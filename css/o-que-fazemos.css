@@ -1,13 +1,8 @@
-
-
- 
- .o-que-fazemos {
+.o-que-fazemos {
  
    width: 55vw;
  }
  
-
-
   .swiper-slide.oquefazemos {
     position: relative;
     height: 100vh; /* Define a altura do container para 100vh */
