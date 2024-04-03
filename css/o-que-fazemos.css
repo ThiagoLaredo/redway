@@ -1,87 +1,95 @@
-.slide-content-oquefazemos {
- width: 55vw;
-}
-.swiper-slide.oquefazemos {
-  background-image: url('../img/1054222547-hd.mov');
-  background-position: center right; 
-  background-size: contain; 
-  background-repeat: no-repeat;  
-  background-color: var(--primary);
-}
 
 
-#oquefazemos {
-  background-color: var(--secondary5);
-  padding: 80px calc((100% - 1200px)/2);
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  }
-  
+ 
+ .o-que-fazemos {
+ 
+   width: 55vw;
+ }
+ 
 
-.o-que-fazemos {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  width: 60vw;
-}
-
-.o-que-fazemos h2 {
-  color: var(--bg);
-  font: 500 2rem/1.125 "Inter", sans-serif;
-  margin-bottom: 1rem;
-}
-
-.lista-servicos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-
-.servico {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.titulo-servico {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.titulo-servico h3 {
-  color: var(--bg);
-  font: 500 1.2rem/1.25 "Inter", sans-serif;
-}
-
-.servico p {
-  color: var(--bg);
-  font: 300 1rem/1.4 "Inter", sans-serif;
-}
-
-
-@media (max-width: 800px) {
-
-  .slide-content-oquefazemos {
-    width: 80vw;
-   }
-
-   .o-que-fazemos {
-    width: 90vw;
-  }
 
   .swiper-slide.oquefazemos {
-
-    background-image: none; 
-    background-color: var(--primary);
-
-  }
-
-  .lista-servicos {
-    grid-template-columns: 1fr;
-    gap: 60px;
+    position: relative;
+    height: 100vh; /* Define a altura do container para 100vh */
+    background-color: var(--primary); /* Cor de fundo azul para o lado esquerdo */
   }
   
-}
+  .video-background-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 33.33%; /* Ocupa 1/3 da largura do container */
+    height: 100%; /* Ocupa 100vh de altura */
+    overflow: hidden;
+  }
+  
+  .video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo cubra o espaço adequadamente */
+  }
+  
+  .conteudo-e-fundo {
+    position: relative;
+    height: 100%;
+  }
+  
+ .o-que-fazemos h2 {
+   color: var(--bg);
+   font: 500 2rem/1.125 "Hind", sans-serif;
+   margin-bottom: 2rem;
+ }
+ 
+ .lista-servicos {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 40px;
+ }
+ 
+ .servico {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+ }
+ 
+ .titulo-servico {
+   display: flex;
+   gap: 12px;
+   align-items: center;
+ }
+ 
+ .titulo-servico h3 {
+   color: var(--bg);
+   font: 500 1.2rem/1.25 "Hind", sans-serif;
+ }
+ 
+ .servico p {
+   color: var(--bg);
+   font: 300 1rem/1.4 "Hind", sans-serif;
+ }
+ 
+ 
+ @media (max-width: 800px) {
+ 
+   .slide-content-oquefazemos {
+     width: 80vw;
+    }
+ 
+    .o-que-fazemos {
+     width: 90vw;
+   }
+ 
+   .swiper-slide.oquefazemos {
+ 
+     background-image: none; 
+     background-color: var(--primary);
+ 
+   }
+ 
+   .lista-servicos {
+     grid-template-columns: 1fr;
+     gap: 60px;
+   }
+ }
+ 
+ 
