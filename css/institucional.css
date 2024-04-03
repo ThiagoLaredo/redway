@@ -23,13 +23,13 @@
 
 .institucional-texto h2 {
   color: var(--text);
-  font: 500 2rem/1.125 "Inter", sans-serif;
+  font: 500 2rem/1.125 "Hind", sans-serif;
   margin-bottom: 1rem;
 }
 
 .institucional-texto p {
   color: var(--secondary);
-  font: 300 1rem/1.25 "Inter", sans-serif;
+  font: 300 1rem/1.25 "Hind", sans-serif;
   margin-bottom: 1rem;
 }
 
@@ -51,13 +51,13 @@
 }
 
 .destaque__titulo {
-  font: 500 1.2rem/1.4 "Inter", sans-serif;
+  font: 500 1.2rem/1.4 "Hind", sans-serif;
   color: var(--bg);
   text-align: center;
 }
 
 .destaque__institucional span { 
-  font: 300 1rem/1 "Inter", sans-serif;
+  font: 300 1rem/1 "Hind", sans-serif;
   color: var(--bg);
   opacity: 0.7;
   margin-bottom: 0;

@@ -28,13 +28,13 @@ flex-direction: column;
 
 .quem-somos h2 {
   color: var(--text);
-  font: 500 2rem/1.125 "Inter", sans-serif;
+  font: 500 2rem/1.125 "Hind", sans-serif;
   margin-bottom: 1rem;
 }
 
 .quem-somos p {
   color: var(--text);
-  font: 300 1rem/1.25 "Inter", sans-serif;
+  font: 300 1rem/1.25 "Hind", sans-serif;
   margin-bottom: 1rem;
   max-width: 100ch;
 }
@@ -142,12 +142,12 @@ flex-direction: column;
  }
 
 .sociob h3, .socio h3 {
-  font: 600 1rem "Inter", sans-serif;
+  font: 600 1rem "Hind", sans-serif;
   color: var(--text);
 }
 
 .sociob ul, .socio ul {
-  font: 300 1rem/1.25 "Inter", sans-serif;
+  font: 300 1rem/1.25 "Hind", sans-serif;
   color: var(--text);
   display: flex;
   flex-direction: column;
@@ -183,7 +183,7 @@ flex-direction: column;
 
 
 .experiencia p {
-  font: 300 1rem/1.4 "Inter", sans-serif;
+  font: 300 1rem/1.4 "Hind", sans-serif;
   color: var(--bg);
   margin-bottom: 20px;
 }
@@ -220,7 +220,7 @@ flex-direction: column;
 
 
 .experiencia2 p {
-  font: 300 1rem/1.4 "Inter", sans-serif;
+  font: 300 1rem/1.4 "Hind", sans-serif;
   color: var(--bg);
   margin-bottom: 20px;
 }
