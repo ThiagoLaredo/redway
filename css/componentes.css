@@ -1,0 +1,114 @@
+.btn-vazado{
+  padding: 12px 8px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  border-radius: 3rem;
+  border: 2px solid #fff;
+  text-align: center;
+  margin: 1.25rem auto 0 auto;
+  max-width: 200px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.3s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
+}
+
+.btn-vazado:hover {
+  background-color: #64d97b;
+  border: 2px solid #64d97b;
+  color: #2A2A33;
+}
+
+.btn-color {
+  padding: 12px 8px;
+  color: #fff;
+  background-color: var(--primary);
+  text-decoration: none;
+  display: block;
+  border-radius: 3rem;
+  border: 2px solid var(--primary);
+  text-align: center;
+  margin: 1.25rem auto 0 auto;
+  max-width: 200px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.5s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
+}
+
+.btn-color:hover {
+ background-color: var(--secondary);
+ border: 2px solid var(--secondary);
+
+}
+
+.btn-anime {
+  position: relative;
+  width: 12rem;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  background-color: none;
+  color: var(--bg);
+  text-align: center;
+  line-height: 3rem;
+  padding: 12px 8px;
+  border-radius: 3rem;
+  word-spacing: 0.2rem  ;
+  z-index: 3;
+  cursor: pointer;      
+  }
+  
+.btn-anime:before, .btn-anime:after {
+  display: block;
+  content: ' ';
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  position: absolute;
+  border-radius: 3rem;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transition:opacity 200ms ease-in-out;
+}
+  
+.btn-anime:before {
+  top: -0.125rem;
+  left: 0;
+}
+    
+.btn-anime:after {
+  bottom: 0;
+  right: 0;
+}
+  
+.btn-anime:hover::before {
+  width: 12rem;
+  height: 100%;
+  opacity: 1;
+  border-top: 0.125rem solid var(--bg);
+  border-right: 0.125rem solid var(--bg);
+  transition: width 300ms cubic-bezier(0.07, 0.62, 0.61, 1), height 150ms 300ms cubic-bezier(0.07, 0.62, 0.61, 1);
+  
+}
+  
+  
+.btn-anime:hover::after {
+  width: 12rem;
+  height: 100%;
+  opacity: 1;
+  border-bottom: 0.125rem solid var(--bg);
+  border-left : 0.125rem solid var(--bg);
+  transition: width 300ms cubic-bezier(0.07, 0.62, 0.61, 1), height 150ms 300ms cubic-bezier(0.07, 0.62, 0.61, 1);
+}
+

@@ -1,0 +1,87 @@
+.slide-content-oquefazemos {
+ width: 55vw;
+}
+.swiper-slide.oquefazemos {
+  background-image: url('../img/1054222547-hd.mov');
+  background-position: center right; 
+  background-size: contain; 
+  background-repeat: no-repeat;  
+  background-color: var(--primary);
+}
+
+
+#oquefazemos {
+  background-color: var(--secondary5);
+  padding: 80px calc((100% - 1200px)/2);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  }
+  
+
+.o-que-fazemos {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 60vw;
+}
+
+.o-que-fazemos h2 {
+  color: var(--bg);
+  font: 500 2rem/1.125 "Inter", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.lista-servicos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.servico {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.titulo-servico {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.titulo-servico h3 {
+  color: var(--bg);
+  font: 500 1.2rem/1.25 "Inter", sans-serif;
+}
+
+.servico p {
+  color: var(--bg);
+  font: 300 1rem/1.4 "Inter", sans-serif;
+}
+
+
+@media (max-width: 800px) {
+
+  .slide-content-oquefazemos {
+    width: 80vw;
+   }
+
+   .o-que-fazemos {
+    width: 90vw;
+  }
+
+  .swiper-slide.oquefazemos {
+
+    background-image: none; 
+    background-color: var(--primary);
+
+  }
+
+  .lista-servicos {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  
+}

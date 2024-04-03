@@ -1,0 +1,167 @@
+#como {
+  background-color: #1f1f26;
+  padding: 3.75rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro_como {
+  margin-bottom: 10px;
+}
+
+.intro_como h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.25rem;
+  line-height: 1.2;
+}
+
+.intro_como p {
+  text-align: center;
+  color: #c0c9df;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  letter-spacing: -0.01rem;
+  max-width: 26.25rem;
+  margin: 0.5rem auto;
+}
+
+#fluxo_trabalho {
+  padding: 60px 100px 60px 100px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  gap: 110px;
+}
+
+.titulo-fluxo {
+  text-align: center;
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+  color: #fff;
+  font-size: 0.875rem;
+  position: relative;
+  text-align: center;
+  width: 100px;
+  margin: 0 auto;
+  line-height: 0;
+}
+
+.titulo-fluxo::before {
+  content: "";
+  background: #1954ec;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  opacity: 0.5;
+  -webkit-filter: blur(20px);
+  -webkit-transform: scale(1.3, 0.8);
+  position: absolute;
+  top: -30px;
+  left: 20px;
+  transition: 2s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.2, 1.2);
+}
+
+.titulo-fluxo:hover::before {
+  opacity: 1.9;
+}
+
+.fluxo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  padding: 60px 0 60px 0;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#fluxo_trabalho {
+  padding: 60px 100px 60px 100px;
+  background: url(../img/piramide.svg) no-repeat center center;
+  background-origin: content-box;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  gap: 110px;
+}
+
+.fluxo li {
+  border-radius: 16px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 10px 20px 10px 20px;
+  position: relative;
+}
+
+.fluxo li::before {
+  content: "";
+  background: url(../img/seta-fluxo.svg) center center no-repeat;
+  width: 14px;
+  height: 24px;
+  position: absolute;
+  display: inline-block;
+  left: -35px;
+}
+
+.fluxo li:first-child::before {
+  display: none;
+}
+
+.fluxo li:first-child {
+  background-color: #22244d;
+}
+
+.fluxo li:nth-child(2) {
+  background-color: #2e3066;
+}
+
+.fluxo li:nth-child(3) {
+  background-color: #3f428c;
+}
+
+.fluxo li:nth-child(4) {
+  background-color: #5054b3;
+}
+
+.fluxo li:nth-child(5) {
+  background-color: #6266d9;
+}
+
+.fluxo li:nth-child(6) {
+  background-color: #7378ff;
+}
+
+@media (max-width: 800px) {
+
+  #fluxo_trabalho {
+    gap: 5px;
+    padding: 80px 20px 60px 20px;    
+    background: url(../img/piramide-horizontal.svg) no-repeat center center;
+    background-size: contain center center;
+  }
+
+  .fluxo {
+    display: block;
+  }
+
+  .fluxo li {
+    margin: 0px 60px 60px 60px;
+  }
+
+  .fluxo li:last-child {
+    margin-bottom: 0;
+  }
+
+  .fluxo li::before {
+    transform: rotate(90deg);
+    width: 14px;
+    height: 24px;
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    top: -100%;
+  }
+}

@@ -1,0 +1,396 @@
+:root {
+  --textwhite: #fff;
+  --text: #395971;
+  --bg: #ffffff;
+  --primary: #4E7A9B;
+  --secondary: #395971;
+  --accent: #6829E6;
+  --textcontrast: #64d97b;
+  --primary5: hsl(206, 33%, 46%, 5%);
+  --primary10: hsl(206, 33%, 46%, 10%);
+  --primary15: hsl(206, 33%, 46%, 15%);
+  --primary20: hsl(206, 33%, 46%, 20%);
+  --primary25: hsl(206, 33%, 46%, 25%);
+  --primary30: hsl(206, 33%, 46%, 30%);
+  --primary35: hsl(206, 33%, 46%, 35%);
+  --primary40: hsl(206, 33%, 46%, 40%);
+  --primary45: hsl(206, 33%, 46%, 45%);
+  --primary50: hsl(206, 33%, 46%, 50%);
+  --primary55: hsl(206, 33%, 46%, 55%);
+  --primary60: hsl(206, 33%, 46%, 60%);
+  --primary65: hsl(206, 33%, 46%, 65%);
+  --primary70: hsl(206, 33%, 46%, 70%);
+  --primary75: hsl(206, 33%, 46%, 75%);
+  --primary80: hsl(206, 33%, 46%, 80%);
+  --primary85: hsl(206, 33%, 46%, 85%);
+  --primary90: hsl(206, 33%, 46%, 90%);
+  --primary95: hsl(206, 33%, 46%, 95%);
+  --secondary5: hsl(206, 33%, 33%, 5%);
+  --secondary10: hsl(206, 33%, 33%, 10%);
+  --secondary15: hsl(206, 33%, 33%, 15%);
+  --secondary20: hsl(206, 33%, 33%, 20%);
+  --secondary25: hsl(206, 33%, 33%, 25%);
+  --secondary30: hsl(206, 33%, 33%, 30%);
+  --secondary35: hsl(206, 33%, 33%, 35%);
+  --secondary40: hsl(206, 33%, 33%, 40%);
+  --secondary45: hsl(206, 33%, 33%, 45%);
+  --secondary50: hsl(206, 33%, 33%, 50%);
+  --secondary55: hsl(206, 33%, 33%, 55%);
+  --secondary60: hsl(206, 33%, 33%, 60%);
+  --secondary65: hsl(206, 33%, 33%, 65%);
+  --secondary70: hsl(206, 33%, 33%, 70%);
+  --secondary75: hsl(206, 33%, 33%, 75%);
+  --secondary80: hsl(206, 33%, 33%, 80%);
+  --secondary85: hsl(206, 33%, 33%, 85%);
+  --secondary90: hsl(206, 33%, 33%, 90%);
+  --secondary95: hsl(206, 33%, 33%, 95%);
+}
+
+
+
+/* Text Color */
+.text {
+  color: var(--text);
+}
+
+.textwhite {
+  color: #fff;
+}
+
+/* Background Color */
+.bg {
+  background-color: var(--bg);
+}
+
+/* Primary Color */
+.primary {
+  color: var(--primary);
+}
+
+/* Secondary Color */
+.secondary {
+  color: var(--secondary);
+}
+
+/* Accent Color */
+.accent {
+  color: var(--accent);
+}
+
+/* Text Contrast Color */
+.textcontrast {
+  color: var(--textcontrast);
+}
+
+/* Text Shades */
+.text5 {
+  color: var(--text5);
+}
+
+.text10 {
+  color: var(--text10);
+}
+
+.text15 {
+  color: var(--text15);
+}
+
+.text20 {
+  color: var(--text20);
+}
+
+.text25 {
+  color: var(--text25);
+}
+
+.text30 {
+  color: var(--text30);
+}
+
+.text35 {
+  color: var(--text35);
+}
+
+.text40 {
+  color: var(--text40);
+}
+
+.text45 {
+  color: var(--text45);
+}
+
+.text50 {
+  color: var(--text50);
+}
+
+.text55 {
+  color: var(--text55);
+}
+
+.text60 {
+  color: var(--text60);
+}
+
+.text65 {
+  color: var(--text65);
+}
+
+.text70 {
+  color: var(--text70);
+}
+
+.text75 {
+  color: var(--text75);
+}
+
+.text80 {
+  color: var(--text80);
+}
+
+.text85 {
+  color: var(--text85);
+}
+
+.text90 {
+  color: var(--text90);
+}
+
+.text95 {
+  color: var(--text95);
+}
+
+/* Bg Shades */
+.bg5 {
+  color: var(--bg5);
+}
+
+/* Primary Shades */
+.primary5 {
+  color: var(--primary5);
+}
+
+.primary10 {
+  color: var(--primary10);
+}
+
+.primary15 {
+  color: var(--primary15);
+}
+
+.primary20 {
+  color: var(--primary20);
+}
+
+.primary25 {
+  color: var(--primary25);
+}
+
+.primary30 {
+  color: var(--primary30);
+}
+
+.primary35 {
+  color: var(--primary35);
+}
+
+.primary40 {
+  color: var(--primary40);
+}
+
+.primary45 {
+  color: var(--primary45);
+}
+
+.primary50 {
+  color: var(--primary50);
+}
+
+.primary55 {
+  color: var(--primary55);
+}
+
+.primary60 {
+  color: var(--primary60);
+}
+
+.primary65 {
+  color: var(--primary65);
+}
+
+.primary70 {
+  color: var(--primary70);
+}
+
+.primary75 {
+  color: var(--primary75);
+}
+
+.primary80 {
+  color: var(--primary80);
+}
+
+.primary85 {
+  color: var(--primary85);
+}
+
+.primary90 {
+  color: var(--primary90);
+}
+
+.primary95 {
+  color: var(--primary95);
+}
+
+/* Secondary Shades */
+.secondary5 {
+  color: var(--secondary5);
+}
+
+.secondary10 {
+  color: var(--secondary10);
+}
+
+.secondary15 {
+  color: var(--secondary15);
+}
+
+.secondary20 {
+  color: var(--secondary20);
+}
+
+.secondary25 {
+  color: var(--secondary25);
+}
+
+.secondary30 {
+  color: var(--secondary30);
+}
+
+.secondary35 {
+  color: var(--secondary35);
+}
+
+.secondary40 {
+  color: var(--secondary40);
+}
+
+.secondary45 {
+  color: var(--secondary45);
+}
+
+.secondary50 {
+  color: var(--secondary50);
+}
+
+.secondary55 {
+  color: var(--secondary55);
+}
+
+.secondary60 {
+  color: var(--secondary60);
+}
+
+.secondary65 {
+  color: var(--secondary65);
+}
+
+.secondary70 {
+  color: var(--secondary70);
+}
+
+.secondary75 {
+  color: var(--secondary75);
+}
+
+.secondary80 {
+  color: var(--secondary80);
+}
+
+.secondary85 {
+  color: var(--secondary85);
+}
+
+.secondary90 {
+  color: var(--secondary90);
+}
+
+.secondary95 {
+  color: var(--secondary95);
+}
+
+/* Accent Shades */
+.accent5 {
+  color: var(--accent5);
+}
+
+.accent10 {
+  color: var(--accent10);
+}
+
+.accent15 {
+  color: var(--accent15);
+}
+
+.accent20 {
+  color: var(--accent20);
+}
+
+.accent25 {
+  color: var(--accent25);
+}
+
+.accent30 {
+  color: var(--accent30);
+}
+
+.accent35 {
+  color: var(--accent35);
+}
+
+.accent40 {
+  color: var(--accent40);
+}
+
+.accent45 {
+  color: var(--accent45);
+}
+
+.accent50 {
+  color: var(--accent50);
+}
+
+.accent55 {
+  color: var(--accent55);
+}
+
+.accent60 {
+  color: var(--accent60);
+}
+
+.accent65 {
+  color: var(--accent65);
+}
+
+.accent70 {
+  color: var(--accent70);
+}
+
+.accent75 {
+  color: var(--accent75);
+}
+
+.accent80 {
+  color: var(--accent80);
+}
+
+.accent85 {
+  color: var(--accent85);
+}
+
+.accent90 {
+  color: var(--accent90);
+}
+
+.accent95 {
+  color: var(--accent95);
+}

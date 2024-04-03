@@ -1,0 +1,141 @@
+.swiper-slide.contato {
+  background-color: var(--primary);
+}
+
+.slide-content-contato {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+#contato {
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary5);
+  padding: 80px calc((100% - 1200px)/2);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.form h2 {
+  font: 500 2rem/1.125 "Inter", sans-serif;
+  color: var(--bg);
+}
+
+
+#contact-form {
+  width: 40vw;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #446A87;
+  color: #fff;
+  /* placeholder: #D9D9D9; */
+  border: 0.5px solid var(--secondary);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #D9D9D9;
+}
+
+.half-width, .half-width-1 {
+  float: left;
+  width: calc(50% - 10px); /* Ajusta a largura considerando o espaçamento */
+  box-sizing: border-box;
+}
+
+.half-width-1 {
+  margin-right: 20px; /* Espaçamento entre os campos */
+}
+
+#send-button {
+  background-color: #fff;
+  color: #4E7A9B;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 6px;
+  font: 800 1rem/1 "Inter", sans-serif;
+
+}
+
+/* Clearfix */
+.form-field::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.contato-lista {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 40px;
+
+}
+
+
+.contato-lista li {
+  font: 300 1rem/1.65 "Inter", sans-serif;
+  color: var(--bg);
+}
+
+.contato-lista a {
+  color: var(--bg);
+}
+
+.contato-lista a:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contato-lista p {
+  font: 300 1rem/1.45 "Inter", sans-serif;
+  color: var(--bg);
+}
+
+@media (max-width: 800px) {
+
+
+
+  .slide-content-contato {
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-left: 80px;
+  }
+
+  #contact-form {
+    width: 90vw;
+  }
+  
+  
+  }
