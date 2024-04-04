@@ -11,6 +11,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+}
+
+nav.menu {
+  display: flex;
+  align-items: center; /* Alinha os itens do menu verticalmente */
+  justify-content: flex-end; /* Alinha os itens à direita */
+  width: 100%; /* Garante que o nav ocupe toda a largura disponível */
+}
+
+ul[data-menu="list"] {
+  display: flex; /* Para alinhar os itens do menu horizontalmente */
+  list-style: none; /* Remove estilos padrão da lista */
+  padding: 0; /* Remove o padding padrão */
+  margin-right: 20px; /* Ajuste conforme necessário para espaço entre menu e botão */
 }
 
 .menu ul {
@@ -27,7 +42,6 @@
 .menu a {
   color: var(--bg);
   font-size: 1.2rem;
-  line-height: 1.3;
   display: flex;
   justify-content: flex;
   justify-content: center;
@@ -47,8 +61,7 @@
   }
 
   .header a > img.minimal {
-    /* Exemplo: diminui o tamanho do logotipo */
-    width: 50%; /* Ajuste conforme necessário */
+    /* width: 50%;  */
     transition: width 0.3s ease;
   }
 
@@ -77,6 +90,77 @@
   color: var(--secondary); /* Branco */
   transition: color 0.3s ease;
 }
+
+.menu-button.minimal {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-self: center; 
+}
+
+.menu-button.minimal .dot {
+  height: 5px;
+  width: 5px;
+  background-color: var(--bg); /* Cor das bolinhas */
+  border-radius: 50%;
+}
+
+.menu-button.minimal.dark .dot {
+  height: 5px;
+  width: 5px;
+  background-color: var(--primary); /* Cor das bolinhas */
+  border-radius: 50%;
+}
+
+.header_menu.minimal .menu-button.minimal {
+  display: flex;
+}
+
+.menu-content.minimal {
+  display: none; /* Esconde inicialmente o menu */
+  position: absolute;
+  right: 100%; /* Posiciona o menu à esquerda do botão */
+  top: 0;
+  width: 200px; /* Ajuste conforme necessário */
+  background-color: #fff; /* Cor de fundo do menu */
+}
+
+.menu-content.minimal.active {
+  display: block; /* Mostra o menu quando ativo */
+}
+
+/* Oculta o botão reduzido por padrão */
+.menu-button.minimal {
+  display: none;
+  /* Estilos adicionais aqui */
+}
+
+/* Mostra o botão reduzido quando a classe 'minimal' é aplicada ao contêiner */
+.header_menu.minimal .menu-button.minimal {
+  display: flex;
+}
+
+/* Esconde o #menu quando a classe 'minimal' está aplicada, mas não 'is-expanded' */
+.header_menu.minimal #menu:not(.is-expanded) {
+  display: none;
+}
+
+/* Quando o #menu tiver a classe 'is-expanded', ele será mostrado, 
+ independente do estado de 'minimal' */
+#menu.is-expanded {
+  display: flex; /* ou 'block', dependendo do seu layout */
+  transform: translateX(0); 
+}
+
+/* Garante que o menu seja mostrado quando não estiver no estado 'minimal' */
+.header_menu #menu {
+  display: flex; /* ou 'block', ajuste conforme necessário */
+  transform: translateX(0);
+}
+
 
 @media (max-width: 700px) {
 

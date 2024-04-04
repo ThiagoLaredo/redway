@@ -7,7 +7,7 @@
 
 .swiper-slide.complaince {
   background-image: url('../img/logo-bg.svg'); 
-  background-position: center left; 
+  background-position: -32%; 
   background-size: contain; 
   background-repeat: no-repeat;  
   background-color: #fff;
