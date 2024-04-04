@@ -18,4 +18,3 @@ new MySwiper();
 const targetElement = document.getElementById('typing');
 
 
-
