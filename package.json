@@ -1,5 +1,5 @@
 {
-  "name": "olatu",
+  "name": "trius",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ThiagoLaredo/thiagolaredo.github.io.git"
+    "url": "git+https://github.com/ThiagoLaredo/TriusCapital.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ThiagoLaredo/thiagolaredo.github.io/issues"
+    "url": "https://github.com/ThiagoLaredo/TriusCapital/issues"
   },
-  "homepage": "https://github.com/ThiagoLaredo/thiagolaredo.github.io#readme",
+  "homepage": "https://github.com/ThiagoLaredo/TriusCapital#readme",
   "devDependencies": {
     "@babel/core": "^7.23.3",
     "@babel/plugin-transform-runtime": "^7.23.3",
