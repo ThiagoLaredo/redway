@@ -2,13 +2,12 @@ export default class MySwiper {
   constructor() {
     this.swiper = null;
 
-    // document.addEventListener('DOMContentLoaded', () => {
-    //   this.initializeSwiper();
-    // });
     document.addEventListener('DOMContentLoaded', () => {
       // Adiciona um ouvinte de evento para redimensionamento da janela
       window.addEventListener('resize', this.handleResize.bind(this));
       this.handleResize();
+      this.setupReducedMenuButton();
+
     });
   }
 
@@ -48,32 +47,6 @@ export default class MySwiper {
         init: this.initialVisibility.bind(this),
       },
     });
-
-    // const pagination = document.querySelector('.pagination');
-    // const menuLateral = document.querySelector('.menu-lateral');
-
-    // if (menuLateral) {
-    //   menuLateral.addEventListener('mouseenter', () => {
-    //     this.hidePagination();
-    //     this.showProjectMenu();
-    //   });
-
-    //   menuLateral.addEventListener('mouseleave', () => {
-    //     this.hideProjectMenu();
-    //     this.showPagination();
-    //   });
-    // }
-
-    // if (pagination) {
-    //   pagination.addEventListener('mouseenter', () => {
-    //     this.hidePagination();
-    //     this.showProjectMenu();
-    //   });
-    //   pagination.addEventListener('mouseleave', () => {
-    //     this.hideProjectMenu();
-    //     this.showPagination();
-    //   });
-    // }
   }
 
   initialVisibility() {
@@ -158,36 +131,53 @@ export default class MySwiper {
     });
 
     // Ativa o item do menu correspondente ao slide atual
-    this.activateCurrentMenuItem(currentSlideIndex);
-}
-
-updateHeaderAndApplyClasses(currentSlideIndex) {
-  const header = document.querySelector('.header_menu');
-  const logo = header.querySelector('a > img'); // Supondo que o logo seja o primeiro <img> dentro de um <a>
-  const menuLinks = header.querySelectorAll('.menu a'); // Seleciona todos os links dentro do menu
-
-  // Verifica e manipula a visibilidade do cabeçalho
-  // header.style.display = currentSlideIndex === 0 ? 'block' : 'none';
-
-  // Remove classes anteriores para evitar conflitos
-  header.classList.remove('minimal', 'dark');
-  logo.classList.remove('minimal', 'dark'); // Remover classes do logo
-  menuLinks.forEach(link => link.classList.remove('minimal', 'dark')); // Remover classes dos links do menu
-
-  // Aplica a classe "minimal" a partir do slide 1
-  if (currentSlideIndex >= 1) {
-      header.classList.add('minimal');
-      logo.classList.add('minimal'); // Adiciona a classe ao logo
-      menuLinks.forEach(link => link.classList.add('minimal')); // Adiciona a classe aos links do menu
+  this.activateCurrentMenuItem(currentSlideIndex);
   }
 
-  // Aplica a classe "white" nos slides 2, 3 e 5
-  if ([1, 2, 4].includes(currentSlideIndex)) {
-      header.classList.add('dark');
-      logo.classList.add('dark'); // Adiciona a classe ao logo
-      menuLinks.forEach(link => link.classList.add('dark')); // Adiciona a classe aos links do menu
+  updateHeaderAndApplyClasses(currentSlideIndex) {
+    const header = document.querySelector('.header_menu');
+    const logo = header.querySelector('a > img'); // Supondo que o logo seja o primeiro <img> dentro de um <a>
+    const menuLinks = header.querySelectorAll('.menu a'); // Seleciona todos os links dentro do menu
+    const menuButton = document.querySelector('.menu-button');
+    // Define o caminho para os logos
+    const originalLogoSrc = "./img/logo.svg";
+    const reducedLogoSrc = "./img/logo-reduce.svg";
+
+    // Remove classes anteriores para evitar conflitos
+    menuButton.classList.remove('dark');
+    header.classList.remove('minimal', 'dark');
+    logo.classList.remove('minimal', 'dark'); // Remover classes do logo
+    menuLinks.forEach(link => link.classList.remove('minimal', 'dark')); // Remover classes dos links do menu
+
+    // Aplica a classe "minimal" a partir do slide 1
+    if (currentSlideIndex >= 1) {
+        header.classList.add('minimal');
+        logo.src = reducedLogoSrc; // Muda o logo para a versão reduzida
+        logo.classList.add('minimal'); // Adiciona a classe ao logo
+        menuLinks.forEach(link => link.classList.add('minimal')); // Adiciona a classe aos links do menu
+    } else {
+        logo.src = originalLogoSrc; // Volta para o logo original
+    }
+
+    // Aplica a classe "dark" nos slides específicos
+    if ([1, 2, 4].includes(currentSlideIndex)) {
+        header.classList.add('dark');
+        menuButton.classList.add('dark');
+        logo.classList.add('dark'); // Adiciona a classe ao logo
+        menuLinks.forEach(link => link.classList.add('dark')); // Adiciona a classe aos links do menu
+    }
+
   }
-}
+
+  setupReducedMenuButton() {
+    const menuButton = document.querySelector('.menu-button.minimal');
+    const menu = document.querySelector('#menu'); // Ajuste o seletor conforme necessário
+
+    menuButton.addEventListener('click', () => {
+        menu.classList.toggle('is-expanded'); // Alterna a classe que controla a visibilidade do menu
+    });
+  }
+
 
   activateCurrentMenuItem(currentSlideIndex) {
     // Se o índice do slide atual for válido
@@ -202,47 +192,6 @@ updateHeaderAndApplyClasses(currentSlideIndex) {
         }
     }
   }
-
-// showHeader(header) {
-//     if (header) {
-//         header.style.display = 'block'; // Ou a classe que você usa para mostrar
-//     }
-// }
-
-
-  // hideProjectMenu() {
-  //   const projectMenu = document.querySelector('.project-menu-hover');
-  //   const pagination = document.querySelector('.pagination');
-
-  //   if (projectMenu) {
-  //     projectMenu.classList.remove('show-element');
-  //     pagination.style.display = 'flex';
-  //   }
-  // }
-
-  // hidePagination() {
-  //   const pagination = document.querySelector('.pagination');
-  //   if (pagination) {
-  //     pagination.classList.remove('show-element');
-  //   }
-  // }
-
-  // showPagination() {
-  //   const pagination = document.querySelector('.pagination');
-  //   if (pagination) {
-  //     pagination.classList.add('show-element');
-  //   }
-  // }
-
-  // showProjectMenu() {
-  //   const projectMenu = document.querySelector('.project-menu-hover');
-  //   const pagination = document.querySelector('.pagination');
-
-  //   if (projectMenu) {
-  //     projectMenu.classList.add('show-element');
-  //     pagination.style.display = 'none';
-  //   }
-  // }
 }
 
 
