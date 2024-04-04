@@ -1,5 +1,7 @@
 .o-que-fazemos {
    width: 55vw;
+   margin-top: 40px;
+
  }
  
   .swiper-slide.oquefazemos {
@@ -75,6 +77,7 @@
  
     .o-que-fazemos {
      width: 90vw;
+     margin-top: 0;
    }
  
    .video-background-wrapper {

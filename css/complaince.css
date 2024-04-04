@@ -3,6 +3,8 @@
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   gap: 80px;
+  margin-top: 40px;
+
 }
 
 .swiper-slide.complaince {
@@ -98,6 +100,7 @@ ul.politicas li::before {
   .slide-content-complaince {
   grid-template-columns: 1fr;
   gap: 40px;
+  margin-top: 0;
   }
 
   .swiper-slide.complaince {
