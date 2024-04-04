@@ -241,6 +241,11 @@
 }
 
 @media (max-width: 800px) {
+
+  .swiper-pagination {
+    display: none;
+  }
+
   .swiper-slide {
 background-position: 80%;}
 

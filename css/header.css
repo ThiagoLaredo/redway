@@ -156,7 +156,7 @@ ul[data-menu="list"] {
 }
 
 /* Garante que o menu seja mostrado quando não estiver no estado 'minimal' */
-.header_menu #menu {
+.js [data-menu="list"] {
   display: flex; /* ou 'block', ajuste conforme necessário */
   transform: translateX(0);
 }
@@ -177,4 +177,14 @@ ul[data-menu="list"] {
   .menu a:hover::after {
     display: none;
   }
+
+  .menu-button {
+    display: none;
+  }
+
+  ul[data-menu="list"] {
+    margin-right: 0px;
+}
+
+
 }

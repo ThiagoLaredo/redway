@@ -130,7 +130,6 @@
   .slide-content-contato {
   grid-template-columns: 1fr;
   gap: 40px;
-  margin-left: 80px;
   }
 
   #contact-form {
