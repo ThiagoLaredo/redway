@@ -7,7 +7,6 @@ export default class MySwiper {
       window.addEventListener('resize', this.handleResize.bind(this));
       this.handleResize();
       this.setupReducedMenuButton();
-
     });
   }
 
@@ -135,6 +134,9 @@ export default class MySwiper {
   }
 
   updateHeaderAndApplyClasses(currentSlideIndex) {
+
+    if (this.isMobile()) return;
+
     const header = document.querySelector('.header_menu');
     const logo = header.querySelector('a > img'); // Supondo que o logo seja o primeiro <img> dentro de um <a>
     const menuLinks = header.querySelectorAll('.menu a'); // Seleciona todos os links dentro do menu
@@ -171,6 +173,8 @@ export default class MySwiper {
 
   setupReducedMenuButton() {
     const menuButton = document.querySelector('.menu-button.minimal');
+    if (!menuButton || this.isMobile()) return;
+
     const menu = document.querySelector('#menu'); // Ajuste o seletor conforme necessário
 
     menuButton.addEventListener('click', () => {
