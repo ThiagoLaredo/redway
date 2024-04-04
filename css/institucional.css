@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: center;
+  margin-top: 40px;
   gap: 1px;
 }
 
@@ -70,5 +71,10 @@
   .slide-content-institucional {
     grid-template-columns: 1fr;
     gap: 10px;
+    margin-top: 0;
+  }
+
+  .destaque__institucional {
+    min-height: 140px;
   }
 }

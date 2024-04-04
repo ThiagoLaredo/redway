@@ -8,6 +8,8 @@
   align-items: center;
   justify-content: center;
   gap: 80px;
+  margin-top: 40px;
+
 }
 
 #contato {
@@ -130,6 +132,8 @@
   .slide-content-contato {
   grid-template-columns: 1fr;
   gap: 40px;
+  margin-top: 0;
+
   }
 
   #contact-form {
