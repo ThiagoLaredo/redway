@@ -7,15 +7,6 @@
   gap: 1px;
 }
 
-#institucional {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  height: 100vh;
-}
-
 .institucional-texto {
   display: flex;
   flex-direction: column;
@@ -66,8 +57,7 @@
 
 }
 
-
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .slide-content-institucional {
     grid-template-columns: 1fr;
     gap: 10px;
