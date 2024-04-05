@@ -12,17 +12,6 @@
 
 }
 
-#contato {
-  width: 100%;
-  height: 100%;
-  background-color: var(--secondary5);
-  padding: 80px calc((100% - 1200px)/2);
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  }
-
 .form {
   display: flex;
   flex-direction: column;

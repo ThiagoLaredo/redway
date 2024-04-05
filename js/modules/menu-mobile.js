@@ -30,9 +30,35 @@ export default class MenuMobile {
     );
   }
 
+  addLinkClickEvents() {
+    const links = this.menuList.querySelectorAll('a'); // Seleciona todos os links no menu
+    links.forEach(link => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault(); // Previne a navegação padrão
+        this.menuList.classList.remove(this.activeClass); // Fecha o menu
+        this.menuButton.classList.remove(this.activeClass); // Altera o botão do menu para o estado não ativo
+  
+        // Extrai o ID do href do link
+        const targetId = link.getAttribute('href').substring(1); // Remove o '#'
+        const targetSection = document.getElementById(targetId);
+  
+        if (targetSection) {
+          // Calcula o offsetTop considerando a altura de um possível cabeçalho fixo
+          const offsetTop = targetSection.offsetTop - (document.querySelector('.header')?.offsetHeight || 0);
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  }
+  
+  
   init() {
     if (this.menuButton && this.menuList) {
       this.addMenuMobileEvents();
+      this.addLinkClickEvents(); 
     }
     return this;
   }

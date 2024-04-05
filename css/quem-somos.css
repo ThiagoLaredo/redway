@@ -12,12 +12,12 @@
 }
 
 
-#quemsomos {
+/* #quemsomos {
 background-color: var(--secondary5);
 padding: 80px calc((100% - 1200px)/2);
 display: flex;
 flex-direction: column;
-}
+} */
 
 
 .quem-somos {
