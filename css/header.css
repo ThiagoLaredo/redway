@@ -162,10 +162,19 @@ ul[data-menu="list"] {
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 
   .header {
-   padding: 12px 0;
+    position: fixed; /* Mantém o cabeçalho fixo no topo */
+    width: 100%; /* Ocupa a largura total da tela */
+    background-color: none;
+    z-index: 10; /* Garante que o cabeçalho fique acima de outros elementos */
+    top: 0; /* Alinha o cabeçalho ao topo da página */
+    left: 0; /* Alinha o cabeçalho à esquerda da página */
+  }
+
+  .header-scrolled {
+    background-color: var(--primary); 
   }
   .header_menu {
     padding: 2.4rem 20px;
