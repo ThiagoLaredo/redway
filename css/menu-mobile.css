@@ -2,7 +2,21 @@
   display: none;
 }
 
+[data-menu="contato-mobile"] {
+ display: none;
+}
+
+[data-menu="linkedin"] {
+  display: none;
+}
+
 @media (max-width: 700px) {
+
+
+  .js [data-menu="logo"] {
+  z-index: 999;
+}
+
   .js [data-menu="button"] {
     display: flex;
     background: none;
@@ -10,7 +24,7 @@
     padding: 0.8rem 0.8rem;
     border-radius: 8px;
     text-transform: uppercase;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Hind', monospace;
     font-weight: bold;
     color: #fff;
     cursor: pointer;
@@ -70,6 +84,7 @@
   .js [data-menu="list"] li {
     width: 90%;
     position: relative;
+    opacity: 0;
   }
 
   .js [data-menu="list"] li::after {
@@ -94,4 +109,45 @@
     align-items: center;
     animation: show-right 0.3s forwards;
   }
+
+  [data-menu="contato-mobile"], [data-menu="linkedin"] {
+    display: none;
+  }
+
+  [data-menu="contato-mobile"].active  {
+    position: fixed;
+    font: 500 1rem "Hind", sans-serif;
+    color: var(--bg);
+    display: block;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    padding: 1rem;
+    opacity: 0;
+  }
+
+  [data-menu="linkedin"].active {
+    position: fixed;
+    font: 500 1rem "Hind", sans-serif;
+    color: var(--bg);
+    display: block;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    padding: 1rem;
+    opacity: 0;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .fadeIn {
+    animation-name: fadeIn;
+    animation-fill-mode: forwards; /* Mantém o elemento visível após a animação */
+    opacity: 0; /* Inicia invisível */
+  }
+  
+
 }

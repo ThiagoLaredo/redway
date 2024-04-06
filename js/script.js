@@ -11,7 +11,7 @@ scrollAnima.init();
 const headerScroll = new HeaderScroll('.header');
 headerScroll.init();
 
-const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+const menuMobile = new MenuMobile('[data-menu="logo"]', '[data-menu="button"]', '[data-menu="list"]', '[data-menu="contato-mobile"]', '[data-menu="linkedin"]' );
 menuMobile.init();
 
 new MySwiper();
