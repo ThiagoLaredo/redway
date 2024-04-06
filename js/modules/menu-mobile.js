@@ -25,7 +25,6 @@ export default class MenuMobile {
 
   openMenu(event) {
     event.preventDefault();
-    this.logoMobile.classList.add(this.activeClass);
     this.menuList.classList.add(this.activeClass);
     this.menuButton.classList.add(this.activeClass);
     this.contatoMobile.classList.add(this.activeClass);
@@ -40,7 +39,6 @@ export default class MenuMobile {
   }
 
   closeMenu(event) {
-    this.logoMobile.classList.remove(this.activeClass);
     this.menuList.classList.remove(this.activeClass);
     this.menuButton.classList.remove(this.activeClass);
     this.contatoMobile.classList.remove(this.activeClass);
