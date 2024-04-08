@@ -5,7 +5,10 @@ import HeaderScroll from './modules/header-scroll.js';
 import MySwiper from './modules/mySwiper.js';
 import ConsoleTextEffect from './modules/text-effect.js';
 
-const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
+// const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
+// scrollAnima.init();
+
+const scrollAnima = new ScrollAnima('.swiper-slide');
 scrollAnima.init();
 
 const headerScroll = new HeaderScroll('.header');
