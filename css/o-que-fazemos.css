@@ -105,12 +105,12 @@ display: none;
 
 }
 
-.video-mobile {
+ .video-mobile {
     max-width: 100%; /* Garante que o vídeo não seja maior que o container */
     height: auto; /* Mantém a proporção do vídeo */
     object-position: contain;
     display: block;
-}
+ }
 
  
    .lista-servicos {
