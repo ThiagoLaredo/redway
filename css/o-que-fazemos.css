@@ -3,6 +3,10 @@
    margin-top: 40px;
 
  }
+
+ .container-video, .video-normal {
+display: none;
+}
  
   .swiper-slide.oquefazemos {
     position: relative;
@@ -77,37 +81,37 @@
  
     .o-que-fazemos {
      width: 90vw;
-     margin-top: 25vh;
+     margin: 0;
    }
  
-   /* .video-background-wrapper {
-    display: none;
-   } */
-
    .swiper-slide.oquefazemos {
  
      background-image: none; 
      background-color: var(--primary);
    }
 
-   .video-background-wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%; /* Ocupa 1/3 da largura do container */
-    height: 40%; /* Ocupa 100vh de altura */
-    overflow: hidden;
-  }
 
   .swiper-slide.oquefazemos {
     height: 100%;
   }
   
   .video-background {
-    width: 100%;
-    height: 50%;
-    object-fit: cover; /* Garante que o vídeo cubra o espaço adequadamente */
+    display: none;
   }
+
+  .container-video {
+    text-align: center; /* Centraliza o vídeo */
+    display: block;
+
+}
+
+.video-normal {
+    max-width: 100%; /* Garante que o vídeo não seja maior que o container */
+    height: auto; /* Mantém a proporção do vídeo */
+    object-position: contain;
+    display: block;
+}
+
  
    .lista-servicos {
      grid-template-columns: 1fr;
