@@ -82,12 +82,12 @@ ul[data-menu="list"] {
   filter: brightness(0) invert(1); 
   transition: filter 0.3s ease;
   z-index: 99;
+  opacity: 1;
 }
 
-/* Estilos para os links do menu com a classe dark */
+
 .header .menu a.dark {
-  /* Exemplo: muda a cor dos links para branco */
-  color: var(--secondary); /* Branco */
+  color: var(--secondary); 
   transition: color 0.3s ease;
 }
 

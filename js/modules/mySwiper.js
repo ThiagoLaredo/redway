@@ -1,3 +1,5 @@
+import gsap from 'gsap';
+
 export default class MySwiper {
   constructor() {
     this.swiper = null;
@@ -36,9 +38,12 @@ swiperInit() {
   // Usando setTimeout para garantir que o Swiper esteja completamente inicializado
   setTimeout(() => {
       if (this.swiper) {
-          this.initialVisibility();
-          // Agora estamos seguros para acessar this.swiper.realIndex
-          this.updateHeaderAndApplyClasses(this.swiper.realIndex);
+        this.initialVisibility();
+        // Agora estamos seguros para acessar this.swiper.realIndex
+        this.updateHeaderAndApplyClasses(this.swiper.realIndex);
+        // Anima o conteúdo do slide inicial
+        const initialSlide = this.swiper.slides[this.swiper.activeIndex];
+        this.animateContentIn(initialSlide);
       }
   }, 0); // Um atraso de 0 ms é suficiente para colocar esta chamada no fim da fila do event loop
 }
@@ -63,6 +68,21 @@ swiperInit() {
       on: {
         slideChange: this.slideChange.bind(this),
         init: this.swiperInit.bind(this), // Use o novo método no evento init
+
+        
+
+        slideChangeTransitionStart: () => {
+          // Animação de saída do slide atual
+          if (this.swiper && this.swiper.slides) {
+            const activeSlide = this.swiper.slides[this.swiper.activeIndex];
+            this.animateContentIn(activeSlide); // Chama animateContentIn para o slide ativo
+          }  
+       
+        },
+        // Evento chamado quando a transição termina
+        slideChangeTransitionEnd: () => {
+          // Animação de entrada para o novo slide
+        }     
       },
     });
   }
@@ -76,6 +96,19 @@ swiperInit() {
     this.updateHeaderAndApplyClasses(initialSlideIndex);
 }
 
+// Função para animar o conteúdo ao entrar
+animateContentIn(slide) {
+  // Seleciona todos os elementos desejados dentro do slide atual
+  // Isso inclui h2, h3, p, li, .destaque__institucional, e img
+  // Você pode ajustar este seletor conforme necessário
+  const elements = slide.querySelectorAll('h2, h3, p, li, .destaque__institucional, .experiencia, img, svg, #contact-form');
+  if (elements.length > 0) { 
+  gsap.fromTo(elements, 
+    { y: -30, opacity: 0 }, 
+    { y: 0, opacity: 1, duration: 0.5, stagger: 0.1, ease: "power1.out" }
+  );
+  }
+}
 
   destroySwiper() {
     // Verifica se o Swiper existe antes de tentar destruí-lo
@@ -128,83 +161,6 @@ swiperInit() {
   this.updateHeaderAndApplyClasses(this.currentSlideIndex);
 
   }
-
-  // updateHeaderAndApplyClasses(currentSlideIndex) {
-
-  //   if (this.isMobile()) return;
-
-  //   const header = document.querySelector('.header_menu');
-  //   const logo = header.querySelector('a > img'); // Supondo que o logo seja o primeiro <img> dentro de um <a>
-  //   const menuLinks = header.querySelectorAll('.menu a'); // Seleciona todos os links dentro do menu
-  //   const menuButton = document.querySelector('.menu-button');
-  //   // Define o caminho para os logos
-  //   const originalLogoSrc = "./img/logo.svg";
-  //   const reducedLogoSrc = "./img/logo-reduce.svg";
-
-  //   // Remove classes anteriores para evitar conflitos
-  //   menuButton.classList.remove('dark');
-  //   header.classList.remove('minimal', 'dark');
-  //   logo.classList.remove('minimal', 'dark'); // Remover classes do logo
-  //   menuLinks.forEach(link => link.classList.remove('minimal', 'dark')); // Remover classes dos links do menu
-
-  //   // Aplica a classe "minimal" a partir do slide 1
-  //   if (currentSlideIndex >= 1) {
-  //       header.classList.add('minimal');
-  //       logo.src = reducedLogoSrc; // Muda o logo para a versão reduzida
-  //       logo.classList.add('minimal'); // Adiciona a classe ao logo
-  //       menuLinks.forEach(link => link.classList.add('minimal')); // Adiciona a classe aos links do menu
-  //   } else {
-  //       logo.src = originalLogoSrc; // Volta para o logo original
-  //   }
-
-  //   // Aplica a classe "dark" nos slides específicos
-  //   if ([1, 2, 4].includes(currentSlideIndex)) {
-  //       header.classList.add('dark');
-  //       menuButton.classList.add('dark');
-  //       logo.classList.add('dark'); // Adiciona a classe ao logo
-  //       menuLinks.forEach(link => link.classList.add('dark')); // Adiciona a classe aos links do menu
-  //   }
-
-  // }
-
-//   updateHeaderAndApplyClasses(currentSlideIndex) {
-//     const header = document.querySelector('.header_menu');
-//     const logo = header.querySelector('a > img'); // Supondo que o logo seja o primeiro <img> dentro de um <a>
-//     const menuLinks = header.querySelectorAll('.menu a');
-//     const menuButton = document.querySelector('.menu-button');
-
-//     // Define o caminho para os logos
-//     const originalLogoSrc = "./img/logo.svg";
-//     const reducedLogoSrc = "./img/logo-reduce.svg";
-
-//     // Remover classes anteriores para evitar conflitos
-//     menuButton.classList.remove('dark');
-//     header.classList.remove('minimal', 'dark');
-//     logo.classList.remove('minimal', 'dark');
-//     menuLinks.forEach(link => link.classList.remove('minimal', 'dark'));
-
-//     if (this.isMobile()) {
-//         // Para modo móvel, usa o logo original
-//         logo.src = originalLogoSrc;
-//     } else {
-//         // Lógica para desktop
-//         if (currentSlideIndex >= 1) {
-//             header.classList.add('minimal');
-//             logo.src = reducedLogoSrc;
-//             logo.classList.add('minimal');
-//             menuLinks.forEach(link => link.classList.add('minimal'));
-//         } else {
-//             logo.src = originalLogoSrc;
-//         }
-
-//         if ([1, 2, 4].includes(currentSlideIndex)) {
-//             header.classList.add('dark');
-//             menuButton.classList.add('dark');
-//             logo.classList.add('dark');
-//             menuLinks.forEach(link => link.classList.add('dark'));
-//         }
-//     }
-// }
 
 updateHeaderAndApplyClasses(currentSlideIndex) {
   const header = document.querySelector('.header_menu');

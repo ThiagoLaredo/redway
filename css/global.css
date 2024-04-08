@@ -48,7 +48,6 @@ img {
   white-space: nowrap; /* Adiciona suporte para espaçamento em branco */
 }
 
-
 @keyframes slideDown {
   from {
     opacity: 0;
