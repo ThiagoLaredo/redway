@@ -102,12 +102,10 @@ animateContentIn(slide) {
   if (commonElements.length > 0) { 
     gsap.fromTo(commonElements, 
       { y: -30, opacity: 0 }, 
-      { y: 0, opacity: 1, duration: 0.5, stagger: 0.2, delay: 0.5, ease: "power1.out" }
+      { y: 0, opacity: 1, duration: 0.5, stagger: 0.2, ease: "power1.out" }
     );
   }
 }
-
-
 
 
   destroySwiper() {
