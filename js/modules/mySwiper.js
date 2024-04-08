@@ -98,17 +98,17 @@ swiperInit() {
 
 // Função para animar o conteúdo ao entrar
 animateContentIn(slide) {
-  // Seleciona todos os elementos desejados dentro do slide atual
-  // Isso inclui h2, h3, p, li, .destaque__institucional, e img
-  // Você pode ajustar este seletor conforme necessário
-  const elements = slide.querySelectorAll('h2, h3, p, li, .destaque__institucional, .experiencia, img, svg, #contact-form');
-  if (elements.length > 0) { 
-  gsap.fromTo(elements, 
-    { y: -30, opacity: 0 }, 
-    { y: 0, opacity: 1, duration: 0.5, stagger: 0.1, ease: "power1.out" }
-  );
+  const commonElements = slide.querySelectorAll('h2, h3, p, li, .destaque__institucional, img, .experiencia, svg, #contact-form');
+  if (commonElements.length > 0) { 
+    gsap.fromTo(commonElements, 
+      { y: -30, opacity: 0 }, 
+      { y: 0, opacity: 1, duration: 0.5, stagger: 0.2, delay: 0.5, ease: "power1.out" }
+    );
   }
 }
+
+
+
 
   destroySwiper() {
     // Verifica se o Swiper existe antes de tentar destruí-lo
