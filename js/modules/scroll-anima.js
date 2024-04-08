@@ -24,6 +24,7 @@ export default class ScrollAnima {
               toggleActions: "play none none none",
             },
           }
+          
         );
       }
     }); 
