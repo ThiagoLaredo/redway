@@ -75,10 +75,9 @@
   }
 
   .js [data-menu="list"] a {
-    font-size: 36px;
+    font-size: 24px;
     width: 100%;
-    display: flex;
-    align-items: center;
+    line-height: 1;
   }
 
   .js [data-menu="list"] li {
@@ -91,7 +90,7 @@
     content: "";
     display: block;
     width: 100%;
-    top: 16px;
+    top: 10px;
     height: 2px;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.09);
@@ -107,6 +106,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 40px;
     animation: show-right 0.3s forwards;
   }
 
