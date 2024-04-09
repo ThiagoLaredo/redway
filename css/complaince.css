@@ -32,19 +32,18 @@
 .complaince-texto h2 {
   color: var(--text);
   font: 500 2rem/1.125 "Hind", sans-serif;
-  margin-bottom: 1rem;
 }
 
 .complaince-texto p {
   color: var(--secondary);
-  font: 300 1rem/1.25 "Hind", sans-serif;
+  font: 300 1rem/1.4 "Hind", sans-serif;
   margin-bottom: 1rem;
 }
 
 .complaince-politicas h3 {
   color: var(--secondary);
   font: 500 1.2rem/1.25 "Hind", sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .politicas li {
