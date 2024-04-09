@@ -19,20 +19,27 @@ export default class MySwiper {
   }
 
 
-  handleResize() {
-    if (this.isMobile()) {
-        if (this.swiper) {
-            this.destroySwiper();
-            // Aplica o estado padrão do cabeçalho para mobile, independentemente do slide
-            this.updateHeaderAndApplyClasses(-1); // Passa um valor específico que indica modo mobile
-        }
-    } else {
-        if (!this.swiper) {
-            this.initializeSwiper();
-            this.updateHeaderAndApplyClasses(this.currentSlideIndex);
-        }
+handleResize() {
+  if (this.isMobile()) {
+    if (this.swiper) {
+      this.destroySwiper();
+      // Aplica o estado padrão do cabeçalho para mobile, independentemente do slide
+      this.updateHeaderAndApplyClasses(-1); // Passa um valor específico que indica modo mobile
     }
+    if (this.swiper2) {
+      this.destroySwiper2(); // Destrói o swiper2 em dispositivos móveis
+    }
+  } else {
+    if (!this.swiper) {
+      this.initializeSwiper();
+      this.updateHeaderAndApplyClasses(this.currentSlideIndex);
+    }
+    // Considera inicializar o swiper2 apenas quando não está em mobile
+    // E se estamos no slide correto, #quemsomos. Isso pode ser verificado posteriormente
+    // dentro da lógica específica onde você considera apropriado para inicializar o swiper2
+  }
 }
+
 
 swiperInit() {
   // Usando setTimeout para garantir que o Swiper esteja completamente inicializado
@@ -44,10 +51,12 @@ swiperInit() {
         // Anima o conteúdo do slide inicial
         const initialSlide = this.swiper.slides[this.swiper.activeIndex];
         this.animateContentIn(initialSlide);
+        // Verifica se o slide atual é #quemsomos para inicializar o swiper2
+        this.checkSlideForSwiper2(); // Assegura que esta função verifica o slide atual e decide sobre a inicialização do swiper2
+
       }
   }, 0); // Um atraso de 0 ms é suficiente para colocar esta chamada no fim da fila do event loop
 }
-
 
 
   initializeSwiper() {
@@ -65,24 +74,44 @@ swiperInit() {
         el: '.swiper-pagination',
         clickable: false,
       }, 
+
       on: {
-        slideChange: this.slideChange.bind(this),
-        init: this.swiperInit.bind(this), // Use o novo método no evento init
-
+        init: () => {
+          this.swiperInit(); // Assume que swiperInit já faz o que está no método bind(this)
+          this.checkSlideForSwiper2(); // Adiciona a chamada aqui
+        },
+        slideChange: () => {
+          this.slideChange(); // Atualiza conforme necessário, pode chamar outra lógica aqui também
+          this.checkSlideForSwiper2(); // Verifica em cada mudança de slide
+        },
         
-
         slideChangeTransitionStart: () => {
           // Animação de saída do slide atual
           if (this.swiper && this.swiper.slides) {
             const activeSlide = this.swiper.slides[this.swiper.activeIndex];
             this.animateContentIn(activeSlide); // Chama animateContentIn para o slide ativo
           }  
-       
         },
         // Evento chamado quando a transição termina
         slideChangeTransitionEnd: () => {
           // Animação de entrada para o novo slide
         }     
+      },
+
+    });
+  }
+
+  initializeSwiper2() {
+    // Lógica para inicializar swiper2 aqui
+    this.swiper2 = new Swiper(".mySwiper2", {
+      direction: "horizontal",
+      mousewheel: true,
+      spaceBetween: 10,
+      grabCursor: false,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
     });
   }
@@ -96,9 +125,8 @@ swiperInit() {
     this.updateHeaderAndApplyClasses(initialSlideIndex);
 }
 
-// Função para animar o conteúdo ao entrar
 animateContentIn(slide) {
-  const commonElements = slide.querySelectorAll('h2, h3, p, li, .destaque__institucional, img, .experiencia, svg, #contact-form');
+  const commonElements = slide.querySelectorAll('h2, h3, p, li, .destaque__institucional, img, .mySwiper2, .experiencia, experiencia::before, svg, #contact-form');
   if (commonElements.length > 0) { 
     gsap.fromTo(commonElements, 
       { y: -30, opacity: 0 }, 
@@ -107,12 +135,18 @@ animateContentIn(slide) {
   }
 }
 
-
   destroySwiper() {
     // Verifica se o Swiper existe antes de tentar destruí-lo
     if (this.swiper !== null) {
       this.swiper.destroy(true, true);
       this.swiper = null; // Reseta a referência do Swiper
+    }
+  }
+
+  destroySwiper2() {
+    if (this.swiper2) {
+      this.swiper2.destroy(true, true);
+      this.swiper2 = null;
     }
   }
 
@@ -201,18 +235,44 @@ updateHeaderAndApplyClasses(currentSlideIndex) {
 }
 
 
-
+checkSlideForSwiper2() {
+  // Certifica-se de que o swiper está definido e possui slides.
+  if (!this.swiper || !this.swiper.slides) {
+    // Log removido para evitar mensagens desnecessárias, já que isso pode ocorrer em condições normais.
+    return;
+  }
   
-  // setupReducedMenuButton() {
-  //   const menuButton = document.querySelector('.menu-button.minimal');
-  //   if (!menuButton || this.isMobile()) return;
+  // Aqui, nós obtemos diretamente o índice do slide #quemsomos
+  const indexOfQuemSomosSlide = this.swiper.slides.findIndex(slide => 
+    slide.getAttribute('data-hash') === 'quemsomos');
 
-  //   const menu = document.querySelector('#menu'); // Ajuste o seletor conforme necessário
+  // Se não encontramos o slide #quemsomos (por exemplo, -1 retornado por findIndex), saímos da função.
+  // Isso evita a execução desnecessária em situações onde o slide relevante não está presente.
+  if (indexOfQuemSomosSlide === -1) {
+    return;
+  }
 
-  //   menuButton.addEventListener('click', () => {
-  //       menu.classList.toggle('is-expanded'); // Alterna a classe que controla a visibilidade do menu
-  //   });
-  // }
+  // Executa a lógica somente se estivermos no slide correto.
+  if (this.swiper.realIndex === indexOfQuemSomosSlide) {
+    if (!this.swiper2 || this.swiper2.destroyed) {
+      this.initializeSwiper2();
+    } // Não há necessidade de um else aqui, dado que a função agora sai cedo se não estamos no slide correto.
+  } else {
+    // Destruir o swiper2 se estiver inicializado e se não estivermos no slide #quemsomos.
+    if (this.swiper2 && !this.swiper2.destroyed) {
+      this.destroySwiper2();
+    }
+  }
+}
+
+
+
+
+checkIfQuemSomosSlide(slide) {
+  return window.location.hash === '#quemsomos' || slide.hash === 'quemsomos';
+}
+
+
 
   setupReducedMenuButton() {
     // Isso assegura que o evento seja aplicado mesmo se o botão mudar
