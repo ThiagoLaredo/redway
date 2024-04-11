@@ -5,7 +5,7 @@
   justify-content: space-between; /* Espaço entre os principais eixos */
   max-width: 1200px; /* Largura máxima do container */
   box-sizing: border-box; /* Garante que o padding não adicione à largura total */
-  gap: 0px 80px;
+  gap: 0px 40px;
   align-items: center;
   margin-top: 40px;
 }

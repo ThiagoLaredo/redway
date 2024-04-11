@@ -51,9 +51,10 @@ swiperInit() {
         // Anima o conteúdo do slide inicial
         const initialSlide = this.swiper.slides[this.swiper.activeIndex];
         this.animateContentIn(initialSlide);
+        this.animateMap();
         // Verifica se o slide atual é #quemsomos para inicializar o swiper2
         this.checkSlideForSwiper2(); // Assegura que esta função verifica o slide atual e decide sobre a inicialização do swiper2
-
+        
       }
   }, 0); // Um atraso de 0 ms é suficiente para colocar esta chamada no fim da fila do event loop
 }
@@ -85,16 +86,25 @@ swiperInit() {
           this.checkSlideForSwiper2(); // Verifica em cada mudança de slide
         },
         
+      
         slideChangeTransitionStart: () => {
-          // Animação de saída do slide atual
-          if (this.swiper && this.swiper.slides) {
+          // Certifique-se de que o swiper está inicializado e o slide ativo está disponível
+          if (this.swiper && this.swiper.slides && this.swiper.activeIndex !== undefined) {
             const activeSlide = this.swiper.slides[this.swiper.activeIndex];
-            this.animateContentIn(activeSlide); // Chama animateContentIn para o slide ativo
-          }  
+            this.animateContentIn(activeSlide);
+        
+            // Verifique se o slide atual contém o mapa
+            if (activeSlide.querySelector('svg')) { // Ajuste o seletor conforme necessário
+              this.animateMap();
+            }
+          }
         },
+        
+
         // Evento chamado quando a transição termina
         slideChangeTransitionEnd: () => {
           // Animação de entrada para o novo slide
+          
         }     
       },
 
@@ -125,15 +135,62 @@ swiperInit() {
     this.updateHeaderAndApplyClasses(initialSlideIndex);
 }
 
+
 animateContentIn(slide) {
   const commonElements = slide.querySelectorAll('h2, h3, p, li, .destaque__institucional, img, .mySwiper2, .experiencia, experiencia::before, svg, #contact-form');
   if (commonElements.length > 0) { 
     gsap.fromTo(commonElements, 
       { y: -30, opacity: 0 }, 
-      { y: 0, opacity: 1, duration: 0.5, stagger: 0.2, ease: "power1.out" }
+      { 
+        y: 0, 
+        opacity: 1, 
+        duration: 0.5, 
+        stagger: 0.2, 
+        ease: "power1.out",
+        onComplete: () => {
+          if (!this.isMobile()) {
+            this.animateMap();
+          }
+        }// Esta é a função que você chamará quando a animação dos elementos terminar
+      }
     );
   }
 }
+
+
+
+animateMap() {
+  const slideMapa = this.swiper.slides[this.swiper.activeIndex];
+  console.log(slideMapa);
+  const mapaSVG = slideMapa.querySelector('svg'); // Selecione o SVG pelo elemento específico
+  console.log(mapaSVG);
+  const paises = ['DO', 'GT', 'Unitedstates', 'EC', 'BR', 'Chile', 'Argentina', 'Angola', 'SN', 'ES', 'PT','Indonesia']; // Exemplo de classes/ids
+
+  if (mapaSVG) {
+
+    paises.forEach((pais, index) => {
+      let seletor = mapaSVG.querySelector(`.${pais}`) ? `.${pais}` : `#${pais}`;
+      // Resetar as propriedades para os estados iniciais aqui, se necessário
+      gsap.set(seletor, { fill: '#ececec' }); // Substitua 'cor_inicial' pela cor original dos países
+    });
+    // Adiciona um delay inicial antes de começar a animação dos países
+    gsap.delayedCall(2, () => {
+      paises.forEach((pais, index) => {
+        // Verifica se o elemento é class ou id e ajusta o seletor
+        let seletor = mapaSVG.querySelector(`.${pais}`) ? `.${pais}` : `#${pais}`;
+        gsap.to(seletor, {
+          fill: '#4E7A9B',
+          delay: index * 0.3, // Mantém o delay existente entre as animações dos países
+          duration: 1,
+        });
+      });
+    });
+  }
+}
+
+
+
+
 
   destroySwiper() {
     // Verifica se o Swiper existe antes de tentar destruí-lo
