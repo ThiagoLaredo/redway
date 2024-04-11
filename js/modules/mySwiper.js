@@ -134,7 +134,6 @@ swiperInit() {
     this.updateHeaderAndApplyClasses(initialSlideIndex);
 }
 
-
 animateContentIn(slide) {
 
    // Verifica se está em um dispositivo móvel e retorna cedo se verdadeiro
@@ -161,7 +160,6 @@ animateContentIn(slide) {
     );
   }
 }
-
 
 animateMap() {
   const slideMapa = this.swiper.slides[this.swiper.activeIndex];
