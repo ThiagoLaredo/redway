@@ -99,8 +99,7 @@ swiperInit() {
             }
           }
         },
-        
-
+      
         // Evento chamado quando a transição termina
         slideChangeTransitionEnd: () => {
           // Animação de entrada para o novo slide
@@ -137,6 +136,12 @@ swiperInit() {
 
 
 animateContentIn(slide) {
+
+   // Verifica se está em um dispositivo móvel e retorna cedo se verdadeiro
+   if (this.isMobile()) {
+    return; // Retorna imediatamente, evitando animações em dispositivos móveis
+  }
+  
   const commonElements = slide.querySelectorAll('h2, h3, p, li, .destaque__institucional, img, .mySwiper2, .experiencia, experiencia::before, svg, #contact-form');
   if (commonElements.length > 0) { 
     gsap.fromTo(commonElements, 
@@ -156,7 +161,6 @@ animateContentIn(slide) {
     );
   }
 }
-
 
 
 animateMap() {
