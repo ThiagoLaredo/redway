@@ -27,6 +27,7 @@ export default class ScrollAnima {
               start: "top 60%",
               end: "bottom 20%",
               toggleActions: "play none none none",
+              markers: false,
             },
           }       
         );
