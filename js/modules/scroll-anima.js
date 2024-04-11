@@ -7,6 +7,7 @@ export default class ScrollAnima {
   constructor(sectionsSelector) {
     this.sections = document.querySelectorAll('.swiper-slide');
     this.animateSections = this.animateSections.bind(this);
+    this.animateMapScroll = this.animateMapScroll.bind(this); 
   }
 
   animateSections() {
@@ -30,11 +31,41 @@ export default class ScrollAnima {
     }); 
   }
 
+  isMobile() {
+    return window.innerWidth <= 768;
+  }
+
+  animateMapScroll() {
+    const sectionMapa = document.querySelector('.svg-container'); // Assume que você tenha um ID específico para a seção que contém o mapa
+    if (sectionMapa) {
+      ScrollTrigger.create({
+        trigger: sectionMapa,
+        start: "top center",
+        onEnter: () => { // Quando a seção do mapa entra na visão
+          const mapaSVG = sectionMapa.querySelector('svg');
+          const paises = ['DO', 'GT', 'Unitedstates', 'EC', 'BR', 'Chile', 'Argentina', 'Angola', 'SN', 'ES', 'PT','Indonesia'];
+
+          if (mapaSVG) {
+            paises.forEach((pais, index) => {
+              let seletor = mapaSVG.querySelector(`.${pais}`) ? `.${pais}` : `#${pais}`;
+              gsap.to(seletor, {
+                fill: '#4E7A9B',
+                delay: index * 0.2, // Ajuste o delay conforme necessário
+                duration: 1,
+              });
+            });
+          }
+        }
+      });
+    }
+  }
+
   init() {
     if (this.sections.length) {
       this.animateSections();
-    }
-    return this; // Permite encadeamento de métodos
+      if (this.isMobile()) {
+        this.animateMapScroll();
+      }    }
+    return this;
   }
 }
-
