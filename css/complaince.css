@@ -4,16 +4,30 @@
   justify-content: center;
   gap: 80px;
   margin-top: 40px;
-
 }
 
 .swiper-slide.complaince {
-  background-image: url('../img/logo-bg.svg'); 
+  position: relative;
+}
+
+.svg-background-complaince svg {
+  width: 50%;
+  height: auto;
   background-position: -32%; 
   background-size: contain; 
   background-repeat: no-repeat;  
-  background-color: #fff;
 }
+
+.svg-background-complaince{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;  /* Certifique-se de que está atrás do conteúdo do slide */
+}
+
+
 
   .complaince {
     display: grid;

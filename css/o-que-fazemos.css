@@ -43,11 +43,18 @@ display: none;
    font: 500 2rem/1.125 "Hind", sans-serif;
    margin-bottom: 2rem;
  }
+
+ .o-que-fazemos p {
+  color: var(--bg);
+  font: 300 1rem/1.4 "Hind", sans-serif;
+  margin-bottom: 0.6rem;
+}
  
  .lista-servicos {
+  margin-top: 60px;
    display: grid;
    grid-template-columns: 1fr 1fr;
-   gap: 40px;
+   gap: 40px 10px;
  }
  
  .servico {

@@ -6,6 +6,7 @@ import ScrollAnima from './modules/scroll-anima.js';
 import MySwiper from './modules/mySwiper.js';
 import ConsoleTextEffect from './modules/text-effect.js';
 
+
 // const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
 // scrollAnima.init();
 
@@ -31,5 +32,8 @@ scrollAnima.init();
 new MySwiper();
 
 const targetElement = document.getElementById('typing');
+
+
+
 
 

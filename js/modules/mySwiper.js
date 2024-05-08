@@ -26,9 +26,9 @@ handleResize() {
       // Aplica o estado padrão do cabeçalho para mobile, independentemente do slide
       this.updateHeaderAndApplyClasses(-1); // Passa um valor específico que indica modo mobile
     }
-    if (this.swiper2) {
-      this.destroySwiper2(); // Destrói o swiper2 em dispositivos móveis
-    }
+    // if (this.swiper2) {
+    //   this.destroySwiper2(); // Destrói o swiper2 em dispositivos móveis
+    // }
   } else {
     if (!this.swiper) {
       this.initializeSwiper();
@@ -52,8 +52,9 @@ swiperInit() {
         const initialSlide = this.swiper.slides[this.swiper.activeIndex];
         this.animateContentIn(initialSlide);
         this.animateMap();
+        this.animateSVG(slide);        
         // Verifica se o slide atual é #quemsomos para inicializar o swiper2
-        this.checkSlideForSwiper2(); // Assegura que esta função verifica o slide atual e decide sobre a inicialização do swiper2
+        // this.checkSlideForSwiper2(); // Assegura que esta função verifica o slide atual e decide sobre a inicialização do swiper2
         
       }
   }, 0); // Um atraso de 0 ms é suficiente para colocar esta chamada no fim da fila do event loop
@@ -71,19 +72,14 @@ swiperInit() {
       hashNavigation: {
         watchState: true,
       },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: false,
-      }, 
-
-      on: {
+       on: {
         init: () => {
           this.swiperInit(); // Assume que swiperInit já faz o que está no método bind(this)
-          this.checkSlideForSwiper2(); // Adiciona a chamada aqui
+          // this.checkSlideForSwiper2(); // Adiciona a chamada aqui
         },
         slideChange: () => {
           this.slideChange(); // Atualiza conforme necessário, pode chamar outra lógica aqui também
-          this.checkSlideForSwiper2(); // Verifica em cada mudança de slide
+          // this.checkSlideForSwiper2(); // Verifica em cada mudança de slide
         },
         
       
@@ -97,6 +93,12 @@ swiperInit() {
             if (activeSlide.querySelector('svg')) { // Ajuste o seletor conforme necessário
               this.animateMap();
             }
+
+
+    // Especificamente anima o SVG dentro da 'svg-background' se existir
+    if (activeSlide.querySelector('.svg-background-complaince svg')) {
+      this.animateSVG(activeSlide);
+    }
           }
         },
       
@@ -110,20 +112,20 @@ swiperInit() {
     });
   }
 
-  initializeSwiper2() {
-    // Lógica para inicializar swiper2 aqui
-    this.swiper2 = new Swiper(".mySwiper2", {
-      direction: "horizontal",
-      mousewheel: true,
-      spaceBetween: 10,
-      grabCursor: false,
-      slidesPerView: 1,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  }
+  // initializeSwiper2() {
+  //   // Lógica para inicializar swiper2 aqui
+  //   this.swiper2 = new Swiper(".mySwiper2", {
+  //     direction: "horizontal",
+  //     mousewheel: true,
+  //     spaceBetween: 10,
+  //     grabCursor: false,
+  //     slidesPerView: 1,
+  //     navigation: {
+  //       nextEl: ".swiper-button-next",
+  //       prevEl: ".swiper-button-prev",
+  //     },
+  //   });
+  // }
 
   initialVisibility() {
     const pagination = document.querySelector('.swiper-pagination');
@@ -134,32 +136,33 @@ swiperInit() {
     this.updateHeaderAndApplyClasses(initialSlideIndex);
 }
 
-animateContentIn(slide) {
+    animateContentIn(slide) {
 
-   // Verifica se está em um dispositivo móvel e retorna cedo se verdadeiro
-   if (this.isMobile()) {
-    return; // Retorna imediatamente, evitando animações em dispositivos móveis
-  }
-  
-  const commonElements = slide.querySelectorAll('h2, h3, p, li, .destaque__institucional, img, .mySwiper2, .experiencia, experiencia::before, svg, #contact-form');
-  if (commonElements.length > 0) { 
-    gsap.fromTo(commonElements, 
-      { y: -30, opacity: 0 }, 
-      { 
-        y: 0, 
-        opacity: 1, 
-        duration: 0.5, 
-        stagger: 0.2, 
-        ease: "power1.out",
-        onComplete: () => {
-          if (!this.isMobile()) {
-            this.animateMap();
-          }
-        }// Esta é a função que você chamará quando a animação dos elementos terminar
+      // Verifica se está em um dispositivo móvel e retorna cedo se verdadeiro
+      if (this.isMobile()) {
+        return; // Retorna imediatamente, evitando animações em dispositivos móveis
       }
-    );
-  }
-}
+      
+      const commonElements = slide.querySelectorAll('h2, h3, p, li, .destaque__institucional, img, .mySwiper2, .experiencia, experiencia::before, svg, #contact-form');
+      if (commonElements.length > 0) { 
+        gsap.fromTo(commonElements, 
+          { y: -30, opacity: 0 }, 
+          { 
+            y: 0, 
+            opacity: 1, 
+            duration: 0.5, 
+            stagger: 0.2, 
+            ease: "power1.out",
+            onComplete: () => {
+              if (!this.isMobile()) {
+                this.animateMap();
+
+              }
+            }// Esta é a função que você chamará quando a animação dos elementos terminar
+          }
+        );
+      }
+    }
 
 animateMap() {
   const slideMapa = this.swiper.slides[this.swiper.activeIndex];
@@ -190,7 +193,34 @@ animateMap() {
   }
 }
 
+animateSVG(slide) {
+  const paths = slide.querySelectorAll('.cls-1');
 
+   paths.forEach(path => {
+       const length = path.getTotalLength();
+       path.style.strokeDasharray = length;
+       path.style.strokeDashoffset = length;
+       gsap.set(path, { fill: "none" })
+      //  path.style.fill = "none";  // Define explícitamente o preenchimento inicial
+
+       // Animação para "desenhar" o caminho
+       gsap.to(path, {
+           strokeDashoffset: 0,
+           delay: 2,
+           duration: 5,
+           ease: "none",  // Uso de easing linear
+           onComplete: () => {
+               // Preenche o caminho após a animação de desenho
+               gsap.to(path, {
+                   fill: "#F7F7F7",  // Cor especificada
+                   stroke: "none",
+                   duration: 0.1,
+                   ease: "none"  // Continua com easing linear
+               });
+           }
+       });
+   });
+}
 
 
 
@@ -202,16 +232,15 @@ animateMap() {
     }
   }
 
-  destroySwiper2() {
-    if (this.swiper2) {
-      this.swiper2.destroy(true, true);
-      this.swiper2 = null;
-    }
-  }
+  // destroySwiper2() {
+  //   if (this.swiper2) {
+  //     this.swiper2.destroy(true, true);
+  //     this.swiper2 = null;
+  //   }
+  // }
 
 
   slideChange() {
-
      // Verifica se o Swiper está definido e inicializado corretamente antes de tentar acessar suas propriedades
      if (!this.swiper || typeof this.swiper.realIndex === 'undefined') {
       console.log("Swiper não inicializado.");
@@ -239,7 +268,7 @@ animateMap() {
     if (pagination) pagination.style.display = displayStyle;
 
     // Aplica a classe 'menu-white' no slide 4 ou 6
-    const shouldApplyMenuWhite = [3, 5].includes(currentSlideIndex);
+    const shouldApplyMenuWhite = [4, 6].includes(currentSlideIndex);
     if (pagination) pagination.classList.toggle('menu-white', shouldApplyMenuWhite);
 
     // Remove 'active' class de todos os itens do menu
@@ -253,45 +282,145 @@ animateMap() {
 
   }
 
-updateHeaderAndApplyClasses(currentSlideIndex) {
-  const header = document.querySelector('.header_menu');
-  const logo = header.querySelector('a > img'); // Assumindo que o logo é o primeiro <img> dentro de um <a>
-  const menuLinks = header.querySelectorAll('.menu a');
-  const menuButton = document.querySelector('.menu-button');
 
-  // Caminhos para os logos
-  const originalLogoSrc = "./img/logo.svg";
-  const reducedLogoSrc = "./img/logo-reduce.svg";
-
-  // Resetando classes para evitar conflitos
-  header.classList.remove('minimal', 'dark');
-  logo.classList.remove('minimal', 'dark');
-  menuLinks.forEach(link => link.classList.remove('minimal', 'dark'));
-  menuButton.classList.remove('dark');
-
-  if (currentSlideIndex === -1 || this.isMobile()) {
-      // Se estamos no modo mobile ou precisamos resetar para o estado padrão
-      logo.src = originalLogoSrc; // Usar o logo original
-  } else {
-      // Ajustes com base no slide atual para desktop
-      if (currentSlideIndex >= 1) {
-          header.classList.add('minimal');
-          logo.src = reducedLogoSrc; // Muda para o logo reduzido
-          logo.classList.add('minimal');
-          menuLinks.forEach(link => link.classList.add('minimal'));
-      } else {
-          logo.src = originalLogoSrc; // Garante que o logo original é usado no primeiro slide
+  updateHeaderAndApplyClasses(currentSlideIndex) {
+    const header = document.querySelector('.header');
+    const headerMenu = document.querySelector('.header_menu');
+    const logo = document.querySelector('a > img'); // Assumindo que o logo é o primeiro <img> dentro de um <a>
+    const menuLinks = document.querySelectorAll('.menu a');
+    const menuButton = document.querySelector('.menu-button');
+  
+    // Caminhos para os logos
+    const originalLogoSrc = "./img/logo.svg";
+    const reducedLogoSrc = "./img/logo-reduzido.svg";
+  
+    // Captura o estado atual antes de modificar
+    const initialState = {
+      headerClass: header.classList.contains('dark'),
+      headerMenuClass: headerMenu.classList.contains('dark') || headerMenu.classList.contains('minimal'),
+      logoSrc: logo.src,
+      logoClass: logo.classList.contains('minimal'),
+      menuLinksClass: Array.from(menuLinks).map(link => link.classList.contains('minimal') || link.classList.contains('dark')),
+      menuButtonClass: menuButton.classList.contains('dark')
+    };
+  
+    // Função para comparar os estados e decidir sobre animações
+    const applyAnimationsIfNeeded = (newState) => {
+      if (newState.headerClass !== initialState.headerClass ||
+          newState.headerMenuClass !== initialState.headerMenuClass ||
+          newState.logoSrc !== initialState.logoSrc ||
+          newState.logoClass !== initialState.logoClass ||
+          !newState.menuLinksClass.every((value, index) => value === initialState.menuLinksClass[index]) ||
+          newState.menuButtonClass !== initialState.menuButtonClass) {
+        // Animação de opacidade para transição
+        gsap.fromTo([header, headerMenu, logo, menuLinks, menuButton], 
+                    { opacity: 0 },
+                    { duration: 0.5, opacity: 1 });
       }
-
-      // Aplica a classe "dark" em slides específicos
-      if ([1, 2, 4].includes(currentSlideIndex)) {
-          header.classList.add('dark');
-          menuButton.classList.add('dark');
-          logo.classList.add('dark');
-          menuLinks.forEach(link => link.classList.add('dark'));
-      }
+    };
+  
+    // Resetando classes para evitar conflitos
+    header.classList.remove('dark');
+    headerMenu.classList.remove('minimal', 'dark');
+    logo.classList.remove('minimal');
+    menuLinks.forEach(link => link.classList.remove('minimal', 'dark'));
+    menuButton.classList.remove('dark');
+  
+    if (currentSlideIndex === -1 || this.isMobile()) {
+        logo.src = originalLogoSrc; // Usar o logo original
+    } else {
+        if (currentSlideIndex >= 1) {
+            headerMenu.classList.add('minimal');
+            logo.src = reducedLogoSrc;
+            logo.classList.add('minimal');
+            menuLinks.forEach(link => link.classList.add('minimal'));
+        } else {
+            logo.src = originalLogoSrc;
+        }
+  
+        if ([1, 2, 3, 5].includes(currentSlideIndex)) {
+            header.classList.add('dark');
+            headerMenu.classList.add('dark');
+            menuButton.classList.add('dark');
+            menuLinks.forEach(link => link.classList.add('dark'));
+        }
+    }
+  
+    // Captura o novo estado após modificações
+    const newState = {
+      headerClass: header.classList.contains('dark'),
+      headerMenuClass: headerMenu.classList.contains('dark') || headerMenu.classList.contains('minimal'),
+      logoSrc: logo.src,
+      logoClass: logo.classList.contains('minimal'),
+      menuLinksClass: Array.from(menuLinks).map(link => link.classList.contains('minimal') || link.classList.contains('dark')),
+      menuButtonClass: menuButton.classList.contains('dark')
+    };
+  
+    // Aplica animações se houver mudanças reais
+    applyAnimationsIfNeeded(newState);
   }
-}
+  
+  
+  
+  // updateHeaderAndApplyClasses(currentSlideIndex) {
+  //   const header = document.querySelector('.header');
+  //   const headerMenu = document.querySelector('.header_menu');
+  //   const logo = document.querySelector('a > img'); // Assumindo que o logo é o primeiro <img> dentro de um <a>
+  //   const menuLinks = document.querySelectorAll('.menu a');
+  //   const menuButton = document.querySelector('.menu-button');
+  
+  //   // Caminhos para os logos
+  //   const originalLogoSrc = "./img/logo.svg";
+  //   const reducedLogoSrc = "./img/logo-reduzido.svg";
+  
+  //   // Animação para resetar estilos antes de aplicar novos
+  //   gsap.to([header, headerMenu, logo, menuLinks, menuButton], {
+  //     duration: 0.3,
+  //     opacity: 0,
+  //     onComplete: () => {
+  //       // Resetando classes para evitar conflitos
+  //       header.classList.remove('dark');
+  //       headerMenu.classList.remove('minimal', 'dark');
+  //       logo.classList.remove('minimal');
+  //       menuLinks.forEach(link => link.classList.remove('minimal', 'dark'));
+  //       menuButton.classList.remove('dark');
+  
+  //       // Aplica configurações de classe e src após reset
+  //       if (currentSlideIndex === -1 || this.isMobile()) {
+  //         // Se estamos no modo mobile ou precisamos resetar para o estado padrão
+  //         logo.src = originalLogoSrc; // Usar o logo original
+  //       } else {
+  //         // Ajustes com base no slide atual para desktop
+  //         if (currentSlideIndex >= 1) {
+  //           headerMenu.classList.add('minimal');
+  //           logo.src = reducedLogoSrc; // Muda para o logo reduzido
+  //           logo.classList.add('minimal');
+  //           menuLinks.forEach(link => link.classList.add('minimal'));
+  //         } else {
+  //           logo.src = originalLogoSrc; // Garante que o logo original é usado no primeiro slide
+  //         }
+  
+  //         // Aplica a classe "dark" em slides específicos
+  //         if ([1, 2, 3, 5].includes(currentSlideIndex)) {
+  //           header.classList.add('dark');
+  //           headerMenu.classList.add('dark');
+  //           menuButton.classList.add('dark');
+  //           menuLinks.forEach(link => link.classList.add('dark'));
+  //         }
+  //       }
+  
+  //       // Animação para reintroduzir os estilos modificados
+  //       gsap.to([header, headerMenu, logo, menuLinks, menuButton], {
+  //         duration: 0.3,
+  //         opacity: 1
+  //       });
+  //     }
+  //   });
+  // }
+  
+
+
+
 
 
 checkSlideForSwiper2() {
@@ -333,17 +462,21 @@ checkIfQuemSomosSlide(slide) {
 
 
 
-  setupReducedMenuButton() {
-    // Isso assegura que o evento seja aplicado mesmo se o botão mudar
-    document.addEventListener('click', (event) => {
-        if (event.target.matches('.menu-button') || event.target.closest('.menu-button')) {
-            const menu = document.querySelector('#menu'); // Ajuste o seletor conforme necessário
-            if (menu) {
-                menu.classList.toggle('is-expanded');
-            }
-        }
-    });
+setupReducedMenuButton() {
+  const menu = document.querySelector('#menu'); // Certifique-se de que este seletor corresponde ao seu menu
+  if (menu) {
+    menu.classList.add('is-expanded'); // Adiciona a classe 'is-expanded' logo no início
+  }
+
+  document.addEventListener('click', (event) => {
+    if (event.target.matches('.menu-button') || event.target.closest('.menu-button')) {
+      if (menu) {
+        menu.classList.toggle('is-expanded');
+      }
+    }
+  });
 }
+
 
 
   activateCurrentMenuItem(currentSlideIndex) {

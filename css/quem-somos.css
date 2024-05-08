@@ -2,17 +2,17 @@
 .slide-content-quemsomos {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-content: space-between; /* Espaço entre os principais eixos */
-  max-width: 1200px; /* Largura máxima do container */
-  box-sizing: border-box; /* Garante que o padding não adicione à largura total */
-  gap: 0px 40px;
+  justify-content: space-between; 
+  max-width: 1200px;
+  box-sizing: border-box; 
+  gap: 0px 60px;
   align-items: center;
   margin-top: 40px;
-}
+} 
 
-.swiper-slide.quemsomos {
+/* .swiper-slide.quemsomos {
   background-color: #F7F7F7;
-}
+} */
 
 .quem-somos {
   display: flex;
@@ -31,29 +31,10 @@
   font: 300 1rem/1.4 "Hind", sans-serif;
 }
 
-/* .socios {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  height: 320px;
+.socios {
   display: flex;
   flex-direction: column;
-  padding: 10px 0;
-} */
-
-
-/* .socios::-webkit-scrollbar {
-  width: 20px; 
 }
-
-.socios::-webkit-scrollbar-thumb {
-  background: linear-gradient(var(--primary50), var(--primary50)); 
-  border-left: 4px solid rgb(178, 199, 203); 
-  border-right: 4px solid rgb(178, 199, 203); 
-  border-radius: 0px; 
-}
-.socios::-webkit-scrollbar-track {
-  background: rgb(178, 199, 203); 
-} */
 
 .mySwiper2 {
  background-color: var(--bg); 
@@ -75,7 +56,7 @@
   border-radius: 6px;
   /* background-color: var(--bg); */
   box-shadow: none;
-  padding: 20px 60px;
+  padding: 10px;
   position: relative;
 }
 
@@ -87,7 +68,7 @@
   display: flex;
   gap: 10px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .socio-nome img {
@@ -195,6 +176,8 @@
     padding: 0;
   }
 
+ 
+
   .socio {
     background-color: none;
     box-shadow: none;
@@ -233,4 +216,4 @@
   .experiencia p:last-child {
     margin-bottom: 0;
   }
-}
+} 

@@ -42,7 +42,7 @@ export default class ScrollAnima {
         trigger: sectionMapa,
         start: "top center",
         onEnter: () => { // Quando a seção do mapa entra na visão
-          const mapaSVG = sectionMapa.querySelector('svg');
+          // const mapaSVG = sectionMapa.querySelector('svg');
           const paises = ['DO', 'GT', 'Unitedstates', 'EC', 'BR', 'Chile', 'Argentina', 'Angola', 'SN', 'ES', 'PT','Indonesia'];
 
           if (mapaSVG) {
