@@ -4,13 +4,14 @@
   align-items: center;
   justify-content: center;
   margin-top: 40px;
-  gap: 1px;
+  gap: 60px;
 }
+
 
 .institucional-texto {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 }
 
 .institucional-texto h2 {
@@ -21,13 +22,13 @@
 .institucional-texto p {
   color: var(--secondary);
   font: 300 1rem/1.4 "Hind", sans-serif;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 .destaques__institucional {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .destaque__institucional {
@@ -35,33 +36,50 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 16px;
+  padding: 10px;
   gap: 4px;
   background-color: var(--primary);
-  border-radius: 12px;
+  border-radius: 6px;
+  min-height: 60px;
+}
+
+.destaque__institucional:nth-child(2) {
+  background-color: var(--primary90);
+}
+
+.destaque__institucional:nth-child(3) {
+  background-color: var(--primary80);
 }
 
 .destaque__titulo {
-  font: 500 1.2rem/1.4 "Hind", sans-serif;
+  font: 500 1rem/1.2 "Hind", sans-serif;
   color: var(--bg);
   text-align: center;
+  max-width:40ch
 }
-
-.destaque__institucional span { 
-  font: 300 1rem/1 "Hind", sans-serif;
-  color: var(--bg);
-  opacity: 0.7;
-  margin-bottom: 0;
-  text-align: center;
-}
-
-/* .svg-container svg {
-  max-width: 100%;
-  max-height: 100%;
-} */
 
 .svg-container {
   display: block; /* Isso garante que a div se ajuste ao conteúdo */
+}
+
+.slide-content-institucional, .slide-content-parcerias {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.parcerias-globais h3 {
+  color: var(--text);
+  font: 500 2rem/1.125 "Hind", sans-serif;
+  margin-bottom: 12px;
+}
+
+.parcerias-globais p {
+  color: var(--text);
+  font: 300 1rem/1.4 "Hind", sans-serif;
+  margin-bottom:10px;
 }
 
 

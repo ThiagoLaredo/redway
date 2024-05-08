@@ -24,7 +24,7 @@
     background-blend-mode: lighten;
     background-color: var(--primary);
     overflow: hidden;
-    opacity: 0.4;
+    opacity: 0.7;
   }
   
   .intro_info {
@@ -41,12 +41,12 @@
   width: 100%;
 } 
 
-.intro_info h1 {
+/* .intro_info h1 {
   font: 500 3.2rem/1.25 "Hind", sans-serif;
   color: var(--bg);
   position: relative;
   width: 70vw;
-}
+} */
 
 .intro_info span {
   font: 300 1.4rem/1.4 "Hind", sans-serif;

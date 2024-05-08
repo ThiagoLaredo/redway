@@ -22,7 +22,7 @@ class ConsoleTextEffect {
 // Uso com callback para iniciar a animação do <span>
 document.addEventListener('DOMContentLoaded', () => {
   const elementoParaDigitar = document.getElementById('typing');
-  const textoParaDigitar = 'A larga experiência na convergência do mercado financeiro com a economia real é o nosso diferencial.';
+  const textoParaDigitar = 'Somos uma gestora com portfólio de investimentos alternativos, focados em infraestrutura, crédito e operações estruturadas.';
   const velocidadeDeDigitacao = 30; // Velocidade em milissegundos
   new ConsoleTextEffect(elementoParaDigitar, textoParaDigitar, velocidadeDeDigitacao, () => {
     // Aqui começa o efeito no <span> após o término do typing
