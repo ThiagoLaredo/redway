@@ -11,11 +11,8 @@
 }
 
 .svg-background-complaince svg {
-  width: 50%;
+  width: 60%;
   height: auto;
-  background-position: -32%; 
-  background-size: contain; 
-  background-repeat: no-repeat;  
 }
 
 .svg-background-complaince{
@@ -106,6 +103,11 @@ ul.politicas li::before {
 
   .swiper-slide.complaince {
     background-size: cover; 
+  }
+
+  .svg-background-complaince svg {
+    width: 100%;
+    height: auto;
   }
   
   }

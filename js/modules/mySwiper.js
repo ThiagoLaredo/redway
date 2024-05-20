@@ -10,7 +10,6 @@ export default class MySwiper {
       // Adiciona um ouvinte de evento para redimensionamento da janela
       window.addEventListener('resize', this.handleResize.bind(this));
       this.handleResize();
-      this.setupReducedMenuButton();
     });
   }
 
@@ -96,7 +95,7 @@ swiperInit() {
 
 
     // Especificamente anima o SVG dentro da 'svg-background' se existir
-    if (activeSlide.querySelector('.svg-background-complaince svg')) {
+    if (activeSlide.querySelector('.svg-quemsomos svg')) {
       this.animateSVG(activeSlide);
     }
           }
@@ -194,33 +193,28 @@ animateMap() {
 }
 
 animateSVG(slide) {
-  const paths = slide.querySelectorAll('.cls-1');
+  const paths = slide.querySelectorAll('.cls-2');
 
-   paths.forEach(path => {
-       const length = path.getTotalLength();
-       path.style.strokeDasharray = length;
-       path.style.strokeDashoffset = length;
-       gsap.set(path, { fill: "none" })
-      //  path.style.fill = "none";  // Define explícitamente o preenchimento inicial
+  paths.forEach(path => {
+    if (path instanceof SVGPathElement) {  // Verificação para garantir que o elemento é um SVGPathElement
+      const length = path.getTotalLength();
+      path.style.strokeDasharray = length;
+      path.style.strokeDashoffset = length;
+      gsap.set(path, { fill: "none" });  // Define explicitamente o preenchimento inicial
 
-       // Animação para "desenhar" o caminho
-       gsap.to(path, {
-           strokeDashoffset: 0,
-           delay: 2,
-           duration: 5,
-           ease: "none",  // Uso de easing linear
-           onComplete: () => {
-               // Preenche o caminho após a animação de desenho
-               gsap.to(path, {
-                   fill: "#F7F7F7",  // Cor especificada
-                   stroke: "none",
-                   duration: 0.1,
-                   ease: "none"  // Continua com easing linear
-               });
-           }
-       });
-   });
+      // Animação para "desenhar" o caminho
+      gsap.to(path, {
+        strokeDashoffset: 0,
+        duration: 5,
+        ease: "none",  // Uso de easing linear
+    
+      });
+    } else {
+      console.error('Elemento não é um SVGPathElement:', path);
+    }
+  });
 }
+
 
 
 
@@ -288,7 +282,6 @@ animateSVG(slide) {
     const headerMenu = document.querySelector('.header_menu');
     const logo = document.querySelector('a > img'); // Assumindo que o logo é o primeiro <img> dentro de um <a>
     const menuLinks = document.querySelectorAll('.menu a');
-    const menuButton = document.querySelector('.menu-button');
   
     // Caminhos para os logos
     const originalLogoSrc = "./img/logo.svg";
@@ -301,7 +294,6 @@ animateSVG(slide) {
       logoSrc: logo.src,
       logoClass: logo.classList.contains('minimal'),
       menuLinksClass: Array.from(menuLinks).map(link => link.classList.contains('minimal') || link.classList.contains('dark')),
-      menuButtonClass: menuButton.classList.contains('dark')
     };
   
     // Função para comparar os estados e decidir sobre animações
@@ -312,19 +304,20 @@ animateSVG(slide) {
           newState.logoClass !== initialState.logoClass ||
           !newState.menuLinksClass.every((value, index) => value === initialState.menuLinksClass[index]) ||
           newState.menuButtonClass !== initialState.menuButtonClass) {
-        // Animação de opacidade para transição
-        gsap.fromTo([header, headerMenu, logo, menuLinks, menuButton], 
+        // Animação de opacidade para transição, excluindo menuButton
+        gsap.fromTo([header, headerMenu, logo, menuLinks], 
                     { opacity: 0 },
                     { duration: 0.5, opacity: 1 });
       }
     };
+    
+    
   
     // Resetando classes para evitar conflitos
     header.classList.remove('dark');
     headerMenu.classList.remove('minimal', 'dark');
     logo.classList.remove('minimal');
     menuLinks.forEach(link => link.classList.remove('minimal', 'dark'));
-    menuButton.classList.remove('dark');
   
     if (currentSlideIndex === -1 || this.isMobile()) {
         logo.src = originalLogoSrc; // Usar o logo original
@@ -341,7 +334,6 @@ animateSVG(slide) {
         if ([1, 2, 3, 5].includes(currentSlideIndex)) {
             header.classList.add('dark');
             headerMenu.classList.add('dark');
-            menuButton.classList.add('dark');
             menuLinks.forEach(link => link.classList.add('dark'));
         }
     }
@@ -353,7 +345,6 @@ animateSVG(slide) {
       logoSrc: logo.src,
       logoClass: logo.classList.contains('minimal'),
       menuLinksClass: Array.from(menuLinks).map(link => link.classList.contains('minimal') || link.classList.contains('dark')),
-      menuButtonClass: menuButton.classList.contains('dark')
     };
   
     // Aplica animações se houver mudanças reais
@@ -361,97 +352,36 @@ animateSVG(slide) {
   }
   
   
-  
-  // updateHeaderAndApplyClasses(currentSlideIndex) {
-  //   const header = document.querySelector('.header');
-  //   const headerMenu = document.querySelector('.header_menu');
-  //   const logo = document.querySelector('a > img'); // Assumindo que o logo é o primeiro <img> dentro de um <a>
-  //   const menuLinks = document.querySelectorAll('.menu a');
-  //   const menuButton = document.querySelector('.menu-button');
-  
-  //   // Caminhos para os logos
-  //   const originalLogoSrc = "./img/logo.svg";
-  //   const reducedLogoSrc = "./img/logo-reduzido.svg";
-  
-  //   // Animação para resetar estilos antes de aplicar novos
-  //   gsap.to([header, headerMenu, logo, menuLinks, menuButton], {
-  //     duration: 0.3,
-  //     opacity: 0,
-  //     onComplete: () => {
-  //       // Resetando classes para evitar conflitos
-  //       header.classList.remove('dark');
-  //       headerMenu.classList.remove('minimal', 'dark');
-  //       logo.classList.remove('minimal');
-  //       menuLinks.forEach(link => link.classList.remove('minimal', 'dark'));
-  //       menuButton.classList.remove('dark');
-  
-  //       // Aplica configurações de classe e src após reset
-  //       if (currentSlideIndex === -1 || this.isMobile()) {
-  //         // Se estamos no modo mobile ou precisamos resetar para o estado padrão
-  //         logo.src = originalLogoSrc; // Usar o logo original
-  //       } else {
-  //         // Ajustes com base no slide atual para desktop
-  //         if (currentSlideIndex >= 1) {
-  //           headerMenu.classList.add('minimal');
-  //           logo.src = reducedLogoSrc; // Muda para o logo reduzido
-  //           logo.classList.add('minimal');
-  //           menuLinks.forEach(link => link.classList.add('minimal'));
-  //         } else {
-  //           logo.src = originalLogoSrc; // Garante que o logo original é usado no primeiro slide
-  //         }
-  
-  //         // Aplica a classe "dark" em slides específicos
-  //         if ([1, 2, 3, 5].includes(currentSlideIndex)) {
-  //           header.classList.add('dark');
-  //           headerMenu.classList.add('dark');
-  //           menuButton.classList.add('dark');
-  //           menuLinks.forEach(link => link.classList.add('dark'));
-  //         }
-  //       }
-  
-  //       // Animação para reintroduzir os estilos modificados
-  //       gsap.to([header, headerMenu, logo, menuLinks, menuButton], {
-  //         duration: 0.3,
-  //         opacity: 1
-  //       });
-  //     }
-  //   });
-  // }
-  
 
-
-
-
-
-checkSlideForSwiper2() {
-  // Certifica-se de que o swiper está definido e possui slides.
-  if (!this.swiper || !this.swiper.slides) {
-    // Log removido para evitar mensagens desnecessárias, já que isso pode ocorrer em condições normais.
-    return;
-  }
+// checkSlideForSwiper2() {
+//   // Certifica-se de que o swiper está definido e possui slides.
+//   if (!this.swiper || !this.swiper.slides) {
+//     // Log removido para evitar mensagens desnecessárias, já que isso pode ocorrer em condições normais.
+//     return;
+//   }
   
-  // Aqui, nós obtemos diretamente o índice do slide #quemsomos
-  const indexOfQuemSomosSlide = this.swiper.slides.findIndex(slide => 
-    slide.getAttribute('data-hash') === 'quemsomos');
+//   // Aqui, nós obtemos diretamente o índice do slide #quemsomos
+//   const indexOfQuemSomosSlide = this.swiper.slides.findIndex(slide => 
+//     slide.getAttribute('data-hash') === 'quemsomos');
 
-  // Se não encontramos o slide #quemsomos (por exemplo, -1 retornado por findIndex), saímos da função.
-  // Isso evita a execução desnecessária em situações onde o slide relevante não está presente.
-  if (indexOfQuemSomosSlide === -1) {
-    return;
-  }
+//   // Se não encontramos o slide #quemsomos (por exemplo, -1 retornado por findIndex), saímos da função.
+//   // Isso evita a execução desnecessária em situações onde o slide relevante não está presente.
+//   if (indexOfQuemSomosSlide === -1) {
+//     return;
+//   }
 
-  // Executa a lógica somente se estivermos no slide correto.
-  if (this.swiper.realIndex === indexOfQuemSomosSlide) {
-    if (!this.swiper2 || this.swiper2.destroyed) {
-      this.initializeSwiper2();
-    } // Não há necessidade de um else aqui, dado que a função agora sai cedo se não estamos no slide correto.
-  } else {
-    // Destruir o swiper2 se estiver inicializado e se não estivermos no slide #quemsomos.
-    if (this.swiper2 && !this.swiper2.destroyed) {
-      this.destroySwiper2();
-    }
-  }
-}
+//   // Executa a lógica somente se estivermos no slide correto.
+//   if (this.swiper.realIndex === indexOfQuemSomosSlide) {
+//     if (!this.swiper2 || this.swiper2.destroyed) {
+//       this.initializeSwiper2();
+//     } // Não há necessidade de um else aqui, dado que a função agora sai cedo se não estamos no slide correto.
+//   } else {
+//     // Destruir o swiper2 se estiver inicializado e se não estivermos no slide #quemsomos.
+//     if (this.swiper2 && !this.swiper2.destroyed) {
+//       this.destroySwiper2();
+//     }
+//   }
+// }
 
 
 
@@ -461,21 +391,6 @@ checkIfQuemSomosSlide(slide) {
 }
 
 
-
-setupReducedMenuButton() {
-  const menu = document.querySelector('#menu'); // Certifique-se de que este seletor corresponde ao seu menu
-  if (menu) {
-    menu.classList.add('is-expanded'); // Adiciona a classe 'is-expanded' logo no início
-  }
-
-  document.addEventListener('click', (event) => {
-    if (event.target.matches('.menu-button') || event.target.closest('.menu-button')) {
-      if (menu) {
-        menu.classList.toggle('is-expanded');
-      }
-    }
-  });
-}
 
 
 

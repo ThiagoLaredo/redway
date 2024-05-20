@@ -1,6 +1,8 @@
 .o-que-fazemos {
-   width: 55vw;
+   /* width: 55vw; */
    margin-top: 40px;
+   display: grid;
+   grid-template-columns: 0.66fr;
 
  }
 
@@ -52,9 +54,10 @@ display: none;
  
  .lista-servicos {
   margin-top: 60px;
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   gap: 40px 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas de igual largura */
+  grid-template-rows: 1fr 1fr; /* Duas linhas de igual altura */
+  gap: 40px 100px; /* Espaçamento entre linhas e colunas */
  }
  
  .servico {
@@ -79,16 +82,18 @@ display: none;
    font: 300 1rem/1.4 "Hind", sans-serif;
  }
  
+
  
  @media (max-width: 800px) {
  
    .slide-content-oquefazemos {
-     width: 80vw;
+     width: 90vw;
     }
  
     .o-que-fazemos {
-     width: 90vw;
-     margin: 0;
+      grid-template-columns: 1fr;
+      margin: 0;
+     padding-top: 360px;
    }
  
    .swiper-slide.oquefazemos {
@@ -102,24 +107,16 @@ display: none;
     height: 100%;
   }
   
-  .video-background {
-    display: none;
+  .video-background-wrapper {
+    position: absolute;
+    top: -60px;
+    right: 0;
+    width: 100%;
+    height: 30%;
+    overflow: hidden;
   }
 
-  .container-video {
-    text-align: center; /* Centraliza o vídeo */
-    display: block;
 
-}
-
- .video-mobile {
-    max-width: 100%; /* Garante que o vídeo não seja maior que o container */
-    height: auto; /* Mantém a proporção do vídeo */
-    object-position: contain;
-    display: block;
- }
-
- 
    .lista-servicos {
      grid-template-columns: 1fr;
      gap: 60px;
