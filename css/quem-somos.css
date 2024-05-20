@@ -1,7 +1,7 @@
 
 .slide-content-quemsomos {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   justify-content: space-between; 
   max-width: 1200px;
   box-sizing: border-box; 
@@ -16,14 +16,29 @@
 
 .quem-somos {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
   gap: 20px;
-  margin-bottom: 2rem;
+}
+
+.svg-quemsomos svg {
+  width: 100%;
+  height: 100%;
+  align-self: center;
+}
+
+.svg-quemsomos {
+  width: 100%;
+  height: 260px;
+  background-color: var(--primary);
+  padding: 20px
 }
 
 .quem-somos h2 {
   color: var(--text);
   font: 500 2rem/1.125 "Hind", sans-serif;
+  margin-bottom: 20px;
 }
 
 .quem-somos p {
@@ -36,18 +51,6 @@
   flex-direction: column;
 }
 
-.mySwiper2 {
- background-color: var(--bg); 
- border-radius: 8px;
-}
-
-.swiper-button-next, .swiper-button-prev {
-  color: var(--primary);
-}
-
-.swiper-button-next:after, .swiper-button-prev:after {
-  font-size: 32px;
-}
 
 .socio {
   display: flex;
@@ -127,10 +130,6 @@
 
 @media (max-width: 800px) {
 
-  .swiper-slide.quemsomos {
-    background: linear-gradient(to top, var(--secondary) 0%, var(--secondary) 440px, #F7F7F7 440px);
-  }
- 
   .slide-content-quemsomos {
     display: flex;
     flex-direction: column;
@@ -139,50 +138,33 @@
     /* padding-bottom: 60px; */
   }
 
-  .mySwiper2 {
-    padding-bottom: 60px;
+  .quem-somos {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-bottom: 2rem;
   }
 
-  .mySwiper2 .swiper-slide {
-    padding: 40px 0;
-    border-bottom: 1px dotted var(--primary);
-  }
-  
-  .mySwiper2 .swiper-slide:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-
-  .mySwiper2 .swiper-slide:first-child {
-    padding-top: 0;
-  }
-
-  .mySwiper2 {
-    background-color: transparent; 
-   }
-   
-   .swiper-button-next, .swiper-button-prev {
-     display: none;
-   }
-   
+  .svg-quemsomos {
+    width: 30%;
+    height: 30%;
+    background-color: var(--primary);
+    padding: 10px;
+}
+ 
   .quem-somos p {
     margin-bottom: 20px;
   }
 
   .socios {
-    overflow-y:inherit;
-    height: auto;
-    background-color: none; 
-    padding: 0;
+   gap: 16px;
   }
 
- 
-
   .socio {
-    background-color: none;
-    box-shadow: none;
     padding: 0;
-    border-bottom: 1px dotted var(--primary);
   }
 
   .socio:last-child {

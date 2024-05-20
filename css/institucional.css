@@ -31,6 +31,11 @@
   gap: 12px;
 }
 
+.destaques__institucional h3 {
+  color: var(--secondary);
+  font: 500 1rem/1.4 "Hind", sans-serif;
+}
+
 .destaque__institucional {
   display: flex;
   flex-direction: column;
@@ -39,7 +44,6 @@
   padding: 10px;
   gap: 4px;
   background-color: var(--primary);
-  border-radius: 6px;
   min-height: 60px;
 }
 
@@ -85,14 +89,14 @@
 
 @media (max-width: 700px) {
   
-  .slide-content-institucional {
+  .slide-content-institucional, .slide-content-parcerias {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 40px;
     margin-top: 0;
   }
 
   .destaque__institucional {
-    min-height: 140px;
+    min-height: 100px;
   }
 
   .svg-container svg {
