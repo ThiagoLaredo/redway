@@ -10,6 +10,7 @@ export default class MySwiper {
       // Adiciona um ouvinte de evento para redimensionamento da janela
       window.addEventListener('resize', this.handleResize.bind(this));
       this.handleResize();
+
     });
   }
 
@@ -25,9 +26,6 @@ handleResize() {
       // Aplica o estado padrão do cabeçalho para mobile, independentemente do slide
       this.updateHeaderAndApplyClasses(-1); // Passa um valor específico que indica modo mobile
     }
-    // if (this.swiper2) {
-    //   this.destroySwiper2(); // Destrói o swiper2 em dispositivos móveis
-    // }
   } else {
     if (!this.swiper) {
       this.initializeSwiper();
@@ -51,10 +49,8 @@ swiperInit() {
         const initialSlide = this.swiper.slides[this.swiper.activeIndex];
         this.animateContentIn(initialSlide);
         this.animateMap();
-        this.animateSVG(slide);        
-        // Verifica se o slide atual é #quemsomos para inicializar o swiper2
-        // this.checkSlideForSwiper2(); // Assegura que esta função verifica o slide atual e decide sobre a inicialização do swiper2
-        
+        this.animateSVG(initialSlide);
+        this.animateNumbers(); // Garante que os números sejam animados na inicialização    
       }
   }, 0); // Um atraso de 0 ms é suficiente para colocar esta chamada no fim da fila do event loop
 }
@@ -87,19 +83,19 @@ swiperInit() {
           if (this.swiper && this.swiper.slides && this.swiper.activeIndex !== undefined) {
             const activeSlide = this.swiper.slides[this.swiper.activeIndex];
             this.animateContentIn(activeSlide);
-        
+   
             // Verifique se o slide atual contém o mapa
             if (activeSlide.querySelector('svg')) { // Ajuste o seletor conforme necessário
               this.animateMap();
             }
-
-
-    // Especificamente anima o SVG dentro da 'svg-background' se existir
-    if (activeSlide.querySelector('.svg-quemsomos svg')) {
-      this.animateSVG(activeSlide);
-    }
+          // Especificamente anima o SVG dentro da 'svg-background' se existir
+          if (activeSlide.querySelector('.svg-quemsomos svg')) {
+            this.animateSVG(activeSlide);
           }
-        },
+          this.animateNumbers(); // Chama a função de animação dos números na mudança de slides
+
+        }
+      },
       
         // Evento chamado quando a transição termina
         slideChangeTransitionEnd: () => {
@@ -111,20 +107,6 @@ swiperInit() {
     });
   }
 
-  // initializeSwiper2() {
-  //   // Lógica para inicializar swiper2 aqui
-  //   this.swiper2 = new Swiper(".mySwiper2", {
-  //     direction: "horizontal",
-  //     mousewheel: true,
-  //     spaceBetween: 10,
-  //     grabCursor: false,
-  //     slidesPerView: 1,
-  //     navigation: {
-  //       nextEl: ".swiper-button-next",
-  //       prevEl: ".swiper-button-prev",
-  //     },
-  //   });
-  // }
 
   initialVisibility() {
     const pagination = document.querySelector('.swiper-pagination');
@@ -135,34 +117,116 @@ swiperInit() {
     this.updateHeaderAndApplyClasses(initialSlideIndex);
 }
 
-    animateContentIn(slide) {
+    // animateContentIn(slide) {
 
-      // Verifica se está em um dispositivo móvel e retorna cedo se verdadeiro
-      if (this.isMobile()) {
-        return; // Retorna imediatamente, evitando animações em dispositivos móveis
-      }
+    //   // Verifica se está em um dispositivo móvel e retorna cedo se verdadeiro
+    //   if (this.isMobile()) {
+    //     return; // Retorna imediatamente, evitando animações em dispositivos móveis
+    //   }
       
-      const commonElements = slide.querySelectorAll('h2, h3, p, li, .destaque__institucional, img, .mySwiper2, .experiencia, experiencia::before, svg, #contact-form');
-      if (commonElements.length > 0) { 
-        gsap.fromTo(commonElements, 
-          { y: -30, opacity: 0 }, 
-          { 
-            y: 0, 
-            opacity: 1, 
-            duration: 0.5, 
-            stagger: 0.2, 
+    //   const commonElements = slide.querySelectorAll('h2, h3, p, li, .destaque__institucional, img, .mySwiper2, .experiencia, experiencia::before, svg, #contact-form');
+    //   if (commonElements.length > 0) { 
+    //     gsap.fromTo(commonElements, 
+    //       { y: -30, opacity: 0 }, 
+    //       { 
+    //         y: 0, 
+    //         opacity: 1, 
+    //         duration: 0.5, 
+    //         stagger: 0.2, 
+    //         ease: "power1.out",
+    //         onComplete: () => {
+    //           if (!this.isMobile()) {
+    //             this.animateMap();
+    //           }
+    //         animateNumbers(); // Adiciona a chamada à função de animação dos números
+    //         }// Esta é a função que você chamará quando a animação dos elementos terminar
+    //       }
+    //     );
+    //   }
+    // }
+
+    animateContentIn(slide) {
+      if (this.isMobile()) {
+        return;
+      }
+  
+      const commonElements = slide.querySelectorAll('h2, h3, p, li, span, .destaque__institucional, img, .mySwiper2, .experiencia, experiencia::before, svg, #contact-form');
+      if (commonElements.length > 0) {
+        gsap.fromTo(commonElements,
+          { y: -30, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.5,
+            stagger: 0.2,
             ease: "power1.out",
             onComplete: () => {
               if (!this.isMobile()) {
                 this.animateMap();
-
               }
-            }// Esta é a função que você chamará quando a animação dos elementos terminar
+              this.animateNumbers(); // Chama a função de animação dos números
+            }
           }
         );
+      } else {
+        this.animateNumbers();
       }
     }
-
+  
+    // animateNumbers() {
+    //   const numberElements = document.querySelectorAll('.numero');
+  
+    //   numberElements.forEach(element => {
+    //     const endValue = parseInt(element.getAttribute('data-end-value'), 10);
+  
+    //     gsap.fromTo(element, 
+    //       { innerHTML: 0 }, 
+    //       { 
+    //         innerHTML: endValue, 
+    //         duration: 5, 
+    //         ease: "power2.out",
+    //         snap: { innerHTML: 1 },
+    //         onUpdate: function () {
+    //           element.innerHTML = Math.round(this.targets()[0].innerHTML);
+    //         }
+    //       });
+    //   });
+    // }
+  
+    animateNumbers() {
+      const numberElements = document.querySelectorAll('.numero');
+    
+      numberElements.forEach(element => {
+        const endValue = parseInt(element.getAttribute('data-end-value'), 10);
+        const isBillion = endValue === 1000; // Verifica se o valor é 1000
+    
+        gsap.fromTo(element, 
+          { innerHTML: 0 }, 
+          { 
+            innerHTML: endValue, 
+            duration: 5, 
+            ease: "power2.out",
+            snap: { innerHTML: 1 },
+            onUpdate: function () {
+              if (isBillion) {
+                element.innerHTML = "+ " + (this.targets()[0].innerHTML >= endValue ? "1 BI" : "0");
+              } else {
+                element.innerHTML = "+ " + Math.round(this.targets()[0].innerHTML);
+              }
+            },
+            onComplete: function () {
+              if (isBillion) {
+                element.innerHTML = "+ 1 BI";
+              } else {
+                element.innerHTML = "+ " + endValue;
+              }
+            }
+          });
+      });
+    }
+    
+  
+    
 animateMap() {
   const slideMapa = this.swiper.slides[this.swiper.activeIndex];
   console.log(slideMapa);
@@ -216,8 +280,6 @@ animateSVG(slide) {
 }
 
 
-
-
   destroySwiper() {
     // Verifica se o Swiper existe antes de tentar destruí-lo
     if (this.swiper !== null) {
@@ -225,13 +287,6 @@ animateSVG(slide) {
       this.swiper = null; // Reseta a referência do Swiper
     }
   }
-
-  // destroySwiper2() {
-  //   if (this.swiper2) {
-  //     this.swiper2.destroy(true, true);
-  //     this.swiper2 = null;
-  //   }
-  // }
 
 
   slideChange() {
@@ -311,7 +366,6 @@ animateSVG(slide) {
       }
     };
     
-    
   
     // Resetando classes para evitar conflitos
     header.classList.remove('dark');
@@ -353,46 +407,9 @@ animateSVG(slide) {
   
   
 
-// checkSlideForSwiper2() {
-//   // Certifica-se de que o swiper está definido e possui slides.
-//   if (!this.swiper || !this.swiper.slides) {
-//     // Log removido para evitar mensagens desnecessárias, já que isso pode ocorrer em condições normais.
-//     return;
-//   }
-  
-//   // Aqui, nós obtemos diretamente o índice do slide #quemsomos
-//   const indexOfQuemSomosSlide = this.swiper.slides.findIndex(slide => 
-//     slide.getAttribute('data-hash') === 'quemsomos');
-
-//   // Se não encontramos o slide #quemsomos (por exemplo, -1 retornado por findIndex), saímos da função.
-//   // Isso evita a execução desnecessária em situações onde o slide relevante não está presente.
-//   if (indexOfQuemSomosSlide === -1) {
-//     return;
-//   }
-
-//   // Executa a lógica somente se estivermos no slide correto.
-//   if (this.swiper.realIndex === indexOfQuemSomosSlide) {
-//     if (!this.swiper2 || this.swiper2.destroyed) {
-//       this.initializeSwiper2();
-//     } // Não há necessidade de um else aqui, dado que a função agora sai cedo se não estamos no slide correto.
-//   } else {
-//     // Destruir o swiper2 se estiver inicializado e se não estivermos no slide #quemsomos.
-//     if (this.swiper2 && !this.swiper2.destroyed) {
-//       this.destroySwiper2();
-//     }
-//   }
-// }
-
-
-
-
 checkIfQuemSomosSlide(slide) {
   return window.location.hash === '#quemsomos' || slide.hash === 'quemsomos';
 }
-
-
-
-
 
   activateCurrentMenuItem(currentSlideIndex) {
     // Se o índice do slide atual for válido

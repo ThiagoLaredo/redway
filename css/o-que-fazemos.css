@@ -43,7 +43,7 @@ display: none;
  .o-que-fazemos h2 {
    color: var(--bg);
    font: 500 2rem/1.125 "Hind", sans-serif;
-   margin-bottom: 2rem;
+   margin-bottom: 1.2rem;
  }
 
  .o-que-fazemos p {
@@ -53,11 +53,11 @@ display: none;
 }
  
  .lista-servicos {
-  margin-top: 60px;
   display: grid;
   grid-template-columns: 1fr 1fr; /* Duas colunas de igual largura */
   grid-template-rows: 1fr 1fr; /* Duas linhas de igual altura */
-  gap: 40px 100px; /* Espaçamento entre linhas e colunas */
+  gap: 1.2rem 100px; /* Espaçamento entre linhas e colunas */
+  margin-top: 20px;
  }
  
  .servico {
@@ -93,7 +93,7 @@ display: none;
     .o-que-fazemos {
       grid-template-columns: 1fr;
       margin: 0;
-     padding-top: 360px;
+     padding-top: 440px;
    }
  
    .swiper-slide.oquefazemos {
@@ -119,7 +119,7 @@ display: none;
 
    .lista-servicos {
      grid-template-columns: 1fr;
-     gap: 60px;
+     gap: 40px;
    }
  }
  

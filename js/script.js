@@ -2,13 +2,10 @@
 import MenuMobile from './modules/menu-mobile.js';
 import HeaderScroll from './modules/header-scroll.js';
 import ScrollAnima from './modules/scroll-anima.js';
-// import MapaAnimacao from './modules/mapa-animacao.js';
 import MySwiper from './modules/mySwiper.js';
 import ConsoleTextEffect from './modules/text-effect.js';
 
 
-// const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
-// scrollAnima.init();
 
 const menuMobile = new MenuMobile('[data-menu="logo"]', '[data-menu="button"]', '[data-menu="list"]', '[data-menu="contato-mobile"]', '[data-menu="linkedin"]' );
 menuMobile.init();
