@@ -1,102 +1,89 @@
 .slide-content-institucional {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   margin-top: 40px;
-  gap: 60px;
+  gap: 20px;
 }
 
 
 .institucional-texto {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-wrap: nowrap;
+  gap: 40px;
 }
 
-.institucional-texto h2 {
+.institucional-texto p {
+  color: var(--text);
+  font: 300 1rem/1.4 "Hind", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.titulo-institucional {
   color: var(--text);
   font: 500 2rem/1.125 "Hind", sans-serif;
 }
 
-.institucional-texto p {
-  color: var(--secondary);
-  font: 300 1rem/1.4 "Hind", sans-serif;
-  /* margin-bottom: 1rem; */
-}
 
 .destaques__institucional {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.destaques__institucional h3 {
-  color: var(--secondary);
-  font: 500 1rem/1.4 "Hind", sans-serif;
+  gap: 24px;
 }
 
 .destaque__institucional {
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  gap: 4px;
-  background-color: var(--primary);
-  min-height: 60px;
+  padding: 20px;
+  background-color: var(--secondary);
+  border-radius:6px;
 }
 
-.destaque__institucional:nth-child(2) {
+/* .destaque__institucional:nth-child(2) {
   background-color: var(--primary90);
 }
 
 .destaque__institucional:nth-child(3) {
   background-color: var(--primary80);
-}
+} */
 
-.destaque__titulo {
+.destaque__titulo  {
   font: 500 1rem/1.2 "Hind", sans-serif;
   color: var(--bg);
   text-align: center;
   max-width:40ch
 }
 
-.svg-container {
-  display: block; /* Isso garante que a div se ajuste ao conteúdo */
+.diferenciais {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.slide-content-institucional, .slide-content-parcerias {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-.parcerias-globais h3 {
+.diferenciais h3 {
   color: var(--text);
-  font: 500 2rem/1.125 "Hind", sans-serif;
-  margin-bottom: 12px;
-}
-
-.parcerias-globais p {
-  color: var(--text);
-  font: 300 1rem/1.4 "Hind", sans-serif;
-  margin-bottom:10px;
+  font: 500 1rem/1.4 "Hind", sans-serif;
 }
 
 
 @media (max-width: 700px) {
+
+  .slide-content-institucional {
+    margin-top: 0px;
+  }
   
-  .slide-content-institucional, .slide-content-parcerias {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    margin-top: 0;
+  .institucional-texto {
+    flex-wrap: wrap;
+    gap: 0px;
   }
 
   .destaque__institucional {
     min-height: 100px;
+  }
+
+  .destaques__institucional {
+    flex-direction: column;
   }
 
   .svg-container svg {

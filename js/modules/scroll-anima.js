@@ -37,12 +37,13 @@ export default class ScrollAnima {
 
   animateMapScroll() {
     const sectionMapa = document.querySelector('.svg-container'); // Assume que você tenha um ID específico para a seção que contém o mapa
+    
     if (sectionMapa) {
       ScrollTrigger.create({
         trigger: sectionMapa,
         start: "top center",
         onEnter: () => { // Quando a seção do mapa entra na visão
-          // const mapaSVG = sectionMapa.querySelector('svg');
+          const mapaSVG = sectionMapa.querySelector('svg');
           const paises = ['DO', 'GT', 'Unitedstates', 'EC', 'BR', 'Chile', 'Argentina', 'Angola', 'SN', 'ES', 'PT','Indonesia'];
 
           if (mapaSVG) {

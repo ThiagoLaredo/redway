@@ -1,0 +1,36 @@
+.svg-container {
+  display: block; /* Isso garante que a div se ajuste ao conteúdo */
+}
+
+.slide-content-parcerias {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.parcerias-globais h3 {
+  color: var(--text);
+  font: 500 2rem/1.125 "Hind", sans-serif;
+  margin-bottom: 12px;
+}
+
+.parcerias-globais p {
+  color: var(--text);
+  font: 300 1rem/1.4 "Hind", sans-serif;
+  margin-bottom:10px;
+}
+
+@media (max-width: 700px) {
+
+  .slide-content-parcerias {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+  }
+ 
+  .svg-container svg {
+    max-width: 100%;
+    max-height: 240px;
+  }
+}
