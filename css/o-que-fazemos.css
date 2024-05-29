@@ -1,50 +1,48 @@
 .o-que-fazemos {
-   /* width: 55vw; */
    margin-top: 40px;
    display: grid;
-   grid-template-columns: 0.66fr;
-
+   grid-template-columns: 0.62fr;
  }
 
- .container-video, .video-normal {
+.container-video, .video-normal {
 display: none;
 }
  
-  .swiper-slide.oquefazemos {
-    position: relative;
-    height: 100vh; /* Define a altura do container para 100vh */
-    background-color: var(--primary); /* Cor de fundo azul para o lado esquerdo */
-  }
+.swiper-slide.oquefazemos {
+  position: relative;
+  height: 100vh; /* Define a altura do container para 100vh */
+  background-color: var(--primary); /* Cor de fundo azul para o lado esquerdo */
+}
   
-  .video-background-wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 33.33%; /* Ocupa 1/3 da largura do container */
-    height: 100%; /* Ocupa 100vh de altura */
-    overflow: hidden;
-  }
+.video-background-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 33.33%; /* Ocupa 1/3 da largura do container */
+  height: 100%; /* Ocupa 100vh de altura */
+  overflow: hidden;
+}
 
-  .swiper-slide.oquefazemos {
-    height: 100%;
-  }
+.swiper-slide.oquefazemos {
+  height: 100%;
+}
   
-  .video-background {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que o vídeo cubra o espaço adequadamente */
-  }
+.video-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que o vídeo cubra o espaço adequadamente */
+}
   
-  .conteudo-e-fundo {
-    position: relative;
-    height: 100%;
-  }
-  
- .o-que-fazemos h2 {
-   color: var(--bg);
-   font: 500 2rem/1.125 "Hind", sans-serif;
-   margin-bottom: 1.2rem;
- }
+.conteudo-e-fundo {
+  position: relative;
+  height: 100%;
+}
+
+.o-que-fazemos h2 {
+  color: var(--bg);
+  font: 500 2rem/1.125 "Hind", sans-serif;
+  margin-bottom: 1.2rem;
+}
 
  .o-que-fazemos p {
   color: var(--bg);
@@ -52,75 +50,78 @@ display: none;
   margin-bottom: 0.6rem;
 }
  
- .lista-servicos {
+.lista-servicos {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Duas colunas de igual largura */
-  grid-template-rows: 1fr 1fr; /* Duas linhas de igual altura */
-  gap: 1.2rem 100px; /* Espaçamento entre linhas e colunas */
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 1.2rem 100px; 
   margin-top: 20px;
- }
- 
- .servico {
-   display: flex;
-   flex-direction: column;
-   gap: 20px;
- }
- 
- .titulo-servico {
-   display: flex;
-   gap: 12px;
-   align-items: center;
- }
- 
- .titulo-servico h3 {
-   color: var(--bg);
-   font: 500 1.2rem/1.25 "Hind", sans-serif;
- }
- 
- .servico p {
-   color: var(--bg);
-   font: 300 1rem/1.4 "Hind", sans-serif;
- }
- 
+}
 
- 
- @media (max-width: 800px) {
- 
-   .slide-content-oquefazemos {
-     width: 90vw;
-    }
- 
-    .o-que-fazemos {
-      grid-template-columns: 1fr;
-      margin: 0;
-     padding-top: 440px;
-   }
- 
-   .swiper-slide.oquefazemos {
- 
-     background-image: none; 
-     background-color: var(--primary);
-   }
+.servico {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.titulo-servico {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.titulo-servico h3 {
+  color: var(--bg);
+  font: 500 1.2rem/1.25 "Hind", sans-serif;
+}
+
+.servico p {
+  color: var(--bg);
+  font: 300 1rem/1.4 "Hind", sans-serif;
+}
+
+@media (max-width: 800px) {
+
+.slide-content-oquefazemos {
+  width: 90vw;
+}
+
+.o-que-fazemos {
+  grid-template-columns: 1fr;
+  margin: 0;
+  padding-top: 440px;
+}
+
+.swiper-slide.oquefazemos {
+
+  background-image: none; 
+  background-color: var(--primary);
+}
 
 
-  .swiper-slide.oquefazemos {
-    height: 100%;
+.swiper-slide.oquefazemos {
+height: 100%;
+}
+
+.video-background-wrapper {
+position: absolute;
+top: -60px;
+right: 0;
+width: 100%;
+height: 30%;
+overflow: hidden;
+}
+
+
+.lista-servicos {
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+}
+
+@media (min-width: 1920px) {
+/* Seu CSS para desktops e monitores grandes aqui */
+  .o-que-fazemos {
+    grid-template-columns: 0.66fr;
   }
-  
-  .video-background-wrapper {
-    position: absolute;
-    top: -60px;
-    right: 0;
-    width: 100%;
-    height: 30%;
-    overflow: hidden;
-  }
-
-
-   .lista-servicos {
-     grid-template-columns: 1fr;
-     gap: 40px;
-   }
- }
- 
- 
+}

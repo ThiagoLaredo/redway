@@ -5,12 +5,10 @@ export default class MySwiper {
     this.swiper = null;
     this.currentSlideIndex = 0; // Inicializa com 0 ou o slide inicial desejado
 
-
     document.addEventListener('DOMContentLoaded', () => {
       // Adiciona um ouvinte de evento para redimensionamento da janela
       window.addEventListener('resize', this.handleResize.bind(this));
       this.handleResize();
-
     });
   }
 
@@ -18,8 +16,7 @@ export default class MySwiper {
     return window.innerWidth <= 768;
   }
 
-
-handleResize() {
+  handleResize() {
   if (this.isMobile()) {
     if (this.swiper) {
       this.destroySwiper();
@@ -35,12 +32,11 @@ handleResize() {
     // E se estamos no slide correto, #quemsomos. Isso pode ser verificado posteriormente
     // dentro da lógica específica onde você considera apropriado para inicializar o swiper2
   }
-}
+  }
 
-
-swiperInit() {
+  swiperInit() {
   // Usando setTimeout para garantir que o Swiper esteja completamente inicializado
-  setTimeout(() => {
+    setTimeout(() => {
       if (this.swiper) {
         this.initialVisibility();
         // Agora estamos seguros para acessar this.swiper.realIndex
@@ -50,11 +46,11 @@ swiperInit() {
         this.animateContentIn(initialSlide);
         this.animateMap();
         this.animateSVG(initialSlide);
-        this.animateNumbers(); // Garante que os números sejam animados na inicialização    
+        console.log('Iniciando animação dos números na inicialização');
+        this.animateNumbers(); // Garante que os números sejam animados na inicialização
       }
-  }, 0); // Um atraso de 0 ms é suficiente para colocar esta chamada no fim da fila do event loop
-}
-
+    }, 0); // Um atraso de 0 ms é suficiente para colocar esta chamada no fim da fila do event loop
+  }
 
   initializeSwiper() {
     this.swiper = new Swiper(".mySwiper", {
@@ -65,7 +61,7 @@ swiperInit() {
       preventClicksPropagation: false,
       autoHeight: false,
       hashNavigation: {
-        watchState: true,
+      watchState: true,
       },
        on: {
         init: () => {
@@ -73,11 +69,9 @@ swiperInit() {
           // this.checkSlideForSwiper2(); // Adiciona a chamada aqui
         },
         slideChange: () => {
-          this.slideChange(); // Atualiza conforme necessário, pode chamar outra lógica aqui também
-          // this.checkSlideForSwiper2(); // Verifica em cada mudança de slide
+          this.slideChange(); 
         },
-        
-      
+             
         slideChangeTransitionStart: () => {
           // Certifique-se de que o swiper está inicializado e o slide ativo está disponível
           if (this.swiper && this.swiper.slides && this.swiper.activeIndex !== undefined) {
@@ -88,25 +82,26 @@ swiperInit() {
             if (activeSlide.querySelector('svg')) { // Ajuste o seletor conforme necessário
               this.animateMap();
             }
-          // Especificamente anima o SVG dentro da 'svg-background' se existir
-          if (activeSlide.querySelector('.svg-quemsomos svg')) {
-            this.animateSVG(activeSlide);
+            // Especificamente anima o SVG dentro da 'svg-background' se existir
+            if (activeSlide.querySelector('.svg-quemsomos svg')) {
+              this.animateSVG(activeSlide);
+            }
           }
-          this.animateNumbers(); // Chama a função de animação dos números na mudança de slides
-
-        }
-      },
+        },
       
         // Evento chamado quando a transição termina
         slideChangeTransitionEnd: () => {
           // Animação de entrada para o novo slide
-          
+          if (this.swiper && this.swiper.slides && this.swiper.activeIndex !== undefined) {
+            const activeSlide = this.swiper.slides[this.swiper.activeIndex];
+            if (activeSlide.datahash === 'quemsomos' || activeSlide.dataset.hash === 'quemsomos') {
+              this.animateNumbers();
+            }
+          }
         }     
       },
-
     });
   }
-
 
   initialVisibility() {
     const pagination = document.querySelector('.swiper-pagination');
@@ -115,170 +110,154 @@ swiperInit() {
     // Assumindo que você possa determinar o slide inicial aqui ou usar this.swiper.realIndex
     let initialSlideIndex = this.swiper ? this.swiper.realIndex : 0;
     this.updateHeaderAndApplyClasses(initialSlideIndex);
-}
+  } 
 
-    // animateContentIn(slide) {
-
-    //   // Verifica se está em um dispositivo móvel e retorna cedo se verdadeiro
-    //   if (this.isMobile()) {
-    //     return; // Retorna imediatamente, evitando animações em dispositivos móveis
-    //   }
-      
-    //   const commonElements = slide.querySelectorAll('h2, h3, p, li, .destaque__institucional, img, .mySwiper2, .experiencia, experiencia::before, svg, #contact-form');
-    //   if (commonElements.length > 0) { 
-    //     gsap.fromTo(commonElements, 
-    //       { y: -30, opacity: 0 }, 
-    //       { 
-    //         y: 0, 
-    //         opacity: 1, 
-    //         duration: 0.5, 
-    //         stagger: 0.2, 
-    //         ease: "power1.out",
-    //         onComplete: () => {
-    //           if (!this.isMobile()) {
-    //             this.animateMap();
-    //           }
-    //         animateNumbers(); // Adiciona a chamada à função de animação dos números
-    //         }// Esta é a função que você chamará quando a animação dos elementos terminar
-    //       }
-    //     );
-    //   }
-    // }
-
-    animateContentIn(slide) {
-      if (this.isMobile()) {
-        return;
-      }
-  
-      const commonElements = slide.querySelectorAll('h2, h3, p, li, span, .destaque__institucional, img, .mySwiper2, .experiencia, experiencia::before, svg, #contact-form');
-      if (commonElements.length > 0) {
-        gsap.fromTo(commonElements,
-          { y: -30, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 0.5,
-            stagger: 0.2,
-            ease: "power1.out",
-            onComplete: () => {
-              if (!this.isMobile()) {
-                this.animateMap();
-              }
-              this.animateNumbers(); // Chama a função de animação dos números
-            }
-          }
-        );
-      } else {
-        this.animateNumbers();
-      }
+  animateContentIn(slide) {
+    if (this.isMobile()) {
+      return;
     }
-  
-    // animateNumbers() {
-    //   const numberElements = document.querySelectorAll('.numero');
-  
-    //   numberElements.forEach(element => {
-    //     const endValue = parseInt(element.getAttribute('data-end-value'), 10);
-  
-    //     gsap.fromTo(element, 
-    //       { innerHTML: 0 }, 
-    //       { 
-    //         innerHTML: endValue, 
-    //         duration: 5, 
-    //         ease: "power2.out",
-    //         snap: { innerHTML: 1 },
-    //         onUpdate: function () {
-    //           element.innerHTML = Math.round(this.targets()[0].innerHTML);
-    //         }
-    //       });
-    //   });
-    // }
-  
-    animateNumbers() {
-      const numberElements = document.querySelectorAll('.numero');
+    console.log('Iniciando animação de conteúdo');
+    const commonElements = slide.querySelectorAll('h2, h3, p, li, .destaque__institucional, .quem-somos, .destaque__quem-somos, img, .mySwiper2, svg, #contact-form');
+    if (commonElements.length > 0) {
+      gsap.fromTo(commonElements,
+        { y: -30, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          stagger: 0.2,
+          ease: "power1.out",
+        onComplete: () => {
+          if (!this.isMobile()) {
+            this.animateMap();
+          }
+          console.log('Conteúdo animado');
+          // this.animateNumbers();
+        }
+      }     
+      );
+    }
+  }
     
-      numberElements.forEach(element => {
-        const endValue = parseInt(element.getAttribute('data-end-value'), 10);
-        const isBillion = endValue === 1000; // Verifica se o valor é 1000
-    
+  animateNumbers() {
+    // Seleciona todos os elementos com a classe 'numero'
+    const numberElements = document.querySelectorAll('.numero');
+
+    // Para cada elemento 'numero' encontrado
+    numberElements.forEach(element => {
+      
+      // Obtém o valor final do atributo 'data-end-value' do elemento
+      const endValue = parseInt(element.getAttribute('data-end-value'), 10);
+      // Verifica se o valor final é igual a 1000 (indicando 1 BI)
+      const isBillion = endValue === 1000;
+      // Define a duração da animação, 10 segundos para 1 BI e 5 segundos para os demais
+      const duration = isBillion ? 3 : 5;
+
+      if (isBillion) {
+        // Animação personalizada para o número 1 BI
+        const milestones = [0, 100000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 1000000000];
+        const totalMilestones = milestones.length;
+        const timePerMilestone = duration / totalMilestones;
+
+        // Cria uma animação GSAP para o elemento
+        gsap.to(element, {
+          innerHTML: 1000000000, // Define o valor final da animação
+          duration: duration, // Define a duração da animação
+          ease: "none", // Define a facilidade da animação
+          onUpdate: function () {
+            // Durante a animação, atualiza o texto do elemento
+            const val = Math.round(this.targets()[0].innerHTML);
+            // Se o valor for maior ou igual a 1000000000, define como "+ 1 BI"
+            if (val >= 1000000000) {
+              element.innerHTML = "+ 1 BI";
+            } else {
+              // Caso contrário, atualiza o texto com o valor atual formatado
+              element.innerHTML = "+ " + val.toLocaleString();
+            }
+          },
+          onComplete: function () {
+            // Quando a animação termina, garante que o texto é "+ 1 BI"
+            element.innerHTML = "+ 1 BI";
+            // Marca o elemento como animado
+            element.setAttribute('data-animated', 'true');
+          },
+          snap: { innerHTML: 100000 } // Define o incremento para o valor durante a animação
+        });
+      } else {
+        // Animação normal para outros números
         gsap.fromTo(element, 
-          { innerHTML: 0 }, 
+          { innerHTML: 0 }, // Valor inicial
           { 
-            innerHTML: endValue, 
-            duration: 5, 
-            ease: "power2.out",
-            snap: { innerHTML: 1 },
+            innerHTML: endValue, // Valor final
+            duration: duration, // Duração da animação
+            ease: "power2.out", // Facilidade da animação
+            snap: { innerHTML: 1 }, // Define o incremento para o valor durante a animação
             onUpdate: function () {
-              if (isBillion) {
-                element.innerHTML = "+ " + (this.targets()[0].innerHTML >= endValue ? "1 BI" : "0");
-              } else {
-                element.innerHTML = "+ " + Math.round(this.targets()[0].innerHTML);
-              }
+              // Durante a animação, atualiza o texto do elemento
+              element.innerHTML = "+ " + Math.round(this.targets()[0].innerHTML);
             },
             onComplete: function () {
-              if (isBillion) {
-                element.innerHTML = "+ 1 BI";
-              } else {
-                element.innerHTML = "+ " + endValue;
-              }
+              // Quando a animação termina, garante que o texto é o valor final
+              element.innerHTML = "+ " + endValue;
+              // Marca o elemento como animado
+              element.setAttribute('data-animated', 'true');
             }
           });
-      });
-    }
-    
-  
-    
-animateMap() {
-  const slideMapa = this.swiper.slides[this.swiper.activeIndex];
-  console.log(slideMapa);
-  const mapaSVG = slideMapa.querySelector('svg'); // Selecione o SVG pelo elemento específico
-  console.log(mapaSVG);
-  const paises = ['DO', 'GT', 'Unitedstates', 'EC', 'BR', 'Chile', 'Argentina', 'Angola', 'SN', 'ES', 'PT','Indonesia']; // Exemplo de classes/ids
-
-  if (mapaSVG) {
-
-    paises.forEach((pais, index) => {
-      let seletor = mapaSVG.querySelector(`.${pais}`) ? `.${pais}` : `#${pais}`;
-      // Resetar as propriedades para os estados iniciais aqui, se necessário
-      gsap.set(seletor, { fill: '#ececec' }); // Substitua 'cor_inicial' pela cor original dos países
-    });
-    // Adiciona um delay inicial antes de começar a animação dos países
-    gsap.delayedCall(2, () => {
-      paises.forEach((pais, index) => {
-        // Verifica se o elemento é class ou id e ajusta o seletor
-        let seletor = mapaSVG.querySelector(`.${pais}`) ? `.${pais}` : `#${pais}`;
-        gsap.to(seletor, {
-          fill: '#4E7A9B',
-          delay: index * 0.3, // Mantém o delay existente entre as animações dos países
-          duration: 1,
-        });
-      });
+      }
     });
   }
-}
+   
+  animateMap() {
+    const slideMapa = this.swiper.slides[this.swiper.activeIndex];
+    console.log(slideMapa);
+    const mapaSVG = slideMapa.querySelector('svg'); // Selecione o SVG pelo elemento específico
+    console.log(mapaSVG);
+    const paises = ['DO', 'GT', 'Unitedstates', 'EC', 'BR', 'Chile', 'Argentina', 'Angola', 'SN', 'ES', 'PT','Indonesia']; // Exemplo de classes/ids
 
-animateSVG(slide) {
-  const paths = slide.querySelectorAll('.cls-2');
+    if (mapaSVG) {
 
-  paths.forEach(path => {
-    if (path instanceof SVGPathElement) {  // Verificação para garantir que o elemento é um SVGPathElement
-      const length = path.getTotalLength();
-      path.style.strokeDasharray = length;
-      path.style.strokeDashoffset = length;
-      gsap.set(path, { fill: "none" });  // Define explicitamente o preenchimento inicial
-
-      // Animação para "desenhar" o caminho
-      gsap.to(path, {
-        strokeDashoffset: 0,
-        duration: 5,
-        ease: "none",  // Uso de easing linear
-    
+      paises.forEach((pais, index) => {
+        let seletor = mapaSVG.querySelector(`.${pais}`) ? `.${pais}` : `#${pais}`;
+        // Resetar as propriedades para os estados iniciais aqui, se necessário
+        gsap.set(seletor, { fill: '#ececec' }); // Substitua 'cor_inicial' pela cor original dos países
       });
-    } else {
-      console.error('Elemento não é um SVGPathElement:', path);
+      // Adiciona um delay inicial antes de começar a animação dos países
+      gsap.delayedCall(2, () => {
+        paises.forEach((pais, index) => {
+          // Verifica se o elemento é class ou id e ajusta o seletor
+          let seletor = mapaSVG.querySelector(`.${pais}`) ? `.${pais}` : `#${pais}`;
+          gsap.to(seletor, {
+            fill: '#4E7A9B',
+            delay: index * 0.3, // Mantém o delay existente entre as animações dos países
+            duration: 1,
+          });
+        });
+      });
     }
-  });
-}
+  }
 
+  animateSVG(slide) {
+    const paths = slide.querySelectorAll('.cls-2');
+
+    paths.forEach(path => {
+      if (path instanceof SVGPathElement) {  // Verificação para garantir que o elemento é um SVGPathElement
+        const length = path.getTotalLength();
+        path.style.strokeDasharray = length;
+        path.style.strokeDashoffset = length;
+        gsap.set(path, { fill: "none" });  // Define explicitamente o preenchimento inicial
+
+        // Animação para "desenhar" o caminho
+        gsap.to(path, {
+          strokeDashoffset: 0,
+          duration: 5,
+          ease: "none",  // Uso de easing linear
+      
+        });
+      } else {
+        console.error('Elemento não é um SVGPathElement:', path);
+      }
+    });
+  }
 
   destroySwiper() {
     // Verifica se o Swiper existe antes de tentar destruí-lo
@@ -287,7 +266,6 @@ animateSVG(slide) {
       this.swiper = null; // Reseta a referência do Swiper
     }
   }
-
 
   slideChange() {
      // Verifica se o Swiper está definido e inicializado corretamente antes de tentar acessar suas propriedades
@@ -328,9 +306,7 @@ animateSVG(slide) {
     // Ativa o item do menu correspondente ao slide atual
   this.activateCurrentMenuItem(currentSlideIndex);
   this.updateHeaderAndApplyClasses(this.currentSlideIndex);
-
   }
-
 
   updateHeaderAndApplyClasses(currentSlideIndex) {
     const header = document.querySelector('.header');
@@ -366,7 +342,6 @@ animateSVG(slide) {
       }
     };
     
-  
     // Resetando classes para evitar conflitos
     header.classList.remove('dark');
     headerMenu.classList.remove('minimal', 'dark');
@@ -405,11 +380,9 @@ animateSVG(slide) {
     applyAnimationsIfNeeded(newState);
   }
   
-  
-
-checkIfQuemSomosSlide(slide) {
-  return window.location.hash === '#quemsomos' || slide.hash === 'quemsomos';
-}
+  checkIfQuemSomosSlide(slide) {
+    return window.location.hash === '#quemsomos' || slide.hash === 'quemsomos';
+  }
 
   activateCurrentMenuItem(currentSlideIndex) {
     // Se o índice do slide atual for válido
