@@ -117,7 +117,7 @@ export default class MySwiper {
       return;
     }
     console.log('Iniciando animação de conteúdo');
-    const commonElements = slide.querySelectorAll('h2, h3, p, li, .destaque__institucional, .quem-somos, .destaque__quem-somos, img, .mySwiper2, svg, #contact-form');
+    const commonElements = slide.querySelectorAll('h2, h3, p, li, .destaque__institucional, .quem-somos, .destaque__quem-somos, .servico, img, svg, #contact-form');
     if (commonElements.length > 0) {
       gsap.fromTo(commonElements,
         { y: -30, opacity: 0 },
@@ -360,7 +360,7 @@ export default class MySwiper {
             logo.src = originalLogoSrc;
         }
   
-        if ([1, 2, 3, 5].includes(currentSlideIndex)) {
+        if ([1, 2, 5].includes(currentSlideIndex)) {
             header.classList.add('dark');
             headerMenu.classList.add('dark');
             menuLinks.forEach(link => link.classList.add('dark'));
