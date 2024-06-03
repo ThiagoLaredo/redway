@@ -1,6 +1,5 @@
 .swiper-slide.intro {
   height: 100vh;
-  /* background-image: linear-gradient(var(--primary65), var(--primary65)), url('../img/background-img.webp');   */
   background-size: cover;
   background-position: center;
 }
@@ -99,6 +98,10 @@
 }
 
 @media (max-width: 800px) {
+
+  .swiper-slide.intro {
+    background-position: 24%;
+  }
 
   .slide-content-intro h1 {
     font: 500 2.4rem/1.25 "Hind", sans-serif;
