@@ -1,4 +1,8 @@
 import gsap from 'gsap';
+import Swiper from 'swiper';
+import { Mousewheel, HashNavigation, Manipulation } from 'swiper/modules';
+import 'swiper/swiper-bundle.css'; // Importar os estilos do Swiper
+
 
 export default class MySwiper {
   constructor() {
@@ -62,6 +66,7 @@ export default class MySwiper {
       hashNavigation: {
       watchState: true,
       },
+      modules: [Mousewheel, HashNavigation, Manipulation], // Adicione os módulos aqui
        on: {
         init: () => {
           this.swiperInit(); // Assume que swiperInit já faz o que está no método bind(this)
