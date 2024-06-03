@@ -9,6 +9,8 @@ export default class MySwiper {
       // Adiciona um ouvinte de evento para redimensionamento da janela
       window.addEventListener('resize', this.handleResize.bind(this));
       this.handleResize();
+      this.carregamentoImagemIntro();
+      this.carregamentoImagemQuemSomos();
     });
   }
 
@@ -28,9 +30,6 @@ export default class MySwiper {
       this.initializeSwiper();
       this.updateHeaderAndApplyClasses(this.currentSlideIndex);
     }
-    // Considera inicializar o swiper2 apenas quando não está em mobile
-    // E se estamos no slide correto, #quemsomos. Isso pode ser verificado posteriormente
-    // dentro da lógica específica onde você considera apropriado para inicializar o swiper2
   }
   }
 
@@ -397,6 +396,52 @@ export default class MySwiper {
         }
     }
   }
+
+  async carregamentoImagemIntro() {
+    const img = document.getElementById("bg-img-intro");
+    const slide = document.querySelector('.swiper-slide.intro');
+  
+    console.log("Tentando carregar a imagem intro:", img.src);
+  
+    try {
+      await fetch(img.src, { method: 'HEAD' });
+      img.addEventListener("load", function() {
+        console.log("Imagem intro carregada com sucesso:", img.src);
+        slide.style.backgroundImage = `linear-gradient(var(--secondary65), var(--secondary65)), url(${img.src})`;
+      });
+  
+      // Trigger the load event if the image is already cached
+      if (img.complete) {
+        img.dispatchEvent(new Event('load'));
+      }
+    } catch (error) {
+      console.error("Erro ao carregar a imagem intro:", img.src);
+    }
+  }
+  
+  async carregamentoImagemQuemSomos() {
+    const img = document.getElementById("bg-img-quemsomos");
+    const slide = document.getElementById("mobile-quemsomos");
+  
+    console.log("Tentando carregar a imagem de quem somos:", img.src);
+  
+    try {
+      await fetch(img.src, { method: 'HEAD' });
+      img.addEventListener("load", function() {
+        console.log("Imagem de quem somos carregada com sucesso:", img.src);
+        slide.style.backgroundImage = `linear-gradient(var(--primary45), var(--primary45)), url(${img.src})`;
+      });
+  
+      // Trigger the load event if the image is already cached
+      if (img.complete) {
+        img.dispatchEvent(new Event('load'));
+      }
+    } catch (error) {
+      console.error("Erro ao carregar a imagem de quem somos:", img.src);
+    }
+  }
+  
+  
 }
 
 

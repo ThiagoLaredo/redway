@@ -47,6 +47,14 @@ img {
   border: 0;
   white-space: nowrap; /* Adiciona suporte para espaçamento em branco */
 }
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
 
 @keyframes slideDown {
   from {

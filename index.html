@@ -46,8 +46,21 @@
     
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-
-        <div class="swiper-slide intro" data-hash="slide1" style="background-image:linear-gradient(var(--secondary65), var(--secondary65)), url(./img/background-img.webp)">
+        <div class="swiper-slide intro" data-hash="slide1">
+          <img 
+          id="bg-img-intro" 
+          class="hidden" 
+          src="./img/intro-1920w.webp" 
+          srcset="
+            ./img/intro-720w.webp 720w,
+            ./img/intro-1024w.webp 1024w,
+            ./img/intro-1920w.webp 1920w
+          "
+          sizes="(max-width: 720px) 100vw, (max-width: 1024px) 100vw, 100vw"
+          alt="Trius Capital"
+          loading="lazy"
+          crossorigin="anonymous"
+        />
           <div class="slide-content-position">
               <div class="slide-content-intro">
                 <h1 id="typing"></h1>
@@ -1062,6 +1075,19 @@
         
 
         <div class="swiper-slide quemsomos" id="mobile-quemsomos" data-hash="quemsomos">
+          <img 
+          id="bg-img-quemsomos" 
+          class="hidden" 
+          src="./img/escritorio-1600w.webp" 
+          srcset="
+            ./img/escritorio-720w.webp 720w,
+            ./img/escritorio-1600w.webp 1600w
+          "
+          sizes="(max-width: 720px) 100vw, (max-width: 1600px) 100vw, 100vw"
+          alt="Trius Capital"
+          loading="lazy"
+          crossorigin="anonymous"
+        />
           <div class="slide-content-position">
             <div class="slide-content-quemsomos">
               <div class="quem-somos">

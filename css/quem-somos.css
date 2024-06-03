@@ -1,9 +1,10 @@
 
 .swiper-slide.quemsomos {
-  background-image: linear-gradient(var(--primary45), var(--primary45)), url('../img/escritorio.webp');  
+  /* background-image: linear-gradient(var(--primary45), var(--primary45)), url('../img/escritorio-1600w.webp');   */
   background-size: cover;
   background-position: center;
 }
+
 .slide-content-quemsomos {
   display: flex;
   justify-content: center; 
@@ -89,7 +90,7 @@
 @media (max-width: 800px) {
 
   .swiper-slide.quemsomos {
-    background-image: linear-gradient(var(--primary45), var(--primary45)), url('../img/escritorio.webp');
+    /* background-image: linear-gradient(var(--primary45), var(--primary45)), url('../img/escritorio.webp'); */
     background-size: cover;
     background-position: top center;
 }
@@ -125,7 +126,7 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .swiper-slide.quemsomos {
-    background-image: linear-gradient(var(--primary45), var(--primary45)), url('../img/escritorio.webp');
+    /* background-image: linear-gradient(var(--primary45), var(--primary45)), url('../img/escritorio.webp'); */
     background-size: cover;
     background-position: top center;
   }
