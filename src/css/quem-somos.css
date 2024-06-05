@@ -87,6 +87,13 @@
   font: 500 1.2rem/1 "Hind", sans-serif;
 }
 
+.cls-2 {
+  fill: none;
+  stroke: var(--bg);
+  stroke-miterlimit: 10;
+  stroke-width: .6; 
+}
+
 @media (max-width: 800px) {
 
   .swiper-slide.quemsomos {
