@@ -38,18 +38,34 @@
   margin-bottom: 5px;
 }
 
-.form-field input[type="text"],
-.form-field input[type="email"],
-.form-field textarea {
+.form-field input[type="text"] {
   width: 100%;
   padding: 10px;
-  border: none;
   background-color: #446A87;
   color: #fff;
   /* placeholder: #D9D9D9; */
   border: 0.5px solid var(--secondary);
   border-radius: 6px;
+}
 
+.form-field input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #446A87;
+  color: #fff;
+  /* placeholder: #D9D9D9; */
+  border: 0.5px solid var(--secondary);
+  border-radius: 6px;
+}
+
+.form-field textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #446A87;
+  color: #fff;
+  /* placeholder: #D9D9D9; */
+  border: 0.5px solid var(--secondary);
+  border-radius: 6px;
 }
 
 .form-field input::placeholder,
