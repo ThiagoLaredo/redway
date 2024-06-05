@@ -33,6 +33,8 @@ const TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 
 module.exports = {
   entry: './src/js/script.js',
@@ -89,6 +91,11 @@ module.exports = {
       template: './src/index.html',  // Caminho para o seu arquivo HTML de origem
       filename: 'index.html'  // Nome do arquivo no diretório de saída
   }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'src/img', to: 'img' } // Copia tudo de src/img para dist/img
+      ]
+    }),
   ],
   resolve: {
     extensions: ['.js'],
