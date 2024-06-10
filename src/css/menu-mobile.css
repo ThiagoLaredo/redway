@@ -35,30 +35,47 @@
 
   #hamburguer {
     width: 30px;
-    border-top: 2px solid #ffffff;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 1px;
+    position: relative;
+    transition: background 0.3s ease; /* Suaviza a transição da cor de fundo */
   }
 
-  #hamburguer::after,
-  #hamburguer::before {
+  #hamburguer::before,
+  #hamburguer::after {
     content: "";
     display: block;
     width: 30px;
     height: 2px;
-    background: currentColor;
-    margin-top: 5px;
-    position: relative;
+    background: #ffffff;
+    border-radius: 1px;
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s ease; /* Suaviza as transições de transformação */
   }
+
+  #hamburguer::before {
+    top: -8px;
+  }
+
+  #hamburguer::after {
+    top: 8px;
+  }
+
+  /* Estilos quando o menu está ativo */
   .js [data-menu="button"].active #hamburguer {
-    border-top: transparent;
+    background: transparent; /* Torna a barra central transparente */
   }
 
   .js [data-menu="button"].active #hamburguer::before {
-    transform: rotate(135deg);
+    transform: rotate(45deg); /* Rotaciona para formar um "X" */
+    top: 0; /* Centraliza em relação à barra principal */
   }
 
   .js [data-menu="button"].active #hamburguer::after {
-    transform: rotate(-135deg);
-    top: -7px;
+    transform: rotate(-45deg); /* Rotaciona para formar um "X" */
+    top: 0; /* Centraliza em relação à barra principal */
   }
 
   .js [data-menu="list"]  {
