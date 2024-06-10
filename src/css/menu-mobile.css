@@ -12,10 +12,9 @@
 
 @media (max-width: 700px) {
 
-
   .js [data-menu="logo"] {
-  z-index: 999;
-}
+    z-index: 999;
+  }
 
   .js [data-menu="button"] {
     display: flex;
@@ -33,39 +32,57 @@
     position: relative;
     z-index: 300;
   }
-  
+
   #hamburguer {
     width: 30px;
-    border-top: 2px solid #ffffff;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 1px;
+    position: relative;
+    transition: background 0.3s ease; /* Suaviza a transição da cor de fundo */
   }
 
-  #hamburguer::after,
-  #hamburguer::before {
+  #hamburguer::before,
+  #hamburguer::after {
     content: "";
     display: block;
     width: 30px;
     height: 2px;
-    background: currentColor;
-    margin-top: 5px;
-    position: relative;
+    background: #ffffff;
+    border-radius: 1px;
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s ease; /* Suaviza as transições de transformação */
   }
+
+  #hamburguer::before {
+    top: -8px;
+  }
+
+  #hamburguer::after {
+    top: 8px;
+  }
+
+  /* Estilos quando o menu está ativo */
   .js [data-menu="button"].active #hamburguer {
-    border-top: transparent;
+    background: transparent; /* Torna a barra central transparente */
   }
 
   .js [data-menu="button"].active #hamburguer::before {
-    transform: rotate(135deg);
+    transform: rotate(45deg); /* Rotaciona para formar um "X" */
+    top: 0; /* Centraliza em relação à barra principal */
   }
 
   .js [data-menu="button"].active #hamburguer::after {
-    transform: rotate(-135deg);
-    top: -7px;
+    transform: rotate(-45deg); /* Rotaciona para formar um "X" */
+    top: 0; /* Centraliza em relação à barra principal */
   }
 
   .js [data-menu="list"]  {
-    display: none;
+    visibility: hidden; 
+    opacity: 0; 
     position: absolute;
-    width: 100%;
+    width: 100vw;
     top: 0;
     right: 0px;
     text-align: center;
@@ -78,19 +95,19 @@
     font-size: 24px;
     width: 100%;
     line-height: 1;
+    width: 100vw;
   }
 
   .js [data-menu="list"] li {
-    width: 90%;
+    width: 100%;
     position: relative;
-    opacity: 0;
   }
 
   .js [data-menu="list"] li::after {
     content: "";
     display: block;
     width: 100%;
-    top: 20px;
+    top: 10px;
     height: 2px;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.09);
@@ -106,8 +123,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    animation: show-right 0.3s forwards;
+    gap: 20px;
   }
 
   [data-menu="contato-mobile"], [data-menu="linkedin"] {
@@ -137,17 +153,4 @@
     padding: 1rem;
     opacity: 0;
   }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  .fadeIn {
-    animation-name: fadeIn;
-    animation-fill-mode: forwards; /* Mantém o elemento visível após a animação */
-    opacity: 0; /* Inicia invisível */
-  }
-  
-
 }
