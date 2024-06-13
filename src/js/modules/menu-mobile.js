@@ -19,33 +19,38 @@ export default class MenuMobile {
   }
 
   openMenu(event) {
-    event.stopPropagation(); // Impede a propagação do evento para o documento
-    console.log('Menu button clicked');
-    
-    if (this.menuOpened) {
-      console.log('Menu already opened, closing menu now');
-      this.closeMenu();
-    } else {
-      console.log('Opening menu');
-      this.menuOpened = true; // Setar a flag para controle de estado
-      this.menuList.classList.add(this.activeClass);
-      this.menuButton.classList.add(this.activeClass);
-      this.contatoMobile.classList.add(this.activeClass);
-      this.linkedinMobile.classList.add(this.activeClass);
-      this.animateMenuItems();
-      this.toggleMenuAnimation(true);
+    if (this.isMobile()) {
+      event.stopPropagation(); // Impede a propagação do evento para o documento apenas em mobile
+      console.log('Menu button clicked on mobile');
+      
+      if (this.menuOpened) {
+        console.log('Menu already opened, closing menu now');
+        this.closeMenu();
+      } else {
+        console.log('Opening menu on mobile');
+        this.menuOpened = true;
+        this.menuList.classList.add(this.activeClass);
+        this.menuButton.classList.add(this.activeClass);
+        this.contatoMobile.classList.add(this.activeClass);
+        this.linkedinMobile.classList.add(this.activeClass);
+        this.animateMenuItems();
+        this.toggleMenuAnimation(true);
+      }
     }
   }
-
+  
   closeMenu() {
-    console.log('Closing menu');
-    this.menuOpened = false; // Resetar a flag
-    this.menuList.classList.remove(this.activeClass);
-    this.menuButton.classList.remove(this.activeClass);
-    this.contatoMobile.classList.remove(this.activeClass);
-    this.linkedinMobile.classList.remove(this.activeClass);
-    this.toggleMenuAnimation(false);
+    if (this.isMobile()) {
+      console.log('Closing menu on mobile');
+      this.menuOpened = false;
+      this.menuList.classList.remove(this.activeClass);
+      this.menuButton.classList.remove(this.activeClass);
+      this.contatoMobile.classList.remove(this.activeClass);
+      this.linkedinMobile.classList.remove(this.activeClass);
+      this.toggleMenuAnimation(false);
+    }
   }
+  
 
   addMenuMobileEvents() {
     this.menuButton.addEventListener('click', this.openMenu);

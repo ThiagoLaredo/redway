@@ -8,7 +8,6 @@
 background-color: var(--primary);
 }
 
-
 .header_menu {
   box-sizing: border-box;
   height: 50px;
@@ -90,21 +89,12 @@ ul[data-menu="list"] {
   opacity: 1;
 }
 
-
 .header .menu a.dark {
   color: var(--bg); 
   transition: color 0.3s ease;
 }
 
-
-
-
-
-
-
-
-@media (max-width: 800px) {
-
+@media (max-width: 800px) { 
   .header {
     position: fixed; /* Mantém o cabeçalho fixo no topo */
     width: 100%; /* Ocupa a largura total da tela */
@@ -134,7 +124,5 @@ ul[data-menu="list"] {
 
   ul[data-menu="list"] {
     margin-right: 0px;
-}
-
-
+  }
 }
