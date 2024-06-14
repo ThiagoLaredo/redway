@@ -69,7 +69,7 @@ export default class MySwiper {
        on: {
         init: () => {
           this.swiperInit(); // Assume que swiperInit já faz o que está no método bind(this)
-          // this.checkSlideForSwiper2(); // Adiciona a chamada aqui
+          this.applyHoverEffects();
         },
         slideChange: () => {
           this.slideChange(); 
@@ -101,6 +101,7 @@ export default class MySwiper {
               this.animateNumbers();
             }
           }
+          this.applyHoverEffects(); // Reaplica os efeitos de hover após cada mudança de slide
         }     
       },
     });
@@ -270,46 +271,79 @@ export default class MySwiper {
     }
   }
 
+  // slideChange() {
+  //    // Verifica se o Swiper está definido e inicializado corretamente antes de tentar acessar suas propriedades
+  //    if (!this.swiper || typeof this.swiper.realIndex === 'undefined') {
+  //     console.log("Swiper não inicializado.");
+  //     return; // Sai do método se o Swiper não estiver inicializado
+  // }
+
+  //    // Atualiza currentSlideIndex aqui
+  //    this.currentSlideIndex = this.swiper.realIndex;
+
+  //   // Primeiro, verifica se o Swiper está definido e inicializado corretamente.
+  //   if (!this.swiper || typeof this.swiper.realIndex === 'undefined') {
+  //       console.log("Swiper não inicializado.");
+  //       return; // Sai do método se o Swiper não estiver inicializado
+  //   }
+
+  //   const currentSlideIndex = this.swiper.realIndex;
+
+  //   // Atualiza a visibilidade e classes do cabeçalho baseado no slide atual
+  //   this.updateHeaderAndApplyClasses(currentSlideIndex);
+
+  //   const pagination = document.querySelector('.swiper-pagination');
+
+  //   // Atualiza a visibilidade do menu lateral e da paginação
+  //   const displayStyle = currentSlideIndex >= 1 ? 'flex' : 'none';
+  //   if (pagination) pagination.style.display = displayStyle;
+
+  //   // Aplica a classe 'menu-white' no slide 4 ou 6
+  //   const shouldApplyMenuWhite = [4, 6].includes(currentSlideIndex);
+  //   if (pagination) pagination.classList.toggle('menu-white', shouldApplyMenuWhite);
+
+  //   // Remove 'active' class de todos os itens do menu
+  //   document.querySelectorAll('.project-menu-item').forEach(menuItem => {
+  //       menuItem.classList.remove('active');
+  //   });
+
+  //   // Ativa o item do menu correspondente ao slide atual
+  // this.activateCurrentMenuItem(currentSlideIndex);
+  // this.updateHeaderAndApplyClasses(this.currentSlideIndex);
+  // }
+
   slideChange() {
-     // Verifica se o Swiper está definido e inicializado corretamente antes de tentar acessar suas propriedades
-     if (!this.swiper || typeof this.swiper.realIndex === 'undefined') {
+    // Verifica se o Swiper está definido e inicializado corretamente antes de tentar acessar suas propriedades
+    if (!this.swiper || typeof this.swiper.realIndex === 'undefined') {
       console.log("Swiper não inicializado.");
       return; // Sai do método se o Swiper não estiver inicializado
-  }
-
-     // Atualiza currentSlideIndex aqui
-     this.currentSlideIndex = this.swiper.realIndex;
-
-    // Primeiro, verifica se o Swiper está definido e inicializado corretamente.
-    if (!this.swiper || typeof this.swiper.realIndex === 'undefined') {
-        console.log("Swiper não inicializado.");
-        return; // Sai do método se o Swiper não estiver inicializado
     }
-
-    const currentSlideIndex = this.swiper.realIndex;
-
+  
+    // Atualiza currentSlideIndex aqui
+    this.currentSlideIndex = this.swiper.realIndex;
+  
     // Atualiza a visibilidade e classes do cabeçalho baseado no slide atual
-    this.updateHeaderAndApplyClasses(currentSlideIndex);
-
+    this.updateHeaderAndApplyClasses(this.currentSlideIndex);
+  
     const pagination = document.querySelector('.swiper-pagination');
-
+  
     // Atualiza a visibilidade do menu lateral e da paginação
-    const displayStyle = currentSlideIndex >= 1 ? 'flex' : 'none';
+    const displayStyle = this.currentSlideIndex >= 1 ? 'flex' : 'none';
     if (pagination) pagination.style.display = displayStyle;
-
+  
     // Aplica a classe 'menu-white' no slide 4 ou 6
-    const shouldApplyMenuWhite = [4, 6].includes(currentSlideIndex);
+    const shouldApplyMenuWhite = [4, 6].includes(this.currentSlideIndex);
     if (pagination) pagination.classList.toggle('menu-white', shouldApplyMenuWhite);
-
+  
     // Remove 'active' class de todos os itens do menu
     document.querySelectorAll('.project-menu-item').forEach(menuItem => {
-        menuItem.classList.remove('active');
+      menuItem.classList.remove('active');
     });
-
+  
     // Ativa o item do menu correspondente ao slide atual
-  this.activateCurrentMenuItem(currentSlideIndex);
-  this.updateHeaderAndApplyClasses(this.currentSlideIndex);
+    this.activateCurrentMenuItem(this.currentSlideIndex);
   }
+  
 
   updateHeaderAndApplyClasses(currentSlideIndex) {
     const header = document.querySelector('.header');
@@ -380,7 +414,25 @@ export default class MySwiper {
     };
   
     // Aplica animações se houver mudanças reais
-    applyAnimationsIfNeeded(newState);
+  applyAnimationsIfNeeded(newState);
+  }
+
+  applyHoverEffects() {
+    // Seleciona todos os links dentro do elemento com ID 'menu'
+    const menuLinks = document.querySelectorAll('#menu a');
+  
+    // Define a opacidade inicial dos links para 1
+    gsap.set(menuLinks, { opacity: 1 });
+  
+    // Aplica a animação de hover usando o GSAP
+    menuLinks.forEach(link => {
+      // Remove qualquer tween de GSAP existente para evitar conflitos ou duplicações
+      gsap.killTweensOf(link);
+  
+      // Define o hover usando GSAP
+      link.addEventListener('mouseenter', () => gsap.to(link, { opacity: 0.6, duration: 0.3 }));
+      link.addEventListener('mouseleave', () => gsap.to(link, { opacity: 1, duration: 0.3 }));
+    });
   }
   
   checkIfQuemSomosSlide(slide) {
