@@ -52,7 +52,7 @@ ul[data-menu="list"] {
   text-decoration: none;
   padding: 12px 8px;
   position: relative;     
-  }
+}
 
 .menu a:hover {
   opacity: 0.6;
@@ -73,7 +73,7 @@ ul[data-menu="list"] {
   font-size: 1rem; /* Menor */
   transition: color 0.3s ease, font-size 0.3s ease;
   padding: 8px 4px;
-
+  opacity: 1;
 }
 
 /* Estilos para o logotipo com a classe dark */
@@ -92,6 +92,7 @@ ul[data-menu="list"] {
 .header .menu a.dark {
   color: var(--bg); 
   transition: color 0.3s ease;
+  opacity: 1;
 }
 
 @media (max-width: 768px) { 
