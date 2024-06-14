@@ -58,7 +58,6 @@
   }
 }
 
-
 .slide-content-intro h1 {
   font: 500 3.2rem/1.25 "Hind", sans-serif;
   color: var(--bg);
@@ -114,4 +113,18 @@
   }
 }
 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1180px) and (orientation: portrait) {
+  .slide-content-intro h1 {
+    font: 500 2.6rem / 3.2rem Hind, sans-serif;
+    max-width: none;
+    width: 100vw;
+  }
+}
 
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1180px) and (orientation: landscape) {
+    .slide-content-intro h1 {
+      font: 500 2.6rem / 3.2rem Hind, sans-serif;
+      max-width: none;
+      width: 100vw;
+    }
+  }

@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   gap: 80px;
-  margin-top: 40px;
+  margin-top: 48px;
 }
 
 .swiper-slide.complaince {
@@ -17,19 +17,19 @@
 
 .svg-background-complaince{
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -20px;
+  left: 80px;
   width: 100%;
-  height: 100%;
+  height: auto;
   z-index: -2;  
 }
 
-  .complaince {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: flex-start;
-    gap: 80px;
-  }
+.complaince {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
+  gap: 80px;
+}
 
 .complaince-texto {
   display: flex;
@@ -58,10 +58,7 @@
   color: var(--text);
   font: 300 1rem/1.25 "Hind", sans-serif;
   margin-bottom: 15px;
-
 }
-
-
 
 ul.politicas li {
   position: relative;
@@ -90,8 +87,7 @@ ul.politicas li::before {
   color: var(--text);
 }
 
-@media (max-width: 800px) {
-
+@media (max-width: 768px) {
   .slide-content-complaince {
   grid-template-columns: 1fr;
   gap: 40px;
@@ -106,9 +102,30 @@ ul.politicas li::before {
     background-size: cover; 
   }
 
-  .svg-background-complaince svg {
-    width: 100%;
-    height: auto;
+  .svg-background-complaince {
+    left: -60px;
+    top: 60px;
+    width: 1400px;
   }
-  
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1180px) and (orientation: portrait) {
+  .slide-content-complaince{
+    grid-template-columns: 1fr;
   }
+  .svg-background-complaince {
+    left: -120px;
+    top: 200px;
+    top: -100px;
+    width: 2400px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1180px) and (orientation: landscape) {
+  .svg-background-complaince {
+    left: -120px;
+    top: 200px;
+    top: -100px;
+    width: 2400px;
+  }
+}
