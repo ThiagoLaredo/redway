@@ -32,8 +32,11 @@ img {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
+  width: 100%; /* Faz o container ocupar 100% da largura do elemento pai */
+  padding: 0 20px; /* Adiciona um pouco de espaço dentro do container */
+  box-sizing: border-box; 
 }
 
 .visually-hidden {
