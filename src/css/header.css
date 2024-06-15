@@ -35,7 +35,7 @@ ul[data-menu="list"] {
 
 .menu ul {
   display: flex;
-  gap: 1.6rem;
+  gap: 1.4rem;
   align-items: center;
   }
 
@@ -93,6 +93,22 @@ ul[data-menu="list"] {
   color: var(--bg); 
   transition: color 0.3s ease;
   opacity: 1;
+}
+
+@media (min-width: 768px) and (max-width: 1080px) {
+
+  .menu ul {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    }
+
+  .menu a {
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 10px 4px;
+  }
+
 }
 
 @media (max-width: 768px) { 
