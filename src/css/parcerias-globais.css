@@ -21,15 +21,21 @@
   margin-bottom:10px;
 }
 
+.svg-container svg {
+  width: 100%; /* Ocupa 100% da largura do contêiner */
+  height: auto; /* Mantém a proporção ao ajustar a largura */
+}
+
 @media (max-width: 768px) {
   .slide-content-parcerias {
     grid-template-columns: 1fr;
     margin-top: 0;
+    gap: 20px;
   }
- 
+
   .svg-container svg {
     max-width: 100%;
-    max-height: 240px;
+    max-height: auto;
   }
 }
 
@@ -37,7 +43,7 @@
     
   .slide-content-parcerias {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 20px;
   }
  
   .svg-container svg {
@@ -48,8 +54,6 @@
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1180px) and (orientation: landscape) {
   .slide-content-parcerias {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding-top: 20px;
+    grid-template-columns: 1fr 1fr;
   }
 }

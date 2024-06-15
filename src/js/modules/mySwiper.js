@@ -11,7 +11,8 @@ export default class MySwiper {
     document.addEventListener('DOMContentLoaded', () => {
       // Adiciona um ouvinte de evento para redimensionamento da janela
       window.addEventListener('resize', this.handleResize.bind(this));
-      this.handleResize();
+      this.setupResizeListener();
+      this.handleResize();      
       this.carregamentoImagemIntro();
       this.carregamentoImagemQuemSomos();
     });
@@ -21,21 +22,65 @@ export default class MySwiper {
     return window.innerWidth <= 768;
   }
 
-  handleResize() {
-  if (this.isMobile()) {
-    if (this.swiper) {
-      this.destroySwiper();
-      // Aplica o estado padrão do cabeçalho para mobile, independentemente do slide
-      this.updateHeaderAndApplyClasses(-1); // Passa um valor específico que indica modo mobile
+  handleResize = () => {
+    console.log("Redimensionando: ", window.innerWidth);
+    const isCurrentlyMobile = this.isMobile();
+    console.log(isCurrentlyMobile ? "Modo Mobile" : "Modo Desktop");
+
+    // Verifica se estamos mudando de estado (de mobile para desktop ou vice-versa)
+    const isStateChange = (isCurrentlyMobile && this.swiper !== null) || (!isCurrentlyMobile && this.swiper === null);
+
+    if (isStateChange) {
+      if (isCurrentlyMobile) {
+        console.log("Destruindo Swiper porque estamos mudando para modo Mobile");
+        this.destroySwiper(); // Destrua o Swiper se estivermos mudando para modo Mobile
+      } else {
+        console.log("Inicializando Swiper porque estamos mudando para modo Desktop");
+        this.initializeSwiper(); // Inicialize o Swiper se estivermos mudando para modo Desktop
+      }
+      this.updateHeaderAndApplyClasses(this.currentSlideIndex); // Atualize sempre as classes do cabeçalho ao mudar de estado
     }
-  } else {
-    if (!this.swiper) {
-      this.initializeSwiper();
-      this.updateHeaderAndApplyClasses(this.currentSlideIndex);
-    }
-  }
+
+    // Adiciona o carregamento e estilo de fundo das imagens intro e quem-somos sempre no redimensionamento
+    this.aplicarBackgroundImagemIntro();
+    this.aplicarBackgroundImagemQuemSomos();
   }
 
+  aplicarBackgroundImagemIntro() {
+    const img = document.getElementById("bg-img-intro");
+    const slide = document.querySelector('.swiper-slide.intro');
+    const backgroundStyle = `linear-gradient(var(--secondary65), var(--secondary65)), url(${img.src})`;
+    slide.style.backgroundImage = backgroundStyle;
+    console.log("Background da imagem intro aplicado: ", backgroundStyle);
+  }
+
+  aplicarBackgroundImagemQuemSomos() {
+    const img = document.getElementById("bg-img-quemsomos");
+    const slide = document.getElementById("mobile-quemsomos");
+    const backgroundStyle = `linear-gradient(var(--primary45), var(--primary45)), url(${img.src})`;
+    slide.style.backgroundImage = backgroundStyle;
+    console.log("Background da imagem quem somos aplicado: ", backgroundStyle);
+  }
+
+
+  throttle(callback, limit) {
+    let waiting = false; // Inicialmente, não está aguardando
+    return function () {
+      if (!waiting) {
+        callback.apply(this, arguments); // Executa o callback
+        waiting = true; // Ativa o estado de espera
+        setTimeout(() => {
+          waiting = false; // Após o limite, permite novas chamadas
+        }, limit);
+      }
+    };
+  }
+
+  setupResizeListener() {
+    const throttledResize = this.throttle(this.handleResize.bind(this), 800);
+    window.addEventListener('resize', throttledResize);
+  }
+  
   swiperInit() {
   // Usando setTimeout para garantir que o Swiper esteja completamente inicializado
     setTimeout(() => {
@@ -115,7 +160,6 @@ export default class MySwiper {
     let initialSlideIndex = this.swiper ? this.swiper.realIndex : 0;
     this.updateHeaderAndApplyClasses(initialSlideIndex);
   } 
-
   animateContentIn(slide) {
     if (this.isMobile()) {
       return;
@@ -271,47 +315,6 @@ export default class MySwiper {
     }
   }
 
-  // slideChange() {
-  //    // Verifica se o Swiper está definido e inicializado corretamente antes de tentar acessar suas propriedades
-  //    if (!this.swiper || typeof this.swiper.realIndex === 'undefined') {
-  //     console.log("Swiper não inicializado.");
-  //     return; // Sai do método se o Swiper não estiver inicializado
-  // }
-
-  //    // Atualiza currentSlideIndex aqui
-  //    this.currentSlideIndex = this.swiper.realIndex;
-
-  //   // Primeiro, verifica se o Swiper está definido e inicializado corretamente.
-  //   if (!this.swiper || typeof this.swiper.realIndex === 'undefined') {
-  //       console.log("Swiper não inicializado.");
-  //       return; // Sai do método se o Swiper não estiver inicializado
-  //   }
-
-  //   const currentSlideIndex = this.swiper.realIndex;
-
-  //   // Atualiza a visibilidade e classes do cabeçalho baseado no slide atual
-  //   this.updateHeaderAndApplyClasses(currentSlideIndex);
-
-  //   const pagination = document.querySelector('.swiper-pagination');
-
-  //   // Atualiza a visibilidade do menu lateral e da paginação
-  //   const displayStyle = currentSlideIndex >= 1 ? 'flex' : 'none';
-  //   if (pagination) pagination.style.display = displayStyle;
-
-  //   // Aplica a classe 'menu-white' no slide 4 ou 6
-  //   const shouldApplyMenuWhite = [4, 6].includes(currentSlideIndex);
-  //   if (pagination) pagination.classList.toggle('menu-white', shouldApplyMenuWhite);
-
-  //   // Remove 'active' class de todos os itens do menu
-  //   document.querySelectorAll('.project-menu-item').forEach(menuItem => {
-  //       menuItem.classList.remove('active');
-  //   });
-
-  //   // Ativa o item do menu correspondente ao slide atual
-  // this.activateCurrentMenuItem(currentSlideIndex);
-  // this.updateHeaderAndApplyClasses(this.currentSlideIndex);
-  // }
-
   slideChange() {
     // Verifica se o Swiper está definido e inicializado corretamente antes de tentar acessar suas propriedades
     if (!this.swiper || typeof this.swiper.realIndex === 'undefined') {
@@ -456,48 +459,60 @@ export default class MySwiper {
   carregamentoImagemIntro() {
     const img = document.getElementById("bg-img-intro");
     const slide = document.querySelector('.swiper-slide.intro');
-  
     console.log("Tentando carregar a imagem intro:", img.src);
-  
+
+    // Função para aplicar o estilo de fundo
+    const aplicarBackground = (src) => {
+      slide.style.backgroundImage = `linear-gradient(var(--secondary65), var(--secondary65)), url(${src})`;
+    };
+
     img.addEventListener("load", function() {
       console.log("Imagem intro carregada com sucesso:", img.src);
-      slide.style.backgroundImage = `linear-gradient(var(--secondary65), var(--secondary65)), url(${img.src})`;
+      aplicarBackground(img.src);
     });
-  
+
     img.addEventListener("error", function() {
       console.error("Erro ao carregar a imagem intro:", img.src);
     });
-  
-    // Trigger the load event if the image is already cached
+
+    // Verifica se a imagem já está carregada e aplica o background
     if (img.complete) {
-      img.dispatchEvent(new Event('load'));
+      aplicarBackground(img.src);
+    } else {
+      // Força o reload da imagem ao mudar o src temporariamente
+      const srcAtual = img.src;
+      img.src = ''; // Limpa o src para garantir que o load será disparado
+      img.src = srcAtual;
     }
   }
-  
+
   carregamentoImagemQuemSomos() {
     const img = document.getElementById("bg-img-quemsomos");
     const slide = document.getElementById("mobile-quemsomos");
-  
     console.log("Tentando carregar a imagem de quem somos:", img.src);
-  
+
+    // Função para aplicar o estilo de fundo
+    const aplicarBackground = (src) => {
+      slide.style.backgroundImage = `linear-gradient(var(--primary45), var(--primary45)), url(${src})`;
+    };
+
     img.addEventListener("load", function() {
       console.log("Imagem de quem somos carregada com sucesso:", img.src);
-      slide.style.backgroundImage = `linear-gradient(var(--primary45), var(--primary45)), url(${img.src})`;
+      aplicarBackground(img.src);
     });
-  
+
     img.addEventListener("error", function() {
       console.error("Erro ao carregar a imagem de quem somos:", img.src);
     });
-  
-    // Trigger the load event if the image is already cached
+
+    // Verifica se a imagem já está carregada e aplica o background
     if (img.complete) {
-      img.dispatchEvent(new Event('load'));
+      aplicarBackground(img.src);
+    } else {
+      // Força o reload da imagem ao mudar o src temporariamente
+      const srcAtual = img.src;
+      img.src = ''; // Limpa o src para garantir que o load será disparado
+      img.src = srcAtual;
     }
-  }
-  
+  }  
 }
-
-
-
-
-
