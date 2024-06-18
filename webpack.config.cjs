@@ -83,12 +83,12 @@ module.exports = {
     port: 9000,
     open: true,
     hot: true,
-    proxy: [{
-      context: ['/send-email'],
+    proxy: [{  // Usar um array aqui
+      context: () => true,
       target: 'http://localhost:5000',
       secure: false,
       changeOrigin: true,
-      timeout: 120000  // Aumenta o tempo limite para 120 segundos
+      timeout: 120000
     }]
   }
 }

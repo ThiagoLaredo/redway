@@ -3,6 +3,8 @@ import HeaderScroll from './modules/header-scroll.js';
 import ScrollAnima from './modules/scroll-anima.js';
 import MySwiper from './modules/mySwiper.js';
 import ConsoleTextEffect from './modules/text-effect.js';
+import { FormHandler } from './modules/formHandler.js';
+
 import "../css/global.css";
 import "../css/header.css";
 import "../css/introducao.css";
@@ -47,32 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-
-// Adicionando o código para interceptar e enviar o formulário
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-  contactForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const formData = {
-      nome: document.getElementById('nome').value,
-      email: document.getElementById('email').value,
-      whatsapp: document.getElementById('whatsapp').value,
-      motivo: document.getElementById('motivo').value,
-      mensagem: document.getElementById('mensagem').value
-    };
-
-    fetch('/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    })
-    .then(response => response.text())
-    .then(data => alert("Mensagem enviada com sucesso!"))
-    .catch(error => console.error('Erro ao enviar mensagem:', error));
-  });
-} else {
-  console.error('Formulário de contato não encontrado.');
-}
+document.addEventListener('DOMContentLoaded', () => {
+  const formHandler = new FormHandler('contact-form');
+});
