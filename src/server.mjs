@@ -7,7 +7,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-const port = 5000;
+const PORT = process.env.PORT || 5001; // Porta alternativa
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -16,7 +16,7 @@ app.post('/send-email', (req, res) => {
   const { nome, email, whatsapp, motivo, mensagem } = req.body;
 
   let transporter = nodemailer.createTransport({
-    host: 'mail.myaswimwear.com.br',
+    host: 'smtp.office365.com',
     port: 587,
     secure: false,  // true for 465, false for other ports
     auth: {
@@ -27,7 +27,7 @@ app.post('/send-email', (req, res) => {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: 'olatuthinking@gmail.com  ',
+    to: 'olatuthinking@gmail.com',
     subject: `Mensagem de ${nome}`,
     text: `Nome: ${nome}\nEmail: ${email}\nWhatsApp: ${whatsapp}\nMotivo: ${motivo}\nMensagem: ${mensagem}`
   };
@@ -43,6 +43,7 @@ app.post('/send-email', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Servidor rodando na porta ${port}`);
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
+
