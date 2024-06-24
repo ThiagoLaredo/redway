@@ -92,6 +92,11 @@
   font-size: 16px;
   border-radius: 6px;
   font: 800 1rem/1 "Hind", sans-serif;
+  transition: opacity 0.3s ease; /* Adiciona uma transição suave para a opacidade */
+}
+
+#send-button:hover {
+  opacity: 0.7; /* Reduz a opacidade quando o mouse está sobre o botão */
 }
 
 /* Clearfix */
