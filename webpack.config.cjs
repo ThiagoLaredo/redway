@@ -67,7 +67,8 @@ module.exports = {
   }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'src/img', to: 'img' } // Copia tudo de src/img para dist/img
+        { from: 'src/img', to: 'img' }, // Copia tudo de src/img para dist/img
+        { from: 'src/translations.json', to: 'translations.json' } // Copia seu arquivo JSON para dist
       ]
     }),
   ],
