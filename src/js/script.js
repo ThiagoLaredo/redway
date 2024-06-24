@@ -3,7 +3,7 @@ import HeaderScroll from './modules/header-scroll.js';
 import ScrollAnima from './modules/scroll-anima.js';
 import MySwiper from './modules/mySwiper.js';
 import ConsoleTextEffect from './modules/text-effect.js';
-import { FormHandler } from './modules/formHandler.js';
+import FormHandler from './modules/formHandler.js';
 
 import "../css/global.css";
 import "../css/header.css";
@@ -49,6 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const formHandler = new FormHandler('contact-form');
-});
+  document.addEventListener('DOMContentLoaded', () => {
+    const formHandler = new FormHandler('contact-form');
+  });

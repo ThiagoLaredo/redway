@@ -1,7 +1,8 @@
-.env
+# .env
 node_modules/
-vendor/
-*.log
-*.cache
-*.bak
-*.tmp
+*.php
+PHPMailer
+# *.log
+# *.cache
+# *.bak
+# *.tmp
