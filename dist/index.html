@@ -1173,24 +1173,25 @@
             <div class="slide-content-contato">
               <div class="form">
                 <h2>Fale Conosco</h2>
-                <form id="contact-form" action="send_email.php" method="POST">
-                    <div class="form-field half-width-1">
-                        <input type="text" id="nome" name="nome" placeholder="Nome e Sobrenome*" required>
-                    </div>
-                    <div class="form-field half-width">
-                        <input type="email" id="email" name="email" placeholder="E-mail*" required>
-                    </div>         
-                    <div class="form-field half-width-1">
-                        <input type="text" id="whatsapp" name="whatsapp" placeholder="WhatsApp/com DDD*" required>
-                    </div>         
-                    <div class="form-field half-width">
-                        <input type="text" id="motivo" name="motivo" placeholder="Motivo do contato*" required>
-                    </div>      
-                    <div class="form-field">
-                        <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="4"></textarea>
-                    </div>
-                    <button type="submit" id="send-button">Enviar mensagem</button>
-                </form>   
+                <form id="contact-form" aria-label="Formulário" method="POST">
+                  <div class="form-field half-width-1">
+                      <input type="text" id="nome" name="nome" placeholder="Nome e Sobrenome*" required>
+                  </div>
+                  <div class="form-field half-width">
+                      <input type="email" id="email" name="email" placeholder="E-mail*" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                  </div>         
+                  <div class="form-field half-width-1">
+                      <input type="text" id="whatsapp" name="whatsapp" placeholder="WhatsApp/com DDD*" required>
+                  </div>         
+                  <div class="form-field half-width">
+                      <input type="text" id="motivo" name="motivo" placeholder="Motivo do contato*" required>
+                  </div>      
+                  <div class="form-field">
+                      <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="4"></textarea>
+                  </div>
+                  <button type="submit" id="send-button">Enviar mensagem</button>
+              </form>
+               
             </div>
                
               <div class="contato-lista">
@@ -1209,8 +1210,7 @@
               </div>
             </div>
           </div>
-        </div>  
-        
+        </div>      
       </div>
     </div>
   </body>

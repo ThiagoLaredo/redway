@@ -85,7 +85,7 @@ module.exports = {
     hot: true,
     proxy: [{  // Usar um array aqui
       context: () => true,
-      target: 'http://localhost:5001',
+      target: 'http://localhost:5005',
       secure: false,
       changeOrigin: true,
       timeout: 120000
