@@ -3,6 +3,16 @@ body, h1, h2, h3, h4, p, ul, li, a {
   padding: 0;
 }
 
+h1, h2, h3, h4 {
+  font-family: 'coolvetica', sans-serif;
+  font-weight: 800; /* Usando 'black' */
+}
+
+p {
+  font-family: 'Odisseia', sans-serif;
+  font-weight: normal; /* Usando 'regular' */
+}
+
 body {
   background-color: #fff;
 }
@@ -32,12 +42,54 @@ img {
 }
 
 .container {
-  max-width: 1440px;
-  margin: 0 auto;
-  width: 100%; /* Faz o container ocupar 100% da largura do elemento pai */
-  padding: 0 20px; /* Adiciona um pouco de espaço dentro do container */
-  box-sizing: border-box; 
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px; /* Largura máxima do container */
+  margin: 0 auto; /* Centraliza o container horizontalmente */
+  padding: 20px; /* Espaço interno do container */
+  box-sizing: border-box; /* Inclui padding na largura total */
 }
+
+/* Importando Coolvetica */
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('../fonts/coolvetica\ rg.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Importando Odisseia Test Black */
+@font-face {
+  font-family: 'Odisseia';
+  src: url('../fonts/OdisseiaTest-Black.otf') format('opentype');
+  font-weight: 800; /* valor estimado para 'black' */
+  font-style: normal;
+}
+
+/* Importando Odisseia Test Bold */
+@font-face {
+  font-family: 'Odisseia';
+  src: url('../fonts/OdisseiaTest-Bold.otf') format('opentype');
+  font-weight: bold; /* geralmente 700 */
+  font-style: normal;
+}
+
+/* Importando Odisseia Test Regular */
+@font-face {
+  font-family: 'Odisseia';
+  src: url('../fonts/OdisseiaTest-Regular.otf') format('opentype');
+  font-weight: normal; /* geralmente 400 */
+  font-style: normal;
+}
+
+/* Importando Odisseia Test Light */
+@font-face {
+  font-family: 'Odisseia';
+  src: url('../fonts/OdisseiaTest-Light.otf') format('opentype');
+  font-weight: 300; /* valor estimado para 'light' */
+  font-style: normal;
+}
+
 
 .visually-hidden {
   position: absolute;
