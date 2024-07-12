@@ -2,8 +2,9 @@
   --textwhite: #fff;
   --text: #283E4F;
   --bg: #ffffff;
-  --primary: #4E7A9B;
-  --secondary: #395971;
+  --primary: #A00000;
+  --secondary: #760000;
+  --alerta: #FE0000;
   --primary5: hsl(206, 33%, 46%, 5%);
   --primary10: hsl(206, 33%, 46%, 10%);
   --primary15: hsl(206, 33%, 46%, 15%);
