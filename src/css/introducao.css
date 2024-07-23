@@ -12,7 +12,6 @@
   flex-direction: column;
   padding: 0 5%; /* Adicione um pouco de padding para não colar o texto na borda */
   gap: 20px;
-  background: white; /* Define a cor de fundo do texto como branco */
 }
 
 .introducao-texto h1 {
@@ -34,9 +33,7 @@
   height: 100vh;
   position: relative;
   object-fit: cover;
-
   border-top: 0.5px solid var(--textwhite);
-
 }
 
 .background-image {
@@ -48,7 +45,7 @@
   left: 0;
   background: url('../img/intro-img.png') no-repeat center center;
   background-size: cover;
-  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%); /* Efeito diagonal */
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%); 
   background-blend-mode: lighten;
   background-color: #A00000;
   background-position: 30% 90%;
@@ -57,3 +54,63 @@
   /* border-bottom-left-radius: 20px; */
   /* box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.5);  */
 }
+
+@media (max-width: 768px) { 
+    .introducao {
+      display: flex;
+      flex-direction: column; /* Empilha os elementos verticalmente */
+      position: relative;
+    }
+  
+    .introducao-texto {
+      width: 100%;
+      gap: 20px;
+      align-items: center;
+      padding-top: 120px;
+    }
+  
+    .introducao-texto h1 {
+      font-size: 2rem;
+      color: var(--textwhite);
+      text-align: center;
+    }
+  
+    .introducao-texto p {
+      max-width: 100%;
+      color: var(--textwhite);
+      text-align: center;
+
+    }
+  
+    .img-intro {
+      width: 100%;
+      object-fit: cover;
+      border-top: none;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+    }
+  
+    .background-image {
+      clip-path: none;
+      background-position: center;
+      background-size: cover;
+      /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 25%), 0 100%); */
+      background-position: 36% 10%;
+    }
+
+    .btn.btn-intro {
+      /* background-color: transparent; */
+      border: 1px solid var(--destaque)
+    }
+  
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1180px) {
+
+}
+
+@media only screen and (min-width: 1180px) {
+
+  }
+

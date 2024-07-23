@@ -17,6 +17,8 @@ import "../css/protecao.css";
 import "../css/produtos.css";
 import "../css/seguranca.css";
 import "../css/rodape.css";
+import "../css/componentes.css";
+
 
 
 

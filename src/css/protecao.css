@@ -22,7 +22,6 @@
 
 .protecao h3  {
   font: 800 1rem/1.35 "Inter", sans-serif;
-
   color: var(--text);
 }
 
@@ -30,3 +29,26 @@
   font: 300 0.85rem/1.35 "Inter", sans-serif;
   color: var(--text);
 }
+
+@media (max-width: 768px) { 
+  .lista-protecoes {
+    flex-direction: column;
+  }
+
+  .protecao {
+    min-height: 0;
+    align-items: center;
+  }
+
+  .protecao h3  {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1180px) {
+
+}
+
+@media only screen and (min-width: 1180px) {
+
+  }
