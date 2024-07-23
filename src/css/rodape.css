@@ -1,5 +1,6 @@
 .rodape-background {
   background-color: var(--primary);
+  border-top: 0.5px solid var(--textwhite);
 }
 
 .rodape {
@@ -7,15 +8,13 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-around;
-  padding: 100px 0;
+  padding: 100px 20px;
 }
 
 .rodape h4 {
  margin-bottom: 12px;
  color: var(--textwhite);
  font: 800 1.2rem/1.2 "Inter", sans-serif;
-
-
 }
 
 .coluna-2 ul, .coluna-3 ul, .coluna-4 ul {
@@ -34,4 +33,24 @@
 
 .rodape a:hover {
   opacity: 0.6;
+}
+
+
+@media (max-width: 768px) { 
+  .rodape-background {
+    border-top: 1px solid var(--textwhite);
+  }
+  .rodape {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1180px) {
+
+}
+
+@media only screen and (min-width: 1180px) {
+
 }

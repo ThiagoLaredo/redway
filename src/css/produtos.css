@@ -19,8 +19,9 @@
 }
 
 .produtos h2 {
-  font: 500 2rem/1.5 'Coolvetica', sans-serif;
+  font: 500 2rem/1.4 'Coolvetica', sans-serif;
   color: var(--text);
+  text-align: center;
 }
 
 .lista-produtos {
@@ -91,3 +92,25 @@
   transform-origin: bottom right; /* Animação inicia da esquerda para a direita */
 }
 
+@media (max-width: 768px) { 
+  .sobre-texto {
+    padding: 0px;
+  }
+  
+  .produto {
+    padding: 20px;
+  }
+
+  .produto p  {
+    max-width: 100%;
+  }
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1180px) {
+
+}
+
+@media only screen and (min-width: 1180px) {
+
+}
