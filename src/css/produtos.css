@@ -1,0 +1,93 @@
+.produtos-background {
+  /* background-color: var(--primary5); */
+  padding: 0 0 100px 0;
+}
+
+.produtos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.produto-titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  gap: 8px;
+}
+
+.produtos h2 {
+  font: 500 2rem/1.5 'Coolvetica', sans-serif;
+  color: var(--text);
+}
+
+.lista-produtos {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.produto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: var(--primary);
+  /* border: 0.5px solid var(--alerta); */
+  padding: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* x-offset, y-offset, blur-radius, spread-radius, color */
+  border-radius: 8px;
+  min-height: 160px;
+  max-width: fit-content;
+}
+
+.produto h3 {
+  color: var(--textwhite);
+  font: 800 1.2rem/1.35 "Inter", sans-serif;
+
+}
+.produto p  {
+  font: 300 0.85rem/1.35 "Inter", sans-serif;
+  color: var(--textwhite);
+  max-width: 40ch;
+}
+
+.produto a  {
+  font: 300 0.75rem/1.35 "Inter", sans-serif;
+  color: var(--textwhite);
+}
+
+.link-produto {
+  display: flex;
+  align-items: center;
+}
+
+.link-produto a {
+  position: relative;
+  display: inline-block; /* Garante que o link se ajuste ao texto */
+  text-decoration: none; /* Remove o sublinhado padrão */
+}
+
+.link-produto a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.4px; /* Espessura da linha */
+  background-color: var(--textwhite); /* Cor da linha */
+  bottom: -4px; /* Posição da linha abaixo do texto */
+  left: 0;
+  transform: scaleX(1); /* Começa sem a linha visível */
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-in-out; /* Animação suave ao passar o mouse */
+}
+
+.link-produto a:hover::before {
+  transform: scaleX(0);
+  transform-origin: bottom right; /* Animação inicia da esquerda para a direita */
+}
+

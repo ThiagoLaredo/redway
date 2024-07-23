@@ -1,17 +1,17 @@
 .header {
-  position: absolute;
   width: 100%;
   z-index: 1000;
+  background-color: var(--primary);
+  border-bottom: 0.5px solid var(--bg);
+  position: fixed;
+  top: 0;
 }
 
-.header.dark{
-background-color: var(--primary);
-}
 
 .header_menu {
   box-sizing: border-box;
   height: 100%;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,13 +40,12 @@ ul[data-menu="list"] {
   }
 
 .menu  li {
-  font-family: "Hind", Arial, sans-serif;
   align-self: center;
 }
 
 .menu a {
   color: var(--bg);
-  font-size: 1rem;
+  font: 1rem/1 'inter', sans-serif;;
   display: flex;
   justify-content: center;
   text-decoration: none;
@@ -229,6 +228,6 @@ ul[data-menu="list"] {
 @media only screen and (min-width: 1180px) {
   /* Coloque aqui os estilos específicos para telas grandes */
   .menu a {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }      

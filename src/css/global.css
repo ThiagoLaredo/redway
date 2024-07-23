@@ -8,10 +8,6 @@ h1, h2, h3, h4 {
   font-weight: 800; /* Usando 'black' */
 }
 
-p {
-  font-family: 'Odisseia', sans-serif;
-  font-weight: normal; /* Usando 'regular' */
-}
 
 body {
   background-color: #fff;
@@ -46,7 +42,7 @@ img {
   flex-direction: column;
   max-width: 1200px; /* Largura máxima do container */
   margin: 0 auto; /* Centraliza o container horizontalmente */
-  padding: 20px; /* Espaço interno do container */
+  padding: 0 20px; /* Espaço interno do container */
   box-sizing: border-box; /* Inclui padding na largura total */
 }
 

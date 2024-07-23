@@ -1,0 +1,28 @@
+.sobre {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+}
+
+
+.sobre-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0 240px;
+}
+
+.sobre-texto h2 {
+  font: 500 2rem/1.5 'Coolvetica', sans-serif;
+  color: var(--text);
+}
+
+.sobre-texto p {
+  font: 300 1rem/1.5 "Inter", sans-serif;
+  color: var(--text);
+  text-align: center;
+}
