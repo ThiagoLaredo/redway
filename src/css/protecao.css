@@ -1,0 +1,32 @@
+.lista-protecoes {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.protecao {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: var(--bg);
+  padding: 20px;
+  border: solid 0.3px #F7EEEE;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* x-offset, y-offset, blur-radius, spread-radius, color */
+  border-radius: 8px;
+  min-height: 300px;
+}
+
+.protecao h3  {
+  font: 800 1rem/1.35 "Inter", sans-serif;
+
+  color: var(--text);
+}
+
+.protecao p  {
+  font: 300 0.85rem/1.35 "Inter", sans-serif;
+  color: var(--text);
+}

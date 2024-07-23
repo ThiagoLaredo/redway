@@ -73,7 +73,7 @@ module.exports = {
     }),
   ],
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.js', '.jsx', '.json'],
   },
   mode: 'production',
   devServer: {

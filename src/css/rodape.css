@@ -1,0 +1,37 @@
+.rodape-background {
+  background-color: var(--primary);
+}
+
+.rodape {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 100px 0;
+}
+
+.rodape h4 {
+ margin-bottom: 12px;
+ color: var(--textwhite);
+ font: 800 1.2rem/1.2 "Inter", sans-serif;
+
+
+}
+
+.coluna-2 ul, .coluna-3 ul, .coluna-4 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font: 300 1rem/1.2 "Inter", sans-serif;
+}
+
+.rodape a {
+  position: relative;
+  display: inline-block; /* Garante que o link se ajuste ao texto */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  color: var(--textwhite);
+}
+
+.rodape a:hover {
+  opacity: 0.6;
+}

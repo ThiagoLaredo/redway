@@ -1,11 +1,9 @@
 import MenuMobile from './modules/menu-mobile.js';
-import HeaderScroll from './modules/header-scroll.js';
-import ScrollAnima from './modules/scroll-anima.js';
-import ConsoleTextEffect from './modules/text-effect.js';
-import FormHandler from './modules/formHandler.js';
+// import ConsoleTextEffect from './modules/text-effect.js';
+// import FormHandler from './modules/formHandler.js';
 import LanguageSwitcher from './modules/languageSwitcher.js';
-import translations from '../translations.json'
-
+// import translations from '../translations.json'
+import { initAnimations } from './modules/animations.js';
 
 
 import "../css/global.css";
@@ -14,56 +12,33 @@ import "../css/introducao.css";
 import "../css/text-typing.css";
 import "../css/menu-mobile.css";
 import "../css/cores.css";
+import "../css/sobre.css";
+import "../css/protecao.css";
+import "../css/produtos.css";
+import "../css/seguranca.css";
+import "../css/rodape.css";
 
-const menuMobile = new MenuMobile('[data-menu="logo"]', '[data-menu="button"]', '[data-menu="list"]', '[data-menu="contato-mobile"]', '[data-menu="linkedin"]' );
-menuMobile.init();
 
-const headerScroll = new HeaderScroll('.header');
-headerScroll.init();
 
-const scrollAnima = new ScrollAnima('.swiper-slide');
-scrollAnima.init();
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const targetElement = document.getElementById('typing');
-  if (targetElement) {
-    const textoParaDigitar = 'Somos uma gestora com portfólio de investimentos alternativos, focados em infraestrutura, crédito e operações estruturadas.';
-    const velocidadeDeDigitacao = 30; // Velocidade em milissegundos
-    new ConsoleTextEffect(targetElement, textoParaDigitar, velocidadeDeDigitacao, () => {
-      // Callback para ser executado após a animação de digitação
-      if (targetElement) {
-        targetElement.style.animation = "fadeInUp 0.5s ease-out";
-      } else {
-        console.error('Elemento para digitação não encontrado após conclusão da digitação.');
-      }
-    });
-  } else {
-    console.error('Elemento targetElement não encontrado no DOM.');
-  }
-});
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const formHandler = new FormHandler('contact-form');
+    console.log("DOM completamente carregado.");
+    
+    // Inicialização de componentes
+    const menuMobile = new MenuMobile('[data-menu="logo"]', '[data-menu="button"]', '[data-menu="list"]', '[data-menu="contato-mobile"]', '[data-menu="linkedin"]');
+    menuMobile.init();
+  
+    // const formHandler = new FormHandler('contact-form');
+  
+    // const languageSwitcher = new LanguageSwitcher(translations);
+    // languageSwitcher.init();
+  
+    // Verifique se está chegando até aqui
+    console.log("Iniciando animações GSAP...");
+  
+    initAnimations();
+  
+    console.log("Animações GSAP iniciadas.");
   });
-
-
-  document.addEventListener('DOMContentLoaded', () => {
-
-    const languageSwitcher = new LanguageSwitcher(translations);
-
-    const btnEnglish = document.getElementById('switch-en');
-    const btnPortuguese = document.getElementById('switch-pt');
-
-    if (btnEnglish && btnPortuguese) {
-        btnEnglish.addEventListener('click', () => {
-            languageSwitcher.switchLanguage('en');
-        });
-
-        btnPortuguese.addEventListener('click', () => {
-            languageSwitcher.switchLanguage('pt');
-        });
-    } else {
-        console.error('Buttons not found');
-    }
-});
+  
