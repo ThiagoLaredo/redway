@@ -1,5 +1,5 @@
 {
-  "name": "trius",
+  "name": "redway",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ThiagoLaredo/TriusCapital.git"
+    "url": "git+https://github.com/ThiagoLaredo/redway.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ThiagoLaredo/TriusCapital.git/issues"
+    "url": "https://github.com/ThiagoLaredo/redway.git/issues"
   },
-  "homepage": "https://github.com/ThiagoLaredo/TriusCapital.git#readme",
+  "homepage": "https://github.com/ThiagoLaredo/redway.git#readme",
   "devDependencies": {
     "@babel/core": "^7.24.9",
     "@babel/plugin-transform-runtime": "^7.24.7",
