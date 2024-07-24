@@ -130,6 +130,7 @@ ul[data-menu="list"] {
     text-decoration: none;
     padding: 10px 4px;
   }
+
 }
 
 @media (max-width: 768px) { 
@@ -158,6 +159,10 @@ ul[data-menu="list"] {
   ul[data-menu="list"] {
     margin-right: 0;
   } */
+
+  .language-options {
+    top: 30px;
+  }
 
   .language-button {
     font-size: 16px;
