@@ -5,47 +5,65 @@
   --primary: #A00000;
   --secondary: #BF1515;
   --alerta: #FE0000;
-  --primary5: hsl(206, 33%, 46%, 5%);
-  --primary10: hsl(206, 33%, 46%, 10%);
-  --primary15: hsl(206, 33%, 46%, 15%);
-  --primary20: hsl(206, 33%, 46%, 20%);
-  --primary25: hsl(206, 33%, 46%, 25%);
-  --primary30: hsl(206, 33%, 46%, 30%);
-  --primary35: hsl(206, 33%, 46%, 35%);
-  --primary40: hsl(206, 33%, 46%, 40%);
-  --primary45: hsl(206, 33%, 46%, 45%);
-  --primary50: hsl(206, 33%, 46%, 50%);
-  --primary55: hsl(206, 33%, 46%, 55%);
-  --primary60: hsl(206, 33%, 46%, 60%);
-  --primary65: hsl(206, 33%, 46%, 65%);
-  --primary70: hsl(206, 33%, 46%, 70%);
-  --primary75: hsl(206, 33%, 46%, 75%);
-  --primary80: hsl(206, 33%, 46%, 80%);
-  --primary85: hsl(206, 33%, 46%, 85%);
-  --primary90: hsl(206, 33%, 46%, 90%);
-  --primary95: hsl(206, 33%, 46%, 95%);
-  --secondary5: hsl(206, 33%, 33%, 5%);
-  --secondary10: hsl(206, 33%, 33%, 10%);
-  --secondary15: hsl(206, 33%, 33%, 15%);
-  --secondary20: hsl(206, 33%, 33%, 20%);
-  --secondary25: hsl(206, 33%, 33%, 25%);
-  --secondary30: hsl(206, 33%, 33%, 30%);
-  --secondary35: hsl(206, 33%, 33%, 35%);
-  --secondary40: hsl(206, 33%, 33%, 40%);
-  --secondary45: hsl(206, 33%, 33%, 45%);
-  --secondary50: hsl(206, 33%, 33%, 50%);
-  --secondary55: hsl(206, 33%, 33%, 55%);
-  --secondary60: hsl(206, 33%, 33%, 60%);
-  --secondary65: hsl(206, 33%, 33%, 65%);
-  --secondary70: hsl(206, 33%, 33%, 70%);
-  --secondary75: hsl(206, 33%, 33%, 75%);
-  --secondary80: hsl(206, 33%, 33%, 80%);
-  --secondary85: hsl(206, 33%, 33%, 85%);
-  --secondary90: hsl(206, 33%, 33%, 90%);
-  --secondary95: hsl(206, 33%, 33%, 95%);
+  --primary5: hsl(0, 100%, 31%, 5%);
+  --primary10: hsl(0, 100%, 31%, 10%);
+  --primary15: hsl(0, 100%, 31%, 15%);
+  --primary20: hsl(0, 100%, 31%, 20%);
+  --primary25: hsl(0, 100%, 31%, 25%);
+  --primary30: hsl(0, 100%, 31%, 30%);
+  --primary35: hsl(0, 100%, 31%, 35%);
+  --primary40: hsl(0, 100%, 31%, 40%);
+  --primary45: hsl(0, 100%, 31%, 45%);
+  --primary50: hsl(0, 100%, 31%, 50%);
+  --primary55: hsl(0, 100%, 31%, 55%);
+  --primary60: hsl(0, 100%, 31%, 60%);
+  --primary65: hsl(0, 100%, 31%, 65%);
+  --primary70: hsl(0, 100%, 31%, 70%);
+  --primary75: hsl(0, 100%, 31%, 75%);
+  --primary80: hsl(0, 100%, 31%, 80%);
+  --primary85: hsl(0, 100%, 31%, 85%);
+  --primary90: hsl(0, 100%, 31%, 90%);
+  --primary95: hsl(0, 100%, 31%, 95%);
+  --secondary5: hsl(0, 80%, 42%, 5%);
+  --secondary10: hsl(0, 80%, 42%, 10%);
+  --secondary15: hsl(0, 80%, 42%, 15%);
+  --secondary20: hsl(0, 80%, 42%, 20%);
+  --secondary25: hsl(0, 80%, 42%, 25%);
+  --secondary30: hsl(0, 80%, 42%, 30%);
+  --secondary35: hsl(0, 80%, 42%, 35%);
+  --secondary40: hsl(0, 80%, 42%, 40%);
+  --secondary45: hsl(0, 80%, 42%, 45%);
+  --secondary50: hsl(0, 80%, 42%, 50%);
+  --secondary55: hsl(0, 80%, 42%, 55%);
+  --secondary60: hsl(0, 80%, 42%, 60%);
+  --secondary65: hsl(0, 80%, 42%, 65%);
+  --secondary70: hsl(0, 80%, 42%, 70%);
+  --secondary75: hsl(0, 80%, 42%, 75%);
+  --secondary80: hsl(0, 80%, 42%, 80%);
+  --secondary85: hsl(0, 80%, 42%, 85%);
+  --secondary90: hsl(0, 80%, 42%, 90%);
+  --secondary95: hsl(0, 80%, 42%, 95%);
+   --alerta5: hsl(0, 100%, 50%, 5%);
+  --alerta10: hsl(0, 100%, 50%, 10%);
+  --alerta15: hsl(0, 100%, 50%, 15%);
+  --alerta20: hsl(0, 100%, 50%, 20%);
+  --alerta25: hsl(0, 100%, 50%, 25%);
+  --alertay30: hsl(0, 100%, 50%, 30%);
+  --alerta35: hsl(0, 100%, 50%, 35%);
+  --alerta40: hsl(0, 100%, 50%, 40%);
+  --alerta45: hsl(0, 100%, 50%, 45%);
+  --alerta50: hsl(0, 100%, 50%, 50%);
+  --alerta55: hsl(0, 100%, 50%, 55%);
+  --alerta60: hsl(0, 100%, 50%, 60%);
+  --alerta65: hsl(0, 100%, 50%, 65%);
+  --alerta70: hsl(0, 100%, 50%, 70%);
+  --alerta75: hsl(0, 100%, 50%, 75%);
+  --alerta80: hsl(0, 100%, 50%, 80%);
+  --alerta85: hsl(0, 100%, 50%, 85%);
+  --alerta90: hsl(0, 100%, 50%, 90%);
+  --alerta95: hsl(0, 100%, 50%, 95%);
+  
 }
-
-
 
 /* Text Color */
 .text {
@@ -53,7 +71,7 @@
 }
 
 .textwhite {
-  color: #fff;
+  color:  var(--textwhite);
 }
 
 /* Background Color */
@@ -73,7 +91,7 @@
 
 /* Accent Color */
 .accent {
-  color: var(--accent);
+  color: var(--alerta);
 }
 
 /* Text Contrast Color */
@@ -315,4 +333,81 @@
 
 .secondary95 {
   color: var(--secondary95);
+}
+
+/* Secondary Shades */
+.salerta5 {
+  color: var(--alerta5);
+}
+
+.salerta10 {
+  color: var(--alerta10);
+}
+
+.alerta15 {
+  color: var(--salerta15);
+}
+
+.alerta20 {
+  color: var(--salerta20);
+}
+
+.alerta25 {
+  color: var(--alerta5);
+}
+
+.alerta30 {
+  color: var(--alerta30);
+}
+
+.alerta35 {
+  color: var(--alerta35);
+}
+
+.alerta40 {
+  color: var(--alerta40);
+}
+
+.alerta45 {
+  color: var(--alerta45);
+}
+
+.alerta50 {
+  color: var(--alertay50);
+}
+
+.alerta55 {
+  color: var(--alerta55);
+}
+
+.alerta60 {
+  color: var(--alerta60);
+}
+
+.alerta65 {
+  color: var(--alerta65);
+}
+
+.alerta70 {
+  color: var(--alerta70);
+}
+
+.alerta75 {
+  color: var(--alerta75);
+}
+
+.alerta80 {
+  color: var(--alerta80);
+}
+
+.alerta85 {
+  color: var(--alerta85);
+}
+
+.alerta90 {
+  color: var(--alerta90);
+}
+
+.alerta95 {
+  color: var(--alerta95);
 }
