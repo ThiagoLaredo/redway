@@ -21,6 +21,6 @@
   transform: scale(1.05); 
 }
 
-/* .btn:active {
+.btn:active {
   transform: scale(0.95); 
-} */
+}
