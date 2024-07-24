@@ -144,32 +144,33 @@ ul[data-menu="list"] {
   }
 
   .header a > img {
-    width: 80%;
+    width: 100%;
   }
 
   .header_menu {
     padding: 0.5rem 0;
   }
 
-  .header-scrolled {
-    background-color: var(--primary); 
-  }
-
-  .menu a:hover::before,
-  .menu a:hover::after {
-    display: none;
-  }
-
   .menu-button {
     display: none;
   }
-
+/* 
   ul[data-menu="list"] {
     margin-right: 0;
-  }
+  } */
 
   .language-button {
     font-size: 16px;
+  }
+
+  .language-switch {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  #menu li a[data-translate=menuFaleConosco] {
+    background-color: transparent;
   }
 }
 
