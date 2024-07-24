@@ -2,7 +2,7 @@ import MenuMobile from './modules/menu-mobile.js';
 // import ConsoleTextEffect from './modules/text-effect.js';
 // import FormHandler from './modules/formHandler.js';
 import LanguageSwitcher from './modules/languageSwitcher.js';
-// import translations from '../translations.json'
+import translations from '../translations.json'
 import { initAnimations } from './modules/animations.js';
 
 
@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // const formHandler = new FormHandler('contact-form');
   
-    // const languageSwitcher = new LanguageSwitcher(translations);
-    // languageSwitcher.init();
+    const languageSwitcher = new LanguageSwitcher(translations);
+    languageSwitcher.init();
   
     // Verifique se está chegando até aqui
     console.log("Iniciando animações GSAP...");

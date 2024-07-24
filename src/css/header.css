@@ -42,6 +42,27 @@ ul[data-menu="list"] {
   align-self: center;
 }
 
+#menu li a[data-translate="menuFaleConosco"] {
+  display: inline-block;
+  padding: 10px 20px; /* Ajuste o padding conforme necessário */
+  background-color: var(--secondary); /* Cor de fundo mais escura ao passar o mouse */
+  color: white; /* Cor do texto */
+  border-radius: 20px; /* Bordas arredondadas */
+  text-decoration: none; /* Remove o sublinhado do link */
+  transition: background-color 0.3s, transform 0.3s; /* Suaviza a transição de cores e transformação */
+}
+
+#menu li a[data-translate="menuFaleConosco"]:hover {
+  background-color: var(--alerta); /* Cor de fundo mais escura ao passar o mouse */
+  transform: scale(1.05); /* Aumenta ligeiramente o botão */
+  opacity: 1;
+}
+
+#menu li a[data-translate="menuFaleConosco"]:active {
+  transform: scale(0.95); /* Reduz ligeiramente o botão ao clicar */
+}
+
+
 .menu a {
   color: var(--bg);
   font: 1rem/1 'inter', sans-serif;;
@@ -58,84 +79,43 @@ ul[data-menu="list"] {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.header_menu.minimal  {
-  padding: 0.2rem 0;
-}
-
-.header a > img.minimal {
-  transition: width 0.3s ease;
-}
-
-/* Estilos para os links do menu com a classe minimal */
-.header .menu a.minimal {
-  /* Exemplo: muda a cor e o tamanho da fonte dos links */
-  font-size: 1rem; /* Menor */
-  line-height: 1;
-  transition: color 0.3s ease, font-size 0.3s ease;
-  padding: 8px 4px;
-  opacity: 1;
-}
-
-/* Estilos para o logotipo com a classe dark */
-.header a > img.dark {
-  filter: none; 
-  transition: filter 0.3s ease;
-}
-
-.header a > img {
-  filter: brightness(0) invert(1); 
-  transition: filter 0.3s ease;
-  z-index: 99;
-  opacity: 1;
-}
-
-.header .menu a.dark {
-  color: var(--bg); 
-  transition: color 0.3s ease;
-  opacity: 1;
-}
-
 .language-switch {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.language-button {
-  background: none;
-  border: 0;
-  color: white;
-  padding: 0 20px; /* Remove vertical padding to avoid affecting the height */
-  font-size: 14px;
-  height: 40px; /* Define a consistent height for the button */
-  line-height: 40px; /* Set line-height equal to the button height for vertical centering */
-  cursor: pointer;
-  transition: opacity 0.3s;
-  font-family: "Hind", Arial, sans-serif;
-}
-
-
-.language-button:hover {
-  opacity: 0.6;
-}
-
-.language-button + .language-button {
-  border-left: none; /* Remove the left border from the second button */
   position: relative;
 }
 
-
-.language-button + .language-button::before {
-  content: "";
+.language-options {
+  display: none;
   position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 40%;
-  width: 1px;
-  background: white;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 5px 0;
 }
+
+.language-button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.language-button img.language-icon {
+  width: 16px; /* Ajuste conforme necessário */
+  height: auto;
+  margin-left: 5px;
+}
+
+.language-button:hover, .language-button:focus {
+  opacity: 0.6;
+}
+
+#current-lang {
+  color: var(--textwhite);
+}
+
+
 
 @media (min-width: 768px) and (max-width: 1080px) {
 

@@ -12,8 +12,15 @@
   cursor: pointer; 
   width: fit-content;
   border: 0;
+  transition: background-color 0.3s, transform 0.3s; 
+  transform: scale(1); 
 }
 
 .btn:hover {
   background-color: var(--alerta);
+  transform: scale(1.05); 
 }
+
+/* .btn:active {
+  transform: scale(0.95); 
+} */

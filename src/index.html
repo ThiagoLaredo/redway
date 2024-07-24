@@ -41,10 +41,16 @@
             <li><a data-translate="menuSoluções" href="">Serviços</a></li>
             <li><a data-translate="menuBlog" href=""">Blog</a></li>
             <li><a data-translate="menuFaleConosco" href="">Fale Conosco</a></li>
-            <!-- Botão de alternância de idioma -->
+            <!-- Botão de alternância de idioma com dropdown -->
             <li class="language-switch">
-              <button id="switch-en" class="language-button">EN</button>
-              <button id="switch-pt" class="language-button">PT</button>
+              <button id="language-dropdown" class="language-button">
+                  <span id="current-lang">PT</span>
+                  <img src="./img/idioma.svg" alt="Idioma" class="language-icon">
+              </button>
+              <div id="language-options" class="language-options">
+                  <button id="switch-en" class="language-button">EN</button>
+                  <button id="switch-pt" class="language-button">PT</button>
+              </div>
             </li>
           </ul>  
         </nav>
@@ -94,7 +100,7 @@
       </div>
     </div>  
 
-    <button class="btn" href="#">Conheça nossos serviços</button>
+    <button class="btn">Conheça nossos serviços</button>
 
   </section>
 
