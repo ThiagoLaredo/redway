@@ -100,7 +100,6 @@
     }
 
     .btn.btn-intro {
-      /* background-color: transparent; */
       border: 1px solid var(--alerta);
       background-color: var(--alerta45);
     }
