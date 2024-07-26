@@ -23,7 +23,7 @@ export const initAnimations = () => {
       ease: "power1.out",
       delay: 1.5
     });
-    gsap.from(".introducao-texto h1, .introducao-texto p, .btn-intro", {
+    gsap.from(".introducao-texto h1, .introducao-texto p, .introducao-texto button", {
       duration: 1,
       x: -100,
       opacity: 0,
@@ -32,24 +32,17 @@ export const initAnimations = () => {
       delay: 2
     });
   };
+
+  document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('mouseenter', () => {
+      gsap.to(button, { duration: 0.3, backgroundColor: 'var(--alerta)', scale: 1.05 });
+    });
+    
+    button.addEventListener('mouseleave', () => {
+      gsap.to(button, { duration: 0.3, backgroundColor: 'var(--secondary)', scale: 1 });
+    });
+  });
   
-
-  // gsap.from(".sobre-texto h2, .sobre-texto p.", {
-  //   scrollTrigger: {
-  //     trigger: ".sobre",
-  //     start: "top 90%", // Inicia quando a parte superior da seção atinge o final da viewport
-  //     toggleActions: "play none none none",
-  //     markers: true // Opcional para debugging
-  //   },
-  //   duration: 1,
-  //   x: -100, // Entrada da esquerda para a direita
-  //   opacity: 0,
-  //   stagger: 0.2,
-  //   ease: "power2.out" // Suaviza a transição
-  // });
-
-
-
   const sections = document.querySelectorAll('section, footer');
   sections.forEach(section => {
     gsap.from(section.querySelectorAll('h2, p, img, h3, ul, button, div'), {
@@ -67,4 +60,6 @@ export const initAnimations = () => {
       ease: "power1.out"
     });
   });
+
+
 

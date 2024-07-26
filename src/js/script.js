@@ -20,27 +20,23 @@ import "../css/rodape.css";
 import "../css/componentes.css";
 
 
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM completamente carregado.");
-    
+
+  
     // Inicialização de componentes
     const menuMobile = new MenuMobile('[data-menu="logo"]', '[data-menu="button"]', '[data-menu="list"]', '[data-menu="contato-mobile"]', '[data-menu="linkedin"]');
     menuMobile.init();
   
     // const formHandler = new FormHandler('contact-form');
-  
-    const languageSwitcher = new LanguageSwitcher(translations);
-    languageSwitcher.init();
-  
-    // Verifique se está chegando até aqui
+
     console.log("Iniciando animações GSAP...");
   
     initAnimations();
   
     console.log("Animações GSAP iniciadas.");
+  
+    const languageSwitcher = new LanguageSwitcher(translations);  
+   
   });
   
