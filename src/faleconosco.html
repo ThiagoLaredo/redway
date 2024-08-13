@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redway - Cibersegurança</title>
+    <meta name="description" content="Há 20 anos elevando o nível da cibersegurança de 
+    grandes empresas, com excelência e transparência.">
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
+
+   <!-- Open Graph / Facebook -->
+   <meta property="og:title" content="Redway: Há 20 anos elevando o nível da cibersegurança de 
+   grandes empresas, com excelência e transparência.">
+   <meta property="og:description" content="Redway: Há 20 anos elevando o nível da cibersegurança de 
+   grandes empresas, com excelência e transparência.">
+   <meta property="og:image" content="https://www.triuscapital.com.br/img/trius-capital-1200w.webp">
+   <meta property="og:image:width" content="1200">  <!-- Largura da imagem -->
+   <meta property="og:image:height" content="630">  <!-- Altura da imagem -->
+   <meta property="og:url" content="https://redwaysecurity.com/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <script>document.documentElement.className += ' js';</script>
+    
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+      <div class="header_menu">
+        <a data-menu="logo" href="/"> <img src="./img/logo_branco.svg" alt="Logo da Redway"></a>
+        <span class="visually-hidden">Voltar para a página inicial</span>
+        <nav class="menu" data-menu="suave">
+          <button data-menu="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+            <span id="hamburguer"></span>
+          </button>          
+          <ul data-menu="list" id="menu">
+            <li><a data-translate="menuRedAlert" href="">RedAlert</a></li>
+            <li><a data-translate="menuServicos" href="">Serviços</a></li>
+            <li><a data-translate="menuBlog" href=""">Blog</a></li>
+            <li><a data-translate="menuFaleConosco" href="">Fale Conosco</a></li>
+            <!-- Botão de alternância de idioma com dropdown -->
+            <li class="language-switch">
+              <button id="language-dropdown" class="language-button">
+                  <span id="current-lang">PT</span>
+                  <img src="./img/idioma.svg" alt="Idioma" class="language-icon">
+              </button>
+              <div id="language-options" class="language-options">
+                  <button id="switch-en" class="language-button">EN</button>
+                  <button id="switch-pt" class="language-button">PT</button>
+              </div>
+            </li>
+          </ul>  
+        </nav>
+      </div>
+    </div>
+    </header>
+
+    <a data-menu="contato-mobile" href="mailto:contato@triuscapital.com.br" target="_blank">contato@redway.com.br</a>
+    <a data-menu="linkedin" href="https://www.linkedin.com/company/trius-capital/" target="_blank">
+      <img src="./img/linkedin.svg">
+      <span class="visually-hidden">Ir para o Linkedin</span>
+    </a>
+    
+    <div class="introducao-pg-interna">
+      <div class="introducao-texto">
+          <h1 data-translate="introTitulo">Fale Com Nossos Especialistas</h1>
+          <p data-translate="introDescricao">Conte com nossa equipe de especialistas. Estamos disponíveis para ajudar a resolver problemas, esclarecer dúvidas e garantir que seus sistemas estejam sempre protegidos.</p>
+      </div>
+      <div class="img-intro-pg-interna">  
+        <div class="background-image-pg-interna"></div>
+      </div> 
+    </div>
+    <div class="formulario container">
+      <form action="#" method="post">
+        <h2>Envie uma mensagem</h2>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" id="sobrenome" name="sobrenome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone">
+
+        <label for="cargo">Cargo:</label>
+        <input type="text" id="cargo" name="cargo">
+
+        <label for="empresa">Empresa:</label>
+        <input type="text" id="empresa" name="empresa">
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf">
+
+        <label for="cnpj">CNPJ:</label>
+        <input type="text" id="cnpj" name="cnpj">
+
+        <label for="areaEmpresa">Área da empresa:</label>
+        <input type="text" id="areaEmpresa" name="areaEmpresa">
+
+        <label for="siteEmpresa">Site da empresa:</label>
+        <input type="url" id="siteEmpresa" name="siteEmpresa">
+
+        <label for="assunto">Assunto:</label>
+        <input type="text" id="assunto" name="assunto" required>
+
+        <label for="necessidade">Necessidade:</label>
+        <textarea id="necessidade" name="necessidade"></textarea>
+
+        <label for="motivoContato">Motivo do contato:</label>
+        <textarea id="motivoContato" name="motivoContato"></textarea>
+
+        <button class="btn-form" type="submit">Enviar</button>
+      </form>
+    </div>
+         
+   
+   <footer class="rodape-background">
+    <div class="rodape container">
+      <img src="./img/logo_branco.svg">
+      <div class="coluna-2">
+        <h4>Redway</h4>
+        <ul>
+          <a data-translate="rodapeLinkSobreNos" hef=""><li>Sobre nós</li></a>
+          <a data-translate="rodapeLinkPerguntasFrequentes" hef=""><li>Perguntas frequentes</li></a>
+          <a data-translate="rodapeLinkContato" hef=""><li>Contato</li></a>
+        </ul>
+      </div>
+      <div class="coluna-3">
+        <h4 data-translate="rodapeLinkProdutos">Produtos</h4>
+        <ul>
+          <a hef=""><li>RedAlert</li></a>
+          <a hef=""><li>VulnWatcher</li></a>
+          <a hef=""><li>Application Security</li></a>
+          <a hef=""><li>Secure Source Code Review</li></a>
+          <a hef=""><li>Red Team & Social Engineering</li></a>
+          <a hef=""><li>Third-Party Cyber Risk Management</li></a>
+          <a hef=""><li>Vulnerability Management</li></a>
+          <a hef=""><li>Hardening e Compliance checks</li></a>
+          <a hef=""><li>Attack Surface Management</li></a>
+        </ul>
+      </div>
+      <div class="coluna-4">
+        <h4 data-translate="rodapeLinkConheca">Conheça</h4>
+        <ul>
+          <a hef=""><li>Cases</li></a>
+          <a hef=""><li>Blog</li></a>
+        </ul>
+      </div>
+    </div>
+   </footer>
+  </body>
+</html>

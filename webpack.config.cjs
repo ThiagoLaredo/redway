@@ -6,7 +6,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-
 module.exports = {
   entry: './src/js/script.js',
   output: {
@@ -32,10 +31,10 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',  // Webpack 5 maneira de lidar com recursos estáticos
+        type: 'asset/resource',
         generator: {
-          filename: 'assets/images/[hash][ext][query]'  // Local e nome do arquivo no output
-      }
+          filename: 'assets/images/[hash][ext][query]'
+        }
       },
     ],
   },
@@ -64,11 +63,18 @@ module.exports = {
       minify: {
         removeRedundantAttributes: false,
       },
-  }),
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/faleconosco.html',
+      filename: 'faleconosco.html',
+      minify: {
+        removeRedundantAttributes: false,
+      },
+    }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'src/img', to: 'img' }, // Copia tudo de src/img para dist/img
-        { from: 'src/translations.json', to: 'translations.json' } // Copia seu arquivo JSON para dist
+        { from: 'src/img', to: 'img' },
+        { from: 'src/translations.json', to: 'translations.json' }
       ]
     }),
   ],
@@ -80,17 +86,19 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
+    historyApiFallback: true,
     compress: true,
     port: 9000,
     open: true,
     hot: true,
-    proxy: [{  // Usar um array aqui
-      context: () => true,
-      target: 'http://localhost:5005',
-      secure: false,
-      changeOrigin: true,
-      timeout: 120000
-    }]
+    proxy: [
+      {
+        context: ['/api'],
+        target: 'http://localhost:5005',
+        secure: false,
+        changeOrigin: true,
+        timeout: 120000
+      }
+    ]
   }
-}
-  
+};
