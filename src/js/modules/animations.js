@@ -23,6 +23,26 @@ export const initAnimations = () => {
       ease: "power1.out",
       delay: 1.5
     });
+
+    gsap.from(".background-image-pg-interna", {
+      duration: 1.5,
+      x: 200,
+      opacity: 0,
+      ease: "power1.out",
+      delay: 1.5
+    });
+
+    gsap.from(".svg-overlay ", {
+      duration: 1.5,
+      y: 0,
+      x:0,
+      scale: 0,
+      opacity: 0,
+      ease: "power1.out",
+      delay: 1.8
+    });
+
+
     gsap.from(".introducao-texto h1, .introducao-texto p, .introducao-texto button", {
       duration: 1,
       x: -100,
@@ -31,6 +51,16 @@ export const initAnimations = () => {
       ease: "power1.out",
       delay: 2
     });
+
+    gsap.from("form ", {
+      duration: 1.5,
+      y: 0,
+      x:0,
+      opacity: 0,
+      ease: "power1.out",
+      delay: 2.4
+    });
+
   };
 
   document.querySelectorAll('.btn').forEach(button => {
