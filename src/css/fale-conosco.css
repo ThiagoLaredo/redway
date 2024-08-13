@@ -29,6 +29,16 @@
   border-top: 0.5px solid var(--bg);
 }
 
+.svg-overlay {
+  position: absolute;
+  width: 100%;  /* Ajuste a largura conforme necessário */
+  height: 100%;  /* Ajuste a altura conforme necessário */
+  top: 0; 
+  left: 0;       /* Alinha o lado esquerdo do SVG com o lado esquerdo do contêiner */
+  opacity: 0.7;
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+}
+
 .formulario {
   display: flex;
   justify-content: center;
@@ -104,12 +114,15 @@ textarea {
     font-size: 2rem;
     color: var(--textwhite);
     text-align: center;
+    z-index: 1
   }
 
   .introducao-texto p {
     max-width: 100%;
     color: var(--textwhite);
     text-align: center;
+    z-index: 1;
+
 
   }
 
@@ -130,6 +143,14 @@ textarea {
     background-position: 36% 10%;
     position: absolute;
   }
+
+  .svg-overlay {
+    clip-path: none
+  }
+
+   /* .line-2, .line-3, .line-4, .line-5 {
+    display: none;
+  } */
 
   .formulario {
     padding: 40px 0 40px 0;
