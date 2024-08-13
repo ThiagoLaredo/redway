@@ -58,7 +58,7 @@ export const initAnimations = () => {
       x:0,
       opacity: 0,
       ease: "power1.out",
-      delay: 2.4
+      delay: 2.2
     });
 
   };
