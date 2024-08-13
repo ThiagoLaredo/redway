@@ -1,0 +1,138 @@
+
+.introducao-pg-interna {
+  display: flex;
+  height: calc(70vh + 80px);
+  width: 100%; 
+}
+
+.img-intro-pg-interna {
+  width: 50%;
+  height: 70vh;
+  position: relative;
+  object-fit: cover;
+  border-top: 0.5px solid var(--textwhite);
+}
+
+.background-image-pg-interna {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('../img/introducao.webp') no-repeat center center;
+  background-size: cover;
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%); 
+  background-blend-mode: darken;
+  background-color: #A00000;
+  background-position: 30% 90%;
+  border-top: 0.5px solid var(--bg);
+}
+
+.formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 80px 0;
+}
+
+.formulario h2 {
+  font: 600 1.4rem/1.5 "Inter", sans-serif;
+  color: var(--text);
+  text-align: center;
+}
+
+form {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+}
+
+label {
+  color: var(--text);
+  font: 300 .8rem/1 "Inter", sans-serif;
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-form {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-form:hover {
+  background-color: var(--alerta);
+}
+
+@media (max-width: 768px) { 
+  .introducao-pg-interna  {
+    display: flex;
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    position: relative;
+    height: 70vh;
+
+  }
+
+  .img-intro-pg-interna {
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    padding-top: 120px;
+    position: absolute;
+  }
+
+  .introducao-texto h1 {
+    font-size: 2rem;
+    color: var(--textwhite);
+    text-align: center;
+  }
+
+  .introducao-texto p {
+    max-width: 100%;
+    color: var(--textwhite);
+    text-align: center;
+
+  }
+
+  .background-image-pg-interna {
+    width: 100%;
+    object-fit: cover;
+    border-top: none;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    clip-path: none; 
+  }
+
+  .background-image-fale-conosco {
+    clip-path: none;
+    background-position: center;
+    background-size: cover;
+    background-position: 36% 10%;
+    position: absolute;
+  }
+
+  .formulario {
+    padding: 40px 0 40px 0;
+  }
+
+}
