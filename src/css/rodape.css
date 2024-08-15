@@ -17,7 +17,7 @@
  font: 800 1.2rem/1.2 "Inter", sans-serif;
 }
 
-.coluna-2 ul, .coluna-3 ul, .coluna-4 ul {
+.coluna-1 ul, .coluna-2 ul, .coluna-3 ul, .coluna-4 ul {
   display: flex;
   flex-direction: column;
   gap: 12px;
