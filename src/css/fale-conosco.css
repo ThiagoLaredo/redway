@@ -104,15 +104,19 @@ textarea {
     flex-direction: column; /* Empilha os elementos verticalmente */
     position: relative;
     height: 70vh;
-
+    justify-content: center;
   }
 
   .img-intro-pg-interna {
     width: 100%;
     gap: 20px;
     align-items: center;
-    padding-top: 120px;
+    /* padding-top: 120px; */
     position: absolute;
+  }
+
+  .introducao-texto.pg-interna {
+    padding-top: 0;
   }
 
   .introducao-texto h1 {
