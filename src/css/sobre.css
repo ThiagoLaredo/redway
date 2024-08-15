@@ -29,6 +29,11 @@
 }
 
 @media (max-width: 768px) { 
+
+  .sobre {
+    padding: 60px 20px;
+  }
+  
   .sobre-texto {
     padding: 0px;
   }

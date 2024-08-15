@@ -17,6 +17,7 @@ html,
 body {
   position: relative;
   height: 100%;
+  overflow-x: hidden;
 }
 
 ul {
@@ -108,3 +109,8 @@ img {
 }
 
 
+@media (max-width: 768px) {
+  body, html {
+    overflow-x: hidden;
+  }
+}
