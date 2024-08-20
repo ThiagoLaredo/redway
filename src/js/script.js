@@ -4,6 +4,8 @@ import MenuMobile from './modules/menu-mobile.js';
 import LanguageSwitcher from './modules/languageSwitcher.js';
 import translations from '../translations.json'
 import { initAnimations } from './modules/animations.js';
+import { adjustContainerWidth } from './modules/deviceStyleAdjuster.js';
+
 
 
 import "../css/global.css";
@@ -41,3 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
    
   });
   
+  window.onload = function() {
+    adjustContainerWidth();
+};
