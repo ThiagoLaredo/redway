@@ -45,16 +45,4 @@
   }
 }
 
-/* Estilos para dispositivos com alta densidade de pixels (como MacBook Pro Retina) */
-@media only screen and (min-device-width : 1920px) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .protecao {
-    min-height: 47vh;
-  }
-}
 
-/* Estilos para dispositivos com densidade de pixels padrão (como algumas telas Samsung) */
-@media only screen and (min-device-width : 1920px) and (-webkit-min-device-pixel-ratio: 1), (min-resolution: 96dpi) {
-  .protecao {
-    min-height: 27vh;
-  }
-}
