@@ -2,15 +2,15 @@
  .introducao {
   display: flex;
   height: 100vh;
-  width: 100%; /* Isso garantirá que a div principal ocupe toda a largura da viewport */
+  width: 100%; 
 }
 
 .introducao-texto {
-  width: 50%; /* Isso define que o texto ocupa 50% da largura da viewport */
+  width: 50%; 
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 0 5%; /* Adicione um pouco de padding para não colar o texto na borda */
+  padding: 0 2%; 
   gap: 20px;
 }
 
@@ -104,11 +104,21 @@
     /* .btn.btn-intro {
       border: 1px solid var(--textwhite);
       background-color: transparent;
-    } */
-  
+    } */  
 }
 
-@media only screen and (min-width: 1180px) {
+/* Estilos para dispositivos com alta densidade de pixels (como MacBook Pro Retina) */
+@media only screen and (min-device-width : 1920px) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .introducao-texto {
+    padding: 0 2%; 
+  }
+}
+
+/* Estilos para dispositivos com densidade de pixels padrão (como algumas telas Samsung) */
+@media only screen and (min-device-width : 1920px) and (-webkit-min-device-pixel-ratio: 1), (min-resolution: 96dpi) {
+  .introducao-texto {
+    padding: 0 5%; 
+  }
   .introducao-texto h1 {
     max-width: none;
   }
