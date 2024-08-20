@@ -65,7 +65,7 @@ export const initAnimations = () => {
 
   document.querySelectorAll('.btn').forEach(button => {
     button.addEventListener('mouseenter', () => {
-      gsap.to(button, { duration: 0.3, backgroundColor: 'var(--alerta)', scale: 1.05 });
+      gsap.to(button, { duration: 0.3, backgroundColor: 'var(--primary)', scale: 1.05 });
     });
     
     button.addEventListener('mouseleave', () => {

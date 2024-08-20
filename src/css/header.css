@@ -2,7 +2,7 @@
   width: 100%;
   z-index: 1000;
   background-color: var(--primary);
-  border-bottom: 0.5px solid var(--bg);
+  /* border-bottom: 0.5px solid var(--bg); */
   position: fixed;
   top: 0;
 }
@@ -53,7 +53,7 @@ ul[data-menu="list"] {
 }
 
 #menu li a[data-translate="menuFaleConosco"]:hover {
-  background-color: var(--alerta); /* Cor de fundo mais escura ao passar o mouse */
+  background-color: var(--alerta40);
   transform: scale(1.05); /* Aumenta ligeiramente o botão */
   opacity: 1;
 }
@@ -142,7 +142,7 @@ ul[data-menu="list"] {
     z-index: 10; /* Garante que o cabeçalho fique acima de outros elementos */
     top: 0; /* Alinha o cabeçalho ao topo da página */
     left: 0; /* Alinha o cabeçalho à esquerda da página */
-    border-bottom: 1px solid var(--bg);
+    /* border-bottom: 1px solid var(--bg); */
   }
 
   .header a > img {

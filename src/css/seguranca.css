@@ -23,8 +23,7 @@
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
   background-blend-mode: lighten;
-  background-color: #A00000;
-  background-position: 18% 90%;
+  background-color: rgba(160, 0, 0, 0.3);  background-position: 18% 90%;
 }
 
 .seguranca-texto {
@@ -94,9 +93,9 @@
     background-position: 1% 10%;
   }
 
-  .texto-destaque {
+  /* .texto-destaque {
     color: var(--alerta);
-  }
+  } */
 
 }
 

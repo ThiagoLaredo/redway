@@ -1,6 +1,6 @@
 .rodape-background {
   background-color: var(--primary);
-  border-top: 0.5px solid var(--textwhite);
+  /* border-top: 0.5px solid var(--textwhite); */
 }
 
 .rodape {
@@ -37,9 +37,9 @@
 
 
 @media (max-width: 768px) { 
-  .rodape-background {
+  /* .rodape-background {
     border-top: 1px solid var(--textwhite);
-  }
+  } */
   .rodape {
     flex-direction: column;
     gap: 40px;
