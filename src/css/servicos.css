@@ -1,0 +1,48 @@
+.background-image.servicos-pg {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('../img/servicos.webp') no-repeat center center;
+  background-size: cover;
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%); 
+  background-blend-mode: lighten;
+  background-color: rgba(160, 0, 0, 0.3);
+  background-position: 30% 90%;
+  border-top: 0.5px solid var(--bg);
+}
+
+.servicos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.servicos-lista li {
+  font: 400 1rem/1.5 "Inter", sans-serif;
+  color: var(--text);
+  position: relative;
+  list-style-type: none; /* Remove os marcadores de lista */
+  border: 1px solid #ccc; /* Adiciona uma borda cinza clara */
+  padding: 10px 15px; /* Adiciona padding para espaçar o texto das bordas */
+  border-radius: 5px; /* Bordas arredondadas para estética */
+  background-color: #fff; /* Fundo branco para cada item da lista */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve para dar profundidade */
+  transition: transform 0.2s ease-in-out; /* Efeito de transição suave ao interagir */
+  /* width:44%; */
+  cursor: pointer;
+}
+.servicos-lista li::after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="%23A00000" stroke-linecap="round" stroke-linejoin="round" d="M9.5 16.5L14.5 11.5L9.5 6.5"/></svg>');
+  position: absolute;
+  top: 50%; /* Posiciona o topo do elemento no centro vertical do `li` */
+  right: 10px; /* Espaço da direita */
+  transform: translateY(-50%); /* Desloca para cima em 50% da sua própria altura, centralizando verticalmente */
+  height: 24px; /* Altura do SVG */
+  width: 24px; /* Largura do SVG */
+}
+.servicos-lista li:hover {
+  transform: translateY(-3px); /* Eleva o item da lista ao passar o mouse */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra mais acentuada ao passar o mouse */
+}
