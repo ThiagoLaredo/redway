@@ -11,16 +11,10 @@ export function adjustContainerWidth() {
   } else {
       if (isMacOS && pixelRatio > 1) {
           container.style.maxWidth = '1200px';
-          protecoes.forEach(function(protecao) {
-              protecao.style.minHeight = '47vh'; // Altura menor para MacBook
-          });
+          protecoes.forEach(protecao => protecao.style.minHeight = '47vh'); // Altura menor para MacBook
       } else {
           container.style.maxWidth = '1800px';
-          protecoes.forEach(function(protecao) {
-              protecao.style.minHeight = '34vh'; // Altura maior para outros dispositivos
-          });
+          protecoes.forEach(protecao => protecao.style.minHeight = '34vh'); // Altura maior para outros dispositivos
       }
   }
 }
-
-

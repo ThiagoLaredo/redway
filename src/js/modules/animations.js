@@ -75,7 +75,7 @@ export const initAnimations = () => {
   
   const sections = document.querySelectorAll('section, footer');
   sections.forEach(section => {
-    gsap.from(section.querySelectorAll('h2, p, img, h3, ul, button, div'), {
+    gsap.from(section.querySelectorAll('h2, p, img, h3, ul, li, a, button, div'), {
       scrollTrigger: {
         trigger: section,
         start: "top 80%", // Inicia um pouco antes de entrar completamente na viewport

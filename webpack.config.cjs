@@ -71,6 +71,20 @@ module.exports = {
         removeRedundantAttributes: false,
       },
     }),
+    new HtmlWebpackPlugin({
+      template: './src/servicos.html',
+      filename: 'servicos.html',
+      minify: {
+        removeRedundantAttributes: false,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/servico.html',
+      filename: 'servico.html',
+      minify: {
+        removeRedundantAttributes: false,
+      },
+    }),
     new CopyWebpackPlugin({
       patterns: [
         { from: 'src/img', to: 'img' },
