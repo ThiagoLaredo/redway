@@ -51,3 +51,61 @@
   color: var(--text);
   text-align: left;
 }
+
+@media (max-width: 768px) { 
+  .introducao.small {
+    display: flex;
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    position: relative;
+  }
+
+  .introducao-texto.small {
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    padding-top: 70px;
+  }
+
+  .introducao-texto.small h1 {
+    font-size: 2rem;
+    color: var(--textwhite);
+    text-align: center;
+  }
+
+  .introducao-texto.small p {
+    max-width: 100%;
+    color: var(--textwhite);
+    text-align: center;
+
+  }
+
+  .img-intro.small {
+    width: 100%;
+    object-fit: cover;
+    border-top: none;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  .background-image.small {
+    clip-path: none;
+    background-position: center;
+    background-size: cover;
+    /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 25%), 0 100%); */
+    background-position: 36% 10%;
+    background-color: rgba(160, 0, 0, 0.3);
+  }
+  .background-image.small::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajuste a cor e a opacidade conforme necessário */
+    background-blend-mode: multiply; /* Escolha o modo de blend que melhor se encaixa */
+    z-index: 1; /* Garante que o overlay fique sobre a imagem de fundo */
+  }
+
+}
