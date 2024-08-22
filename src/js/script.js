@@ -10,6 +10,7 @@ import { initAnimations } from './modules/animations.js';
 import "../css/global.css";
 import "../css/header.css";
 import "../css/introducao.css";
+import "../css/introducao-small.css";
 import "../css/text-typing.css";
 import "../css/menu-mobile.css";
 import "../css/cores.css";

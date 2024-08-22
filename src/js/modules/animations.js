@@ -43,7 +43,7 @@ export const initAnimations = () => {
     });
 
 
-    gsap.from(".introducao-texto h1, .introducao-texto p, .introducao-texto button", {
+    gsap.from(".introducao-texto h1, .introducao-texto p, .introducao-texto button, .servicos-lista", {
       duration: 1,
       x: -100,
       opacity: 0,

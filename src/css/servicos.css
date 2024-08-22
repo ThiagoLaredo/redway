@@ -1,4 +1,8 @@
-.background-image.servicos-pg {
+.servicos {
+  padding: 0 0 60px 0;
+}
+
+.background-image.servicos-img {
   content: "";
   position: absolute;
   top: 0;
@@ -17,6 +21,7 @@
 .servicos-lista {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 8px;
 }
 .servicos-lista li {
@@ -32,6 +37,7 @@
   transition: transform 0.2s ease-in-out; /* Efeito de transição suave ao interagir */
   /* width:44%; */
   cursor: pointer;
+  width: 28vw;
 }
 .servicos-lista li::after {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="%23A00000" stroke-linecap="round" stroke-linejoin="round" d="M9.5 16.5L14.5 11.5L9.5 6.5"/></svg>');
