@@ -1,0 +1,53 @@
+
+.introducao.small {
+  display: flex;
+  height: calc(70vh - 60px);
+  width: 100%; 
+}
+
+.img-intro.small {
+  width: 50%;
+  height: 70vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  object-fit: cover;
+  border-top: 0.5px solid var(--textwhite);
+}
+
+.background-image.small {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('../img/introducao.webp') no-repeat center center;
+  background-size: cover;
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%); 
+  background-blend-mode: lighten;
+  background-color: rgba(160, 0, 0, 0.3);
+  background-position: 30% 90%;
+  border-top: 0.5px solid var(--bg);
+}
+
+
+.introducao-texto.small {
+  width: 50%; 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.introducao-texto.small h1 {
+  font-size: 2.4rem;
+  color: var(--text);
+  text-align: left;
+}
+
+.introducao-texto.small p {
+  font: 300 1rem/1.5 "Inter", sans-serif;
+  color: var(--text);
+  text-align: left;
+}

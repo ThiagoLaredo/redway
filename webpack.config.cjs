@@ -85,6 +85,13 @@ module.exports = {
         removeRedundantAttributes: false,
       },
     }),
+    new HtmlWebpackPlugin({
+      template: './src/fique-alerta.html',
+      filename: 'fique-alerta.html',
+      minify: {
+        removeRedundantAttributes: false,
+      },
+    }),
     new CopyWebpackPlugin({
       patterns: [
         { from: 'src/img', to: 'img' },
