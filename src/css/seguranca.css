@@ -1,13 +1,25 @@
-.seguranca {
+.seguranca-background {
   display: flex;
   height: 70vh;
   width: 100%;
+  position: relative;
+  justify-content: flex-end;
+}
+
+.seguranca {
+  display: flex;
+  justify-content: flex-end;
+  height: 70vh;
+  width: 100%;
+  position: relative;
 }
 
 .img-seguranca {
   width: 50%;
-  height: 100vh;
-  position: relative;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   object-fit: cover;
   z-index: -1;
 }
@@ -30,8 +42,8 @@
   width: 50%; /* Isso define que o texto ocupa 50% da largura da viewport */
   display: flex;
   justify-content: center;
+  align-items: flex-end;
   flex-direction: column;
-  padding: 0 5%; /* Adicione um pouco de padding para não colar o texto na borda */
   gap: 20px;
 }
 
@@ -51,16 +63,14 @@
 
 @media (max-width: 768px) { 
   .seguranca {
-    flex-direction: column; /* Empilha os elementos verticalmente */
-    position: relative;
+    justify-content: center;
   }
 
   .seguranca-texto {
     width: 100%;
     gap: 20px;
     align-items: center;
-    position: absolute;
-    top: 30%;
+    padding: 0 20px;
     }
 
   .seguranca-texto h3 {

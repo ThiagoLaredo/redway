@@ -41,8 +41,8 @@ img {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   max-width: 1200px; /* Largura máxima do container */
   margin: 0 auto; /* Centraliza o container horizontalmente */
   padding: 0 20px; /* Espaço interno do container */
