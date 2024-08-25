@@ -1,72 +1,184 @@
 {
   "pt": {
-    "menuServicos": "Serviços",
-    "menuFaleConosco": "Fale Conosco",
-    "introTitulo": "Segurança de alto nível para proteger o que mais te interessa",
-    "introDescricao": "Há 20 anos elevando o nível da cibersegurança de grandes empresas, com excelência e transparência.",
-    "introBotao": "Fale com nossos especialistas",
-    "institucionalTitulo": "Redway Cibersegurança",
-    "institucionalDescricao": "Com décadas de experiência e uma forte reputação em cibersegurança, somos a escolha para empresas que buscam proteção robusta de seus dados. Nossas soluções especializadas elevam a capacidade do seu time interno, garantindo uma segurança de alto nível.",
-    "servicoTitulo1": "Identificação de Vulnerabilidades",
-    "servicoDescricao1": "Identificamos vulnerabilidades através de uma avaliação minuciosa e personalizada, oferecendo auditorias completas para detectar riscos que possam comprometer sua empresa e realizando testes rigorosos para avaliar a resistência dos controles de segurança contra ataques cibernéticos.",
-    "servicoTitulo2": "Monitoramento e Gestão de Vulnerabilidades",
-    "servicoDescricao2": "Com um acompanhamento contínuo e gestão de vulnerabilidades são garantidos por serviços que monitoram e alertam sobre potenciais riscos em softwares, oferecendo inteligência em tempo real sobre ameaças cibernéticas, identificando rapidamente vulnerabilidades e fornecendo atualizações de patches e correções.",
-    "servicoTitulo3": "Fortalecimento e Prevenção",
-    "servicoDescricao3": "Para fortalecer e prevenir ameaças, oferecemos orientações detalhadas para garantir a configuração segura dos sistemas, simulamos cenários de ataque e otimizamos a proteção contra ameaças específicas. Nossa gestão de segurança inclui minimizar riscos externos ao cuidar da segurança dos fornecedores e fornecer uma visão abrangente dos ativos da empresa para identificar e mitigar continuamente vulnerabilidades.",
-    "servicobotao": "Conheça nossos serviços",
-    "produtoTitulo": "Nosso produto que garante à máxima proteção",
-    "produtoNome": "RedAlert",
-    "produtoDescricao": "Mantenha sua Empresa Segura em um Cenário de Ameaças em Constante Evolução: Gerenciamento de Superfície de Ataque Externo (EASM) da Redway.",
-    "produtoLink": "Saiba mais sobre o RedAlert",
-    "questao": "Por que fortalecer a segurança de dados da sua empresa?",
-    "questaoResposta": "Em um mercado onde 78% dos consumidores deixariam de fazer negócios com uma empresa que sofreu uma violação de dados, garantir a proteção cibernética é essencial.",
-    "rodapeLinkSobreNos": "Sobre Nós",
-    "rodapeLinkPerguntasFrequentes": "Perguntas Frequentes",
-    "rodapeLinkContato": "Contato",
-    "rodapeLinkProdutos": "Produtos",
-    "rodapeLinkConheca": "Conheça",
-    "rodapeLinkCases": "Cases",
-    "faleConoscoTitulo": "Fale Conosco",
-    "enviarMensagem": "Enviar mensagem",
-    "nomePlaceholder": "Nome e Sobrenome*",
-    "emailPlaceholder": "E-mail*",
-    "whatsappPlaceholder": "WhatsApp/com DDD*",
-    "motivoPlaceholder": "Motivo do contato*",
-    "mensagemPlaceholder": "Sua mensagem"
+    "header": {
+      "menuFiqueAlerta": "Fique Alerta",
+      "menuServicos": "Serviços",
+      "menuBlog": "Blog",
+      "menuFaleConosco": "Fale Conosco"
+    },
+    "home": {
+      "introTitulo": "Segurança de alto nível para proteger o que mais te interessa",
+      "introDescricao": "Nossos profissionais estão há mais de 20 anos elevando o nível da cibersegurança de grandes empresas, com excelência e transparência.",
+      "introBotao": "Fale com nossos especialistas",
+      "institucionalTitulo": "Redway Information Security",
+      "institucionalDescricao": "Com décadas de experiência e uma forte reputação em cibersegurança, somos a escolha para empresas que buscam proteção robusta de seus dados. Nossas soluções especializadas elevam a capacidade do seu time interno, garantindo uma segurança de alto nível.",
+      "servicoTitulo1": "Identificação de Vulnerabilidades",
+      "servicoDescricao1": "Identificamos vulnerabilidades através de uma avaliação minuciosa e personalizada, oferecendo auditorias completas para detectar riscos que possam comprometer sua empresa e realizando testes rigorosos para avaliar a resistência dos controles de segurança contra ataques cibernéticos.",
+      "servicoTitulo2": "Monitoramento e Gestão de Vulnerabilidades",
+      "servicoDescricao2": "Com um acompanhamento contínuo e gestão de vulnerabilidades são garantidos por serviços que monitoram e alertam sobre potenciais riscos em softwares, oferecendo inteligência em tempo real sobre ameaças cibernéticas, identificando rapidamente vulnerabilidades e fornecendo atualizações de patches e correções.",
+      "servicoTitulo3": "Fortalecimento e Prevenção",
+      "servicoDescricao3": "Para fortalecer e prevenir ameaças, oferecemos orientações detalhadas para garantir a configuração segura dos sistemas, simulamos cenários de ataque e otimizamos a proteção contra ameaças específicas. Nossa gestão de segurança inclui minimizar riscos externos ao cuidar da segurança dos fornecedores e fornecer uma visão abrangente dos ativos da empresa para identificar e mitigar continuamente vulnerabilidades.",
+      "servicobotao": "Conheça nossos serviços",
+      "produtoTitulo": "Nosso produto que garante à máxima proteção",
+      "produtoNome": "Fique Alerta",
+      "produtoDescricao": "Serviço que coleta, analisa, organiza e distribui informações sobre vulnerabilidades de segurança cibernética através de uma avaliação minuciosa e personalizada.",
+      "produtoLink": "Saiba mais sobre o Fique Alerta",
+      "questao": "Por que fortalecer a segurança de dados da sua empresa?",
+      "questaoResposta": "Em um mercado onde 78% dos consumidores deixariam de fazer negócios com uma empresa que sofreu uma violação de dados, garantir a proteção cibernética é essencial."
+    },
+    "servicos": {
+      "servicosTitulo": "Soluções para Cibersegurança",
+      "servicosDescricao": "Segurança cibernética para fornecer proteção e monitoramento contínuo, garantindo integridade dos seus dados e que a sua empresa esteja sempre um passo à frente das ameaças."
+    },
+    "servico": {
+      "comum": {
+        "servicoBotao": "Contrate"
+      },
+      "application-security": {
+        "titulo": "Application Security",
+        "descricao": "Análise detalhada e personalizada das suas aplicações, identificando falhas de segurança com precisão cirúrgica. Técnicas avançadas de teste de penetração e revisão de código são utilizadas para fornecer um relatório exaustivo de vulnerabilidades, permitindo que sua equipe corrija rapidamente qualquer falha e fortaleça a proteção de seus sistemas."
+      },
+      "secure-source-code-review": {
+        "titulo": "Secure Source Code Review",
+        "descricao": "Essencial para garantir a segurança do seu software desde a base. Com a realização de uma auditoria aprofundada do código-fonte, utilizando métodos avançados de análise estática e dinâmica para identificar potenciais falhas de segurança que possam comprometer a sua empresa, assegurando que seu código se mantenha robusto e seguro contra vulnerabilidades."
+      },
+      "red-team-social-engineering": {
+        "titulo": "Red Team & Social Engineering",
+        "descricao": "Simulações realistas de cenários de ataque testam a eficácia das suas defesas e a prontidão da sua equipe. Insights valiosos são fornecidos sobre como otimizar a alocação de recursos para melhorar a proteção contra ameaças específicas, ajudando sua empresa a se preparar para possíveis incidentes de segurança."
+      },
+      "vulnerability-management": {
+        "titulo": "Vulnerability Management",
+        "descricao": "A Gestão de Vulnerabilidades é um processo contínuo e estruturado que visa identificar, avaliar, priorizar e mitigar vulnerabilidades em sistemas, redes, aplicativos e infraestrutura de uma organização. O objetivo principal do nosso Vulnerability Management é reduzir o seu risco de exposição a ameaças cibernéticas, através da proteção de ativos críticos e dados sensíveis contra explorações maliciosas.",
+        "descricao-2": "Possuímos a solução ideal para a identifição, Avaliação e classificação das vulnerabilidades do seu parque tecnológico, assim como o gerenciamento e o monitoramento contínuo do seu negócio. Através da nossa plataforma implementamos um processo estruturado de gerenciamento de vulnerabilidades, agindo ativamente na mitigação de riscos e no fortalecimento de suas defesas contra às ameaças emergentes."
+      },
+      "hardening-compliance-checks": {
+        "titulo": "Hardening e Compliance Checks",
+        "hardening-compliance": {
+        "titulo": "Hardening e Compliance",
+        "descricao": [
+          "Hardening e Compliance são duas práticas essenciais na área de segurança cibernética e estão relacionadas à proteção e ao alinhamento das políticas e configurações de segurança de uma organização com as melhores práticas e padrões de segurança aceitos.",
+          "Nosso serviço especializado ajuda as corporações a reforçar a segurança de sistemas, aplicativos e redes, tornando-os mais resilientes e menos suscetíveis a ataques cibernéticos. Isso é alcançado através da implementação de configurações e políticas de segurança rigorosas, desativando serviços e funções desnecessárias, removendo usuários ou permissões não utilizados e aplicando correções de segurança (patches) para eliminar vulnerabilidades conhecidas, reduzindo a superfície de ataques e dificultando que invasores explorem falhas de segurança.",
+          "Através de nossos serviços de checagem de compliance ajudamos a garantir que a organização esteja aderindo a requisitos específicos estabelecidos por autoridades governamentais, órgãos reguladores ou padrões do setor. O objetivo do compliance é proteger dados, privacidade e segurança dos clientes e usuários, bem como garantir a integridade e confiabilidade das operações da organização."
+        ],
+        "lista": [
+          "GDPR (Regulamento Geral de Proteção de Dados) na União Europeia;",
+          "HIPAA (Lei de Portabilidade e Responsabilidade de Seguro de Saúde) nos EUA;",
+          "PCI DSS (Padrão de Segurança de Dados da Indústria de Cartões de Pagamento) para processadores de cartões de crédito."
+        ],
+        "conclusao": "A combinação de Hardening e Compliance é fundamental para garantir a segurança e a conformidade de uma organização. O Hardening fortalece a postura de segurança geral, reduzindo os riscos de violações e ataques, enquanto o Compliance garante que a organização esteja em conformidade com as leis e regulamentações aplicáveis. Juntas, essas práticas ajudam a proteger os ativos da empresa, a reputação e a confiança dos clientes e parceiros de negócios. Além disso, o cumprimento de normas de segurança pode resultar em vantagens competitivas e redução de penalidades legais associadas a violações de segurança ou privacidade." } }
+      
+    },
+    "footer": {
+      "LinkSobreNos": "Sobre Nós",
+      "LinkPerguntasFrequentes": "Perguntas Frequentes",
+      "LinkContato": "Contato",
+      "TituloProduto": "Produto",
+      "TituloServicos": "Servicos",
+      "TituloConheca": "Conheça",
+      "LinkCases": "Cases",
+      "faleConoscoTitulo": "Fale Conosco",
+      "enviarMensagem": "Enviar mensagem",
+      "nomePlaceholder": "Nome e Sobrenome*",
+      "emailPlaceholder": "E-mail*",
+      "whatsappPlaceholder": "WhatsApp/com DDD*",
+      "motivoPlaceholder": "Motivo do contato*",
+      "mensagemPlaceholder": "Sua mensagem"
+    }
   },
   "en": {
-    "menuServicos": "Services",
-    "menuFaleConosco": "Contact Us",
-    "introTitulo": "High-level security to protect what matters most to you",
-    "introDescricao": "For 20 years raising the level of cybersecurity for large companies, with excellence and transparency.",
-    "introBotao": "Speak with our experts",
-    "institucionalTitulo": "Redway Cybersecurity",
-    "institucionalDescricao": "With decades of experience and a strong reputation in cybersecurity, we are the choice for companies seeking robust protection of their data. Our specialized solutions elevate the capacity of your internal team, ensuring high-level security.",
-    "servicoTitulo1": "Vulnerability Identification",
-    "servicoDescricao1": "We identify vulnerabilities through a thorough and personalized assessment, offering complete audits to detect risks that may compromise your company and conducting rigorous tests to evaluate the resilience of security controls against cyber attacks.",
-    "servicoTitulo2": "Vulnerability Monitoring and Management",
-    "servicoDescricao2": "Continuous monitoring and management of vulnerabilities are ensured by services that monitor and alert about potential risks in software, offering real-time intelligence on cyber threats, quickly identifying vulnerabilities and providing patch updates and fixes.",
-    "servicoTitulo3": "Strengthening and Prevention",
-    "servicoDescricao3": "To strengthen and prevent threats, we offer detailed guidance to ensure secure configuration of systems, simulate attack scenarios, and optimize protection against specific threats. Our security management includes minimizing external risks by taking care of supplier security and providing a comprehensive view of company assets to continuously identify and mitigate vulnerabilities.",
-    "servicobotao": "Discover our services",
-    "produtoTitulo": "Our product that ensures maximum protection",
-    "produtoNome": "RedAlert",
-    "produtoDescricao": "Keep Your Company Safe in a Constantly Evolving Threat Landscape: External Attack Surface Management (EASM) by Redway.",
-    "produtoLink": "Learn more about RedAlert",
-    "questao": "Why strengthen your company's data security?",
-    "questaoResposta": "In a market where 78% of consumers would stop doing business with a company that has suffered a data breach, ensuring cybersecurity is essential.",
-    "rodapeLinkSobreNos": "About Us",
-    "rodapeLinkPerguntasFrequentes": "FAQs",
-    "rodapeLinkContato": "Contact",
-    "rodapeLinkProdutos": "Products",
-    "rodapeLinkConheca": "Discover",
-    "rodapeLinkCases": "Cases",
-    "faleConoscoTitulo": "Contact Us",
-    "enviarMensagem": "Send message",
-    "nomePlaceholder": "Full Name*",
-    "emailPlaceholder": "Email*",
-    "whatsappPlaceholder": "WhatsApp/with DDD*",
-    "motivoPlaceholder": "Reason for contact*",
-    "mensagemPlaceholder": "Your message"
+    "header": {
+      "menuFiqueAlerta": "Fique Alerta",
+      "menuServicos": "Services",
+      "menuBlog": "Blog",
+      "menuFaleConosco": "Contact Us"
+    },
+      "home": {
+      "introTitulo": "High-level security to protect what matters most to you",
+      "introDescricao": "Our professionals have been elevating the level of cybersecurity for large companies for over 20 years, with excellence and transparency.",
+      "introBotao": "Speak with our experts",
+      "institucionalTitulo": "Redway Information Security",
+      "institucionalDescricao": "With decades of experience and a strong reputation in cybersecurity, we are the choice for companies seeking robust protection of their data. Our specialized solutions elevate the capacity of your internal team, ensuring high-level security.",
+      "servicoTitulo1": "Vulnerability Identification",
+      "servicoDescricao1": "We identify vulnerabilities through a thorough and personalized assessment, offering complete audits to detect risks that may compromise your company and conducting rigorous tests to evaluate the resilience of security controls against cyber attacks.",
+      "servicoTitulo2": "Vulnerability Monitoring and Management",
+      "servicoDescricao2": "Continuous monitoring and management of vulnerabilities are ensured by services that monitor and alert about potential risks in software, offering real-time intelligence on cyber threats, quickly identifying vulnerabilities and providing patch updates and fixes.",
+      "servicoTitulo3": "Strengthening and Prevention",
+      "servicoDescricao3": "To strengthen and prevent threats, we offer detailed guidance to ensure secure configuration of systems, simulate attack scenarios, and optimize protection against specific threats. Our security management includes minimizing external risks by taking care of supplier security and providing a comprehensive view of company assets to continuously identify and mitigate vulnerabilities.",
+      "servicobotao": "Discover our services",
+      "produtoTitulo": "Our product that ensures maximum protection",
+      "produtoNome": "Fique Alerta",
+      "produtoDescricao": "Service that collects, analyzes, organizes, and distributes information about cybersecurity vulnerabilities through a thorough and personalized assessment.",
+      "produtoLink": "Learn more about Fique Alerta",
+      "questao": "Why strengthen your company's data security?",
+      "questaoResposta": "In a market where 78% of consumers would stop doing business with a company that has suffered a data breach, ensuring cybersecurity is essential."
+    },
+    "servicos": {
+      "servicosTitulo": "Cibersecurity Solutions",
+      "servicosDescricao": "Cybersecurity to provide protection and continuous monitoring, ensuring the integrity of your data and that your company is always one step ahead of threats."
+    },
+    "servico": {
+      "comum": {
+        "servicoBotao": "Hire"
+      },
+      "application-security": {
+        "titulo": "Application Security",
+        "descricao": "Detailed and personalized analysis of your applications, identifying security flaws with surgical precision. Advanced penetration testing and code review techniques are used to provide an exhaustive report of vulnerabilities, allowing your team to quickly correct any flaws and strengthen the protection of your systems."
+      },
+      "secure-source-code-review": {
+        "titulo": "Secure Source Code Review",
+        "descricao": "Essencial para garantir a segurança do seu software desde a base. Com a realização de uma auditoria aprofundada do código-fonte, utilizando métodos avançados de análise estática e dinâmica para identificar potenciais falhas de segurança que possam comprometer a sua empresa, assegurando que seu código se mantenha robusto e seguro contra vulnerabilidades."
+      },
+      "red-team-social-engineering": {
+        "titulo": "Red Team & Social Engineering",
+        "descricao": "Essential for ensuring the security of your software from the ground up. By conducting a thorough audit of the source code, using advanced static and dynamic analysis methods to identify potential security flaws that could compromise your company, ensuring that your code remains robust and secure against vulnerabilities."
+      },
+      "vulnerability-management": {
+        "titulo": "Vulnerability Management",
+        "descricao": "Vulnerability Management is an ongoing and structured process aimed at identifying, assessing, prioritizing, and mitigating vulnerabilities in systems, networks, applications, and an organization's infrastructure. The main goal of our Vulnerability Management is to reduce your risk of exposure to cyber threats by protecting critical assets and sensitive data against malicious exploitations",
+        "descricao-2": "We have the ideal solution for identifying, assessing, and classifying the vulnerabilities of your technological park, as well as managing and continuously monitoring your business. Through our platform, we implement a structured vulnerability management process, actively acting in risk mitigation and strengthening your defenses against emerging threats"
+      },
+      "hardening-compliance-checks": {
+        "titulo": "Hardening e Compliance Checks",
+        "hardening-compliance": {
+        "titulo": "Hardening e Compliance",
+        "descricao": [
+          "Hardening e Compliance são duas práticas essenciais na área de segurança cibernética e estão relacionadas à proteção e ao alinhamento das políticas e configurações de segurança de uma organização com as melhores práticas e padrões de segurança aceitos.",
+          "Nosso serviço especializado ajuda as corporações a reforçar a segurança de sistemas, aplicativos e redes, tornando-os mais resilientes e menos suscetíveis a ataques cibernéticos. Isso é alcançado através da implementação de configurações e políticas de segurança rigorosas, desativando serviços e funções desnecessárias, removendo usuários ou permissões não utilizados e aplicando correções de segurança (patches) para eliminar vulnerabilidades conhecidas, reduzindo a superfície de ataques e dificultando que invasores explorem falhas de segurança.",
+          "Através de nossos serviços de checagem de compliance ajudamos a garantir que a organização esteja aderindo a requisitos específicos estabelecidos por autoridades governamentais, órgãos reguladores ou padrões do setor. O objetivo do compliance é proteger dados, privacidade e segurança dos clientes e usuários, bem como garantir a integridade e confiabilidade das operações da organização."
+        ],
+        "lista": [
+          "GDPR (Regulamento Geral de Proteção de Dados) na União Europeia;",
+          "HIPAA (Lei de Portabilidade e Responsabilidade de Seguro de Saúde) nos EUA;",
+          "PCI DSS (Padrão de Segurança de Dados da Indústria de Cartões de Pagamento) para processadores de cartões de crédito."
+        ],
+        "conclusao": "A combinação de Hardening e Compliance é fundamental para garantir a segurança e a conformidade de uma organização. O Hardening fortalece a postura de segurança geral, reduzindo os riscos de violações e ataques, enquanto o Compliance garante que a organização esteja em conformidade com as leis e regulamentações aplicáveis. Juntas, essas práticas ajudam a proteger os ativos da empresa, a reputação e a confiança dos clientes e parceiros de negócios. Além disso, o cumprimento de normas de segurança pode resultar em vantagens competitivas e redução de penalidades legais associadas a violações de segurança ou privacidade." } }
+        
+      
+    },
+    "footer": {
+      "LinkSobreNos": "About Us",
+      "LinkPerguntasFrequentes": "FAQs",
+      "LinkContato": "Contact",
+      "TituloProduto": "Product",
+      "TituloServicos": "Services",
+      "TituloConheca": "Discover",
+      "LinkCases": "Cases",
+      "faleConoscoTitulo": "Contact Us",
+      "enviarMensagem": "Send message",
+      "nomePlaceholder": "Full Name*",
+      "emailPlaceholder": "Email*",
+      "whatsappPlaceholder": "WhatsApp/with DDD*",
+      "motivoPlaceholder": "Reason for contact*",
+      "mensagemPlaceholder": "Your message"
+    }
   }
 }
+
+
+
+ 
+
+
+ 
+
+

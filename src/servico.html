@@ -37,10 +37,10 @@
             <span id="hamburguer"></span>
           </button>          
           <ul data-menu="list" id="menu">
-            <li><a data-translate="menuFiqueAlerta" href="./fique-alerta.html">Fique Alerta</a></li>
-            <li><a data-translate="menuServicos" href="./servicos.html">Serviços</a></li>
-            <li><a data-translate="menuBlog" href="">Blog</a></li>
-            <li><a data-translate="menuFaleConosco" href="./faleconosco.html">Fale Conosco</a></li>
+            <li><a data-translate="header.menuFiqueAlerta" href="./fique-alerta.html">Fique Alerta</a></li>
+            <li><a data-translate="header.menuServicos" href="./servicos.html">Serviços</a></li>
+            <li><a data-translate="header.menuBlog" href="">Blog</a></li>
+            <li><a data-translate="header.menuFaleConosco" href="./faleconosco.html">Fale Conosco</a></li>
             <!-- Botão de alternância de idioma com dropdown -->
             <li class="language-switch">
               <button id="language-dropdown" class="language-button">
@@ -66,37 +66,32 @@
     
     <div class="introducao small container">
       <div class="introducao-texto small">
-          <h1 data-translate="introTitulo">Application Security</h1>
-          <p data-translate="introDescricao">Análise detalhada e personalizada das suas aplicações, identificando falhas de segurança com precisão cirúrgica. Técnicas avançadas de teste de penetração e revisão de código são utilizadas para fornecer um relatório exaustivo de vulnerabilidades, permitindo que sua equipe corrija rapidamente qualquer falha e fortaleça a proteção de seus sistemas.
-          </p>
-          <button data-translate="introBotao" class="btn btn-intro" href="#">Contrate</button>
-      </div>
+        <h1 id="serviceTitle"></h1>
+        <p id="serviceDescription"></p>
+        <button class="btn btn-intro" id="serviceButton">Contrate</button>
+    </div>
       <div class="img-intro small">  
         <div class="background-image small"></div>
       </div>   
     </div>
-
-  
-         
-   
     <footer class="rodape-background">
       <div class="rodape container">
         <div class="coluna-1">
           <h4>Redway</h4>
           <ul>
-            <a data-translate="rodapeLinkSobreNos" hef=""><li>Sobre nós</li></a>
-            <a data-translate="rodapeLinkPerguntasFrequentes" hef=""><li>Perguntas frequentes</li></a>
-            <a data-translate="rodapeLinkContato" hef=""><li>Contato</li></a>
+            <a data-translate="footer.LinkSobreNos" hef=""><li>Sobre nós</li></a>
+            <a data-translate="footer.LinkPerguntasFrequentes" hef=""><li>Perguntas frequentes</li></a>
+            <a data-translate="footer.LinkContato" hef=""><li>Contato</li></a>
           </ul>
         </div>
         <div class="coluna-2">
-          <h4 data-translate="rodapeLinkProduto">Produto</h4>
+          <h4 data-translate="footer.TituloProduto">Produto</h4>
           <ul>
             <a hef=""><li>Fique Alerta</li></a>
           </ul>
         </div>
         <div class="coluna-3">
-          <h4 data-translate="rodapeLinkServicos">Serviços</h4>
+          <h4 data-translate="footer.TituloServicos">Serviços</h4>
           <ul>
             <a href="./servico.html"><li>Application Security</li></a>
             <a href=""><li>Secure Source Code Review</li></a>
@@ -106,13 +101,13 @@
           </ul>
         </div>
         <div class="coluna-4">
-          <h4 data-translate="rodapeLinkConheca">Conheça</h4>
+          <h4 data-translate="footer.TituloConheca">Conheça</h4>
           <ul>
             <a hef=""><li>Cases</li></a>
             <a hef=""><li>Blog</li></a>
           </ul>
         </div>
       </div>
-     </footer>
+    </footer>
   </body>
 </html>
