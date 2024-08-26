@@ -127,20 +127,19 @@
     text-align: center; /* Adicionado para centralizar o texto */
 }
 
-.js ul[data-menu="list"] > li > a::after {
-  content: "";
-  display: block;
-  width: 100vw; /* Ocupe 100% da largura da tela */
-  margin-left: -50vw; /* Centraliza o ::after em relação à tela */
-  height: 2px;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.09);
-  position: absolute;
-  bottom: -12px;
-  left: 50%; /* Posiciona o ::after no centro do link */
-  transform: translateY(-50%); /* Centraliza o ::after em relação ao centro do menu */
-}
-
+  .js ul[data-menu="list"] > li > a::after {
+    content: "";
+    display: block;
+    width: 100vw; /* Ocupe 100% da largura da tela */
+    margin-left: -50vw; /* Centraliza o ::after em relação à tela */
+    height: 2px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.09);
+    position: absolute;
+    bottom: -12px;
+    left: 50%; /* Posiciona o ::after no centro do link */
+    transform: translateY(-50%); /* Centraliza o ::after em relação ao centro do menu */
+  }
 
   .js ul[data-menu="list"] li:last-child::after {
     display: none;
