@@ -44,29 +44,39 @@ function setupServiceLinks(serviceLoader, lang) {
         });
     });
 }
-
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("DOM completamente carregado.");
-    console.log("Service ID:", serviceId);  // Verifique se o serviceId está correto
+  console.log("DOM completamente carregado.");
 
-    const menuMobile = new MenuMobile('[data-menu="logo"]', '[data-menu="button"]', '[data-menu="list"]', '[data-menu="contato-mobile"]', '[data-menu="linkedin"]');
-    menuMobile.init();
+  const menuMobile = new MenuMobile('[data-menu="logo"]', '[data-menu="button"]', '[data-menu="list"]', '[data-menu="contato-mobile"]', '[data-menu="linkedin"]');
+  menuMobile.init();
 
-    initAnimations();
+  initAnimations();
 
-    const subMenu = new SubMenu('#menu');
+  const subMenu = new SubMenu('#menu');
 
-    // Definir currentLang corretamente aqui
-    currentLang = 'pt'; // Força o idioma inicial como 'PT'
-    const languageSwitcher = new LanguageSwitcher(translations, currentLang);
-    const serviceLoader = new ServiceLoader(translations, languageSwitcher);
+  // Definir currentLang corretamente aqui
+  currentLang = 'pt'; // Força o idioma inicial como 'PT'
+  const languageSwitcher = new LanguageSwitcher(translations, currentLang);
+  const serviceLoader = new ServiceLoader(translations, languageSwitcher);
 
-    if (serviceId) {
-        serviceLoader.loadService(serviceId, currentLang);
-    } else {
-        console.error('Service ID is undefined or null on page load');
-    }
+  // Carrega o serviço baseado no hash atual na inicialização da página
+  const serviceId = window.location.hash.substring(1); // Captura o ID do serviço do hash da URL
+  if (serviceId) {
+      serviceLoader.loadService(serviceId, currentLang);
+  } else {
+      console.error('Service ID is undefined or null on page load');
+  }
 
-    // Chama a função para configurar os links de serviços
-    setupServiceLinks(serviceLoader, currentLang);
+  // Adiciona um listener para o evento de mudança de hash
+  window.addEventListener('hashchange', () => {
+      const newServiceId = window.location.hash.substring(1);
+      if (newServiceId) {
+          serviceLoader.loadService(newServiceId, currentLang);
+      } else {
+          console.error('Service ID is undefined or null on hash change');
+      }
+  });
+
+  // Chama a função para configurar os links de serviços
+  setupServiceLinks(serviceLoader, currentLang);
 });
