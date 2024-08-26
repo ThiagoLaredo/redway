@@ -126,7 +126,7 @@
       },
       "secure-source-code-review": {
         "titulo": "Secure Source Code Review",
-        "descricao": "Essencial para garantir a segurança do seu software desde a base. Com a realização de uma auditoria aprofundada do código-fonte, utilizando métodos avançados de análise estática e dinâmica para identificar potenciais falhas de segurança que possam comprometer a sua empresa, assegurando que seu código se mantenha robusto e seguro contra vulnerabilidades."
+        "descricao": "Essential for ensuring the security of your software from the ground up. By conducting a thorough audit of the source code, using advanced static and dynamic analysis methods to identify potential security flaws that could compromise your company, ensuring that your code remains robust and secure against vulnerabilities."
       },
       "red-team-social-engineering": {
         "titulo": "Red Team & Social Engineering",
