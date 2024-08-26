@@ -2,7 +2,6 @@
   width: 100%;
   z-index: 1000;
   background-color: var(--primary);
-  /* border-bottom: 0.5px solid var(--bg); */
   position: fixed;
   top: 0;
 }
@@ -32,12 +31,6 @@ ul[data-menu="list"] {
   gap: 1.4rem;
   align-items: center;
 }
-
-/* .menu ul {
-  display: flex;
-  gap: 1.4rem;
-  align-items: center;
-  } */
 
 .menu  li {
   align-self: center;
@@ -149,23 +142,6 @@ ul[data-menu="list"] {
 
 
 
-
-@media (min-width: 768px) and (max-width: 1080px) {
-
-  .menu ul {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    }
-
-  .menu a {
-    font-size: 1rem;
-    text-decoration: none;
-    padding: 10px 4px;
-  }
-
-}
-
 @media (max-width: 768px) { 
   .header {
     position: fixed; /* Mantém o cabeçalho fixo no topo */
@@ -188,10 +164,39 @@ ul[data-menu="list"] {
   .menu-button {
     display: none;
   }
-/* 
-  ul[data-menu="list"] {
-    margin-right: 0;
+
+  .submenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--secondary40);
+    padding: 0;
+    margin: 0;
+    top: 10px;
+    box-shadow: none;
+  }
+
+  ul[data-menu="list"] .submenu li {
+    padding: 8px 0;
+  }
+
+  ul[data-menu="list"] .submenu li a {
+    font-size: 16px !important;
+    color: var(--textwhite);
+    text-decoration: none;
+    display: block;
+  }
+
+  /* ul[data-menu="list"] .submenu li::after {
+    display: none;
   } */
+
+  /* Remove o ::after se o item tiver um submenu */
+.js ul[data-menu="list"] > li.has-submenu > a::after {
+  display: none;
+}
 
   .language-options {
     top: 30px;

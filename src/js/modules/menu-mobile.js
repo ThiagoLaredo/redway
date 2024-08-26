@@ -160,10 +160,30 @@ export default class MenuMobile {
     }
   }
 
+  highlightSpecificItems() {
+    // Seleciona apenas os 'li' que são filhos diretos do menu principal
+    const listItems = this.menuList.querySelectorAll(':scope > li');
+  
+    if (listItems.length >= 5) { // Certifica-se de que há pelo menos 5 itens na lista principal
+      const secondItem = listItems[1]; // Segundo item
+      const fifthItem = listItems[4];  // Quinto item
+  
+      // Adiciona uma classe ou estilo para destacar os itens
+      secondItem.classList.add('highlight');
+      fifthItem.classList.add('highlight');
+  
+      // Remove a linha after do segundo item
+      secondItem.style.setProperty('border-bottom', 'none');
+    }
+  }
+  
+  
+
   init() {
     if (this.logoMobile && this.menuButton && this.menuList  && this.contatoMobile && this.linkedinMobile) {
       this.addMenuMobileEvents();
       this.addLinkClickEvents(); 
+      this.highlightSpecificItems(); 
     }
     return this;
   }

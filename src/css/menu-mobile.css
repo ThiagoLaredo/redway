@@ -114,30 +114,35 @@
     gap: 20px;
   }
 
-  .js [data-menu="list"] a {
-    font-size: 24px;
+  .js ul[data-menu="list"] a {
+    font-size: 20px;
     width: 100%;
     line-height: 1;
     width: 100vw;
   }
 
-  .js [data-menu="list"] li {
+  .js ul[data-menu="list"] > li > a {
     width: 100%;
     position: relative;
-  }
+    text-align: center; /* Adicionado para centralizar o texto */
+}
 
-  .js [data-menu="list"] li::after {
-    content: "";
-    display: block;
-    width: 100%;
-    top: 10px;
-    height: 2px;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.09);
-    position: relative;
-  }
+.js ul[data-menu="list"] > li > a::after {
+  content: "";
+  display: block;
+  width: 100vw; /* Ocupe 100% da largura da tela */
+  margin-left: -50vw; /* Centraliza o ::after em relação à tela */
+  height: 2px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.09);
+  position: absolute;
+  bottom: -12px;
+  left: 50%; /* Posiciona o ::after no centro do link */
+  transform: translateY(-50%); /* Centraliza o ::after em relação ao centro do menu */
+}
 
-  .js [data-menu="list"] li:last-child::after {
+
+  .js ul[data-menu="list"] li:last-child::after {
     display: none;
   }
 
