@@ -29,14 +29,15 @@ ul[data-menu="list"] {
   display: flex; 
   list-style: none;
   padding: 0; 
-  /* margin-right: 20px;  */
+  gap: 1.4rem;
+  align-items: center;
 }
 
-.menu ul {
+/* .menu ul {
   display: flex;
   gap: 1.4rem;
   align-items: center;
-  }
+  } */
 
 .menu  li {
   align-self: center;
@@ -62,7 +63,6 @@ ul[data-menu="list"] {
   transform: scale(0.95); /* Reduz ligeiramente o botão ao clicar */
 }
 
-
 .menu a {
   color: var(--bg);
   font: 1rem/1 'inter', sans-serif;;
@@ -77,6 +77,38 @@ ul[data-menu="list"] {
 .menu a:hover {
   opacity: 0.6;
   transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* Esconder submenu por padrão */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Exibir submenu ao passar o mouse sobre o item pai */
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+/* Estilos para itens do submenu */
+.submenu li {
+  margin: 0;
+  padding: 10px 20px;
+}
+
+.submenu li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.submenu li a:hover {
+  background-color: #f5f5f5;
 }
 
 .language-switch {
