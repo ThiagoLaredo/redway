@@ -37,10 +37,18 @@
             <span id="hamburguer"></span>
           </button>          
           <ul data-menu="list" id="menu">
-            <li><a data-translate="menuRedAlert" href="">Fique Alerta</a></li>
-            <li><a data-translate="menuServicos" href="./servicos.html">Serviços</a></li>
-            <li><a data-translate="menuBlog" href=""">Blog</a></li>
-            <li><a data-translate="menuFaleConosco" href="./faleconosco.html">Fale Conosco</a></li>
+            <li><a data-translate="header.menuFiqueAlerta" href="./fique-alerta.html">Fique Alerta</a></li>
+            <li class="has-submenu">
+              <a data-translate="header.menuServicos" href="./servicos.html">Serviços</a>
+              <ul class="submenu">
+                <li><a href="./servico.html#application-security"">Application Security</a></li>
+                <li><a href="./servico.html#secure-source-code-review">Secure Source Code Review</a></li>
+                <li><a href="./servico.html#red-team-social-engineering">Red Team & Social Engineering</a></li>
+                <li><a href="./servico.html#vulnerability-management">Vulnerability Management</a></li>
+                <li><a href="./servico.html#hardening-compliance-checks">Hardening e Compliance Checks</a></li>
+              </ul>
+            <li><a data-translate="header.menuBlog" href="">Blog</a></li>
+            <li><a data-translate="header.menuFaleConosco" href="./faleconosco.html">Fale Conosco</a></li>
             <!-- Botão de alternância de idioma com dropdown -->
             <li class="language-switch">
               <button id="language-dropdown" class="language-button">
@@ -66,18 +74,124 @@
     
     <div class="introducao small container">
       <div class="introducao-texto small">
-          <h1 data-translate="introTitulo">Application Security</h1>
-          <p data-translate="introDescricao">Análise detalhada e personalizada das suas aplicações, identificando falhas de segurança com precisão cirúrgica. Técnicas avançadas de teste de penetração e revisão de código são utilizadas para fornecer um relatório exaustivo de vulnerabilidades, permitindo que sua equipe corrija rapidamente qualquer falha e fortaleça a proteção de seus sistemas.
-          </p>
-          <button data-translate="introBotao" class="btn btn-intro" href="#">Contrate</button>
-      </div>
-      <div class="img-intro small">  
-        <div class="background-image small"></div>
-      </div>   
-    </div>
+          <h1 data-translate="introTitulo">Fique Alerta</h1>
+          <p data-translate="introDescricao">Fique Alerta é um serviço que coleta, analisa, organiza e distribui informações sobre vulnerabilidades de segurança cibernética. Essas plataformas são projetadas para ajudar organizações a identificar, avaliar e mitigar riscos associados a vulnerabilidades em seus sistemas, redes e aplicativos.</p>  </div>
+          <div class="img-intro small">  
+            <div class="background-image small"></div>
+          </div>   
+        </div>
 
+        <section class="beneficios container">
+          <h2>Benefícios</h2>
+          <div class="beneficios-lista">
+            <div class="beneficio">
+              <h3>Redução de Riscos</h3> 
+              <p>Ajuda a reduzir os riscos cibernéticos ao fornecer informações precisas e acionáveis sobre vulnerabilidades</p>
+            </div>
+            <div class="beneficio">
+              <h3>Eficiência Operacional</h3> 
+              <p>Melhora a eficiência dos processos de segurança ao automatizar a coleta e análise de dados de vulnerabilidades</p>
+            </div>
+            <div class="beneficio">
+              <h3>Tomada de Decisões</h3> 
+              <p>Permite que as equipes de segurança tomem decisões mais assertivas sobre onde focar os esforços de mitigação e remediação</p>
+            </div>
+            <div class="beneficio">
+              <h3>Conformidade</h3> 
+              <p>Ajuda a cumprir com regulamentações e normas de segurança cibernética que exigem a gestão de vulnerabilidades</p>
+            </div>
+          </div>
+        </section>
+          
+        <section class="oque-fique-alerta-background">
+          <div class="oque-fique-alerta container">
+            <div class="oque-fique-alerta-texto">
+              <p>O Fique Alerta é a plataforma de <strong>Vulnerability Intelligence</strong> da Redway que monitora o surgimento de ameaças e viabiliza que você seja informado das novas vulnerabilidades que podem impactar seus sistemas, mantendo-o atento sobre as ações que devem ser realizadas para manter-se protegido.</p>
+            <p>Nossos analistas monitoram diversas fontes de informações, identificando e qualificando novas vulnerabilidades de acordo com as tecnologias utilizadas pela sua empresa.</p>
+            <p>Além disso, lhe mantemos informados sobre os mais novos vetores de ataque utilizados pelos adversários, possibilitando uma visibilidade contínua de possíveis ameaças e viabilizando a criação de estratégias de proteção mais eficientes.</p>
+            <p>Nossa ferramenta se integra perfeitamente com outras ferramentas de segurança e gestão de TI para fornecer uma visão unificada do panorama de segurança.</p>
+            </div>
+            <ul class="oque-fique-alerta-lista">
+              <li><strong>Monitoramento 24x7</strong> da publicação de vulnerabilidades relacionadas às tecnologias utilizadas pela empresa; </li>
+
+              <li><strong>Priorização de Riscos:</strong> Qualificamos as vulnerabilidades de acordo com o impacto ao negócio;</li>
+
+              <li><strong>Integração com Ferramentas Existentes:</strong> 
+                Integra-se perfeitamente com outras ferramentas de segurança e gestão de TI para fornecer uma visão unificada do panorama de segurança.</li>
+
+              <li><strong>Relatórios Completos:</strong>
+                Gera relatórios detalhados e painéis que fornecem insights sobre o status das vulnerabilidades da organização e os esforços de remediação.</li>
+            </ul>
+        </div>
+        </section>
+
+        <section class="planos container">
+          <h2 style="text-align: center;">Escolha o Plano Ideal para Você</h2>
+          <div class="planos-lista">
+              <div class="plano">
+                <div class="plano-texto">
+                  <div class="plano-titulo">
+                    <h3>Básico</h3>
+                  </div>
+                  <ul>
+                    <li>Notificações por <strong>e-mail</strong></li>
+                    <li>Monitoramento de <strong>10</strong> produtos</li>
+                    <li><strong>2</strong> Usuários</li>
+                    <li>Suporte por <strong>e-mail </strong>(SLA de <strong>48</strong> horas)</li>
+                    <li>Alteração dos produtos monitorados a cada <strong>6</strong> meses</li>
+                  </ul>
+                </div>             
+                <div class="plano-valor">
+                  <span>R$99/mês</span>
+                  <a href="#" class="btn assinar">Assine Agora</a>
+                </div>              
+              </div>
   
-         
+              <div class="plano">
+                <div class="plano-texto">
+                  <div class="plano-titulo">
+                    <h3>Avançado</h3>
+                    <h4>(Recursos adicionais)</h4>
+                  </div>
+                  <ul>
+                      <li>Notificação via <strong>Telegram</strong></li>
+                      <li>Monitoramento de mais <strong>20</strong> produtos</li>
+                      <li>Mais <strong>6</strong> usuários</li>
+                      <li>Suporte por <strong>e-mail</strong> (SLA de <strong>24 horas</strong>)</li>
+                      <li>Alteração dos produtos monitorados a cada <strong>3</strong> meses</li>
+                      <li><strong>Feed </strong>de notícias</li>
+                      <li>Acesso a <strong>API</strong></li>
+                  </ul>
+                </div>
+                <div class="plano-valor">
+                  <span>R$199/mês</span>
+                  <a href="#" class="btn assinar">Assine Agora</a>
+                </div> 
+              </div>
+  
+              <div class="plano">
+                <div class="plano-texto">
+                  <div class="plano-titulo">
+                    <h3>Empresarial</h3>
+                    <h4>(Recursos adicionais)</h4>
+                  </div>
+                  <ul>
+                      <li>Integração com <strong>Jira/Slack</strong></li>
+                      <li>Quantidade de produtos <strong>sob demanda</strong></li>
+                      <li>Mais <strong>12</strong> usuários</li>
+                      <li>Suporte premium por <strong>telefone (24/7)</strong></li>
+                      <li>Alteração dos produtos monitorados <strong>mensalmente</strong></li>
+                      <li>Descoberta <strong>automática</strong> de produtos</li>
+                      <li>Acesso à <strong>plataforma</strong> completa</li>
+                  </ul>
+                </div>
+                <div class="plano-valor">
+                  <span>R$499/mês</span>
+                  <a href="#" class="btn assinar">Assine Agora</a>
+                </div> 
+              </div>
+          </div>
+        </section>
    
     <footer class="rodape-background">
       <div class="rodape container">

@@ -1,13 +1,11 @@
 .lista-protecoes {
-  display: flex;
   gap: 24px;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
 }
 
 .protecao {
-  flex: 1;
+  flex: 1 1 calc(50% - 20px); /* Calcula a largura para ter duas colunas */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -16,8 +14,7 @@
   padding: 20px;
   border: solid 0.3px #F7EEEE;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* x-offset, y-offset, blur-radius, spread-radius, color */
-  border-radius: 8px;
-  height: 48vh;
+  border-radius: 12px;
 }
 
 .protecao h3  {
