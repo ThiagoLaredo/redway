@@ -31,7 +31,7 @@
   list-style-type: none; /* Remove os marcadores de lista */
   border: 1px solid #ccc; /* Adiciona uma borda cinza clara */
   padding: 10px 15px; /* Adiciona padding para espaçar o texto das bordas */
-  border-radius: 5px; /* Bordas arredondadas para estética */
+  border-radius: 12px; /* Bordas arredondadas para estética */
   background-color: #fff; /* Fundo branco para cada item da lista */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve para dar profundidade */
   transition: transform 0.2s ease-in-out; /* Efeito de transição suave ao interagir */
@@ -84,7 +84,7 @@
     list-style-type: none; /* Remove os marcadores de lista */
     border: 1px solid #ccc; /* Adiciona uma borda cinza clara */
     padding: 10px 15px; /* Adiciona padding para espaçar o texto das bordas */
-    border-radius: 5px; /* Bordas arredondadas para estética */
+    border-radius: 12px; /* Bordas arredondadas para estética */
     background-color: #fff; /* Fundo branco para cada item da lista */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve para dar profundidade */
     transition: transform 0.2s ease-in-out; /* Efeito de transição suave ao interagir */
