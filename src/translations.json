@@ -83,7 +83,60 @@
       "whatsappPlaceholder": "WhatsApp/com DDD*",
       "motivoPlaceholder": "Motivo do contato*",
       "mensagemPlaceholder": "Sua mensagem"
-    }
+    },
+
+    
+      "alerta": {
+        "introTitulo": "Fique Alerta",
+        "introDescricao": "Fique Alerta é um serviço que coleta, analisa, organiza e distribui informações sobre vulnerabilidades de segurança cibernética. Essas plataformas são projetadas para ajudar organizações a identificar, avaliar e mitigar riscos associados a vulnerabilidades em seus sistemas, redes e aplicativos.",
+        "beneficiosTitulo": "Benefícios",
+        "beneficio1Titulo": "Redução de Riscos",
+        "beneficio1Descritivo": "Ajuda a reduzir os riscos cibernéticos ao fornecer informações precisas e acionáveis sobre vulnerabilidades.",
+        "beneficio2Titulo": "Eficiência Operacional",
+        "beneficio2Descritivo": "Melhora a eficiência dos processos de segurança ao automatizar a coleta e análise de dados de vulnerabilidades.",
+        "beneficio3Titulo": "Tomada de Decisões",
+        "beneficio3Descritivo": "Permite que as equipes de segurança tomem decisões mais assertivas sobre onde focar os esforços de mitigação e remediação.",
+        "beneficio4Titulo": "Conformidade",
+        "beneficio4Descritivo": "Ajuda a cumprir com regulamentações e normas de segurança cibernética que exigem a gestão de vulnerabilidades.",
+        "oqueParagrafo1": "O Fique Alerta é a plataforma de <strong>Vulnerability Intelligence</strong> da Redway que monitora o surgimento de ameaças e viabiliza que você seja informado das novas vulnerabilidades que podem impactar seus sistemas, mantendo-o atento sobre as ações que devem ser realizadas para manter-se protegido.",
+        "oqueParagrafo2": "Nossos analistas monitoram diversas fontes de informações, identificando e qualificando novas vulnerabilidades de acordo com as tecnologias utilizadas pela sua empresa.",
+        "oqueParagrafo3": "Além disso, lhe mantemos informados sobre os mais novos vetores de ataque utilizados pelos adversários, possibilitando uma visibilidade contínua de possíveis ameaças e viabilizando a criação de estratégias de proteção mais eficientes.",
+        "oqueParagrafo4": "Nossa ferramenta se integra perfeitamente com outras ferramentas de segurança e gestão de TI para fornecer uma visão unificada do panorama de segurança.",
+        "oqueLista1": "<strong>Monitoramento 24x7</strong> da publicação de vulnerabilidades relacionadas às tecnologias utilizadas pela empresa;",
+        "oqueLista2": "<strong>Priorização de Riscos:</strong> Qualificamos as vulnerabilidades de acordo com o impacto ao negócio;",
+        "oqueLista3": "<strong>Integração com Ferramentas Existentes:</strong> Integra-se perfeitamente com outras ferramentas de segurança e gestão de TI para fornecer uma visão unificada do panorama de segurança.",
+        "oqueLista4": "<strong>Relatórios Completos:</strong> Gera relatórios detalhados e painéis que fornecem insights sobre o status das vulnerabilidades da organização e os esforços de remediação.",
+        "planoTitulo": "Escolha o Plano Ideal para Você",
+        "planoBasicoTitulo": "Básico",
+        "planoBasico1": "Notificações por <strong>e-mail</strong>",
+        "planoBasico2": "Monitoramento de <strong>10</strong> produtos",
+        "planoBasico3": "<strong>2</strong> Usuários",
+        "planoBasico4": "Suporte por <strong>e-mail</strong> (SLA de <strong>48</strong> horas)",
+        "planoBasico5": "Alteração dos produtos monitorados a cada <strong>6</strong> meses",
+        "planoBasicoValor": "R$99/mês",
+        "planoBotao": "Assine Agora",
+        "planoAvancadoTitulo": "Avançado",
+        "planoRecursosAdicionais": "(Recursos adicionais)",
+        "planoAvancado1": "Notificação via <strong>Telegram</strong>",
+        "planoAvancado2": "Monitoramento de mais <strong>20</strong> produtos",
+        "planoAvancado3": "Mais <strong>6</strong> usuários",
+        "planoAvancado4": "Suporte por <strong>e-mail</strong> (SLA de <strong>24 horas</strong>)",
+        "planoAvancado5": "Alteração dos produtos monitorados a cada <strong>3</strong> meses",
+        "planoAvancado6": "<strong>Feed</strong> de notícias",
+        "planoAvancado7": "Acesso a <strong>API</strong>",
+        "planoAvancadoValor": "R$199/mês",
+        "planoEmpresarialTitulo": "Empresarial",
+        "planoEmpresarial1": "Integração com <strong>Jira/Slack</strong>",
+        "planoEmpresarial2": "Quantidade de produtos <strong>sob demanda</strong>",
+        "planoEmpresarial3": "Mais <strong>12</strong> usuários",
+        "planoEmpresarial4": "Suporte premium por <strong>telefone (24/7)</strong>",
+        "planoEmpresarial5": "Alteração dos produtos monitorados <strong>mensalmente</strong>",
+        "planoEmpresarial6": "Descoberta <strong>automática</strong> de produtos",
+        "planoEmpresarial7": "Acesso à <strong>plataforma</strong> completa",
+        "planoEmpresarialValor": "R$499/mês"
+      }
+    
+    
   },
   "en": {
     "header": {
@@ -152,9 +205,8 @@
           "PCI DSS (Padrão de Segurança de Dados da Indústria de Cartões de Pagamento) para processadores de cartões de crédito."
         ],
         "conclusao": "A combinação de Hardening e Compliance é fundamental para garantir a segurança e a conformidade de uma organização. O Hardening fortalece a postura de segurança geral, reduzindo os riscos de violações e ataques, enquanto o Compliance garante que a organização esteja em conformidade com as leis e regulamentações aplicáveis. Juntas, essas práticas ajudam a proteger os ativos da empresa, a reputação e a confiança dos clientes e parceiros de negócios. Além disso, o cumprimento de normas de segurança pode resultar em vantagens competitivas e redução de penalidades legais associadas a violações de segurança ou privacidade." } }
-        
-      
     },
+    
     "footer": {
       "LinkSobreNos": "About Us",
       "LinkPerguntasFrequentes": "FAQs",
@@ -170,7 +222,58 @@
       "whatsappPlaceholder": "WhatsApp/with DDD*",
       "motivoPlaceholder": "Reason for contact*",
       "mensagemPlaceholder": "Your message"
-    }
+    },
+
+    
+      "alerta": {
+        "introTitulo": "Stay Alert",
+        "introDescricao": "Stay Alert is a service that collects, analyzes, organizes, and distributes information about cybersecurity vulnerabilities. These platforms are designed to help organizations identify, assess, and mitigate risks associated with vulnerabilities in their systems, networks, and applications.",
+        "beneficiosTitulo": "Benefits",
+        "beneficio1Titulo": "Risk Reduction",
+        "beneficio1Descritivo": "Helps reduce cyber risks by providing accurate and actionable information on vulnerabilities.",
+        "beneficio2Titulo": "Operational Efficiency",
+        "beneficio2Descritivo": "Improves the efficiency of security processes by automating the collection and analysis of vulnerability data.",
+        "beneficio3Titulo": "Decision Making",
+        "beneficio3Descritivo": "Enables security teams to make more informed decisions about where to focus mitigation and remediation efforts.",
+        "beneficio4Titulo": "Compliance",
+        "beneficio4Descritivo": "Helps comply with cybersecurity regulations and standards that require vulnerability management.",
+        "oqueParagrafo1": "Stay Alert is Redway's <strong>Vulnerability Intelligence</strong> platform that monitors the emergence of threats and ensures you are informed of new vulnerabilities that may impact your systems, keeping you aware of the actions needed to stay protected.",
+        "oqueParagrafo2": "Our analysts monitor various information sources, identifying and qualifying new vulnerabilities according to the technologies used by your company.",
+        "oqueParagrafo3": "Additionally, we keep you informed about the latest attack vectors used by adversaries, providing continuous visibility into potential threats and enabling the creation of more efficient protection strategies.",
+        "oqueParagrafo4": "Our tool seamlessly integrates with other security and IT management tools to provide a unified view of the security landscape.",
+        "oqueLista1": "<strong>24x7 Monitoring</strong> of vulnerability publications related to the technologies used by the company;",
+        "oqueLista2": "<strong>Risk Prioritization:</strong> We qualify vulnerabilities according to business impact;",
+        "oqueLista3": "<strong>Integration with Existing Tools:</strong> Seamlessly integrates with other security and IT management tools to provide a unified view of the security landscape.",
+        "oqueLista4": "<strong>Comprehensive Reports:</strong> Generates detailed reports and dashboards that provide insights into the organization's vulnerability status and remediation efforts.",
+        "planoTitulo": "Choose the Ideal Plan for You",
+        "planoBasicoTitulo": "Basic",
+        "planoBasico1": "Email <strong>notifications</strong>",
+        "planoBasico2": "Monitoring of <strong>10</strong> products",
+        "planoBasico3": "<strong>2</strong> Users",
+        "planoBasico4": "<strong>Email</strong> support (SLA of <strong>48</strong> hours)",
+        "planoBasico5": "Change monitored products every <strong>6</strong> months",
+        "planoBasicoValor": "R$99/month",
+        "planoBotao": "Subscribe Now",
+        "planoAvancadoTitulo": "Advanced",
+        "planoRecursosAdicionais": "(Additional features)",
+        "planoAvancado1": "Notification via <strong>Telegram</strong>",
+        "planoAvancado2": "Monitoring of <strong>20</strong> additional products",
+        "planoAvancado3": "<strong>6</strong> more users",
+        "planoAvancado4": "<strong>Email</strong> support (SLA of <strong>24 hours</strong>)",
+        "planoAvancado5": "Change monitored products every <strong>3</strong> months",
+        "planoAvancado6": "<strong>News Feed</strong>",
+        "planoAvancado7": "Access to <strong>API</strong>",
+        "planoAvancadoValor": "R$199/month",
+        "planoEmpresarialTitulo": "Enterprise",
+        "planoEmpresarial1": "Integration with <strong>Jira/Slack</strong>",
+        "planoEmpresarial2": "Number of products <strong>on demand</strong>",
+        "planoEmpresarial3": "<strong>12</strong> more users",
+        "planoEmpresarial4": "Premium support by <strong>phone (24/7)</strong>",
+        "planoEmpresarial5": "Change monitored products <strong>monthly</strong>",
+        "planoEmpresarial6": "<strong>Automatic</strong> product discovery",
+        "planoEmpresarial7": "Access to the full <strong>platform</strong>",
+        "planoEmpresarialValor": "R$499/month"
+      } 
   }
 }
 

@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Definir currentLang corretamente aqui
   currentLang = 'pt'; // Força o idioma inicial como 'PT'
   const languageSwitcher = new LanguageSwitcher(translations, currentLang);
+  languageSwitcher.applyTranslations();
   const serviceLoader = new ServiceLoader(translations, languageSwitcher);
 
   // Carrega o serviço baseado no hash atual na inicialização da página

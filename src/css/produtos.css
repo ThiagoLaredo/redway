@@ -36,31 +36,37 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
+  align-items: center;
+  gap: 30px;
   background-color: var(--primary);
   /* border: 0.5px solid var(--alerta); */
-  padding: 40px;
+  padding: 80px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* x-offset, y-offset, blur-radius, spread-radius, color */
   border-radius: 12px;
-  min-height: 160px;
   max-width: fit-content;
 }
 
 .produto h3 {
   color: var(--textwhite);
   font: 800 1.2rem/1.35 "Inter", sans-serif;
-
 }
+
+.logo-fiqueAlerta {
+  width: 50%;
+  height: auto;
+}
+
 .produto p  {
-  font: 300 0.85rem/1.35 "Inter", sans-serif;
+  font: 300 1rem/1.4 "Inter", sans-serif;
   color: var(--textwhite);
-  max-width: 40ch;
+  max-width: 80ch;
+  text-align: center;
 }
 
 .produto a  {
-  font: 300 0.75rem/1.35 "Inter", sans-serif;
+  font: 300 0.85rem/1.35 "Inter", sans-serif;
   color: var(--textwhite);
+  padding: 4px 12px;
 }
 
 .link-produto {
@@ -77,11 +83,11 @@
 .link-produto a::before {
   content: '';
   position: absolute;
-  width: 100%;
+  width: calc(100% - 24px); /* Ajusta a largura para subtrair o padding */
   height: 0.4px; /* Espessura da linha */
   background-color: var(--textwhite); /* Cor da linha */
   bottom: -4px; /* Posição da linha abaixo do texto */
-  left: 0;
+  left: 12px;
   transform: scaleX(1); /* Começa sem a linha visível */
   transform-origin: bottom left;
   transition: transform 0.3s ease-in-out; /* Animação suave ao passar o mouse */
@@ -93,6 +99,11 @@
 }
 
 @media (max-width: 768px) { 
+
+  .logo-fiqueAlerta {
+    width: 100%;
+  }
+  
   .sobre-texto {
     padding: 0px;
   }

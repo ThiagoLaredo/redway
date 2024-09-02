@@ -188,5 +188,10 @@
     gap: 30px;
   }
 
+.introducao-texto.small img {
+  filter: brightness(0) invert(1); /* Altera a imagem para branca */
+}
+  
+
 }
 
