@@ -63,11 +63,37 @@ export default class LanguageSwitcher {
         this.applyTranslations();
     }
 
+    // applyTranslations() {
+    //     document.querySelectorAll("[data-translate]").forEach(elem => {
+    //         const keys = elem.getAttribute("data-translate").split('.');
+    //         let translation = this.translations[this.currentLang];
+
+    //         keys.forEach(key => {
+    //             if (translation && translation[key]) {
+    //                 translation = translation[key];
+    //             } else {
+    //                 translation = null;
+    //             }
+    //         });
+
+    //         if (translation) {
+    //             if (elem.tagName.toLowerCase() === 'input' || elem.tagName.toLowerCase() === 'textarea') {
+    //                 elem.placeholder = translation;
+    //             } else {
+    //                 elem.textContent = translation;
+    //             }
+    //         } else {
+    //             console.error('Translation missing for', keys.join('.'));
+    //         }
+    //     });
+    // }
+
+
     applyTranslations() {
         document.querySelectorAll("[data-translate]").forEach(elem => {
             const keys = elem.getAttribute("data-translate").split('.');
             let translation = this.translations[this.currentLang];
-
+    
             keys.forEach(key => {
                 if (translation && translation[key]) {
                     translation = translation[key];
@@ -75,16 +101,17 @@ export default class LanguageSwitcher {
                     translation = null;
                 }
             });
-
+    
             if (translation) {
                 if (elem.tagName.toLowerCase() === 'input' || elem.tagName.toLowerCase() === 'textarea') {
                     elem.placeholder = translation;
                 } else {
-                    elem.textContent = translation;
+                    elem.innerHTML = translation; // Usa innerHTML para permitir tags HTML
                 }
             } else {
                 console.error('Translation missing for', keys.join('.'));
             }
         });
     }
+    
 }
