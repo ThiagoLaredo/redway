@@ -1,7 +1,7 @@
 {
   "pt": {
     "header": {
-      "menuFiqueAlerta": "Fique Alerta",
+      "menuFiqueAlerta": "FiqueAlerta",
       "menuServicos": "Serviços",
       "menuBlog": "Blog",
       "menuFaleConosco": "Fale Conosco"
@@ -20,9 +20,9 @@
       "servicoDescricao3": "Para fortalecer e prevenir ameaças, oferecemos orientações detalhadas para garantir a configuração segura dos sistemas, simulamos cenários de ataque e otimizamos a proteção contra ameaças específicas. Nossa gestão de segurança inclui minimizar riscos externos ao cuidar da segurança dos fornecedores e fornecer uma visão abrangente dos ativos da empresa para identificar e mitigar continuamente vulnerabilidades.",
       "servicobotao": "Conheça nossos serviços",
       "produtoTitulo": "Nosso produto que garante à máxima proteção",
-      "produtoNome": "Fique Alerta",
+      "produtoNome": "FiqueAlerta",
       "produtoDescricao": "Serviço que coleta, analisa, organiza e distribui informações sobre vulnerabilidades de segurança cibernética através de uma avaliação minuciosa e personalizada.",
-      "produtoLink": "Saiba mais sobre o Fique Alerta",
+      "produtoLink": "Saiba mais sobre o FiqueAlerta",
       "questao": "Por que fortalecer a segurança de dados da sua empresa?",
       "questaoResposta": "Em um mercado onde 78% dos consumidores deixariam de fazer negócios com uma empresa que sofreu uma violação de dados, garantir a proteção cibernética é essencial."
     },
@@ -87,8 +87,8 @@
 
     
       "alerta": {
-        "introTitulo": "Fique Alerta",
-        "introDescricao": "Fique Alerta é um serviço que coleta, analisa, organiza e distribui informações sobre vulnerabilidades de segurança cibernética. Essas plataformas são projetadas para ajudar organizações a identificar, avaliar e mitigar riscos associados a vulnerabilidades em seus sistemas, redes e aplicativos.",
+        "introTitulo": "FiqueAlerta",
+        "introDescricao": "FiqueAlerta é um serviço que coleta, analisa, organiza e distribui informações sobre vulnerabilidades de segurança cibernética. Essas plataformas são projetadas para ajudar organizações a identificar, avaliar e mitigar riscos associados a vulnerabilidades em seus sistemas, redes e aplicativos.",
         "beneficiosTitulo": "Benefícios",
         "beneficio1Titulo": "Redução de Riscos",
         "beneficio1Descritivo": "Ajuda a reduzir os riscos cibernéticos ao fornecer informações precisas e acionáveis sobre vulnerabilidades.",
@@ -98,7 +98,7 @@
         "beneficio3Descritivo": "Permite que as equipes de segurança tomem decisões mais assertivas sobre onde focar os esforços de mitigação e remediação.",
         "beneficio4Titulo": "Conformidade",
         "beneficio4Descritivo": "Ajuda a cumprir com regulamentações e normas de segurança cibernética que exigem a gestão de vulnerabilidades.",
-        "oqueParagrafo1": "O Fique Alerta é a plataforma de <strong>Vulnerability Intelligence</strong> da Redway que monitora o surgimento de ameaças e viabiliza que você seja informado das novas vulnerabilidades que podem impactar seus sistemas, mantendo-o atento sobre as ações que devem ser realizadas para manter-se protegido.",
+        "oqueParagrafo1": "O FiqueAlerta é a plataforma de <strong>Vulnerability Intelligence</strong> da Redway que monitora o surgimento de ameaças e viabiliza que você seja informado das novas vulnerabilidades que podem impactar seus sistemas, mantendo-o atento sobre as ações que devem ser realizadas para manter-se protegido.",
         "oqueParagrafo2": "Nossos analistas monitoram diversas fontes de informações, identificando e qualificando novas vulnerabilidades de acordo com as tecnologias utilizadas pela sua empresa.",
         "oqueParagrafo3": "Além disso, lhe mantemos informados sobre os mais novos vetores de ataque utilizados pelos adversários, possibilitando uma visibilidade contínua de possíveis ameaças e viabilizando a criação de estratégias de proteção mais eficientes.",
         "oqueParagrafo4": "Nossa ferramenta se integra perfeitamente com outras ferramentas de segurança e gestão de TI para fornecer uma visão unificada do panorama de segurança.",
@@ -140,7 +140,7 @@
   },
   "en": {
     "header": {
-      "menuFiqueAlerta": "Fique Alerta",
+      "menuFiqueAlerta": "FiqueAlerta",
       "menuServicos": "Services",
       "menuBlog": "Blog",
       "menuFaleConosco": "Contact Us"
@@ -159,9 +159,9 @@
       "servicoDescricao3": "To strengthen and prevent threats, we offer detailed guidance to ensure secure configuration of systems, simulate attack scenarios, and optimize protection against specific threats. Our security management includes minimizing external risks by taking care of supplier security and providing a comprehensive view of company assets to continuously identify and mitigate vulnerabilities.",
       "servicobotao": "Discover our services",
       "produtoTitulo": "Our product that ensures maximum protection",
-      "produtoNome": "Fique Alerta",
+      "produtoNome": "FiqueAlerta",
       "produtoDescricao": "Service that collects, analyzes, organizes, and distributes information about cybersecurity vulnerabilities through a thorough and personalized assessment.",
-      "produtoLink": "Learn more about Fique Alerta",
+      "produtoLink": "Learn more about FiqueAlerta",
       "questao": "Why strengthen your company's data security?",
       "questaoResposta": "In a market where 78% of consumers would stop doing business with a company that has suffered a data breach, ensuring cybersecurity is essential."
     },
