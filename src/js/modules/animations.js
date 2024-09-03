@@ -7,12 +7,12 @@ gsap.registerPlugin(ScrollTrigger);
 export const initPageLoadAnimations = () => {
   const pageElements = [
     { selector: ".header", props: { duration: 1, opacity: 0, ease: "power1.inOut" } },
-    { selector: "[data-menu='logo']", props: { duration: 1, delay: 0.5, opacity: 0, ease: "power1.inOut" } },
-    { selector: "#menu li", props: { duration: 0.5, delay: 1, opacity: 0, stagger: 0.2, ease: "power1.out" } },
+    { selector: "[data-menu='logo'], [data-menu='button']", props: { duration: 1, delay: 0.5, opacity: 0, ease: "power1.inOut" } },
+    { selector: "#menu > li", props: { duration: 0.5, delay: 1, opacity: 0, stagger: 0.2, ease: "power1.out" } },
     { selector: ".background-image, #serviceimage, .background-image-pg-interna", props: { duration: 1.5, x: 200, opacity: 0, ease: "power1.out", delay: 1.5 } },
     { selector: ".svg-overlay", props: { duration: 1.5, scale: 0, opacity: 0, ease: "power1.out", delay: 1.8 } },
     { selector: ".introducao-texto h1, .introducao-texto p, .introducao-texto button, .servicos-lista, #logo-fiqueAlerta-v", props: { duration: 1, x: -100, opacity: 0, stagger: 0.2, ease: "power1.out", delay: 2 } },
-    { selector: "form", props: { duration: 1.5, opacity: 0, ease: "power1.out", delay: 2.2 } }
+    { selector: "form, .beneficios, .servico-beneficios", props: { duration: 1.5, opacity: 0, ease: "power1.out", delay: 2.2 } }
   ];
 
   // Executa animações para cada elemento configurado
@@ -39,7 +39,7 @@ export const initScrollAnimations = () => {
   const sections = document.querySelectorAll('section');
   
   sections.forEach(section => {
-    const elementsToAnimate = section.querySelectorAll('h2, h3, p, img, .btn, a, .background-image, .background-img-seguranca, .link-produto');
+    const elementsToAnimate = section.querySelectorAll('h2, h3, p, img, .btn, a, .background-image, .background-img-seguranca, .link-produto, .plano');
 
     gsap.from(elementsToAnimate, {
       scrollTrigger: {

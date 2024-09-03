@@ -173,25 +173,27 @@
 
 @media (max-width: 768px) { 
 
-  .beneficios-lista {
-    gap: 20px 20px;
-    flex-wrap: wrap;
+    .beneficios {
+      padding: 80px 20px;
+    }
+
+    .beneficios-lista {
+      gap: 20px 20px;
+      flex-direction: column;
+    }
+
+    .oque-fique-alerta {
+      flex-direction: column;    
+      gap: 30px;
+    }
+
+    .planos-lista {
+      flex-direction: column;    
+      gap: 30px;
+    }
+
+  .introducao-texto.small img {
+    filter: brightness(0) invert(1); /* Altera a imagem para branca */
   }
-
-  .oque-fique-alerta {
-    flex-direction: column;    
-    gap: 30px;
-  }
-
-  .planos-lista {
-    flex-direction: column;    
-    gap: 30px;
-  }
-
-.introducao-texto.small img {
-  filter: brightness(0) invert(1); /* Altera a imagem para branca */
-}
-  
-
 }
 

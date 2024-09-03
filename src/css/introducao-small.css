@@ -1,7 +1,7 @@
 
 .introducao.small {
   display: flex;
-  height: calc(70vh - 60px);
+  height: 70vh;
   width: 100%; 
 }
 
@@ -39,6 +39,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
+  margin-top: 80px;
 }
 
 .introducao-texto.small h1 {
@@ -58,13 +59,14 @@
     display: flex;
     flex-direction: column; /* Empilha os elementos verticalmente */
     position: relative;
+    height: 590px;
   }
 
   .introducao-texto.small {
     width: 100%;
     gap: 20px;
     align-items: center;
-    padding-top: 70px;
+    /* padding-top: 80px; */
   }
 
   .introducao-texto.small h1 {
@@ -104,7 +106,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Ajuste a cor e a opacidade conforme necessário */
+    background-color: rgba(0, 0, 0, 0.6); /* Ajuste a cor e a opacidade conforme necessário */
     background-blend-mode: multiply; /* Escolha o modo de blend que melhor se encaixa */
     z-index: 1; /* Garante que o overlay fique sobre a imagem de fundo */
   }

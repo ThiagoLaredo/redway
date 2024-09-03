@@ -88,7 +88,4 @@ window.addEventListener('load', () => {
     initPageLoadAnimations();
     initButtonAnimations();
     initScrollAnimations();
-  
-    // Força a atualização do ScrollTrigger após o carregamento completo
-    ScrollTrigger.refresh(); 
-  });
+});
