@@ -89,7 +89,7 @@ export const initAnimations = () => {
         start: "top center", // Inicia no centro da viewport
         end: "bottom center", // Termina quando a parte inferior atinge o centro
         toggleActions: "play none none none",
-        markers: true // Defina como true para debugging
+
       },
       duration: 0.5,
       opacity: 0,
