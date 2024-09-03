@@ -86,10 +86,10 @@ export const initAnimations = () => {
     gsap.from(section.querySelectorAll('h2, p, img, h3, .rodape, .btn, div'), {
       scrollTrigger: {
         trigger: section,
-        start: "top 80%", // Inicia um pouco antes de entrar completamente na viewport
-        end: "bottom 100%", // Termina um pouco depois de estar totalmente visível
+        start: "top center", // Inicia no centro da viewport
+        end: "bottom center", // Termina quando a parte inferior atinge o centro
         toggleActions: "play none none none",
-        markers: false // Defina como true para debugging
+        markers: true // Defina como true para debugging
       },
       duration: 0.5,
       opacity: 0,
