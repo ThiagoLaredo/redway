@@ -47,7 +47,7 @@ export const initScrollAnimations = () => {
         start: "top 80%", // Inicia um pouco antes do topo da seção atingir 80% da altura da viewport
         end: "bottom 60%", // Termina um pouco depois do fundo da seção atingir 60% da altura da viewport
         toggleActions: "play none none reverse", // Reativa a animação ao voltar
-        markers: false // Defina como true para debugging
+        markers: false 
       },
       opacity: 0,
       y: 20,
