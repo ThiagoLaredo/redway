@@ -59,14 +59,14 @@
     display: flex;
     flex-direction: column; /* Empilha os elementos verticalmente */
     position: relative;
-    height: 590px;
   }
 
   .introducao-texto.small {
     width: 100%;
     gap: 20px;
     align-items: center;
-    /* padding-top: 80px; */
+    height: 70vh;
+    padding-top: 0px;
   }
 
   .introducao-texto.small h1 {
