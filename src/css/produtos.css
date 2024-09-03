@@ -101,7 +101,7 @@
 @media (max-width: 768px) { 
 
   .logo-fiqueAlerta {
-    width: 100%;
+    width: 80%;
   }
   
   .sobre-texto {
@@ -109,7 +109,7 @@
   }
   
   .produto {
-    padding: 20px;
+    padding: 24px;
   }
 
   .produto p  {

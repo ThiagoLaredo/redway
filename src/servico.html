@@ -42,10 +42,12 @@
             <li class="has-submenu">
               <a data-translate="header.menuServicos" href="./servicos.html">Serviços</a>
               <ul class="submenu">
-                <li><a href="./servico.html#application-security"">Application Security</a></li>
-                <li><a href="./servico.html#secure-source-code-review">Secure Source Code Review</a></li>
-                <li><a href="./servico.html#red-team-social-engineering">Red Team & Social Engineering</a></li>
+                <li><a href="./servico.html#ddos-testing">DDoS Testing</a></li>
+                <li><a href="./servico.html#pentest">Pentest</a></li>
+                <li><a href="./servico.html#phishing-simulation">Phishing Simulation</a></li>
+                <li><a href="./servico.html#secure-source-code-review">Secure Source Code Review (SSCR)</a></li>
                 <li><a href="./servico.html#vulnerability-management">Vulnerability Management</a></li>
+                <li><a href="./servico.html#application-pentest">Application Pentest</a></li>
                 <li><a href="./servico.html#hardening-compliance-checks">Hardening e Compliance Checks</a></li>
               </ul>
             <li><a data-translate="header.menuBlog" href="">Blog</a></li>
@@ -76,13 +78,25 @@
     <div class="introducao small container">
       <div class="introducao-texto small">
         <h1 id="serviceTitle"></h1>
-        <p id="serviceDescription"></p>
-        <button class="btn btn-intro" id="serviceButton">Contrate</button>
-    </div>
+        <p id="serviceDescriptionIntro"></p>
+      </div>
       <div class="img-intro small">  
-        <div class="background-image small"></div>
+        <div id="serviceimage"></div>
       </div>   
     </div>
+
+    <section class="servico-beneficios container">
+      <ul id="serviceBeneficiosTitle"></ul>
+    </section>
+
+    <section class="serviceDescription-back">
+      <div class="serviceDescription container">
+        <p id="serviceDescription"></p>
+        <a href="./faleconosco.html" class="btn btn-intro" id="serviceButton">Contrate</a>
+      </div>
+    </section>
+
+    
     <footer class="rodape-background">
       <div class="rodape container">
         <div class="coluna-1">
@@ -102,11 +116,13 @@
         <div class="coluna-3">
           <h4 data-translate="footer.TituloServicos">Serviços</h4>
           <ul>
-            <a href="./servico.html#application-security"><li>Application Security</li></a>
-            <a href="./servico.html#secure-source-code-review"><li>Secure Source Code Review</li></a>
-            <a href="./servico.html#red-team-social-engineering"><li>Red Team & Social Engineering</li></a>
-            <a href="./servico.html#vulnerability-management"><li>Vulnerability Management</li></a>
-            <a href="./servico.html#hardening-compliance-checks"><li>Hardening e Compliance checks</li></a>
+            <li><a href="./servico.html#ddos-testing">DDoS Testing</a></li>
+            <li><a href="./servico.html#pentest">Pentest</a></li>
+            <li><a href="./servico.html#phishing-simulation">Phishing Simulation</a></li>
+            <li><a href="./servico.html#secure-source-code-review">Secure Source Code Review (SSCR)</a></li>
+            <li><a href="./servico.html#vulnerability-management">Vulnerability Management</a></li>
+            <li><a href="./servico.html#application-pentest">Application Pentest</a></li>
+            <li><a href="./servico.html#hardening-compliance-checks">Hardening e Compliance Checks</a></li>
           </ul>
         </div>
         <div class="coluna-4">

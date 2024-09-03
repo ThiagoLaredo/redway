@@ -21,6 +21,7 @@ import "../css/seguranca.css";
 import "../css/fale-conosco.css";
 import "../css/fique-alerta.css";
 import "../css/servicos.css";
+import "../css/servico.css";
 import "../css/rodape.css";
 import "../css/componentes.css";
 

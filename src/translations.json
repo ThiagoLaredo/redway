@@ -30,44 +30,143 @@
       "servicosTitulo": "Soluções para Cibersegurança",
       "servicosDescricao": "Segurança cibernética para fornecer proteção e monitoramento contínuo, garantindo integridade dos seus dados e que a sua empresa esteja sempre um passo à frente das ameaças."
     },
-    "servico": {
-      "comum": {
-        "servicoBotao": "Contrate"
+    
+    
+      "servico": {
+        "comum": {
+          "servicoBotao": "Contrate"
+        },
+        "ddos-testing": {
+          "titulo": "DDoS Testing",
+          "descricao": "A Simulação de Ataques DDoS visa testar a capacidade da infraestrutura da empresa de resistir a ataques de negação de serviço distribuídos, que têm como objetivo sobrecarregar os recursos de rede, aplicativos e servidores, tornando-os indisponíveis para os usuários legítimos. Este serviço permite identificar pontos fracos e implementar melhorias para assegurar a continuidade dos serviços em situações adversas.",
+          "descricaoAdicional": [
+            "Antes de realizar a simulação, realizamos uma análise abrangente da infraestrutura de TI para entender a capacidade atual de lidar com tráfego elevado e identificar as possíveis defesas existentes, como firewalls, balanceadores de carga e soluções de mitigação de DDoS.",
+            "Elaboramos cenários de ataque DDoS que refletem ameaças reais que a organização pode enfrentar. Isso pode incluir ataques volumétricos, que sobrecarregam a largura de banda da rede; ataques de exaustão de recursos, que visam consumir recursos do servidor; e ataques de camada de aplicação, que sobrecarregam aplicativos específicos."
+          ],
+          "imagem": "ddos-testing.jpg",
+          "beneficiosTitulo": "Os principais benefícios deste tipo de teste são:",
+          "beneficios": [
+            "Avaliação da capacidade de resiliência contra ataques DDoS;",
+            "Identificação de vulnerabilidades na infraestrutura de rede e servidores;",
+            "Melhoria da postura de defesa contra ataques de negação de serviço;",
+            "Relatórios detalhados para a tomada de decisões estratégicas sobre segurança;",
+            "Cumprimento de requisitos de continuidade de negócios e resiliência operacional."
+          ]
+        },
+        "pentest": {
+          "titulo": "Pentest",
+          "descricao": "O Pentest tem o objetivo de identificar fraquezas em sistemas e redes antes que criminosos cibernéticos o façam. Essa avaliação detalhada envolve a exploração de possíveis vulnerabilidades em diversos níveis, desde a camada de aplicativos até a infraestrutura de rede.",
+          "descricaoAdicional": [
+            "É uma ferramenta valiosa para avaliar a segurança de uma empresa e identificar fraquezas antes de criminosos cibernéticos, permitindo que as organizações detectem e corrijam vulnerabilidades de forma proativa.",
+            "Se você precisa de um diagnóstico das fragilidades da sua empresa, seja do ponto de vista interno ou do ponto de vista externo, nós podemos lhe ajudar!",
+            "Nossos especialistas realizam testes controlados, identificando vulnerabilidades que não foram detectadas pelos sistemas automatizados de segurança ou testes convencionais. Geramos um relatório detalhado, documentando todas as vulnerabilidades identificadas, os métodos de exploração utilizados, e o impacto potencial das falhas, juntamente com recomendações práticas e priorizadas para remediação.",
+            "Após a entrega do relatório, realizamos uma reunião com a equipe de TI e segurança da empresa para discutir os achados e responder a quaisquer perguntas. As recomendações incluem não apenas correções técnicas, mas também sugestões de melhorias em políticas, procedimentos e treinamentos.",
+            "Após a implementação das correções, nossa equipe também realiza re-testes para garantir que as vulnerabilidades foram devidamente mitigadas. Esse ciclo de teste, correção e re-teste contribui para a melhoria contínua da segurança da organização.",
+            "A Redway pode ajudar a garantir a proteção dos seus dados e a fortalecer a sua postura de segurança geral."
+          ],
+          "imagem": "pentest.jpg",
+          "beneficiosTitulo": "Principais benefícios:",
+          "beneficios": [
+            "Identificação e correção proativa de vulnerabilidades críticas antes que sejam exploradas por atacantes;",
+            "Melhoria da postura de segurança e da resiliência contra ataques cibernéticos;",
+            "Cumprimento de requisitos regulatórios e normativos de segurança;",
+            "Relatórios detalhados que ajudam na priorização de investimentos em segurança."
+          ]
+        },
+        "phishing-simulation": {
+          "titulo": "Phishing Simulation",
+          "descricao": "A Simulação de Phishing visa educar e avaliar os colaboradores da empresa sobre os riscos de phishing, aumentando a conscientização e a capacidade de identificar e evitar esses ataques. Isso reduz o risco de violações de segurança que podem resultar em perda de dados, prejuízos financeiros e danos à reputação.",
+          "descricaoAdicional": [
+            "Através de um planejamento personalizado analisamos as necessidades e o nível de maturidade em cibersegurança da organização, incluindo a identificação dos tipos de phishing mais relevantes para o setor e os perfis de colaboradores que são mais propensos a serem alvos.",
+            "Desenvolvemos cenários realistas e simulamos ataques reais. Essas simulações podem incluir vários tipos de phishing, como spear-phishing (direcionado a indivíduos específicos), vishing (phishing por telefone) e smishing (phishing por SMS).",
+            "Após a simulação, um relatório detalhado é gerado, destacando o desempenho dos colaboradores, as áreas de vulnerabilidade e recomendações para melhorar a resiliência contra phishing. Isso inclui gráficos e métricas que facilitam a visualização dos resultados."
+          ],
+          "imagem": "phishing-simulation.jpg",
+          "beneficiosTitulo": "Com este tipo de ação você terá:",
+          "beneficios": [
+            "Aumento da conscientização e do conhecimento em cibersegurança entre os colaboradores;",
+            "Redução do risco de incidentes de segurança causados por phishing;",
+            "Melhoria contínua da postura de segurança da empresa;",
+            "Relatórios detalhados que ajudam na tomada de decisões estratégicas de segurança."
+          ]
+        },
+        "secure-source-code-review": {
+          "titulo": "Secure Source Code Review (SSCR)",
+          "descricao": "Uma das etapas cruciais para garantir a segurança de um projeto é a revisão do código fonte. O Secure Source Code Review (SSCR), ou Revisão de Código Fonte Segura, é um processo sistemático que visa identificar e corrigir potenciais vulnerabilidades e falhas de segurança no código de um aplicativo ou software.",
+          "descricaoAdicional": [
+            "A revisão de código fonte é uma das técnicas mais confiáveis para encontrar e resolver problemas de segurança em um projeto de software. Ao analisar manualmente o código, os revisores podem identificar falhas de programação, vulnerabilidades conhecidas e até mesmo erros que podem passar despercebidos em outras etapas de testes.",
+            "Nosso processo começa com a definição do escopo da revisão de código, considerando os módulos ou componentes críticos da aplicação. Em conjunto com a equipe de desenvolvimento, são identificadas as áreas do código que podem apresentar maiores riscos, como funcionalidades de autenticação, processamento de dados sensíveis, ou integração com terceiros.",
+            "Revisamos o código-fonte utilizando uma combinação de ferramentas automatizadas e análise manual. As ferramentas automatizadas são utilizadas para realizar uma varredura inicial em busca de padrões conhecidos de vulnerabilidades, como injeção de SQL, cross-site scripting (XSS), buffer overflows, e uso inadequado de criptografia. A revisão manual é realizada por nossos especialistas em segurança que examinam áreas críticas do código em busca de falhas lógicas, problemas de controle de acesso e erros que possam não ser detectados por ferramentas automatizadas.",
+            "As vulnerabilidades identificadas durante a revisão são documentadas e classificadas com base em sua gravidade e impacto potencial na aplicação. A análise inclui uma avaliação do risco que cada vulnerabilidade representa para a aplicação e seus usuários, bem como a probabilidade de exploração.",
+            "Para cada vulnerabilidade encontrada, fornecemos recomendações detalhadas de mitigação. Isso pode incluir alterações específicas no código, adoção de bibliotecas ou frameworks mais seguros, e melhorias na lógica de negócio para evitar falhas de segurança. As recomendações são adaptadas ao contexto da aplicação e ao ambiente de desenvolvimento da empresa.",
+            "No caso de projetos pontuais, um relatório detalhado é entregue ao final da revisão, documentando todas as vulnerabilidades encontradas e as correções recomendadas. O relatório também pode incluir sugestões para melhorias contínuas nas práticas de desenvolvimento seguro.",
+            "Para trabalhos contínuos, oferecemos a constante avaliação do código e análises criteriosas dos novos trechos códigos desenvolvidos, de modo a evitar que novas vulnerabilidades sejam inseridas."
+          ],
+          "imagem": "secure-source-code-review.webp",
+          "beneficiosTitulo": "Principais benefícios:",
+          "beneficios": [
+            "Detecção precoce de vulnerabilidades, reduzindo o risco de exploração em ambientes de produção;",
+            "Melhoria da qualidade do código com a adoção de melhores práticas de segurança;",
+            "Redução dos custos associados à correção de falhas de segurança após o lançamento;",
+            "Fortalecimento da colaboração entre as equipes de segurança e desenvolvimento;",
+            "Aumento da confiança dos usuários e stakeholders na segurança da aplicação."
+          ]
+        },
+        "vulnerability-management": {
+          "titulo": "Vulnerability Management",
+          "descricao": "A Gestão de Vulnerabilidades é um processo contínuo e estruturado que visa identificar, avaliar, priorizar e mitigar vulnerabilidades em sistemas, redes, aplicativos e infraestrutura de uma organização. O objetivo principal do nosso Vulnerability Management é reduzir o seu risco de exposição a ameaças cibernéticas, através da proteção de ativos críticos e dados sensíveis contra explorações maliciosas.",
+          "descricaoAdicional": [
+            "Nosso serviço começa com uma identificação e mapeamento dos ativos de TI da empresa, incluindo servidores, dispositivos de rede, aplicativos, bancos de dados e dispositivos IoT. Este inventário detalhado é essencial para garantir que todos os ativos sejam monitorados para vulnerabilidades.",
+            "Após o mapeamento, realizamos varreduras periódicas utilizando ferramentas automatizadas de ponta para identificar vulnerabilidades conhecidas nos sistemas e aplicativos. Essas varreduras incluem tanto vulnerabilidades técnicas, como falhas em sistemas operacionais, quanto problemas de configuração inadequada.",
+            "Cada vulnerabilidade é avaliada quanto ao seu risco, considerando fatores como a gravidade da vulnerabilidade, a criticidade do ativo afetado, a exposição externa e a probabilidade de exploração. Esta avaliação ajuda a priorizar as vulnerabilidades que necessitam de atenção imediata.",
+            "Com base na avaliação de risco, as vulnerabilidades são priorizadas para correção. Um plano de ação é desenvolvido em conjunto com a equipe de TI da empresa, detalhando as etapas necessárias para corrigir ou mitigar as vulnerabilidades, e definindo prazos de execução."
+          ],
+          "imagem": "vulnerability_management.webp",
+          "beneficiosTitulo": "Principais benefícios:",
+          "beneficios": [
+            "Redução do risco de exploração de vulnerabilidades por meio de uma abordagem proativa e contínua;",
+            "Melhoria da postura de segurança da organização com correções rápidas e eficazes;",
+            "Conformidade com normas e regulamentações de segurança cibernética;",
+            "Aumento da confiança dos stakeholders na capacidade da empresa de proteger seus ativos;",
+            "Visibilidade contínua sobre o estado de segurança da infraestrutura de TI."
+          ]
+        },
+        "application-pentest": {
+          "titulo": "Application Pentest",
+          "descricao": "Application Pentest é uma disciplina focada em identificar, prevenir e corrigir vulnerabilidades em aplicativos, para proteger os dados e os usuários contra possíveis ataques.",
+          "descricaoAdicional": [
+            "Realizamos testes em aplicação web, mobile ou desktop, de modo a identificar falhas de segurança que possam comprometer dados sensíveis ou permitir acesso não autorizado. Também identificamos as principais superfícies de ataque, incluindo interfaces do usuário, APIs expostas, e qualquer ponto onde a aplicação interage com outros sistemas ou usuários.",
+            "De maneira criteriosa, realizamos buscas por vulnerabilidades clássicas, como injeções de SQL, Cross-Site Scripting (XSS), e falhas de autenticação. Assim como, faz parte do escopo a busca por falhas de lógica de negócios, controle inadequado de permissões, e exposição de dados sensíveis.",
+            "Realizamos tentativas de explorar as vulnerabilidades identificadas para entender o impacto real que essas falhas poderiam ter se fossem exploradas por um atacante. Isso inclui a realização de ataques simulados, como a obtenção de acesso não autorizado, execução de comandos maliciosos, ou roubo de informações confidenciais.",
+            "Após a realização dos testes produzimos um relatório detalhado que documenta todas as vulnerabilidades identificadas, o processo de exploração realizado, e o impacto potencial de cada falha, considerando fatores como a gravidade da vulnerabilidade, a sensibilidade dos dados afetados, e a facilidade com que o ataque pode ser replicado por um adversário. O relatório também inclui recomendações detalhadas para mitigar as vulnerabilidades e fortalecer a segurança da aplicação."
+          ],
+          "imagem": "application_pentest.jpg",
+          "beneficiosTitulo": "Principais benefícios:",
+          "beneficios": [
+            "<strong>Detecção Proativa:</strong> Identificação de vulnerabilidades antes que possam ser exploradas por atacantes reais, prevenindo incidentes de segurança e protegendo dados sensíveis;",
+            "<strong>Fortalecimento da Segurança:</strong>  Melhoria da postura de segurança da aplicação através da correção de falhas críticas e adoção de melhores práticas de desenvolvimento seguro;",
+            "<strong>Conformidade com Normas:</strong>  Aumento da conformidade com normas e regulamentações de segurança cibernética, demonstrando um compromisso com a proteção dos dados dos usuários;",
+            "<strong>Aprimoramento da Confiança:</strong>  Reforço da confiança dos usuários e stakeholders na aplicação, demonstrando um compromisso contínuo com a segurança."
+          ]
+        },
+        "hardening-compliance-checks": {
+          "titulo": "Hardening e Compliance Checks",
+          "descricao": "\"Hardening e Compliance\" são duas práticas essenciais na área de segurança cibernética e estão relacionadas à proteção e ao alinhamento das políticas e configurações de segurança de uma organização com as melhores práticas e padrões de segurança aceitos.",
+          "descricaoAdicional": [
+            "Nosso serviço especializado ajuda as corporações a reforçar a segurança de sistemas, aplicativos e redes, tornando-os mais resilientes e menos suscetíveis a ataques cibernéticos. Isso é alcançado através da implementação de configurações e políticas de segurança rigorosas, desativando serviços e funções desnecessárias, removendo usuários ou permissões não utilizados e aplicando correções de segurança (patches) para eliminar vulnerabilidades conhecidas, reduzindo a superfície de ataques e dificultando que invasores explorem falhas de segurança.",
+            "Através de nossos serviços de checagem de compliance ajudamos a garantir que a organização esteja aderindo a requisitos específicos estabelecidos por autoridades governamentais, órgãos reguladores ou padrões do setor. O objetivo do compliance é proteger dados, privacidade e segurança dos clientes e usuários, bem como garantir a integridade e confiabilidade das operações da organização."
+          ],
+          "imagem": "hardening_compliance_checks.webp",
+          "beneficiosTitulo": "Exemplos de regulamentações e padrões de segurança que as organizações podem precisar cumprir incluem:",
+          "beneficios": [
+            "GDPR (Regulamento Geral de Proteção de Dados) na União Europeia;",
+            "HIPAA (Lei de Portabilidade e Responsabilidade de Seguro de Saúde) nos EUA;",
+            "PCI DSS (Padrão de Segurança de Dados da Indústria de Cartões de Pagamento) para processadores de cartões de crédito."
+          ]
+        }
       },
-      "application-security": {
-        "titulo": "Application Security",
-        "descricao": "Análise detalhada e personalizada das suas aplicações, identificando falhas de segurança com precisão cirúrgica. Técnicas avançadas de teste de penetração e revisão de código são utilizadas para fornecer um relatório exaustivo de vulnerabilidades, permitindo que sua equipe corrija rapidamente qualquer falha e fortaleça a proteção de seus sistemas."
-      },
-      "secure-source-code-review": {
-        "titulo": "Secure Source Code Review",
-        "descricao": "Essencial para garantir a segurança do seu software desde a base. Com a realização de uma auditoria aprofundada do código-fonte, utilizando métodos avançados de análise estática e dinâmica para identificar potenciais falhas de segurança que possam comprometer a sua empresa, assegurando que seu código se mantenha robusto e seguro contra vulnerabilidades."
-      },
-      "red-team-social-engineering": {
-        "titulo": "Red Team & Social Engineering",
-        "descricao": "Simulações realistas de cenários de ataque testam a eficácia das suas defesas e a prontidão da sua equipe. Insights valiosos são fornecidos sobre como otimizar a alocação de recursos para melhorar a proteção contra ameaças específicas, ajudando sua empresa a se preparar para possíveis incidentes de segurança."
-      },
-      "vulnerability-management": {
-        "titulo": "Vulnerability Management",
-        "descricao": "A Gestão de Vulnerabilidades é um processo contínuo e estruturado que visa identificar, avaliar, priorizar e mitigar vulnerabilidades em sistemas, redes, aplicativos e infraestrutura de uma organização. O objetivo principal do nosso Vulnerability Management é reduzir o seu risco de exposição a ameaças cibernéticas, através da proteção de ativos críticos e dados sensíveis contra explorações maliciosas.",
-        "descricao-2": "Possuímos a solução ideal para a identifição, Avaliação e classificação das vulnerabilidades do seu parque tecnológico, assim como o gerenciamento e o monitoramento contínuo do seu negócio. Através da nossa plataforma implementamos um processo estruturado de gerenciamento de vulnerabilidades, agindo ativamente na mitigação de riscos e no fortalecimento de suas defesas contra às ameaças emergentes."
-      },
-      "hardening-compliance-checks": {
-        "titulo": "Hardening e Compliance Checks",
-        "hardening-compliance": {
-        "titulo": "Hardening e Compliance",
-        "descricao": [
-          "Hardening e Compliance são duas práticas essenciais na área de segurança cibernética e estão relacionadas à proteção e ao alinhamento das políticas e configurações de segurança de uma organização com as melhores práticas e padrões de segurança aceitos.",
-          "Nosso serviço especializado ajuda as corporações a reforçar a segurança de sistemas, aplicativos e redes, tornando-os mais resilientes e menos suscetíveis a ataques cibernéticos. Isso é alcançado através da implementação de configurações e políticas de segurança rigorosas, desativando serviços e funções desnecessárias, removendo usuários ou permissões não utilizados e aplicando correções de segurança (patches) para eliminar vulnerabilidades conhecidas, reduzindo a superfície de ataques e dificultando que invasores explorem falhas de segurança.",
-          "Através de nossos serviços de checagem de compliance ajudamos a garantir que a organização esteja aderindo a requisitos específicos estabelecidos por autoridades governamentais, órgãos reguladores ou padrões do setor. O objetivo do compliance é proteger dados, privacidade e segurança dos clientes e usuários, bem como garantir a integridade e confiabilidade das operações da organização."
-        ],
-        "lista": [
-          "GDPR (Regulamento Geral de Proteção de Dados) na União Europeia;",
-          "HIPAA (Lei de Portabilidade e Responsabilidade de Seguro de Saúde) nos EUA;",
-          "PCI DSS (Padrão de Segurança de Dados da Indústria de Cartões de Pagamento) para processadores de cartões de crédito."
-        ],
-        "conclusao": "A combinação de Hardening e Compliance é fundamental para garantir a segurança e a conformidade de uma organização. O Hardening fortalece a postura de segurança geral, reduzindo os riscos de violações e ataques, enquanto o Compliance garante que a organização esteja em conformidade com as leis e regulamentações aplicáveis. Juntas, essas práticas ajudam a proteger os ativos da empresa, a reputação e a confiança dos clientes e parceiros de negócios. Além disso, o cumprimento de normas de segurança pode resultar em vantagens competitivas e redução de penalidades legais associadas a violações de segurança ou privacidade." } }
-      
-    },
+    
+    
     "footer": {
       "LinkSobreNos": "Sobre Nós",
       "LinkPerguntasFrequentes": "Perguntas Frequentes",
@@ -169,43 +268,142 @@
       "servicosTitulo": "Cibersecurity Solutions",
       "servicosDescricao": "Cybersecurity to provide protection and continuous monitoring, ensuring the integrity of your data and that your company is always one step ahead of threats."
     },
-    "servico": {
-      "comum": {
-        "servicoBotao": "Hire"
+    
+      "servico": {
+        "comum": {
+          "servicoBotao": "Hire"
+        },
+        "ddos-testing": {
+          "titulo": "DDoS Testing",
+          "descricao": "The DDoS Attack Simulation aims to test the company's infrastructure capacity to withstand distributed denial-of-service attacks, which aim to overwhelm network, application, and server resources, making them unavailable to legitimate users. This service allows identifying weaknesses and implementing improvements to ensure service continuity in adverse situations.",
+          "descricaoAdicional": [
+            "Before conducting the simulation, we perform a comprehensive analysis of the IT infrastructure to understand its current capacity to handle high traffic and identify existing defenses such as firewalls, load balancers, and DDoS mitigation solutions.",
+            "We create DDoS attack scenarios that reflect real threats the organization may face. This may include volumetric attacks that overload network bandwidth, resource exhaustion attacks that aim to consume server resources, and application layer attacks that overload specific applications."
+          ],
+          "imagem": "ddos-testing.jpg",
+          "beneficiosTitulo": "The main benefits of this type of test are:",
+          "beneficios": [
+            "Assessment of resilience against DDoS attacks;",
+            "Identification of vulnerabilities in network and server infrastructure;",
+            "Improvement of the defense posture against denial-of-service attacks;",
+            "Detailed reports for strategic security decision-making;",
+            "Compliance with business continuity and operational resilience requirements."
+          ]
+        },
+        "pentest": {
+          "titulo": "Pentest",
+          "descricao": "The Pentest aims to identify weaknesses in systems and networks before cybercriminals do. This detailed assessment involves exploiting possible vulnerabilities at various levels, from the application layer to the network infrastructure.",
+          "descricaoAdicional": [
+            "It is a valuable tool for assessing a company's security and identifying weaknesses before cybercriminals, allowing organizations to proactively detect and correct vulnerabilities.",
+            "If you need a diagnosis of your company's weaknesses, whether from an internal or external perspective, we can help you!",
+            "Our experts conduct controlled tests, identifying vulnerabilities not detected by automated security systems or conventional tests. We generate a detailed report documenting all identified vulnerabilities, the exploitation methods used, and the potential impact of the flaws, along with practical and prioritized recommendations for remediation.",
+            "After delivering the report, we hold a meeting with the company's IT and security team to discuss findings and answer any questions. The recommendations include not only technical fixes but also suggestions for improvements in policies, procedures, and training.",
+            "After the corrections are implemented, our team also performs retests to ensure the vulnerabilities have been properly mitigated. This cycle of testing, correction, and retesting contributes to the continuous improvement of the organization's security.",
+            "Redway can help ensure your data is protected and strengthen your overall security posture."
+          ],
+          "imagem": "pentest.jpg",
+          "beneficiosTitulo": "Key benefits:",
+          "beneficios": [
+            "Proactive identification and correction of critical vulnerabilities before they are exploited by attackers;",
+            "Improvement of security posture and resilience against cyberattacks;",
+            "Compliance with regulatory and security standards;",
+            "Detailed reports that help prioritize security investments."
+          ]
+        },
+        "phishing-simulation": {
+          "titulo": "Phishing Simulation",
+          "descricao": "The Phishing Simulation aims to educate and assess the company's employees about phishing risks, increasing awareness and the ability to identify and avoid these attacks. This reduces the risk of security breaches that could result in data loss, financial damage, and reputation harm.",
+          "descricaoAdicional": [
+            "Through personalized planning, we analyze the organization's needs and cybersecurity maturity level, including identifying the most relevant types of phishing for the sector and the profiles of employees most likely to be targeted.",
+            "We develop realistic scenarios and simulate real attacks. These simulations can include various types of phishing, such as spear-phishing (targeted at specific individuals), vishing (phishing by phone), and smishing (phishing by SMS).",
+            "After the simulation, a detailed report is generated, highlighting employee performance, areas of vulnerability, and recommendations to improve phishing resilience. This includes charts and metrics that facilitate result visualization."
+          ],
+          "imagem": "phishing-simulation.jpg",
+          "beneficiosTitulo": "With this type of action, you will have:",
+          "beneficios": [
+            "Increased awareness and knowledge of cybersecurity among employees;",
+            "Reduced risk of security incidents caused by phishing;",
+            "Continuous improvement of the company's security posture;",
+            "Detailed reports that help in strategic security decision-making."
+          ]
+        },
+        "secure-source-code-review": {
+          "titulo": "Secure Source Code Review (SSCR)",
+          "descricao": "One of the crucial steps to ensuring a project's security is reviewing the source code. Secure Source Code Review (SSCR) is a systematic process aimed at identifying and correcting potential vulnerabilities and security flaws in an application's or software's code.",
+          "descricaoAdicional": [
+            "Source code review is one of the most reliable techniques for finding and solving security problems in a software project. By manually analyzing the code, reviewers can identify programming errors, known vulnerabilities, and even errors that may go unnoticed in other testing stages.",
+            "Our process starts by defining the scope of the code review, considering the critical modules or components of the application. In conjunction with the development team, areas of the code that may present higher risks, such as authentication functionalities, sensitive data processing, or third-party integration, are identified.",
+            "We review the source code using a combination of automated tools and manual analysis. Automated tools are used to perform an initial scan for known vulnerability patterns, such as SQL injection, cross-site scripting (XSS), buffer overflows, and improper use of cryptography. Manual review is conducted by our security experts who examine critical areas of the code for logical flaws, access control problems, and errors that automated tools might not detect.",
+            "Vulnerabilities identified during the review are documented and classified based on their severity and potential impact on the application. The analysis includes an assessment of the risk each vulnerability poses to the application and its users, as well as the likelihood of exploitation.",
+            "For each vulnerability found, we provide detailed mitigation recommendations. This may include specific code changes, adopting safer libraries or frameworks, and improvements in business logic to prevent security flaws. Recommendations are tailored to the application's context and the company's development environment.",
+            "In the case of specific projects, a detailed report is delivered at the end of the review, documenting all vulnerabilities found and the recommended corrections. The report may also include suggestions for continuous improvements in secure development practices.",
+            "For continuous work, we offer constant code evaluation and thorough analysis of newly developed code segments to prevent new vulnerabilities from being introduced."
+          ],
+          "imagem": "secure-source-code-review.jpg",
+          "beneficiosTitulo": "Key benefits:",
+          "beneficios": [
+            "Early detection of vulnerabilities, reducing the risk of exploitation in production environments;",
+            "Improved code quality through the adoption of better security practices;",
+            "Reduced costs associated with fixing security flaws after release;",
+            "Strengthened collaboration between security and development teams;",
+            "Increased trust from users and stakeholders in application security."
+          ]
+        },
+        "vulnerability-management": {
+          "titulo": "Vulnerability Management",
+          "descricao": "Vulnerability Management is a continuous and structured process aimed at identifying, assessing, prioritizing, and mitigating vulnerabilities in an organization's systems, networks, applications, and infrastructure. The primary objective of our Vulnerability Management is to reduce your risk of exposure to cyber threats by protecting critical assets and sensitive data from malicious exploits.",
+          "descricaoAdicional": [
+            "Our service begins with identifying and mapping the company's IT assets, including servers, network devices, applications, databases, and IoT devices. This detailed inventory is essential to ensure all assets are monitored for vulnerabilities.",
+            "After mapping, we conduct periodic scans using advanced automated tools to identify known vulnerabilities in systems and applications. These scans include both technical vulnerabilities, such as flaws in operating systems, and issues of improper configuration.",
+            "Each vulnerability is assessed for its risk, considering factors such as the vulnerability's severity, the criticality of the affected asset, external exposure, and the likelihood of exploitation. This assessment helps prioritize vulnerabilities that require immediate attention.",
+            "Based on the risk assessment, vulnerabilities are prioritized for remediation. An action plan is developed in conjunction with the company's IT team, detailing the steps needed to correct or mitigate vulnerabilities and defining execution timelines."
+          ],
+          "imagem": "vulnerability-management.jpg",
+          "beneficiosTitulo": "Key benefits:",
+          "beneficios": [
+            "Reduced risk of vulnerability exploitation through a proactive and continuous approach;",
+            "Improved security posture of the organization with quick and effective fixes;",
+            "Compliance with cybersecurity standards and regulations;",
+            "Increased stakeholder confidence in the company's ability to protect its assets;",
+            "Continuous visibility over the security state of the IT infrastructure."
+          ]
+        },
+        "application-pentest": {
+          "titulo": "Application Pentest",
+          "descricao": "Application Pentest focuses on identifying, preventing, and correcting vulnerabilities in applications to protect data and users against possible attacks.",
+          "descricaoAdicional": [
+            "We perform tests on web, mobile, or desktop applications to identify security flaws that may compromise sensitive data or allow unauthorized access. We also identify the main attack surfaces, including user interfaces, exposed APIs, and any points where the application interacts with other systems or users.",
+            "We thoroughly search for classic vulnerabilities such as SQL injections, Cross-Site Scripting (XSS), and authentication failures. The scope also includes searching for business logic flaws, inadequate permission control, and exposure of sensitive data.",
+            "We attempt to exploit identified vulnerabilities to understand the real impact these flaws could have if exploited by an attacker. This includes conducting simulated attacks such as obtaining unauthorized access, executing malicious commands, or stealing confidential information.",
+            "After the tests, we produce a detailed report documenting all identified vulnerabilities, the exploitation process carried out, and the potential impact of each flaw, considering factors such as the severity of the vulnerability, the sensitivity of the affected data, and the ease with which the attack can be replicated by an adversary. The report also includes detailed recommendations to mitigate vulnerabilities and strengthen application security."
+          ],
+          "imagem": "application-pentest.jpg",
+          "beneficiosTitulo": "Key benefits:",
+          "beneficios": [
+            "Proactive Detection: Identifying vulnerabilities before they can be exploited by real attackers, preventing security incidents and protecting sensitive data;",
+            "Security Strengthening: Improving the application's security posture by correcting critical flaws and adopting better secure development practices;",
+            "Compliance with Standards: Increasing compliance with cybersecurity standards and regulations, demonstrating a commitment to protecting user data;",
+            "Enhancing Trust: Reinforcing trust from users and stakeholders in the application by demonstrating a continuous commitment to security."
+          ]
+        },
+        "hardening-compliance-checks": {
+          "titulo": "Hardening and Compliance Checks",
+          "descricao": "\"Hardening and Compliance\" are two essential practices in cybersecurity, related to protecting and aligning an organization's security policies and configurations with accepted best practices and security standards.",
+          "descricaoAdicional": [
+            "Our specialized service helps corporations strengthen the security of systems, applications, and networks, making them more resilient and less susceptible to cyberattacks. This is achieved by implementing rigorous security configurations and policies, disabling unnecessary services and functions, removing unused users or permissions, and applying security patches to eliminate known vulnerabilities, reducing the attack surface and making it harder for attackers to exploit security flaws.",
+            "Through our compliance check services, we help ensure the organization adheres to specific requirements established by governmental authorities, regulatory bodies, or industry standards. The objective of compliance is to protect customer and user data, privacy, and security, as well as ensure the integrity and reliability of the organization's operations."
+          ],
+          "imagem": "hardening-compliance-checks.jpg",
+          "beneficiosTitulo": "Examples of regulations and security standards organizations may need to comply with include:",
+          "beneficios": [
+            "GDPR (General Data Protection Regulation) in the European Union;",
+            "HIPAA (Health Insurance Portability and Accountability Act) in the USA;",
+            "PCI DSS (Payment Card Industry Data Security Standard) for credit card processors."
+          ]
+        }
       },
-      "application-security": {
-        "titulo": "Application Security",
-        "descricao": "Detailed and personalized analysis of your applications, identifying security flaws with surgical precision. Advanced penetration testing and code review techniques are used to provide an exhaustive report of vulnerabilities, allowing your team to quickly correct any flaws and strengthen the protection of your systems."
-      },
-      "secure-source-code-review": {
-        "titulo": "Secure Source Code Review",
-        "descricao": "Essential for ensuring the security of your software from the ground up. By conducting a thorough audit of the source code, using advanced static and dynamic analysis methods to identify potential security flaws that could compromise your company, ensuring that your code remains robust and secure against vulnerabilities."
-      },
-      "red-team-social-engineering": {
-        "titulo": "Red Team & Social Engineering",
-        "descricao": "Essential for ensuring the security of your software from the ground up. By conducting a thorough audit of the source code, using advanced static and dynamic analysis methods to identify potential security flaws that could compromise your company, ensuring that your code remains robust and secure against vulnerabilities."
-      },
-      "vulnerability-management": {
-        "titulo": "Vulnerability Management",
-        "descricao": "Vulnerability Management is an ongoing and structured process aimed at identifying, assessing, prioritizing, and mitigating vulnerabilities in systems, networks, applications, and an organization's infrastructure. The main goal of our Vulnerability Management is to reduce your risk of exposure to cyber threats by protecting critical assets and sensitive data against malicious exploitations",
-        "descricao-2": "We have the ideal solution for identifying, assessing, and classifying the vulnerabilities of your technological park, as well as managing and continuously monitoring your business. Through our platform, we implement a structured vulnerability management process, actively acting in risk mitigation and strengthening your defenses against emerging threats"
-      },
-      "hardening-compliance-checks": {
-        "titulo": "Hardening e Compliance Checks",
-        "hardening-compliance": {
-        "titulo": "Hardening e Compliance",
-        "descricao": [
-          "Hardening e Compliance são duas práticas essenciais na área de segurança cibernética e estão relacionadas à proteção e ao alinhamento das políticas e configurações de segurança de uma organização com as melhores práticas e padrões de segurança aceitos.",
-          "Nosso serviço especializado ajuda as corporações a reforçar a segurança de sistemas, aplicativos e redes, tornando-os mais resilientes e menos suscetíveis a ataques cibernéticos. Isso é alcançado através da implementação de configurações e políticas de segurança rigorosas, desativando serviços e funções desnecessárias, removendo usuários ou permissões não utilizados e aplicando correções de segurança (patches) para eliminar vulnerabilidades conhecidas, reduzindo a superfície de ataques e dificultando que invasores explorem falhas de segurança.",
-          "Através de nossos serviços de checagem de compliance ajudamos a garantir que a organização esteja aderindo a requisitos específicos estabelecidos por autoridades governamentais, órgãos reguladores ou padrões do setor. O objetivo do compliance é proteger dados, privacidade e segurança dos clientes e usuários, bem como garantir a integridade e confiabilidade das operações da organização."
-        ],
-        "lista": [
-          "GDPR (Regulamento Geral de Proteção de Dados) na União Europeia;",
-          "HIPAA (Lei de Portabilidade e Responsabilidade de Seguro de Saúde) nos EUA;",
-          "PCI DSS (Padrão de Segurança de Dados da Indústria de Cartões de Pagamento) para processadores de cartões de crédito."
-        ],
-        "conclusao": "A combinação de Hardening e Compliance é fundamental para garantir a segurança e a conformidade de uma organização. O Hardening fortalece a postura de segurança geral, reduzindo os riscos de violações e ataques, enquanto o Compliance garante que a organização esteja em conformidade com as leis e regulamentações aplicáveis. Juntas, essas práticas ajudam a proteger os ativos da empresa, a reputação e a confiança dos clientes e parceiros de negócios. Além disso, o cumprimento de normas de segurança pode resultar em vantagens competitivas e redução de penalidades legais associadas a violações de segurança ou privacidade." } }
-    },
+  
+    
     
     "footer": {
       "LinkSobreNos": "About Us",

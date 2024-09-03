@@ -37,10 +37,20 @@
             <span id="hamburguer"></span>
           </button>          
           <ul data-menu="list" id="menu">
-            <li><a data-translate="menuFiqueAlerta" href="./fique-alerta.html">FiqueAlerta</a></li>
-            <li><a data-translate="menuServicos" href="./servicos.html">Serviços</a></li>
-            <li><a data-translate="menuBlog" href="">Blog</a></li>
-            <li><a data-translate="menuFaleConosco" href="./faleconosco.html">Fale Conosco</a></li>
+            <li><a data-translate="header.menuFiqueAlerta" href="./fique-alerta.html">FiqueAlerta</a></li>
+            <li class="has-submenu">
+              <a data-translate="header.menuServicos" href="./servicos.html">Serviços</a>
+              <ul class="submenu">
+                <li><a href="./servico.html#ddos-testing">DDoS Testing</a></li>
+                <li><a href="./servico.html#pentest">Pentest</a></li>
+                <li><a href="./servico.html#phishing-simulation">Phishing Simulation</a></li>
+                <li><a href="./servico.html#secure-source-code-review">Secure Source Code Review (SSCR)</a></li>
+                <li><a href="./servico.html#vulnerability-management">Vulnerability Management</a></li>
+                <li><a href="./servico.html#application-pentest">Application Pentest</a></li>
+                <li><a href="./servico.html#hardening-compliance-checks">Hardening e Compliance Checks</a></li>
+              </ul>
+            <li><a data-translate="header.menuBlog" href="">Blog</a></li>
+            <li><a data-translate="header.menuFaleConosco" href="./faleconosco.html">Fale Conosco</a></li>
             <!-- Botão de alternância de idioma com dropdown -->
             <li class="language-switch">
               <button id="language-dropdown" class="language-button">
@@ -53,6 +63,7 @@
               </div>
             </li>
           </ul>  
+        </nav>
         </nav>
       </div>
     </div>
@@ -119,11 +130,13 @@
         <div class="coluna-3">
           <h4 data-translate="rodapeLinkServicos">Serviços</h4>
           <ul>
-            <a href="./servico.html"><li>Application Security</li></a>
-            <a href=""><li>Secure Source Code Review</li></a>
-            <a href=""><li>Red Team & Social Engineering</li></a>
-            <a href=""><li>Vulnerability Management</li></a>
-            <a href=""><li>Hardening e Compliance checks</li></a>
+            <li><a href="./servico.html#ddos-testing">DDoS Testing</a></li>
+            <li><a href="./servico.html#pentest">Pentest</a></li>
+            <li><a href="./servico.html#phishing-simulation">Phishing Simulation</a></li>
+            <li><a href="./servico.html#secure-source-code-review">Secure Source Code Review (SSCR)</a></li>
+            <li><a href="./servico.html#vulnerability-management">Vulnerability Management</a></li>
+            <li><a href="./servico.html#application-pentest">Application Pentest</a></li>
+            <li><a href="./servico.html#hardening-compliance-checks">Hardening e Compliance Checks</a></li>
           </ul>
         </div>
         <div class="coluna-4">
