@@ -81,7 +81,7 @@ export const initAnimations = () => {
     });
   });
   
-  const sections = document.querySelectorAll('section, footer');
+  const sections = document.querySelectorAll('section');
   sections.forEach(section => {
     gsap.from(section.querySelectorAll('h2, p, img, h3, .coluna-1, .coluna-2, .coluna-3, .btn, div'), {
       scrollTrigger: {
