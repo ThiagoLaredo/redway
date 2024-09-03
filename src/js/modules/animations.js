@@ -71,15 +71,15 @@ export const initAnimations = () => {
 
   };
 
-  document.querySelectorAll('.btn').forEach(button => {
-    button.addEventListener('mouseenter', () => {
-      gsap.to(button, { duration: 0.3, backgroundColor: 'var(--primary)', scale: 1.05 });
-    });
+  // document.querySelectorAll('.btn').forEach(button => {
+  //   button.addEventListener('mouseenter', () => {
+  //     gsap.to(button, { duration: 0.3, backgroundColor: 'var(--primary)', scale: 1.05 });
+  //   });
     
-    button.addEventListener('mouseleave', () => {
-      gsap.to(button, { duration: 0.3, backgroundColor: 'var(--secondary)', scale: 1 });
-    });
-  });
+  //   button.addEventListener('mouseleave', () => {
+  //     gsap.to(button, { duration: 0.3, backgroundColor: 'var(--secondary)', scale: 1 });
+  //   });
+  // });
   
   const sections = document.querySelectorAll('section, footer');
   sections.forEach(section => {
@@ -89,7 +89,7 @@ export const initAnimations = () => {
         start: "top center", // Inicia no centro da viewport
         end: "bottom center", // Termina quando a parte inferior atinge o centro
         toggleActions: "play none none none",
-        markers: true // Defina como true para debugging
+
       },
       duration: 0.5,
       opacity: 0,
