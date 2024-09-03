@@ -3,7 +3,7 @@ import MenuMobile from './modules/menu-mobile.js';
 // import FormHandler from './modules/formHandler.js';
 import LanguageSwitcher from './modules/languageSwitcher.js';
 import translations from '../translations.json';
-import { initAnimations } from './modules/animations.js';
+import { initPageLoadAnimations, initButtonAnimations, initScrollAnimations } from './modules/animations.js';
 import { ServiceLoader } from './modules/serviceLoader.js';
 import { SubMenu } from './modules/subMenu.js';
 
@@ -52,7 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuMobile = new MenuMobile('[data-menu="logo"]', '[data-menu="button"]', '[data-menu="list"]', '[data-menu="contato-mobile"]', '[data-menu="linkedin"]');
   menuMobile.init();
 
-  initAnimations();
+  initPageLoadAnimations();
+  initButtonAnimations();
+  initScrollAnimations();
 
   const subMenu = new SubMenu('#menu');
 
