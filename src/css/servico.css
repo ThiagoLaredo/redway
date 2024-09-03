@@ -1,0 +1,107 @@
+#serviceimage {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%); 
+  background-blend-mode: lighten;
+  background-color: rgba(160, 0, 0, 0.3);
+  background-position: 30% 90%;
+  border-top: 0.5px solid var(--bg);
+}
+
+.servico-beneficios {
+  padding: 140px 20px 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.servico-beneficios h3 {
+  font: 500 1.8rem Coolvetica,sans-serif;
+  color: var(--text);
+}
+
+#serviceBeneficiosTitle{
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 0px 20px;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+#serviceBeneficiosTitle li {
+  color: var(--text);
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1 1 calc(50% - 20px); /* Calcula a largura para ter duas colunas */
+  font: 400 0.85rem/1.35 "Inter", sans-serif;
+}
+
+#serviceBeneficiosTitle strong {
+  color: var(--primary);
+}
+
+
+.serviceDescription-back {
+  background-color: #fcf6f6;
+  padding: 80px 20px;
+}
+
+.serviceDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#serviceDescription {
+  display: flex;
+  flex-direction: column;
+  font: 300 .85rem / 1.35 Inter, sans-serif;
+  gap: 20px
+}
+
+@media (max-width: 768px) { 
+
+  .servico-beneficios {
+    padding: 120px 20px 80px 20px;
+  }
+
+  #serviceimage {
+    clip-path: none;
+    background-position: center;
+    background-size: cover;
+    /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 25%), 0 100%); */
+    background-position: 36% 10%;
+    background-color: rgba(160, 0, 0, 0.3);
+  }
+
+  #serviceimage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajuste a cor e a opacidade conforme necessário */
+    background-blend-mode: multiply; /* Escolha o modo de blend que melhor se encaixa */
+    z-index: 1; /* Garante que o overlay fique sobre a imagem de fundo */
+  }
+
+  #serviceBeneficiosTitle{
+   flex-direction: column;
+   gap: 20px;
+  }
+
+}

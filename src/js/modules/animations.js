@@ -24,6 +24,14 @@ export const initAnimations = () => {
       delay: 1.5
     });
 
+    gsap.from("#serviceimage", {
+      duration: 1.5,
+      x: 200,
+      opacity: 0,
+      ease: "power1.out",
+      delay: 1.5
+    });
+
     gsap.from(".background-image-pg-interna", {
       duration: 1.5,
       x: 200,
@@ -43,7 +51,7 @@ export const initAnimations = () => {
     });
 
 
-    gsap.from(".introducao-texto h1, .introducao-texto p, .introducao-texto button, .servicos-lista", {
+    gsap.from(".introducao-texto h1, .introducao-texto p, .introducao-texto button, .servicos-lista, #logo-fiqueAlerta-v", {
       duration: 1,
       x: -100,
       opacity: 0,
