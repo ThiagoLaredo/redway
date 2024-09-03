@@ -174,7 +174,7 @@
 @media (max-width: 768px) { 
 
     .beneficios {
-      padding: 80px 20px;
+      padding: 60px 20px;
     }
 
     .beneficios-lista {
@@ -182,9 +182,23 @@
       flex-direction: column;
     }
 
+    .oque-fique-alerta-background {
+      padding: 60px 0;
+    }
+
     .oque-fique-alerta {
       flex-direction: column;    
       gap: 30px;
+    }
+
+    .plano-titulo h3 {
+      font: 800 1.4rem/1.35 "Inter", sans-serif;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .planos {
+      padding: 60px 20px;
     }
 
     .planos-lista {

@@ -76,7 +76,11 @@
 @media (max-width: 768px) { 
 
   .servico-beneficios {
-    padding: 80px 20px;
+    padding: 60px 20px;
+  }
+
+  .serviceDescription-back {
+    padding: 60px 0;
   }
 
   #serviceimage {

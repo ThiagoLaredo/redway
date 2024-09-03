@@ -68,6 +68,13 @@
 
 @media (max-width: 768px) { 
 
+  .introducao-texto.small.servicos {
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    padding-top: 40px;
+  }
+
 
   .background-image.servicos-img  {
     clip-path: none;
@@ -85,7 +92,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Ajuste a cor e a opacidade conforme necessário */
+    background-color: rgba(0, 0, 0, 0.6); /* Ajuste a cor e a opacidade conforme necessário */
     background-blend-mode: multiply; /* Escolha o modo de blend que melhor se encaixa */
     z-index: 1; /* Garante que o overlay fique sobre a imagem de fundo */
   }
