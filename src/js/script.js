@@ -46,15 +46,12 @@ function setupServiceLinks(serviceLoader, lang) {
         });
     });
 }
+
 document.addEventListener('DOMContentLoaded', () => {
   console.log("DOM completamente carregado.");
 
   const menuMobile = new MenuMobile('[data-menu="logo"]', '[data-menu="button"]', '[data-menu="list"]', '[data-menu="contato-mobile"]', '[data-menu="linkedin"]');
   menuMobile.init();
-
-  initPageLoadAnimations();
-  initButtonAnimations();
-  initScrollAnimations();
 
   const subMenu = new SubMenu('#menu');
 
@@ -85,3 +82,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Chama a função para configurar os links de serviços
   setupServiceLinks(serviceLoader, currentLang);
 });
+
+// Após o carregamento completo dos recursos, inicializa as animações e força a atualização do ScrollTrigger
+window.addEventListener('load', () => {
+    initPageLoadAnimations();
+    initButtonAnimations();
+    initScrollAnimations();
+  
+    // Força a atualização do ScrollTrigger após o carregamento completo
+    ScrollTrigger.refresh(); 
+  });
