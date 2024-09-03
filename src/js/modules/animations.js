@@ -71,19 +71,19 @@ export const initAnimations = () => {
 
   };
 
-  // document.querySelectorAll('.btn').forEach(button => {
-  //   button.addEventListener('mouseenter', () => {
-  //     gsap.to(button, { duration: 0.3, backgroundColor: 'var(--primary)', scale: 1.05 });
-  //   });
+  document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('mouseenter', () => {
+      gsap.to(button, { duration: 0.3, backgroundColor: 'var(--primary)', scale: 1.05 });
+    });
     
-  //   button.addEventListener('mouseleave', () => {
-  //     gsap.to(button, { duration: 0.3, backgroundColor: 'var(--secondary)', scale: 1 });
-  //   });
-  // });
+    button.addEventListener('mouseleave', () => {
+      gsap.to(button, { duration: 0.3, backgroundColor: 'var(--secondary)', scale: 1 });
+    });
+  });
   
   const sections = document.querySelectorAll('section, footer');
   sections.forEach(section => {
-    gsap.from(section.querySelectorAll('h2, p, img, h3, .rodape, .btn, div'), {
+    gsap.from(section.querySelectorAll('h2, p, img, h3, .coluna-1, .coluna-2, .coluna-3, .btn, div'), {
       scrollTrigger: {
         trigger: section,
         start: "top center", // Inicia no centro da viewport
