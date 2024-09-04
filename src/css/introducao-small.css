@@ -31,7 +31,6 @@
   border-top: 0.5px solid var(--bg);
 }
 
-
 .introducao-texto.small {
   width: 50%; 
   display: flex;
@@ -41,6 +40,18 @@
   gap: 20px;
   margin-top: 80px;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 
 .introducao-texto.small h1 {
   font-size: 2.4rem;
