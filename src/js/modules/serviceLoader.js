@@ -31,6 +31,19 @@ export class ServiceLoader {
       titleElement.textContent = serviceData.titulo || '';
       descriptionIntroElement.textContent = serviceData.descricao || '';
       buttonElement.textContent = this.data[lang].servico.comum.servicoBotao || '';
+
+      // Atualizando o título da página para SEO
+      const seoTitle = serviceData.tituloSEO || `RedWay - ${serviceData.titulo || 'Serviço'}`;
+      document.title = seoTitle;
+      
+      // Atualizando a descrição para SEO
+      let metaDescription = document.querySelector('meta[name="description"]');
+      if (!metaDescription) {
+        metaDescription = document.createElement('meta');
+        metaDescription.name = 'description';
+        document.head.appendChild(metaDescription);
+      }
+      metaDescription.content = serviceData.descricaoSEO || serviceData.descricao || 'Descrição do serviço não disponível.';
   
       // Limpa a descrição adicional antes de adicionar novos elementos
       descriptionElement.innerHTML = '';
@@ -44,15 +57,32 @@ export class ServiceLoader {
           descriptionElement.appendChild(p);
         });
       }
-  
-      // Carrega a imagem, se disponível
+        
+          // Carrega a imagem, se disponível
       if (serviceData.imagem) {
         imageElement.style.backgroundImage = `url('../img/${serviceData.imagem}')`;
         imageElement.style.backgroundSize = 'cover'; // Ajusta a imagem para cobrir o container
       } else {
         imageElement.style.backgroundImage = 'none';
       }
-  
+
+      // Verifica se o elemento de texto alternativo existe, caso contrário, cria um
+      let altTextElement = imageElement.querySelector('.visually-hidden');
+
+      if (!altTextElement) {
+        // Se não existe, cria o elemento span para o texto alternativo
+        altTextElement = document.createElement('span');
+        altTextElement.classList.add('visually-hidden');
+        imageElement.appendChild(altTextElement);
+      }
+
+      // Atualiza o texto alternativo
+      if (serviceData.titulo) {
+        altTextElement.textContent = `Imagem de fundo: ${serviceData.titulo}`;
+      } else {
+        altTextElement.textContent = 'Imagem de fundo: descrição não disponível';
+      }
+
       // Remove todos os elementos <h3> dentro da seção de benefícios
       const existingTitles = beneficiosListElement.parentNode.querySelectorAll('h3');
       existingTitles.forEach(title => title.remove());
