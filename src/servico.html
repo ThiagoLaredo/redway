@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,12 +22,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Adiar o carregamento da fonte -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <!-- Preload para fontes do Google -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Adiar o carregamento do link padrão -->
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    </noscript>
 
     <!-- CSS crítico inline -->
     <style>
-      /* CSS crítico para a parte acima da dobra da página */
       body {
         font-family: 'Inter', sans-serif;
         /* Outros estilos críticos aqui */
