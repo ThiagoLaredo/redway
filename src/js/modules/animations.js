@@ -46,7 +46,7 @@ export const initScrollAnimations = () => {
         trigger: section,
         start: "top 80%", // Inicia um pouco antes do topo da seção atingir 80% da altura da viewport
         end: "bottom 60%", // Termina um pouco depois do fundo da seção atingir 60% da altura da viewport
-        toggleActions: "play none none reverse", // Reativa a animação ao voltar
+        toggleActions: "play none none none", // Reativa a animação ao voltar
         markers: false 
       },
       opacity: 0,
@@ -62,7 +62,7 @@ export const initScrollAnimations = () => {
     scrollTrigger: {
       trigger: '.rodape-background', // Gatilho específico para o footer
       start: "top 80%",
-      toggleActions: "play none none reverse",
+      toggleActions: "play none none none",
       markers: false
     },
     opacity: 0,
