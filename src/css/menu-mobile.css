@@ -111,9 +111,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
   }
-
+/* 
   .js ul[data-menu="list"] a {
     font-size: 16px;
     width: 100%;
@@ -122,24 +122,59 @@
   }
 
   .js ul[data-menu="list"] > li > a {
-    width: 100%;
+    width: 100vw;
     position: relative;
-    text-align: center; /* Adicionado para centralizar o texto */
+    text-align: center; 
+    padding: 10px 0; 
 }
 
   .js ul[data-menu="list"] > li > a::after {
     content: "";
     display: block;
-    width: 100vw; /* Ocupe 100% da largura da tela */
-    margin-left: -50vw; /* Centraliza o ::after em relação à tela */
+    width: 100vw; 
+    margin-left: -50vw; 
     height: 2px;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.09);
     position: absolute;
-    bottom: -12px;
-    left: 50%; /* Posiciona o ::after no centro do link */
-    transform: translateY(-50%); /* Centraliza o ::after em relação ao centro do menu */
+    bottom: -8px;
+    left: 50%; 
+    transform: translateY(-50%);
+  } */
+
+  .js ul[data-menu="list"] {
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
+  
+  .js ul[data-menu="list"] > li {
+    position: relative; /* Define o li como o contêiner de referência para o posicionamento absoluto */
+    width: 100vw; /* Garante que o li ocupe toda a largura da tela */
+  }
+  
+  .js ul[data-menu="list"] > li > a {
+    display: block; /* Faz o link ocupar toda a área do item de lista */
+    width: 100%; 
+    text-align: center;
+    padding: 4px 0; 
+    font-size: 16px;
+    line-height: 1; /* Remove o espaço extra abaixo do texto */
+    margin: 0;
+  }
+  
+  .js ul[data-menu="list"] > li > a::after {
+    content: "";
+    display: block;
+    width: 100vw; /* Ocupe 100% da largura da tela */
+    height: 2px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.09);
+    position: absolute; /* Define o ::after como absoluto para ocupar a largura total */
+    left: 0; /* Alinha à esquerda da tela */
+    bottom: -8px; /* Ajusta a posição vertical da linha */
+  }
+  
 
   .js ul[data-menu="list"] li:last-child::after {
     display: none;
