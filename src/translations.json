@@ -43,7 +43,7 @@
             "Antes de realizar a simulação, realizamos uma análise abrangente da infraestrutura de TI para entender a capacidade atual de lidar com tráfego elevado e identificar as possíveis defesas existentes, como firewalls, balanceadores de carga e soluções de mitigação de DDoS.",
             "Elaboramos cenários de ataque DDoS que refletem ameaças reais que a organização pode enfrentar. Isso pode incluir ataques volumétricos, que sobrecarregam a largura de banda da rede; ataques de exaustão de recursos, que visam consumir recursos do servidor; e ataques de camada de aplicação, que sobrecarregam aplicativos específicos."
           ],
-          "imagem": "ddos-testing.jpg",
+          "imagem": "ddos-testing.webp",
           "beneficiosTitulo": "Os principais benefícios deste tipo de teste são:",
           "beneficios": [
             "Avaliação da capacidade de resiliência contra ataques DDoS;",
@@ -64,7 +64,7 @@
             "Após a implementação das correções, nossa equipe também realiza re-testes para garantir que as vulnerabilidades foram devidamente mitigadas. Esse ciclo de teste, correção e re-teste contribui para a melhoria contínua da segurança da organização.",
             "A Redway pode ajudar a garantir a proteção dos seus dados e a fortalecer a sua postura de segurança geral."
           ],
-          "imagem": "pentest.jpg",
+          "imagem": "pentest.webp",
           "beneficiosTitulo": "Principais benefícios:",
           "beneficios": [
             "Identificação e correção proativa de vulnerabilidades críticas antes que sejam exploradas por atacantes;",
@@ -280,7 +280,7 @@
             "Before conducting the simulation, we perform a comprehensive analysis of the IT infrastructure to understand its current capacity to handle high traffic and identify existing defenses such as firewalls, load balancers, and DDoS mitigation solutions.",
             "We create DDoS attack scenarios that reflect real threats the organization may face. This may include volumetric attacks that overload network bandwidth, resource exhaustion attacks that aim to consume server resources, and application layer attacks that overload specific applications."
           ],
-          "imagem": "ddos-testing.jpg",
+          "imagem": "ddos-testing.webp",
           "beneficiosTitulo": "The main benefits of this type of test are:",
           "beneficios": [
             "Assessment of resilience against DDoS attacks;",
@@ -301,7 +301,7 @@
             "After the corrections are implemented, our team also performs retests to ensure the vulnerabilities have been properly mitigated. This cycle of testing, correction, and retesting contributes to the continuous improvement of the organization's security.",
             "Redway can help ensure your data is protected and strengthen your overall security posture."
           ],
-          "imagem": "pentest.jpg",
+          "imagem": "pentest.webp",
           "beneficiosTitulo": "Key benefits:",
           "beneficios": [
             "Proactive identification and correction of critical vulnerabilities before they are exploited by attackers;",

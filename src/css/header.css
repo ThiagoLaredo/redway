@@ -58,7 +58,7 @@ ul[data-menu="list"] {
 
 .menu a {
   color: var(--bg);
-  font: 1rem/1 'inter', sans-serif;;
+  font: 1rem 'inter', sans-serif;;
   display: flex;
   justify-content: center;
   text-decoration: none;
@@ -125,7 +125,7 @@ ul[data-menu="list"] {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 5px 10px;
+  padding: 12px 18px;
 }
 
 .language-button img.language-icon {
@@ -141,7 +141,6 @@ ul[data-menu="list"] {
 #current-lang {
   color: var(--textwhite);
 }
-
 
 
 @media (max-width: 768px) { 
@@ -167,7 +166,7 @@ ul[data-menu="list"] {
     display: none;
   }
 
-  .submenu {
+  /* .submenu {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -176,30 +175,70 @@ ul[data-menu="list"] {
     background-color: var(--secondary40);
     padding: 0;
     margin: 0;
-    top: 10px;
+    top: 6px;
     box-shadow: none;
-    border-radius: none;
+    border-radius: 0px;
   }
 
   ul[data-menu="list"] .submenu li {
-    padding: 8px 0;
+    padding: 4px 0;
+    border: none;
   }
 
   ul[data-menu="list"] .submenu li a {
-    font-size: 16px !important;
+    font-size: 14px !important;
     color: var(--textwhite);
     text-decoration: none;
     display: block;
-  }
-
-  /* ul[data-menu="list"] .submenu li::after {
-    display: none;
   } */
 
-  /* Remove o ::after se o item tiver um submenu */
-.js ul[data-menu="list"] > li.has-submenu > a::after {
-  display: none;
-}
+  .submenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Necessário para o posicionamento absoluto dos elementos filhos */
+    background-color: var(--secondary40);
+    padding: 0;
+    margin: 0;
+    top: 6px;
+    width: 100vw; /* Ocupe toda a largura da viewport */
+    box-shadow: none;
+    border-radius: 0;
+  }
+  
+  ul[data-menu="list"] .submenu li {
+    width: 100vw; /* Garante que cada item de submenu ocupe toda a largura da tela */
+    position: relative; /* Define como contêiner de referência para o pseudo-elemento ::after */
+    padding: 4px 0;
+    border: none;
+  }
+  
+  ul[data-menu="list"] .submenu li a {
+    font-size: 14px !important;
+    color: var(--textwhite);
+    text-decoration: none;
+    display: block;
+    width: 100%; /* Faz o link ocupar toda a largura do item de lista */
+    padding: 6px 0; /* Adiciona padding para aumentar a área de clique */
+    text-align: center;
+  }
+  
+  ul[data-menu="list"] .submenu li a::after {
+    content: "";
+    display: block;
+    width: 100vw; /* Ocupe 100% da largura da tela */
+    height: 2px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.09);
+    position: absolute; /* Define o ::after como absoluto para ocupar a largura total */
+    left: 0; /* Alinha à esquerda da tela */
+    bottom: -4px; /* Ajusta a posição vertical da linha */
+  }
+  
+
+
+
 
   .language-options {
     top: 30px;
