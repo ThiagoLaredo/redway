@@ -4,29 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Título dinâmico (pode ser substituído pelo JavaScript) -->
+    
+    <!-- Título dinâmico -->
     <title>RedWay - Serviço</title>
-    <!-- Meta Description (pode ser substituído pelo JavaScript) -->
     <meta name="description" content="Descrição padrão do serviço">
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
 
-   <!-- Open Graph / Facebook -->
-   <meta property="og:title" content="Redway: Há 20 anos elevando o nível da cibersegurança de 
-   grandes empresas, com excelência e transparência.">
-   <meta property="og:description" content="Redway: Há 20 anos elevando o nível da cibersegurança de 
-   grandes empresas, com excelência e transparência.">
-   <meta property="og:image" content="https://redwaysecurity.com/img/src/img/redway-security.webp">
-   <meta property="og:image:width" content="1200">  <!-- Largura da imagem -->
-   <meta property="og:image:height" content="630">  <!-- Altura da imagem -->
-   <meta property="og:url" content="https://redwaysecurity.com/">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Redway: Há 20 anos elevando o nível da cibersegurança de grandes empresas, com excelência e transparência.">
+    <meta property="og:description" content="Redway: Há 20 anos elevando o nível da cibersegurança de grandes empresas, com excelência e transparência.">
+    <meta property="og:image" content="https://redwaysecurity.com/img/src/img/redway-security.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://redwaysecurity.com/">
 
+    <!-- Preconnect para melhorar o carregamento de fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    
+
+    <!-- Adiar o carregamento da fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <!-- CSS crítico inline -->
+    <style>
+      /* CSS crítico para a parte acima da dobra da página */
+      body {
+        font-family: 'Inter', sans-serif;
+        /* Outros estilos críticos aqui */
+      }
+    </style>
+
+    <!-- JavaScript para detectar o suporte a JS -->
     <script>document.documentElement.className += ' js';</script>
-    
-  </head>
+</head>
+
   <body>
     <header class="header">
       <div class="container">
