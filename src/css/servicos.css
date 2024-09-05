@@ -2,6 +2,10 @@
   padding: 0 0 60px 0;
 }
 
+.introducao-texto.small.servicos {
+  padding-top: 60px;
+}
+
 .background-image.servicos-img {
   content: "";
   position: absolute;
@@ -74,7 +78,6 @@
     align-items: center;
     padding-top: 140px;
   }
-
 
   .background-image.servicos-img  {
     clip-path: none;

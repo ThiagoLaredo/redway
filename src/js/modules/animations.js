@@ -17,58 +17,79 @@ export const initPageLoadAnimations = () => {
 
   // Executa animações para cada elemento configurado
   pageElements.forEach(element => {
-    gsap.from(element.selector, element.props);
+    const targets = document.querySelectorAll(element.selector);
+    if (targets.length > 0) {
+      gsap.from(targets, element.props);
+    } else if (element.selector === '.svg-overlay' || element.selector.includes('form, .beneficios, .servico-beneficios')) {
+      // Verifica se elementos são opcionais e ignoram mensagens de aviso para eles
+      console.info(`Optional GSAP target '${element.selector}' not found on this page.`);
+    }
   });
 };
 
 // Função para animações dos botões
 export const initButtonAnimations = () => {
-  document.querySelectorAll('.btn').forEach(button => {
-    button.addEventListener('mouseenter', () => {
-      gsap.to(button, { duration: 0.3, backgroundColor: 'var(--primary)', scale: 1.05 });
-    });
+  const buttons = document.querySelectorAll('.btn');
+  if (buttons.length > 0) {
+    buttons.forEach(button => {
+      button.addEventListener('mouseenter', () => {
+        gsap.to(button, { duration: 0.3, backgroundColor: 'var(--primary)', scale: 1.05 });
+      });
 
-    button.addEventListener('mouseleave', () => {
-      gsap.to(button, { duration: 0.3, backgroundColor: 'var(--secondary)', scale: 1 });
+      button.addEventListener('mouseleave', () => {
+        gsap.to(button, { duration: 0.3, backgroundColor: 'var(--secondary)', scale: 1 });
+      });
     });
-  });
+  } else {
+    console.info("No buttons found for GSAP animation.");
+  }
 };
+
 // Função para animações de scroll usando ScrollTrigger
 export const initScrollAnimations = () => {
-  // Animação para cada seção com conteúdo
   const sections = document.querySelectorAll('section');
-  
-  sections.forEach(section => {
-    const elementsToAnimate = section.querySelectorAll('h2, h3, p, img, .btn, a, .background-image, .background-img-seguranca, .link-produto, .plano');
+  if (sections.length > 0) {
+    sections.forEach(section => {
+      const elementsToAnimate = section.querySelectorAll('h2, h3, p, img, .btn, a, .background-image, .background-img-seguranca, .link-produto, .plano');
+      if (elementsToAnimate.length > 0) {
+        gsap.from(elementsToAnimate, {
+          scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            end: "bottom 60%",
+            toggleActions: "play none none none",
+            markers: false 
+          },
+          opacity: 0,
+          y: 20,
+          stagger: 0.2,
+          duration: 0.8,
+          ease: "power2.out"
+        });
+      } else {
+        console.info(`No elements found for animation in section: ${section.className}`);
+      }
+    });
+  } else {
+    console.info("No sections found for GSAP scroll animations.");
+  }
 
-    gsap.from(elementsToAnimate, {
+  const footerElements = document.querySelectorAll('.rodape h4, .rodape ul, .rodape li');
+  if (footerElements.length > 0) {
+    gsap.from(footerElements, {
       scrollTrigger: {
-        trigger: section,
-        start: "top 80%", // Inicia um pouco antes do topo da seção atingir 80% da altura da viewport
-        end: "bottom 60%", // Termina um pouco depois do fundo da seção atingir 60% da altura da viewport
-        toggleActions: "play none none none", // Reativa a animação ao voltar
-        markers: false 
+        trigger: '.rodape-background',
+        start: "top 80%",
+        toggleActions: "play none none none",
+        markers: false
       },
       opacity: 0,
       y: 20,
-      stagger: 0.2, // Efeito dominó para elementos
-      duration: 0.8,
+      stagger: 0.1,
+      duration: 0.4,
       ease: "power2.out"
     });
-  });
-
-  // Animação para o footer
-  gsap.from('.rodape h4, .rodape ul, .rodape li', {
-    scrollTrigger: {
-      trigger: '.rodape-background', // Gatilho específico para o footer
-      start: "top 80%",
-      toggleActions: "play none none none",
-      markers: false
-    },
-    opacity: 0,
-    y: 20,
-    stagger: 0.1, // Menor atraso entre os elementos para uma transição mais rápida
-    duration: 0.4,
-    ease: "power2.out"
-  });
+  } else {
+    console.info("GSAP targets for footer animation not found.");
+  }
 };
