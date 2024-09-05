@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>FiqueAlerta: Monitore e Gerencie Vulnerabilidades de Segurança Cibernética</title>
+      <meta name="description" content="Utilize o FiqueAlerta para coletar, analisar e distribuir informações sobre vulnerabilidades, ajudando sua organização a identificar, avaliar e mitigar riscos em sistemas, redes e aplicativos.">
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Redway: Há 20 anos elevando o nível da cibersegurança de 
+    grandes empresas, com excelência e transparência.">
+    <meta property="og:description" content="Redway: Há 20 anos elevando o nível da cibersegurança de 
+    grandes empresas, com excelência e transparência.">
+    <meta property="og:image" content="https://redwaysecurity.com/img/src/img/redway-security.webp">
+    <meta property="og:image:width" content="1200">  <!-- Largura da imagem -->
+    <meta property="og:image:height" content="630">  <!-- Altura da imagem -->
+    <meta property="og:url" content="https://redwaysecurity.com/">
+    <!-- Preload para a fonte Coolvetica -->
+    <link rel="preload" href="./fonts/coolvetica.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/coolvetica.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <!-- Preload para melhorar o carregamento de fontes locais -->
+    <link rel="preload" href="./fonts/Inter18pt-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter18pt-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter24pt-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <!-- Pré-carregar a imagem LCP -->
+    <!-- <link rel="preload" href="./img/redway-information-security.webp" as="image" type="image/webp"> -->
+    <script>document.documentElement.className += ' js';</script>
+  <script defer="defer" src="main.js"></script><link href="style.css" rel="stylesheet"></head>
+  <body>
+    <header class="header">
+      <div class="container">
+      <div class="header_menu">
+        <a data-menu="logo" href="/"> <img src="./img/logo_branco.svg" alt="Logo da Redway"></a>
+        <span class="visually-hidden">Voltar para a página inicial</span>
+        <nav class="menu" data-menu="suave">
+          <button data-menu="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+            <span id="hamburguer"></span>
+          </button>          
+          <ul data-menu="list" id="menu">
+            <li><a data-translate="header.menuFiqueAlerta" href="./fique-alerta.html">FiqueAlerta</a></li>
+            <li class="has-submenu">
+              <a data-translate="header.menuServicos" href="./servicos.html">Serviços</a>
+              <ul class="submenu">
+                <li><a href="./servico.html#ddos-testing">DDoS Testing</a></li>
+                <li><a href="./servico.html#pentest">Pentest</a></li>
+                <li><a href="./servico.html#phishing-simulation">Phishing Simulation</a></li>
+                <li><a href="./servico.html#secure-source-code-review">Secure Source Code Review (SSCR)</a></li>
+                <li><a href="./servico.html#vulnerability-management">Vulnerability Management</a></li>
+                <li><a href="./servico.html#application-pentest">Application Pentest</a></li>
+                <li><a href="./servico.html#hardening-compliance-checks">Hardening e Compliance Checks</a></li>
+              </ul>
+            </li><li><a data-translate="header.menuBlog" href="">Blog</a></li>
+            <li><a data-translate="header.menuFaleConosco" href="./faleconosco.html">Fale Conosco</a></li>
+            <!-- Botão de alternância de idioma com dropdown -->
+            <li class="language-switch">
+              <button id="language-dropdown" class="language-button">
+                  <span id="current-lang">PT</span>
+                  <img src="./img/idioma.svg" alt="Idioma" class="language-icon">
+              </button>
+              <div id="language-options" class="language-options">
+                  <button id="switch-en" class="language-button">EN</button>
+                  <button id="switch-pt" class="language-button">PT</button>
+              </div>
+            </li>
+          </ul>  
+        </nav>
+      </div>
+    </div>
+    </header>
+
+    <a data-menu="contato-mobile" href="mailto:contato@triuscapital.com.br" target="_blank">contato@redway.com.br</a>
+    <a data-menu="linkedin" href="https://www.linkedin.com/company/redway-security/" target="_blank">
+      <img src="./img/linkedin.svg">
+      <span class="visually-hidden">Ir para o Linkedin</span>
+    </a>
+    
+    <div class="introducao small container">
+      <div class="introducao-texto small">
+        <img id="logo-fiqueAlerta-v" src="./img/Logo-FiqueAlerta vermelho.svg" alt="FiqueAlerta">
+          <p data-translate="alerta.introDescricao"></p>  
+        </div>
+          <div class="img-intro small">  
+            <div class="background-image small"></div>
+          </div>   
+    </div>
+
+    <section class="beneficios container">
+      <h2 data-translate="alerta.beneficiosTitulo"></h2>
+      <div class="beneficios-lista">
+        <div class="beneficio">
+          <h3 data-translate="alerta.beneficio1Titulo"></h3> 
+          <p data-translate="alerta.beneficio1Descritivo"></p>
+        </div>
+        <div class="beneficio">
+          <h3 data-translate="alerta.beneficio2Titulo"></h3> 
+          <p data-translate="alerta.beneficio2Descritivo"></p>
+        </div>
+        <div class="beneficio">
+          <h3 data-translate="alerta.beneficio3Titulo"></h3> 
+          <p data-translate="alerta.beneficio3Descritivo"></p>
+        </div>
+        <div class="beneficio">
+          <h3 data-translate="alerta.beneficio4Titulo"></h3> 
+          <p data-translate="alerta.beneficio4Descritivo"></p>
+        </div>
+      </div>
+    </section>
+          
+    <section class="oque-fique-alerta-background">
+      <div class="oque-fique-alerta container">
+        <div class="oque-fique-alerta-texto">
+          <p data-translate="alerta.oqueParagrafo1">O FiqueAlerta é a plataforma de <strong>Vulnerability Intelligence</strong> da Redway que monitora o surgimento de ameaças e viabiliza que você seja informado das novas vulnerabilidades que podem impactar seus sistemas, mantendo-o atento sobre as ações que devem ser realizadas para manter-se protegido.</p>
+          <p data-translate="alerta.oqueParagrafo2">Nossos analistas monitoram diversas fontes de informações, identificando e qualificando novas vulnerabilidades de acordo com as tecnologias utilizadas pela sua empresa.</p>
+          <p data-translate="alerta.oqueParagrafo3">Além disso, lhe mantemos informados sobre os mais novos vetores de ataque utilizados pelos adversários, possibilitando uma visibilidade contínua de possíveis ameaças e viabilizando a criação de estratégias de proteção mais eficientes.</p>
+          <p data-translate="alerta.oqueParagrafo4">Nossa ferramenta se integra perfeitamente com outras ferramentas de segurança e gestão de TI para fornecer uma visão unificada do panorama de segurança.</p>
+        </div>
+        <ul class="oque-fique-alerta-lista">
+          <li data-translate="alerta.oqueLista1"><strong>Monitoramento 24x7</strong> da publicação de vulnerabilidades relacionadas às tecnologias utilizadas pela empresa; </li>
+
+          <li data-translate="alerta.oqueLista2"><strong>Priorização de Riscos:</strong> Qualificamos as vulnerabilidades de acordo com o impacto ao negócio;</li>
+
+          <li data-translate="alerta.oqueLista3"><strong>Integração com Ferramentas Existentes:</strong> 
+            Integra-se perfeitamente com outras ferramentas de segurança e gestão de TI para fornecer uma visão unificada do panorama de segurança.</li>
+
+          <li data-translate="alerta.oqueLista4"><strong>Relatórios Completos:</strong>
+            Gera relatórios detalhados e painéis que fornecem insights sobre o status das vulnerabilidades da organização e os esforços de remediação.</li>
+        </ul>
+    </div>
+    </section>
+
+    <section class="planos container">
+      <h2 data-translate="alerta.planoTitulo" style="text-align: center;"></h2>
+      <div class="planos-lista">
+          <div class="plano">
+            <div class="plano-texto">
+              <div class="plano-titulo">
+                <h3 data-translate="alerta.planoBasicoTitulo"></h3>
+              </div>
+              <ul>
+                <li data-translate="alerta.planoBasico1"></li>
+                <li data-translate="alerta.planoBasico2"></li>
+                <li data-translate="alerta.planoBasico3"></li>
+                <li data-translate="alerta.planoBasico4"></li>
+                <li data-translate="alerta.planoBasico5"></li>
+              </ul>
+            </div>             
+            <div class="plano-valor">
+              <span data-translate="alerta.planoBasicoValor">R$99/mês</span>
+              <a data-translate="alerta.planoBotao" href="./faleconosco.html" class="btn assinar"></a>
+            </div>              
+          </div>
+
+          <div class="plano">
+            <div class="plano-texto">
+              <div class="plano-titulo">
+                <h3 data-translate="alerta.planoAvancadoTitulo"></h3>
+                <h4 data-translate="alerta.planoRecursosAdicionais"></h4>
+              </div>
+              <ul>
+                  <li data-translate="alerta.planoAvancado1"></li>
+                  <li data-translate="alerta.planoAvancado2"></li>
+                  <li data-translate="alerta.planoAvancado3"></li>
+                  <li data-translate="alerta.planoAvancado4"></li>
+                  <li data-translate="alerta.planoAvancado5"></li>
+                  <li data-translate="alerta.planoAvancado6"></li>
+                  <li data-translate="alerta.planoAvancado7"></li>
+              </ul>
+            </div>
+            <div class="plano-valor">
+              <span data-translate="alerta.planoAvancadoValor"></span>
+              <a data-translate="alerta.planoBotao" href="./faleconosco.html" class="btn assinar"></a>
+            </div> 
+          </div>
+
+          <div class="plano">
+            <div class="plano-texto">
+              <div class="plano-titulo">
+                <h3 data-translate="alerta.planoEmpresarialTitulo"></h3>
+                <h4></h4>
+              </div>
+              <ul>
+                  <li data-translate="alerta.planoEmpresarial1"></li>
+                  <li data-translate="alerta.planoEmpresarial2"></li>
+                  <li data-translate="alerta.planoEmpresarial3"></li>
+                  <li data-translate="alerta.planoEmpresarial4"></li>
+                  <li data-translate="alerta.planoEmpresarial5"></li>
+                  <li data-translate="alerta.planoEmpresarial6"></li>
+                  <li data-translate="alerta.planoEmpresarial7"></li>
+              </ul>
+            </div>
+            <div class="plano-valor">
+              <span data-translate="alerta.planoEmpresarialValor"></span>
+              <a data-translate="alerta.planoBotao" href="./faleconosco.html" class="btn assinar"></a>
+            </div> 
+          </div>
+      </div>
+    </section>
+   
+    <footer class="rodape-background">
+      <div class="rodape container">
+        <div class="coluna-1">
+          <h4></h4>
+          <ul>
+            <a data-translate="rodapeLinkSobreNos" hef=""><li>Sobre nós</li></a>
+            <a data-translate="rodapeLinkPerguntasFrequentes" hef=""><li>Perguntas frequentes</li></a>
+            <a data-translate="rodapeLinkContato" hef=""><li>Contato</li></a>
+          </ul>
+        </div>
+        <div class="coluna-2">
+          <h4 data-translate="rodapeLinkProduto">Produto</h4>
+          <ul>
+            <a hef=""><li>FiqueAlerta</li></a>
+          </ul>
+        </div>
+        <div class="coluna-3">
+          <h4 data-translate="rodapeLinkServicos">Serviços</h4>
+          <ul>
+              <a hef=""><li>Application Security</li></a>
+              <a hef=""><li>Secure Source Code Review</li></a>
+              <a hef=""><li>Red Team & Social Engineering</li></a>
+              <a hef=""><li>Third-Party Cyber Risk Management</li></a>
+              <a hef=""><li>Vulnerability Management</li></a>
+              <a hef=""><li>Hardening e Compliance checks</li></a>
+              <a hef=""><li>Attack Surface Management</li></a>
+          </ul>
+        </div>
+        <div class="coluna-4">
+          <h4 data-translate="rodapeLinkConheca">Conheça</h4>
+          <ul>
+            <a hef=""><li>Cases</li></a>
+            <a hef=""><li>Blog</li></a>
+          </ul>
+        </div>
+      </div>
+     </footer>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Redway - Cibersegurança</title>
+    <meta name="description" content="Há 20 anos elevando o nível da cibersegurança de 
+    grandes empresas, com excelência e transparência.">
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Redway: Há 20 anos elevando o nível da cibersegurança de 
+    grandes empresas, com excelência e transparência.">
+    <meta property="og:description" content="Redway: Há 20 anos elevando o nível da cibersegurança de 
+    grandes empresas, com excelência e transparência.">
+    <meta property="og:image" content="https://redwaysecurity.com/img/src/img/redway-security.webp">
+    <meta property="og:image:width" content="1200">  <!-- Largura da imagem -->
+    <meta property="og:image:height" content="630">  <!-- Altura da imagem -->
+    <meta property="og:url" content="https://redwaysecurity.com/">
+    <!-- Preload para a fonte Coolvetica -->
+    <link rel="preload" href="./fonts/coolvetica.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/coolvetica.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <!-- Preload para melhorar o carregamento de fontes locais -->
+    <link rel="preload" href="./fonts/Inter18pt-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter18pt-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter24pt-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <!-- Pré-carregar a imagem LCP -->
+    <!-- <link rel="preload" href="./img/redway-information-security.webp" as="image" type="image/webp"> -->
+    <script>document.documentElement.className += ' js';</script>
+  <script defer="defer" src="main.js"></script><link href="style.css" rel="stylesheet"></head>
+  <body>
+    <header class="header">
+      <div class="container">
+      <div class="header_menu">
+        <a data-menu="logo" href="/"> <img src="./img/logo_branco.svg" alt="Logo da Redway"></a>
+        <span class="visually-hidden">Voltar para a página inicial</span>
+        <nav class="menu" data-menu="suave">
+          <button data-menu="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
+            <span id="hamburguer"></span>
+          </button>          
+          <ul data-menu="list" id="menu">
+            <li><a data-translate="header.menuFiqueAlerta" href="./fique-alerta.html">FiqueAlerta</a></li>
+            <li class="has-submenu">
+              <a data-translate="header.menuServicos" href="./servicos.html">Serviços</a>
+              <ul class="submenu">
+                <li><a href="./servico.html#ddos-testing">DDoS Testing</a></li>
+                <li><a href="./servico.html#pentest">Pentest</a></li>
+                <li><a href="./servico.html#phishing-simulation">Phishing Simulation</a></li>
+                <li><a href="./servico.html#secure-source-code-review">Secure Source Code Review (SSCR)</a></li>
+                <li><a href="./servico.html#vulnerability-management">Vulnerability Management</a></li>
+                <li><a href="./servico.html#application-pentest">Application Pentest</a></li>
+                <li><a href="./servico.html#hardening-compliance-checks">Hardening e Compliance Checks</a></li>
+              </ul>
+            </li><li><a data-translate="header.menuBlog" href="">Blog</a></li>
+            <li><a data-translate="header.menuFaleConosco" href="./faleconosco.html">Fale Conosco</a></li>
+            <!-- Botão de alternância de idioma com dropdown -->
+            <li class="language-switch">
+              <button id="language-dropdown" class="language-button">
+                  <span id="current-lang">PT</span>
+                  <img src="./img/idioma.svg" alt="Idioma" class="language-icon">
+              </button>
+              <div id="language-options" class="language-options">
+                  <button id="switch-en" class="language-button">EN</button>
+                  <button id="switch-pt" class="language-button">PT</button>
+              </div>
+            </li>
+          </ul>  
+        </nav>
+        
+      </div>
+    </div>
+    </header>
+    <a data-menu="contato-mobile" href="mailto:contato@triuscapital.com.br" target="_blank">contato@redway.com.br</a>
+    <a data-menu="linkedin" href="https://www.linkedin.com/company/redway-security/" target="_blank">
+      <img src="./img/linkedin.svg">
+      <span class="visually-hidden">Ir para o Linkedin</span>
+    </a>   
+    <div class="introducao small container">
+      <div class="introducao-texto small">
+          <h1 data-translate="introTitulo">Fale Com Nossos Especialistas</h1>
+          <p data-translate="introDescricao">Conte com nossa equipe de especialistas. Estamos disponíveis para ajudar a resolver problemas, esclarecer dúvidas e garantir que seus sistemas estejam sempre protegidos.</p>
+      </div>
+      <div class="img-intro small">  
+        <div class="background-image small"></div>
+      </div> 
+      
+      
+      
+    </div>
+    <div class="formulario container">
+      <form action="#" method="post">
+        <h2>Envie uma mensagem</h2>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone">
+
+        <label for="empresa">Empresa:</label>
+        <input type="text" id="empresa" name="empresa">
+
+        <label for="motivoContato">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem"></textarea>
+
+        <button class="btn-form" type="submit">Enviar</button>
+      </form>
+    </div>          
+    <footer class="rodape-background">
+      <div class="rodape container">
+        <div class="coluna-1">
+          <h4>Redway</h4>
+          <ul>
+            <a data-translate="rodapeLinkSobreNos" hef=""><li>Sobre nós</li></a>
+            <a data-translate="rodapeLinkPerguntasFrequentes" hef=""><li>Perguntas frequentes</li></a>
+            <a data-translate="rodapeLinkContato" hef=""><li>Contato</li></a>
+          </ul>
+        </div>
+        <div class="coluna-2">
+          <h4 data-translate="rodapeLinkProduto">Produto</h4>
+          <ul>
+            <a hef=""><li>FiqueAlerta</li></a>
+          </ul>
+        </div>
+        <div class="coluna-3">
+          <h4 data-translate="rodapeLinkServicos">Serviços</h4>
+          <ul>
+            <li><a href="./servico.html#ddos-testing">DDoS Testing</a></li>
+            <li><a href="./servico.html#pentest">Pentest</a></li>
+            <li><a href="./servico.html#phishing-simulation">Phishing Simulation</a></li>
+            <li><a href="./servico.html#secure-source-code-review">Secure Source Code Review (SSCR)</a></li>
+            <li><a href="./servico.html#vulnerability-management">Vulnerability Management</a></li>
+            <li><a href="./servico.html#application-pentest">Application Pentest</a></li>
+            <li><a href="./servico.html#hardening-compliance-checks">Hardening e Compliance Checks</a></li>
+          </ul>
+        </div>
+        <div class="coluna-4">
+          <h4 data-translate="rodapeLinkConheca">Conheça</h4>
+          <ul>
+            <a hef=""><li>Cases</li></a>
+            <a hef=""><li>Blog</li></a>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
