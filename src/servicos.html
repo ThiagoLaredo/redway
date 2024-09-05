@@ -16,6 +16,9 @@
     <meta property="og:image:width" content="1200">  <!-- Largura da imagem -->
     <meta property="og:image:height" content="630">  <!-- Altura da imagem -->
     <meta property="og:url" content="https://redwaysecurity.com/">
+     <!-- Preload para a fonte Coolvetica -->
+     <link rel="preload" href="./fonts/coolvetica.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+     <link rel="preload" href="./fonts/coolvetica.woff" as="font" type="font/woff" crossorigin="anonymous">
     <!-- Preload para melhorar o carregamento de fontes locais -->
     <link rel="preload" href="./fonts/Inter18pt-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Inter18pt-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -24,7 +27,6 @@
     <link rel="preload" href="./img/servicos.webp" as="image" type="image/webp">
     <script>document.documentElement.className += ' js';</script>
   </head>
-  <body>
   <body>
     <header class="header">
       <div class="container">
@@ -66,13 +68,11 @@
       </div>
     </div>
     </header>
-
     <a data-menu="contato-mobile" href="mailto:contato@triuscapital.com.br" target="_blank">contato@redway.com.br</a>
     <a data-menu="linkedin" href="https://www.linkedin.com/company/redway-security/" target="_blank">
       <img src="./img/linkedin.svg">
       <span class="visually-hidden">Ir para o Linkedin</span>
     </a>
-    
     <div class="introducao container">
       <div class="introducao-texto small servicos">
           <h1 data-translate="servicos.servicosTitulo">Soluções para Cibersegurança</h1>
@@ -89,47 +89,44 @@
       </div>
       <div class="img-intro">  
         <div class="background-image servicos-img"></div>
-      </div> 
-      
+      </div>       
     </div>
-
-   
     <footer class="rodape-background">
-    <div class="rodape container">
-      <div class="coluna-1">
-        <h4>Redway</h4>
-        <ul>
-          <li><a data-translate="footer.LinkSobreNos" href="#">Sobre nós</a></li>
-          <li><a data-translate="footer.LinkPerguntasFrequentes" href="#">Perguntas frequentes</a></li>
-          <li><a data-translate="footer.LinkContato" href="./faleconosco.html">Contato</a></li>
-        </ul>
+      <div class="rodape container">
+        <div class="coluna-1">
+          <h4>Redway</h4>
+          <ul>
+            <li><a data-translate="footer.LinkSobreNos" href="#">Sobre nós</a></li>
+            <li><a data-translate="footer.LinkPerguntasFrequentes" href="#">Perguntas frequentes</a></li>
+            <li><a data-translate="footer.LinkContato" href="./faleconosco.html">Contato</a></li>
+          </ul>
+        </div>
+        <div class="coluna-2">
+          <h4 data-translate="footer.TituloProduto">Produto</h4>
+          <ul>
+            <li><a href="./fique-alerta.html">FiqueAlerta</a></li>
+          </ul>
+        </div>
+        <div class="coluna-3">
+          <h4 data-translate="footer.TituloServicos">Serviços</h4>
+          <ul>
+            <li><a href="./servico.html#ddos-testing">DDoS Testing</a></li>
+            <li><a href="./servico.html#pentest">Pentest</a></li>
+            <li><a href="./servico.html#phishing-simulation">Phishing Simulation</a></li>
+            <li><a href="./servico.html#secure-source-code-review">Secure Source Code Review (SSCR)</a></li>
+            <li><a href="./servico.html#vulnerability-management">Vulnerability Management</a></li>
+            <li><a href="./servico.html#application-pentest">Application Pentest</a></li>
+            <li><a href="./servico.html#hardening-compliance-checks">Hardening e Compliance Checks</a></li>
+          </ul>
+        </div>
+        <div class="coluna-4">
+          <h4 data-translate="footer.TituloConheca">Conheça</h4>
+          <ul>
+            <li><a href="#">Cases</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="coluna-2">
-        <h4 data-translate="footer.TituloProduto">Produto</h4>
-        <ul>
-          <li><a href="./fique-alerta.html">FiqueAlerta</a></li>
-        </ul>
-      </div>
-      <div class="coluna-3">
-        <h4 data-translate="footer.TituloServicos">Serviços</h4>
-        <ul>
-          <li><a href="./servico.html#ddos-testing">DDoS Testing</a></li>
-          <li><a href="./servico.html#pentest">Pentest</a></li>
-          <li><a href="./servico.html#phishing-simulation">Phishing Simulation</a></li>
-          <li><a href="./servico.html#secure-source-code-review">Secure Source Code Review (SSCR)</a></li>
-          <li><a href="./servico.html#vulnerability-management">Vulnerability Management</a></li>
-          <li><a href="./servico.html#application-pentest">Application Pentest</a></li>
-          <li><a href="./servico.html#hardening-compliance-checks">Hardening e Compliance Checks</a></li>
-        </ul>
-      </div>
-      <div class="coluna-4">
-        <h4 data-translate="footer.TituloConheca">Conheça</h4>
-        <ul>
-          <li><a href="#">Cases</a></li>
-          <li><a href="#">Blog</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+    </footer>
   </body>
 </html>

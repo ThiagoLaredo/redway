@@ -71,21 +71,14 @@ img {
   font-display: swap;
 }
 
-
 /* Importando Coolvetica */
 @font-face {
   font-family: 'Coolvetica';
-  src: url('../fonts/coolvetica\ rg.otf') format('opentype');
+  src: url('../fonts/coolvetica.woff2') format('woff2'),
+       url('../fonts/coolvetica.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-}
-
-/* Importando Odisseia Test Black */
-@font-face {
-  font-family: 'Odisseia';
-  src: url('../fonts/OdisseiaTest-Black.otf') format('opentype');
-  font-weight: 800; /* valor estimado para 'black' */
-  font-style: normal;
+  font-display: swap;
 }
 
 .visually-hidden {
