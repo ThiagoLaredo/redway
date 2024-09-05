@@ -25,7 +25,6 @@ ul {
 a {
   text-decoration: none;
   cursor: pointer;
-
 }
 
 img {
@@ -39,13 +38,21 @@ img {
 }
 
 .container {
-  /* display: flex;
-  flex-direction: column; */
   max-width: 1200px; /* Largura máxima do container */
   margin: 0 auto; /* Centraliza o container horizontalmente */
   padding: 0 20px; /* Espaço interno do container */
   box-sizing: border-box; /* Inclui padding na largura total */
 }
+
+@font-face {
+  font-family: 'Inter 18pt';
+  src: url('Inter18pt-Light.woff2') format('woff2'),
+      url('Inter18pt-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 @font-face {
   font-family: 'Inter';
@@ -64,7 +71,6 @@ img {
   font-style: normal;
   font-display: swap;
 }
-
 
 
 /* Importando Coolvetica */
