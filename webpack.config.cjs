@@ -1,3 +1,4 @@
+// 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -14,6 +15,7 @@ module.exports = {
   },
   module: {
     rules: [
+      // Regra para processar JavaScript
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -25,16 +27,35 @@ module.exports = {
           },
         },
       },
+      // Regra para processar CSS e imagens de fundo
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              url: true, // Habilita o processamento de URLs no CSS
+              importLoaders: 1,
+            },
+          },
+        ],
       },
+      // Regra para processar imagens
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/images/[hash][ext][query]'
+          filename: 'img/[name][ext][query]', // Salva as imagens na pasta 'img'
         }
+      },
+      // Regra para processar fontes
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]', // Salva as fontes na pasta 'fonts'
+        },
       },
     ],
   },
