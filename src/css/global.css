@@ -47,6 +47,26 @@ img {
   box-sizing: border-box; /* Inclui padding na largura total */
 }
 
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter18pt-Regular.woff2') format('woff2'),
+      url('../fonts/Inter18pt-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter24pt-Bold.woff2') format('woff2'),
+      url('../fonts/Inter24pt-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 /* Importando Coolvetica */
 @font-face {
   font-family: 'Coolvetica';
