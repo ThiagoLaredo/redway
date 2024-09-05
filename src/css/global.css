@@ -53,7 +53,6 @@ img {
   font-display: swap;
 }
 
-
 @font-face {
   font-family: 'Inter';
   src: url('../fonts/Inter18pt-Regular.woff2') format('woff2'),
@@ -72,7 +71,6 @@ img {
   font-display: swap;
 }
 
-
 /* Importando Coolvetica */
 @font-face {
   font-family: 'Coolvetica';
@@ -88,31 +86,6 @@ img {
   font-weight: 800; /* valor estimado para 'black' */
   font-style: normal;
 }
-
-/* Importando Odisseia Test Bold */
-@font-face {
-  font-family: 'Odisseia';
-  src: url('../fonts/OdisseiaTest-Bold.otf') format('opentype');
-  font-weight: bold; /* geralmente 700 */
-  font-style: normal;
-}
-
-/* Importando Odisseia Test Regular */
-@font-face {
-  font-family: 'Odisseia';
-  src: url('../fonts/OdisseiaTest-Regular.otf') format('opentype');
-  font-weight: normal; /* geralmente 400 */
-  font-style: normal;
-}
-
-/* Importando Odisseia Test Light */
-@font-face {
-  font-family: 'Odisseia';
-  src: url('../fonts/OdisseiaTest-Light.otf') format('opentype');
-  font-weight: 300; /* valor estimado para 'light' */
-  font-style: normal;
-}
-
 
 .visually-hidden {
   position: absolute;
