@@ -189,4 +189,3 @@ window.addEventListener('load', () => {
     initButtonAnimations();
     initScrollAnimations();
 });
-``
