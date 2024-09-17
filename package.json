@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/ThiagoLaredo/redway.git#readme",
   "devDependencies": {
-    "cross-env": "^7.0.3",
     "@babel/core": "^7.24.9",
     "@babel/plugin-transform-runtime": "^7.24.7",
     "@babel/preset-env": "^7.24.8",
