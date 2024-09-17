@@ -152,7 +152,7 @@
           ],
           "tituloSEO": "Application Pentest: Identifique e Corrija Vulnerabilidades em Aplicativos",
           "descricaoSEO": "Realize um Application Pentest para identificar, prevenir e corrigir vulnerabilidades em seus aplicativos, protegendo dados e usuários contra possíveis ataques cibernéticos.",
-          "imagem": "application_pentest.jpg",
+          "imagem": "application_pentest.webp",
           "beneficiosTitulo": "Principais benefícios:",
           "beneficios": [
             "<strong>Detecção Proativa:</strong> Identificação de vulnerabilidades antes que possam ser exploradas por atacantes reais, prevenindo incidentes de segurança e protegendo dados sensíveis;",
@@ -391,7 +391,7 @@
             "We attempt to exploit identified vulnerabilities to understand the real impact these flaws could have if exploited by an attacker. This includes conducting simulated attacks such as obtaining unauthorized access, executing malicious commands, or stealing confidential information.",
             "After the tests, we produce a detailed report documenting all identified vulnerabilities, the exploitation process carried out, and the potential impact of each flaw, considering factors such as the severity of the vulnerability, the sensitivity of the affected data, and the ease with which the attack can be replicated by an adversary. The report also includes detailed recommendations to mitigate vulnerabilities and strengthen application security."
           ],
-          "imagem": "application-pentest.jpg",
+          "imagem": "application_pentest.webp",
           "beneficiosTitulo": "Key benefits:",
           "beneficios": [
             "Proactive Detection: Identifying vulnerabilities before they can be exploited by real attackers, preventing security incidents and protecting sensitive data;",
