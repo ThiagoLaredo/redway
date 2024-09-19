@@ -74,6 +74,27 @@ export const initScrollAnimations = () => {
     console.info("No sections found for GSAP scroll animations.");
   }
 
+  if (document.querySelectorAll(".highlight").length > 0) {
+    document.querySelectorAll(".highlight").forEach(element => {
+        gsap.to(element, {
+            scrollTrigger: {
+                trigger: element,
+                start: "top center",
+                toggleActions: "play none none none",
+                markers: false
+            },
+            duration: 2,
+            width: "100%",
+            ease: "none",
+            repeat: 0,
+            yoyo: false
+        });
+    });
+} else {
+    console.info("GSAP targets for highlight animation not found.");
+}
+
+
   const footerElements = document.querySelectorAll('.rodape h4, .rodape ul, .rodape li');
   if (footerElements.length > 0) {
     gsap.from(footerElements, {
