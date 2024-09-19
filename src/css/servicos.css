@@ -39,6 +39,7 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve para dar profundidade */
   transition: transform 0.2s ease-in-out; /* Efeito de transição suave ao interagir */
   width: 28vw;
+  max-width: 360px; /* Limite máximo da largura para evitar itens muito grandes */
   cursor: pointer; /* Mostra um cursor de ponteiro ao passar o mouse */
   overflow: hidden; /* Garante que o conteúdo não transborde do item da lista */
   padding: 0; /* Remove padding para o item da lista */
