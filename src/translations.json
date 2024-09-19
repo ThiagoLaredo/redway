@@ -226,7 +226,7 @@
         "planoBasico3": "<strong>2</strong> Usuários",
         "planoBasico4": "Suporte por <strong>e-mail</strong> (SLA de <strong>48</strong> horas)",
         "planoBasico5": "Alteração dos produtos monitorados a cada <strong>6</strong> meses",
-        "planoBasicoValor": "R$99/mês",
+        "planoBasicoValor": "99",
         "planoBotao": "Assine Agora",
         "planoAvancadoTitulo": "Avançado",
         "planoRecursosAdicionais": "(Recursos adicionais)",
@@ -237,7 +237,7 @@
         "planoAvancado5": "Alteração dos produtos monitorados a cada <strong>3</strong> meses",
         "planoAvancado6": "<strong>Feed</strong> de notícias",
         "planoAvancado7": "Acesso a <strong>API</strong>",
-        "planoAvancadoValor": "R$199/mês",
+        "planoAvancadoValor": "199",
         "planoEmpresarialTitulo": "Empresarial",
         "planoEmpresarial1": "Integração com <strong>Jira/Slack</strong>",
         "planoEmpresarial2": "Quantidade de produtos <strong>sob demanda</strong>",
@@ -246,7 +246,9 @@
         "planoEmpresarial5": "Alteração dos produtos monitorados <strong>mensalmente</strong>",
         "planoEmpresarial6": "Descoberta <strong>automática</strong> de produtos",
         "planoEmpresarial7": "Acesso à <strong>plataforma</strong> completa",
-        "planoEmpresarialValor": "R$499/mês"
+        "planoEmpresarialValor": "499",
+        "planoPeriodo": "/mês"
+
       }
     
     
@@ -464,7 +466,7 @@
         "planoBasico3": "<strong>2</strong> Users",
         "planoBasico4": "<strong>Email</strong> support (SLA of <strong>48</strong> hours)",
         "planoBasico5": "Change monitored products every <strong>6</strong> months",
-        "planoBasicoValor": "R$99/month",
+        "planoBasicoValor": "99",
         "planoBotao": "Subscribe Now",
         "planoAvancadoTitulo": "Advanced",
         "planoRecursosAdicionais": "(Additional features)",
@@ -475,7 +477,7 @@
         "planoAvancado5": "Change monitored products every <strong>3</strong> months",
         "planoAvancado6": "<strong>News Feed</strong>",
         "planoAvancado7": "Access to <strong>API</strong>",
-        "planoAvancadoValor": "R$199/month",
+        "planoAvancadoValor": "199",
         "planoEmpresarialTitulo": "Enterprise",
         "planoEmpresarial1": "Integration with <strong>Jira/Slack</strong>",
         "planoEmpresarial2": "Number of products <strong>on demand</strong>",
@@ -484,7 +486,9 @@
         "planoEmpresarial5": "Change monitored products <strong>monthly</strong>",
         "planoEmpresarial6": "<strong>Automatic</strong> product discovery",
         "planoEmpresarial7": "Access to the full <strong>platform</strong>",
-        "planoEmpresarialValor": "R$499/month"
+        "planoEmpresarialValor": "499",
+        "planoPeriodo": "/month"
+
       } 
   }
 }
