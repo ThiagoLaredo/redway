@@ -190,12 +190,38 @@
   align-items: center;
 }
 
-.plano-valor span {
-  font: 800 1.4rem/1.35 "Inter", sans-serif;
+.plano-preco {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-left: 23px;
+}
+
+.plano-preco p {
+  font: 800 2.8rem "Inter", sans-serif;
   color: var(--primary);
-  margin-top: 20px;
   display: inline-block;
 }
+
+/* Estilo para o "R$" como ::before */
+.plano-valor p::before {
+  content: 'R$';
+  font: 300 .85rem "Inter", sans-serif; /* Fonte menor e leve */
+  color: var(--primary);
+  position: absolute;
+  left: -20px; /* Ajuste de posição para ficar antes do preço */
+  top: 0;
+  transform: translateY(30px); /* Ajusta verticalmente o "R$" */
+}
+
+.plano-preco span {
+  font: 300 0.85rem "Inter", sans-serif;
+  color: var(--primary);
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+
 
 @media (max-width: 768px) { 
 
