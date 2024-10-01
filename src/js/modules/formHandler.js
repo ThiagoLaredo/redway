@@ -1,73 +1,30 @@
-export default class FormHandler {
-  constructor(formId) {
-      this.form = document.getElementById(formId);
-      this.responseMessage = document.createElement('div');
-      this.form.append(this.responseMessage);
-      this.addEventListeners();
-      this.styleResponseMessage();
-  }
+export function setupForm() {
+    const form = document.getElementById('contactForm');
+    const thankYouMessage = document.getElementById('thankYouMessage');
 
-  addEventListeners() {
-      this.form.addEventListener('submit', event => this.handleSubmit(event));
-  }
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevenir o envio tradicional do formulário
 
-  handleSubmit(event) {
-      event.preventDefault();
-      const formData = new FormData(this.form);
-      
-      this.showLoadingIndicator();
-      fetch('./enviar.php', {
-          method: 'POST',
-          body: formData
-      })
-      .then(response => response.json())
-      .then(data => {
-          // console.log('Resposta recebida:', data);
-          if (data.message) {
-              this.showResponseMessage(data.message, 'success');
-            } else {
-              this.showResponseMessage('No message received from server', 'error');
-          }
-      })
-      .catch(error => {
-          // console.error('Erro ao enviar formulário:', error);
-          this.showResponseMessage('Erro na comunicação com o servidor', 'error');
-      });
-  }
+        // Preparando dados do formulário para enviar
+        const formData = new FormData(form);
+        formData.append('apikey', 'sua_chave_de_acesso_web3forms'); // Substitua com sua chave real do Web3Forms
 
-  showLoadingIndicator() {
-      this.responseMessage.textContent = 'Enviando...';
-      this.responseMessage.style.display = 'block';
-      this.responseMessage.style.opacity = 1;
-  }
-
-  showResponseMessage(message, type) {
-    // console.log('Mostrando mensagem:', message, 'Tipo:', type); // Adicione esta linha
-      this.responseMessage.textContent = message;
-      this.styleResponseMessage(type);
-      setTimeout(() => {
-          this.fadeOut(this.responseMessage);
-      }, 10000); // 5000 milissegundos = 5 segundos
-  }
-
-  styleResponseMessage(type) {
-      this.responseMessage.style.marginTop = '10px';
-      this.responseMessage.style.color = 'white';
-      this.responseMessage.style.font = '500 1rem/1.4 "Hind", sans-serif';
-  }
-
-  fadeOut(element) {
-    let op = 1;  // Opacidade inicial
-    const timer = setInterval(() => {
-        if (op <= 0.01) {
-            clearInterval(timer);
-            element.style.display = 'none';
-            element.style.opacity = 0;
-            console.log('Elemento ocultado com sucesso.'); // Verificar se chega neste ponto
-        } else {
-            op -= 0.05; // Decrementa a opacidade em passos fixos
-            element.style.opacity = op;
-        }
-    }, 50);
-  }
+        // Enviando dados usando fetch para o Web3Forms
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+            // Mostra a mensagem de agradecimento e esconde o formulário
+            thankYouMessage.style.display = 'block';
+            form.style.display = 'none';  // Esconde o formulário
+            form.reset(); // Opcional: Limpa o formulário após o envio bem-sucedido
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('Houve um erro ao enviar o formulário, tente novamente.');
+        });
+    });
 }
