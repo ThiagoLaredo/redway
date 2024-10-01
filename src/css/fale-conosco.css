@@ -4,8 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 80px 0;
-  margin-top: 60px;
+  padding: 80px 20px;
 }
 
 .formulario h2 {
@@ -18,7 +17,7 @@ form {
   background: white;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 90%;
+  width: 100%;
   max-width: 600px;
   display: flex;
   flex-direction: column;
@@ -126,7 +125,6 @@ textarea {
     clip-path: none; 
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, 0.5);  /* Mudando para usar rgba com opacidade */
-   
   }
 
   .background-image-fale-conosco {
@@ -141,13 +139,8 @@ textarea {
     clip-path: none;
   }
 
-   /* .line-2, .line-3, .line-4, .line-5 {
-    display: none;
-  } */
-
   .formulario {
-    padding: 60px 0;
+    padding: 60px 20px;
     margin-top: 0px;
   }
-
 }

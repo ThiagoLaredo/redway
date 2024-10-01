@@ -1,3 +1,5 @@
+// modules/formHandler.js
+
 export function setupForm() {
     const form = document.getElementById('contactForm');
     const thankYouMessage = document.getElementById('thankYouMessage');
@@ -17,10 +19,9 @@ export function setupForm() {
         .then(response => response.json())
         .then(data => {
             console.log('Success:', data);
-            // Mostra a mensagem de agradecimento e esconde o formulário
+            // Mostra a mensagem de agradecimento
             thankYouMessage.style.display = 'block';
-            form.style.display = 'none';  // Esconde o formulário
-            form.reset(); // Opcional: Limpa o formulário após o envio bem-sucedido
+            form.reset(); // Limpa o formulário após o envio bem-sucedido
         })
         .catch((error) => {
             console.error('Error:', error);
