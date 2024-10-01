@@ -77,40 +77,40 @@
     </a>   
     <div class="introducao small container">
       <div class="introducao-texto small">
-          <h1 data-translate="introTitulo">Fale Com Nossos Especialistas</h1>
-          <p data-translate="introDescricao">Conte com nossa equipe de especialistas. Estamos disponíveis para ajudar a resolver problemas, esclarecer dúvidas e garantir que seus sistemas estejam sempre protegidos.</p>
+          <h1 data-translate="faleconosco.introTitulo">Fale Com Nossos Especialistas</h1>
+          <p data-translate="faleconosco.introDescricao">Conte com nossa equipe de especialistas. Estamos disponíveis para ajudar a resolver problemas, esclarecer dúvidas e garantir que seus sistemas estejam sempre protegidos.</p>
       </div>
       <div class="img-intro small">  
         <div class="background-image small"></div>
       </div> 
       
-      
-      
     </div>
     <div class="formulario container">
       <form id="contactForm">
-        <h2>Envie uma mensagem</h2>
-        <label for="nome">Nome:</label>
+        <h2 data-translate="faleconosco.formTitulo">Envie uma mensagem</h2>
+        
+        <label data-translate="faleconosco.formNome" for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required>
     
-        <label for="email">E-mail:</label>
+        <label data-translate="faleconosco.formEmail" for="email">E-mail:</label>
         <input type="email" id="email" name="email" required>
     
-        <label for="telefone">Telefone:</label>
+        <label data-translate="faleconosco.formTelefone" for="telefone">Telefone:</label>
         <input type="tel" id="telefone" name="telefone" pattern="^\d{10,11}$" title="Por favor, insira um número de telefone válido com 10 ou 11 dígitos." required>
     
-        <label for="empresa">Empresa:</label>
+        <label data-translate="faleconosco.formEmpresa" for="empresa">Empresa:</label>
         <input type="text" id="empresa" name="empresa">
     
-        <label for="motivoContato">Mensagem:</label>
+        <label data-translate="faleconosco.formMensagem" for="motivoContato">Mensagem:</label>
         <textarea id="mensagem" name="mensagem"></textarea>
     
-        <button class="btn-form" type="submit">Enviar</button>
-      </form>
+        <button data-translate="faleconosco.formEnviar" class="btn-form" type="submit">Enviar</button>
+    </form>
+    
       <!-- Mensagem de agradecimento oculta -->
       <div id="thankYouMessage" style="display: none;">
-          <h3>Obrigado por entrar em contato!</h3>
-          <p>Recebemos sua mensagem e entraremos em contato em breve.</p>
+          <h3 data-translate="faleconosco.obrigadoTitulo">Obrigado por entrar em contato!</h3>
+          <p data-translate="faleconosco.obrigadoDescricao">Recebemos sua mensagem e entraremos em contato em breve.</p>
       </div>
     </div>         
     <footer class="rodape-background">
@@ -118,19 +118,19 @@
         <div class="coluna-1">
           <h4>Redway</h4>
           <ul>
-            <a data-translate="rodapeLinkSobreNos" hef=""><li>Sobre nós</li></a>
-            <a data-translate="rodapeLinkPerguntasFrequentes" hef=""><li>Perguntas frequentes</li></a>
-            <a data-translate="rodapeLinkContato" hef=""><li>Contato</li></a>
+            <li><a data-translate="footer.LinkSobreNos" href="#">Sobre nós</a></li>
+            <li><a data-translate="footer.LinkPerguntasFrequentes" href="#">Perguntas frequentes</a></li>
+            <li><a data-translate="footer.LinkContato" href="./faleconosco.html">Contato</a></li>
           </ul>
         </div>
         <div class="coluna-2">
-          <h4 data-translate="rodapeLinkProduto">Produto</h4>
+          <h4 data-translate="footer.TituloProduto">Produto</h4>
           <ul>
-            <a hef=""><li>FiqueAlerta</li></a>
+            <li><a href="./fique-alerta.html">FiqueAlerta</a></li>
           </ul>
         </div>
         <div class="coluna-3">
-          <h4 data-translate="rodapeLinkServicos">Serviços</h4>
+          <h4 data-translate="footer.TituloServicos">Serviços</h4>
           <ul>
             <li><a href="./servico.html#ddos-testing">DDoS Testing</a></li>
             <li><a href="./servico.html#pentest">Pentest</a></li>
@@ -142,10 +142,10 @@
           </ul>
         </div>
         <div class="coluna-4">
-          <h4 data-translate="rodapeLinkConheca">Conheça</h4>
+          <h4 data-translate="footer.TituloConheca">Conheça</h4>
           <ul>
-            <a hef=""><li>Cases</li></a>
-            <a hef=""><li>Blog</li></a>
+            <li><a href="#">Cases</a></li>
+            <li><a href="#">Blog</a></li>
           </ul>
         </div>
       </div>
