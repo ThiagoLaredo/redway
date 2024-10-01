@@ -87,6 +87,7 @@ module.exports = {
     createHtmlPlugin('servicos', 'servicos'),
     createHtmlPlugin('servico', 'servico'),
     createHtmlPlugin('fique-alerta', 'fique-alerta'),
+    createHtmlPlugin('blog', 'blog'),
     new CopyWebpackPlugin({
       patterns: [
         { from: 'src/img', to: 'img' },
