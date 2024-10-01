@@ -88,10 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Chama a função para configurar os links de serviços
   setupServiceLinks(serviceLoader, currentLang);
-});
 
-// Inicializa a função de manipulação do formulário
-setupForm();  // Certifique-se de ter importado a função no início do arquivo
+  const form = document.getElementById('contactForm');
+  if (form) {
+      setupForm();
+  }
+});
 
 // Inicializa as animações após o carregamento completo dos recursos
 window.addEventListener('load', () => {
