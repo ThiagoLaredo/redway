@@ -6,6 +6,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+// Função para criar instâncias do HtmlWebpackPlugin
+function createHtmlPlugin(template, filename) {
+  return new HtmlWebpackPlugin({
+    template: `./src/${template}.html`,
+    filename: `${filename}.html`,
+    minify: {
+      removeRedundantAttributes: false,
+    }
+  });
+}
+
 module.exports = {
   entry: './src/js/script.js',
   output: {
@@ -14,7 +25,6 @@ module.exports = {
   },
   module: {
     rules: [
-      // Regra para processar JavaScript
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -26,7 +36,6 @@ module.exports = {
           },
         },
       },
-      // Regra para processar CSS e imagens de fundo
       {
         test: /\.css$/i,
         use: [
@@ -34,26 +43,24 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              url: true, // Habilita o processamento de URLs no CSS
+              url: true,
               importLoaders: 1,
             },
           },
         ],
       },
-      // Regra para processar imagens
       {
         test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'img/[name][ext][query]', // Salva as imagens na pasta 'img'
-        }
+          filename: 'img/[name][ext][query]',
+        },
       },
-      // Regra para processar fontes
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'fonts/[name][ext]', // Salva as fontes na pasta 'fonts'
+          filename: 'fonts/[name][ext]',
         },
       },
     ],
@@ -74,44 +81,12 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin({
-      filename: 'style.css',
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-      filename: 'index.html',
-      minify: {
-        removeRedundantAttributes: false,
-      },
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/faleconosco.html',
-      filename: 'faleconosco.html',
-      minify: {
-        removeRedundantAttributes: false,
-      },
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/servicos.html',
-      filename: 'servicos.html',
-      minify: {
-        removeRedundantAttributes: false,
-      },
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/servico.html',
-      filename: 'servico.html',
-      minify: {
-        removeRedundantAttributes: false,
-      },
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/fique-alerta.html',
-      filename: 'fique-alerta.html',
-      minify: {
-        removeRedundantAttributes: false,
-      },
-    }),
+    new MiniCssExtractPlugin({ filename: 'style.css' }),
+    createHtmlPlugin('index', 'index'),
+    createHtmlPlugin('faleconosco', 'faleconosco'),
+    createHtmlPlugin('servicos', 'servicos'),
+    createHtmlPlugin('servico', 'servico'),
+    createHtmlPlugin('fique-alerta', 'fique-alerta'),
     new CopyWebpackPlugin({
       patterns: [
         { from: 'src/img', to: 'img' },

@@ -1,5 +1,5 @@
 import MenuMobile from './modules/menu-mobile.js';
-// import FormHandler from './modules/formHandler.js';
+import { setupForm } from './modules/formHandler.js';
 import LanguageSwitcher from './modules/languageSwitcher.js';
 import translations from '../translations.json';
 import { initPageLoadAnimations, initButtonAnimations, initScrollAnimations } from './modules/animations.js';
@@ -89,6 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Chama a função para configurar os links de serviços
   setupServiceLinks(serviceLoader, currentLang);
 });
+
+// Inicializa a função de manipulação do formulário
+setupForm();  // Certifique-se de ter importado a função no início do arquivo
 
 // Inicializa as animações após o carregamento completo dos recursos
 window.addEventListener('load', () => {
