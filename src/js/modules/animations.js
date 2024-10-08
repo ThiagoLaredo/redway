@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 // Função para animações de elementos visíveis na abertura da página
 export const initPageLoadAnimations = () => {
   const pageElements = [
-    { selector: ".header", props: { duration: 1, opacity: 0, ease: "power1.inOut" } },
+    // { selector: ".header", props: { duration: 1, opacity: 0, ease: "power1.inOut" } },
     { selector: "[data-menu='logo'], [data-menu='button']", props: { duration: 1, delay: 0.5, opacity: 0, ease: "power1.inOut" } },
     { selector: "#menu > li", props: { duration: 0.5, delay: 1, opacity: 0, stagger: 0.2, ease: "power1.out" } },
     { selector: ".background-image, #serviceimage, .background-image-pg-interna", props: { duration: 1.5, x: 200, opacity: 0, ease: "power1.out", delay: 1.5 } },
